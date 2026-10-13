@@ -1,0 +1,47 @@
+/* ReBirth — tasarım değişkenleri (oyunun arayüz kitinden: scripts/ui/ui_kit.gd) */
+@font-face { font-family: "Anton"; src: url("../assets/fonts/Anton-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("../assets/fonts/Barlow-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("../assets/fonts/Barlow-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("../assets/fonts/Barlow-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Barlow Condensed"; src: url("../assets/fonts/BarlowCondensed-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Barlow Condensed"; src: url("../assets/fonts/BarlowCondensed-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Barlow Condensed"; src: url("../assets/fonts/BarlowCondensed-ExtraBold.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+@font-face { font-family: "Caveat"; src: url("../assets/fonts/Caveat.woff2") format("woff2"); font-display: swap; }
+
+:root {
+  /* kömür zeminler */
+  --bg: #191817;
+  --bg2: #252423;
+  --bg3: #33312f;
+  --bg4: #41403d;
+  --line: rgba(242, 230, 199, 0.10);
+  --line2: rgba(242, 230, 199, 0.20);
+  /* hardal vurgu */
+  --accent: #f1ad2a;
+  --accent-h: #ffc247;
+  --accent-d: #b37a1a;
+  /* kâğıt ve mürekkep */
+  --cream: #ece4d0;
+  --cream2: #dbd1ba;
+  --cream3: #c7bba3;
+  --ink: #201d1b;
+  --ink-muted: #61594f;
+  /* metin */
+  --text: #f2ebd9;
+  --muted: #a8a091;
+  /* durum renkleri */
+  --good: #66b86b;
+  --bad: #db4738;
+  --teal: #5cb58c;
+  --blue: #52a1e0;
+  --purple: #a678db;
+  --cyan: #45c4cc;
+  /* yazı tipleri */
+  --f-display: "Anton", "Impact", sans-serif;
+  --f-caps: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --f-body: "Barlow", system-ui, sans-serif;
+  --f-script: "Caveat", cursive;
+  /* ölçüler */
+  --radius: 6px;
+  --ease: cubic-bezier(.2, .7, .1, 1);
+}

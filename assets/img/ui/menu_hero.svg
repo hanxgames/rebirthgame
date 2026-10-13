@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" viewBox="0 0 900 720" xmlns:c2pa="http://c2pa.org/manifest">
+  <defs>
+    <linearGradient id="inkA" gradientUnits="userSpaceOnUse" x1="380" y1="0" x2="560" y2="0">
+      <stop offset="0" stop-color="#5a4029"/>
+      <stop offset="0.16" stop-color="#2a1f16"/>
+      <stop offset="0.5" stop-color="#17120e"/>
+      <stop offset="1" stop-color="#0f0c09"/>
+    </linearGradient>
+    <linearGradient id="inkB" gradientUnits="userSpaceOnUse" x1="566" y1="0" x2="720" y2="0">
+      <stop offset="0" stop-color="#4a3523"/>
+      <stop offset="0.2" stop-color="#231a13"/>
+      <stop offset="1" stop-color="#0f0c09"/>
+    </linearGradient>
+    <linearGradient id="rock" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c2219"/>
+      <stop offset="0.22" stop-color="#17120e"/>
+      <stop offset="1" stop-color="#0b0907"/>
+    </linearGradient>
+    <linearGradient id="flag" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2d4437"/>
+      <stop offset="0.4" stop-color="#3e5b4a"/>
+      <stop offset="0.66" stop-color="#26382e"/>
+      <stop offset="1" stop-color="#36523f"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="#1d1712" stroke-width="2.6" stroke-linecap="round" opacity="0.75">
+    <path d="M300,120 q9,-9 18,0 q9,-9 18,0"/>
+    <path d="M352,96 q6,-6 12,0 q6,-6 12,0"/>
+    <path d="M250,160 q5,-5 10,0 q5,-5 10,0"/>
+  </g>
+  <!-- bayrak -->
+  <rect x="697" y="78" width="7" height="522" fill="#16110d"/>
+  <rect x="697" y="78" width="2" height="522" fill="#6a4b2c"/>
+  <circle cx="700.5" cy="75" r="7" fill="#d1a548"/>
+  <path d="M700,94 C660,82 610,108 548,96 C540,124 556,150 546,176 C556,198 550,212 556,226 C612,238 650,210 700,224 Z" fill="url(#flag)"/>
+  <path d="M548,96 C540,124 556,150 546,176 C556,198 550,212 556,226 C566,228 574,228 582,228 C576,200 584,170 574,140 C580,120 576,104 580,100 C568,100 558,99 548,96 Z" fill="#1d2c24" opacity="0.55"/>
+  <g transform="translate(626,160) rotate(-18)" fill="#e2d6b8">
+    <path d="M-34,26 C-12,8 10,-8 34,-28" fill="none" stroke="#e2d6b8" stroke-width="3.2" stroke-linecap="round"/>
+    <ellipse cx="-22" cy="10" rx="9" ry="3.6" transform="rotate(-60 -22 10)"/>
+    <ellipse cx="-14" cy="20" rx="9" ry="3.6" transform="rotate(20 -14 20)"/>
+    <ellipse cx="-6" cy="-2" rx="9" ry="3.6" transform="rotate(-60 -6 -2)"/>
+    <ellipse cx="3" cy="9" rx="9" ry="3.6" transform="rotate(20 3 9)"/>
+    <ellipse cx="10" cy="-14" rx="9" ry="3.6" transform="rotate(-60 10 -14)"/>
+    <ellipse cx="19" cy="-4" rx="9" ry="3.6" transform="rotate(20 19 -4)"/>
+    <ellipse cx="28" cy="-30" rx="8" ry="3.4" transform="rotate(-30 28 -30)"/>
+    <circle cx="-2" cy="14" r="3.2" fill="#d1a548"/>
+    <circle cx="16" cy="2" r="3.2" fill="#d1a548"/>
+  </g>
+  <!-- asker (arkada) -->
+  <g fill="#17120e">
+    <path d="M674,324 L716,334 L720,434 L694,444 Z"/>
+    <path d="M610,286 C611,260 631,249 649,251 C668,253 681,266 681,285 L690,290 L602,291 Z"/>
+    <path d="M620,290 L664,290 L662,312 C654,324 630,324 622,312 Z"/>
+    <path d="M610,322 C624,314 656,314 674,320 L694,334 L702,420 L694,476 L604,476 L596,404 L600,338 Z"/>
+    <path d="M612,472 L604,602 L634,602 L642,476 Z"/>
+    <path d="M652,472 L660,602 L688,602 L686,470 Z"/>
+    <path d="M598,598 L640,598 L642,612 L594,612 Z"/>
+    <path d="M656,598 L698,598 L700,612 L654,612 Z"/>
+    <path d="M560,452 L568,460 L700,340 L692,332 Z"/>
+    <path d="M604,340 L592,412 L610,418 L652,384 L642,356 Z"/>
+    <path d="M612,404 L604,424 L622,430 L630,412 Z"/>
+  </g>
+  <path d="M672,342 L700,334" stroke="#5a4029" stroke-width="2" opacity="0.6"/>
+  <!-- koordinatör (önde) -->
+  <g fill="#120e0b">
+    <!-- rüzgârda atkı -->
+    <path d="M468,236 C500,232 528,222 556,212 C578,205 596,208 616,200 C604,214 590,220 572,224 C590,226 606,222 622,214 C606,232 580,238 556,236 C532,240 504,246 480,250 Z"/>
+    <!-- baş (sola bakan profil) ve sakal -->
+    <path d="M456,130 C476,128 489,143 489,163 L489,188 C487,205 478,216 464,219 L448,221 C440,214 434,206 432,199 L424,191 L429,185 L427,178 L431,172 C430,149 439,132 456,130 Z"/>
+    <path d="M431,196 C433,214 446,229 466,226 L478,206 Z"/>
+    <path d="M444,214 L472,214 L474,238 L444,238 Z"/>
+    <!-- palto -->
+    <path d="M404,254 C428,234 498,228 534,248 C546,258 550,282 552,314 L562,522 C530,536 432,538 392,526 L398,402 C398,342 396,292 404,254 Z"/>
+    <!-- önden sarkan atkı ucu -->
+    <path d="M446,234 L432,310 L450,312 L462,238 Z"/>
+    <!-- dürbünlü kol -->
+    <path d="M406,262 L368,328 L376,344 L424,322 L430,300 L414,298 Z"/>
+    <path d="M356,298 C356,294 360,292 364,292 L396,292 C400,292 402,296 402,300 L402,326 L356,326 Z" fill="#1b150f"/>
+    <!-- bacaklar -->
+    <path d="M420,522 L426,604 L450,604 L454,528 Z"/>
+    <path d="M478,528 L486,604 L510,604 L508,524 Z"/>
+    <path d="M414,598 L456,598 L458,614 L408,614 Z"/>
+    <path d="M482,598 L518,598 L522,614 L480,614 Z"/>
+  </g>
+  <path d="M474,250 L470,520" stroke="#060504" stroke-width="2" opacity="0.6"/>
+  <circle cx="358" cy="302" r="3.2" fill="#e6ac52" opacity="0.9"/>
+  <circle cx="358" cy="318" r="3.2" fill="#e6ac52" opacity="0.9"/>
+  <g fill="none" stroke="#c08843" stroke-width="1.6" opacity="0.55" stroke-linecap="round">
+    <path d="M404,254 C398,292 398,342 398,402 L392,526"/>
+    <path d="M431,172 C430,149 439,132 456,130"/>
+    <path d="M610,322 L600,338 L596,404 L604,476"/>
+    <path d="M610,286 C611,260 631,249 649,251"/>
+    <path d="M406,262 L368,328"/>
+  </g>
+  <!-- kaya sırtı -->
+  <path d="M60,720 L110,676 L150,668 L196,646 L236,642 L280,628 L330,622 L372,610 L430,608 L476,604 L540,606 L600,603 L660,604 L720,598 L760,584 L800,578 L840,562 L880,556 L900,552 L900,720 Z" fill="url(#rock)"/>
+  <path d="M150,668 L196,646 L236,642 L280,628 L330,622 L372,610 L430,608 L476,604 L540,606 L600,603 L660,604 L720,598 L760,584 L800,578 L840,562 L880,556 L900,552" fill="none" stroke="#c08843" stroke-width="2" opacity="0.5"/>
+  <g fill="#0e0b08">
+    <path d="M250,720 L276,664 L320,650 L352,676 L370,720 Z"/>
+    <path d="M520,720 L560,654 L620,640 L668,662 L700,720 Z"/>
+    <path d="M760,720 L780,640 L840,620 L900,632 L900,720 Z"/>
+  </g>
+  <g stroke="#130f0b" stroke-width="2.2" stroke-linecap="round">
+    <path d="M206,646 l-4,-14 M212,646 l2,-16 M218,645 l6,-12"/>
+    <path d="M560,606 l-3,-12 M566,606 l2,-15 M572,605 l5,-11"/>
+    <path d="M808,577 l-4,-13 M814,577 l1,-16 M820,576 l6,-12"/>
+  </g>
+</svg>

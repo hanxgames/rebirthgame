@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ReBirth · Mini oyun testi</title>
+<link rel="stylesheet" href="css/tokens.css">
+<style>
+  html, body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--f-body); }
+  .wrap { max-width: 1180px; margin: 24px auto; padding: 0 16px; }
+  .stage { position: relative; width: 100%; aspect-ratio: 16 / 10; background: #000; border: 1px solid var(--line2); border-radius: 8px; overflow: hidden; }
+  @media (max-width: 700px) { .stage { aspect-ratio: 3 / 4; } }
+  h1 { font-family: var(--f-display); font-weight: 400; letter-spacing: .02em; }
+  .bar { display: flex; gap: 8px; margin: 12px 0; font-family: var(--f-caps); }
+  .bar a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 id="t">Mini oyun</h1>
+  <div class="bar"><a href="?g=hava">hava</a><a href="?g=golge">golge</a><a href="?g=insa">insa</a><a href="?g=konvoy">konvoy</a>
+    · <a id="dil" href="#">dil</a></div>
+  <div class="stage" id="stage"></div>
+  <pre id="log"></pre>
+</div>
+<script src="js/host.js" data-root=""></script>
+<script>
+  var q = new URLSearchParams(location.search);
+  var id = q.get("g") || "hava";
+  document.documentElement.lang = q.get("lang") === "en" ? "en" : "tr";
+  document.getElementById("dil").href = "?g=" + id + "&lang=" + (document.documentElement.lang === "en" ? "tr" : "en");
+  var s = document.createElement("script");
+  s.src = "js/games/" + id + ".js?" + Date.now();
+  s.onload = function () {
+    var g = window.RBGames[id];
+    document.getElementById("t").textContent = g ? g.title[RBHost.lang()] : id;
+    window.inst = RBHost.mount(id, document.getElementById("stage"), function (r) {
+      document.getElementById("log").textContent = JSON.stringify(r);
+    });
+  };
+  document.body.appendChild(s);
+</script>
+</body>
+</html>
