@@ -21,6 +21,8 @@
 
   /* ------------------------------------------------------------------ dil */
   var lang = (function () {
+    var q = new URLSearchParams(location.search).get("lang");
+    if (q === "tr" || q === "en") return q;
     try { var s = localStorage.getItem("rb_lang"); if (s === "tr" || s === "en") return s; } catch (e) {}
     var n = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
     return /^tr/i.test(n) ? "tr" : "en";
@@ -51,6 +53,7 @@
     $("#soundBtn").setAttribute("aria-label", t("nav.sound"));
     $("#burger").setAttribute("aria-label", t("nav.menu"));
     $$("#langBtn [data-l]").forEach(function (s) { s.classList.toggle("is-on", s.getAttribute("data-l") === lang); });
+    $$("a[data-keep-lang]").forEach(function (a) { a.href = a.getAttribute("data-keep-lang") + "?lang=" + lang; });
     buildTicker();
     buildCrisis(first);
     buildMoments();
