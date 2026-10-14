@@ -741,6 +741,8 @@
   }
 
   /* ------------------------------------------------------------------ başlat */
+  // süreli kampanya rozetleri (ör. PC çıkış indirimi) bitiş tarihinden sonra kendiliğinden kalkar
+  $$("[data-sale-until]").forEach(function (e) { if (Date.now() > Date.parse(e.getAttribute("data-sale-until"))) e.remove(); });
   applyLang(true);
   observeReveals();
   navSolid();
