@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-15T16:44:16Z",
+ "guncelleme": "2026-10-15T17:45:01Z",
  "haberler": [
   {
    "id": "2026-10-15-kara-kolera",
@@ -114,6 +114,43 @@
   }
  ],
  "guncellemeler": [
+  {
+   "id": "2026-10-15-surum-2-0-6",
+   "tarih": "2026-10-15",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update"
+   },
+   "surum": "2.0.6",
+   "baslik": {
+    "tr": "Sürüm 2.0.6: Kara Kolera geliyor",
+    "en": "Version 2.0.6: Black Cholera is coming"
+   },
+   "ozet": {
+    "tr": "Kara Kolera etkinliği, ana menüde haberler ve güncelleme notları, daha büyük menü düğmeleri ve MediaTek telefonlar için açılış düzeltmesi.",
+    "en": "The Black Cholera event, news and patch notes on the main menu, bigger menu buttons and a launch fix for MediaTek phones."
+   },
+   "metin": {
+    "tr": [
+     "• Yeni etkinlik: Kara Kolera 31 Ekim'de başlıyor. Karantina kampını savunun, laboratuvarda tedaviyi bulun, dozları dört şehre ulaştırın (Premium)",
+     "• Ana menüde Haberler ve Güncelleme notları: duyurular ve yenilikler artık oyunun içinde",
+     "• Oyun her açılışta ana menüden başlar; kaldığınız harekât \"Devam et\" ile sürer, kayıtlarınız korunur",
+     "• Ana menü düğmeleri daha büyük; Saha el kitabı artık Ayarlar'da",
+     "• Bazı MediaTek Dimensity işlemcili telefonlarda (ör. moto g54, moto g power 5G) açılışta kapanma düzeltildi",
+     "• Performans ve kararlılık iyileştirmeleri"
+    ],
+    "en": [
+     "• New event: Black Cholera begins October 31. Defend the quarantine camp, find the cure in the lab and get the doses to four cities (Premium)",
+     "• News and patch notes on the main menu: announcements and updates are now inside the game",
+     "• The game now always opens on the main menu; pick up your campaign with \"Continue\", your saves are kept",
+     "• Bigger main menu buttons; the Field Manual is now in Settings",
+     "• Fixed a crash on launch on some phones with MediaTek Dimensity chips (e.g. moto g54, moto g power 5G)",
+     "• Performance and stability improvements"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-15-surum-2-0-6-03536f.jpg",
+   "eklendi": "2026-10-15T17:45:01.596430Z"
+  },
   {
    "id": "2026-10-14-surum-2-0-5",
    "tarih": "2026-10-14",
