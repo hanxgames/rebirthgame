@@ -22,8 +22,8 @@ taslak.json (TR ve EN zorunlu; oyunun diğer dilleri İngilizcesini gösterir):
     "baglanti": "https://...",                   # isteğe bağlı: "Detayları gör" bu adresi açar (yoksa haberler.html#<id>)
     "platform": ["android", "pc", "web"],        # isteğe bağlı: oyunda yalnız bu platformlarda (android|ios|pc|web) görünür;
                                                  #   başka mağazaya satış bağlantısı veren haberi iOS'a koyma (App Store 3.1.1)
-    "form": "moderator"                          # isteğe bağlı: haberler.html'de haberin altına başvuru formu (js/basvuru.js;
-  }                                              #   site bir şey saklamaz, oyuncunun e-posta uygulamasını hazır mesajla açar)
+    "form": "moderator"                          # isteğe bağlı: haberler.html'de haberin altına başvuru düğmesi (js/basvuru.js
+  }                                              #   FORMLAR: kimlik → Google Formlar bağlantısı; site bir şey saklamaz)
 Görsel her biçimde olabilir: 16:9 kırpılır, 640x360 JPEG'e çevrilir (Pillow). Ardından siteyi yayınla (git push):
 oyun ana menü her açıldığında ve açıkken 5 dakikada bir akışı yeniden okur.
 """
@@ -42,7 +42,7 @@ TURLER = {"haber": "haberler", "guncelleme": "guncellemeler"}
 EN_COK = 5
 BOY = (640, 360)
 DILLER = ("tr", "en")
-FORMLAR = ("moderator",)   # js/basvuru.js'in bildiği başvuru formları
+FORMLAR = ("moderator",)   # js/basvuru.js FORMLAR'daki kimlikler (Google Formlar bağlantıları)
 
 
 def oku() -> dict:

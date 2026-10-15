@@ -1,6 +1,6 @@
 /* ReBirth — haberler.html: haberler.json akışını çizer (oyunun ana menüsü de aynı dosyayı okur; ekleme: tools/haber_ekle.py).
    Dil doc.js'ten gelir (html lang); dil düğmesi değişince yeniden çizilir. #<kimlik> ile gelinirse o kayıt açılır ve vurgulanır.
-   Kayıtta "form" varsa altına başvuru formu kurulur (js/basvuru.js). */
+   Kayıtta "form" varsa altına Google Formlar'daki başvuru formunu açan düğme konur (js/basvuru.js). */
 (function () {
   "use strict";
   var AYLAR = {
@@ -13,7 +13,7 @@
   var liste = document.getElementById("newsList");
   var yukleniyor = false;
 
-  // sayfa önbellekten eski hâliyle geldiyse (Pages 10 dk önbellekler; akış ise her seferinde taze) form betiğini sonradan yükle
+  // sayfa önbellekten eski hâliyle geldiyse (Pages 10 dk önbellekler; akış ise her seferinde taze) başvuru betiğini sonradan yükle
   function formBetigi() {
     if (yukleniyor) return;
     yukleniyor = true;
@@ -80,10 +80,10 @@
         a.rel = "noopener";
         govde.appendChild(a);
       }
-      if (k.form && window.RBBasvuru) {   // başvuru formu (js/basvuru.js); haberin kendisine gelindiyse açık
+      if (k.form && window.RBBasvuru) {   // başvuru düğmesi (js/basvuru.js → Google Formlar)
         var fk = el("div", "apl");
         govde.appendChild(fk);
-        window.RBBasvuru.kur(fk, k.form, dil(), decodeURIComponent((location.hash || "").slice(1)) === k.id);
+        window.RBBasvuru.kur(fk, k.form, dil());
       } else if (k.form) {
         formBetigi();
       }
