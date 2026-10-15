@@ -140,7 +140,7 @@ window.RB_I18N = {
     "cta.title": "Vilayet sizi bekliyor",
     "cta.lead": "İndirin, ilk girişimi başlatın ve Tarsel'in yeniden doğuşunu izleyin.",
     "foot.studio": "Bir HanX Games yapımı",
-    "foot.privacy": "Gizlilik", "foot.support": "Destek", "foot.top": "Başa dön",
+    "foot.privacy": "Gizlilik", "foot.support": "Destek", "foot.news": "Haberler", "foot.top": "Başa dön",
     "foot.note": "ReBirth'teki tüm yer, kurum ve kişi adları kurgusaldır.",
     "modal.close": "Kapat"
   },
@@ -285,7 +285,7 @@ window.RB_I18N = {
     "cta.title": "The province is waiting",
     "cta.lead": "Download, start your first initiative and watch Tarsel rise again.",
     "foot.studio": "A HanX Games production",
-    "foot.privacy": "Privacy", "foot.support": "Support", "foot.top": "Back to top",
+    "foot.privacy": "Privacy", "foot.support": "Support", "foot.news": "News", "foot.top": "Back to top",
     "foot.note": "All places, organizations and people in ReBirth are fictional.",
     "modal.close": "Close"
   }

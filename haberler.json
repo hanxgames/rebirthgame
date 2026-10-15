@@ -1,0 +1,221 @@
+{
+ "surum": 1,
+ "en_cok": 5,
+ "guncelleme": "2026-10-15T16:44:16Z",
+ "haberler": [
+  {
+   "id": "2026-10-15-kara-kolera",
+   "tarih": "2026-10-15",
+   "etiket": {
+    "tr": "Etkinlik",
+    "en": "Event"
+   },
+   "baslik": {
+    "tr": "Kara Kolera 31 Ekim'de başlıyor",
+    "en": "Black Cholera begins October 31"
+   },
+   "ozet": {
+    "tr": "Sınırlı süreli yeni etkinlik: karantina kampını savunun, laboratuvarda tedaviyi bulun, dozları dört şehre ulaştırın. Premium üyelere özel.",
+    "en": "A new limited-time event: defend the quarantine camp, find the cure in the lab and get the doses to four cities. Exclusive to Premium members."
+   },
+   "metin": {
+    "tr": [
+     "Salgın Morvan Havzası'nı yuttu. Elinizde yalnız Arden'deki duvarlı karantina kampı var; dört şehir sürülerle dolu.",
+     "• Her ay kampın kapısına dayanan sürüye karşı savunmayı bizzat yönetin ya da ekiplerinize bırakın",
+     "• Laboratuvarda on iki maddeden doğru dördünü doğru sırayla bulun",
+     "• Erzak helikopterinin getirdiği sandıklardaki notlardan ipucu toplayın",
+     "• Tedavi bulununca dozları eskortlu konvoylarla şehirlere taşıyın",
+     "Etkinlik 31 Ekim – 30 Kasım 2026 arasında açık. Katılmak için oyunun en son sürümünü yükleyin."
+    ],
+    "en": [
+     "The plague has swallowed the Morvan Basin. All you hold is the walled quarantine camp at Arden; four cities are overrun.",
+     "• Every month the horde reaches the camp gates: command the defense yourself or leave it to your teams",
+     "• In the lab, find the right four of twelve ingredients in the right order",
+     "• Collect clues from the notes in the supply crates the helicopter drops",
+     "• Once the cure is found, carry the doses to the cities in escorted convoys",
+     "The event runs from October 31 to November 30, 2026. Update to the latest version to take part."
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-15-kara-kolera-6717aa.jpg",
+   "eklendi": "2026-10-15T16:43:56.000000Z"
+  },
+  {
+   "id": "2026-10-14-bilgisayarda",
+   "tarih": "2026-10-14",
+   "etiket": {
+    "tr": "Duyuru",
+    "en": "Announcement"
+   },
+   "baslik": {
+    "tr": "ReBirth artık bilgisayarda",
+    "en": "ReBirth is now on PC"
+   },
+   "ozet": {
+    "tr": "Windows ve Linux sürümleri itch.io'da, tarayıcıda ücretsiz demo da var. Çıkışa özel %60 indirim 28 Ekim'e kadar.",
+    "en": "Windows and Linux versions are out on itch.io, with a free browser demo. 60% launch discount until October 28."
+   },
+   "metin": {
+    "tr": [
+     "Bilgisayar sürümü gelişmiş grafik seçenekleri ve klavye-fare kontrolleriyle geliyor.",
+     "• Windows ve Linux; kurulum gerektirmez",
+     "• Ultra kalite, yansımalar, hacimsel sis ve alan derinliği",
+     "• Tüm haritalar, Kriz Masası ve Hava Kuvvetleri dahil",
+     "• Tarayıcıda oynanan ücretsiz demo"
+    ],
+    "en": [
+     "The PC version comes with advanced graphics options and keyboard and mouse controls.",
+     "• Windows and Linux, no installation needed",
+     "• Ultra quality, reflections, volumetric fog and depth of field",
+     "• All maps, the Crisis Desk and the Air Force included",
+     "• A free demo you can play in your browser"
+    ]
+   },
+   "baglanti": "https://hanx-games.itch.io/rebirth",
+   "gorsel": "assets/img/haber/2026-10-14-bilgisayarda-07c6e1.jpg",
+   "eklendi": "2026-10-15T16:43:55.000000Z",
+   "platform": [
+    "android",
+    "pc",
+    "web"
+   ]
+  },
+  {
+   "id": "2026-10-14-reddit-toplulugu",
+   "tarih": "2026-10-14",
+   "etiket": {
+    "tr": "Topluluk",
+    "en": "Community"
+   },
+   "baslik": {
+    "tr": "Reddit topluluğumuz açıldı",
+    "en": "Join our Reddit community"
+   },
+   "ozet": {
+    "tr": "r/ReBirthGame'de hata bildirin, öneride bulunun, stratejilerinizi paylaşın. Güncelleme notlarını ilk orada duyuruyoruz.",
+    "en": "Report bugs, suggest ideas and share your strategies on r/ReBirthGame. Patch notes land there first."
+   },
+   "metin": {
+    "tr": [
+     "ReBirth'ün resmî topluluğu r/ReBirthGame açıldı. Her mesajı okuyoruz.",
+     "• Hata bildirimleri ve öneriler",
+     "• Strateji ve harekât paylaşımları",
+     "• Güncelleme notları ve yaklaşan etkinlikler"
+    ],
+    "en": [
+     "ReBirth's official community, r/ReBirthGame, is open. We read every post.",
+     "• Bug reports and suggestions",
+     "• Strategy and campaign stories",
+     "• Patch notes and upcoming events"
+    ]
+   },
+   "baglanti": "https://www.reddit.com/r/ReBirthGame/",
+   "gorsel": "assets/img/haber/2026-10-14-reddit-toplulugu-11129e.jpg",
+   "eklendi": "2026-10-15T16:43:54.000000Z"
+  }
+ ],
+ "guncellemeler": [
+  {
+   "id": "2026-10-14-surum-2-0-5",
+   "tarih": "2026-10-14",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update"
+   },
+   "surum": "2.0.5",
+   "baslik": {
+    "tr": "Sürüm 2.0.5 yayında",
+    "en": "Version 2.0.5 is out"
+   },
+   "ozet": {
+    "tr": "Yeni harekât ekranı, ilk açılışta rehberli eğitim ve isyancı saldırılarını haritada gösteren uyarı.",
+    "en": "A new campaign screen, a guided tutorial on first launch and alerts that point you straight to insurgent attacks."
+   },
+   "metin": {
+    "tr": [
+     "• Hızlı başla: tek dokunuşla üç haritadan birinde harekâta başlayın",
+     "• Özel harekât: senaryo, doktrin ve zorluğu siz seçin",
+     "• Eğitim harekâtı: oyunu rehberli turla adım adım öğrenin; yeni oyuncular doğrudan eğitimle başlar",
+     "• Saldırı uyarısı: saldırı ekran dışındaysa kenarda bölgeyi gösteren kırmızı ok belirir, dokununca kamera oraya gider; bölge haritada kırmızı yanıp söner",
+     "• Harita katmanları daha belirgin"
+    ],
+    "en": [
+     "• Quick start: begin a campaign on any of the three maps with a single tap",
+     "• Custom campaign: pick the scenario, doctrine and difficulty yourself",
+     "• Training campaign: learn the game step by step with the guided tour; new players start right there",
+     "• Attack alerts: when an attack happens off screen, a red arrow on the edge points to it and takes the camera there; the district flashes red on the map",
+     "• Clearer map layers"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-14-surum-2-0-5-24319e.jpg",
+   "eklendi": "2026-10-15T16:43:53.000000Z"
+  },
+  {
+   "id": "2026-10-14-surum-2-0-4",
+   "tarih": "2026-10-14",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update"
+   },
+   "surum": "2.0.4",
+   "baslik": {
+    "tr": "Sürüm 2.0.4: arayüz ölçeği",
+    "en": "Version 2.0.4: interface scale"
+   },
+   "ozet": {
+    "tr": "Arayüzü %85 ile %130 arasında büyütüp küçültün. Rehberli tur kaldığı yerden sürer, bazı telefonlardaki açılış çökmesi giderildi.",
+    "en": "Scale the interface anywhere from 85% to 130%. The guided tour now resumes where you left off, and a launch crash on some phones is fixed."
+   },
+   "metin": {
+    "tr": [
+     "• Ayarlar → Arayüz ölçeği: her pencere her ekrana sığar",
+     "• Rehberli tur yarıda kalırsa kaldığı bölümden devam eder",
+     "• Ayarlar'dan web sitesi, gizlilik politikası ve destek sayfası",
+     "• Bazı Oppo ve Adreno 610 grafikli telefonlarda açılışta kapanma düzeltildi",
+     "• Performans iyileştirmeleri"
+    ],
+    "en": [
+     "• Settings → Interface scale: every window fits every screen",
+     "• If you leave the guided tour halfway, it picks up from the same chapter",
+     "• Website, privacy policy and support links in Settings",
+     "• Fixed a launch crash on some Oppo phones and Adreno 610 devices",
+     "• Performance improvements"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-14-surum-2-0-4-34e962.jpg",
+   "eklendi": "2026-10-15T16:43:52.000000Z"
+  },
+  {
+   "id": "2026-10-13-surum-2-0-3",
+   "tarih": "2026-10-13",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update"
+   },
+   "surum": "2.0.3",
+   "baslik": {
+    "tr": "Sürüm 2.0.3: hava harekâtı sinematiği",
+    "en": "Version 2.0.3: air strike cinematics"
+   },
+   "ozet": {
+    "tr": "Hava vuruşlarında kamera jeti izliyor ve patlamayı yakından gösteriyor. Kriz Masası düzeltmeleri ve daha akıcı oyun.",
+    "en": "During air strikes the camera follows your jet and watches the impact up close. Plus Crisis Desk fixes and smoother play."
+   },
+   "metin": {
+    "tr": [
+     "• Jet üsten hedefe uçar ve füzeyi atar; kamera patlamayı hedefin üstünden izler",
+     "• İlk dokunuşta kontrol hemen size döner; Ayarlar → Hava harekâtı kamerası ile kapatılabilir",
+     "• Kriz Masası'nda yeniden başlatma ve pencere düzeltmeleri",
+     "• Uzun harekâtlarda daha akıcı kare hızı"
+    ],
+    "en": [
+     "• Your jet flies from the base to the target and fires; the camera watches the blast from above the target",
+     "• The first tap hands control straight back to you; turn it off in Settings → Air strike camera",
+     "• Crisis Desk restart and window fixes",
+     "• Smoother frame rate in long campaigns"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-13-surum-2-0-3-d1ce7a.jpg",
+   "eklendi": "2026-10-15T16:43:51.000000Z"
+  }
+ ]
+}
