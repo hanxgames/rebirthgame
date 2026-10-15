@@ -20,8 +20,10 @@ taslak.json (TR ve EN zorunlu; oyunun diğer dilleri İngilizcesini gösterir):
     "ozet":   {"tr": "...", "en": "..."},        # oyundaki kartta görünür (2-3 satır)
     "metin":  {"tr": ["paragraf", "• madde"], "en": [...]},   # haberler.html'de; "• " ile başlayan satır madde olur
     "baglanti": "https://...",                   # isteğe bağlı: "Detayları gör" bu adresi açar (yoksa haberler.html#<id>)
-    "platform": ["android", "pc", "web"]         # isteğe bağlı: oyunda yalnız bu platformlarda (android|ios|pc|web) görünür;
-  }                                              #   başka mağazaya satış bağlantısı veren haberi iOS'a koyma (App Store 3.1.1)
+    "platform": ["android", "pc", "web"],        # isteğe bağlı: oyunda yalnız bu platformlarda (android|ios|pc|web) görünür;
+                                                 #   başka mağazaya satış bağlantısı veren haberi iOS'a koyma (App Store 3.1.1)
+    "form": "moderator"                          # isteğe bağlı: haberler.html'de haberin altına başvuru formu (js/basvuru.js;
+  }                                              #   site bir şey saklamaz, oyuncunun e-posta uygulamasını hazır mesajla açar)
 Görsel her biçimde olabilir: 16:9 kırpılır, 640x360 JPEG'e çevrilir (Pillow). Ardından siteyi yayınla (git push):
 oyun ana menü her açıldığında ve açıkken 5 dakikada bir akışı yeniden okur.
 """
@@ -40,6 +42,7 @@ TURLER = {"haber": "haberler", "guncelleme": "guncellemeler"}
 EN_COK = 5
 BOY = (640, 360)
 DILLER = ("tr", "en")
+FORMLAR = ("moderator",)   # js/basvuru.js'in bildiği başvuru formları
 
 
 def oku() -> dict:
@@ -108,6 +111,8 @@ def denetle_kayit(k: dict) -> list:
     b = k.get("baglanti", "")
     if b and not str(b).startswith("https://"):
         hata.append("baglanti https olmalı")
+    if k.get("form") is not None and k.get("form") not in FORMLAR:
+        hata.append("form: " + " | ".join(FORMLAR))
     pl = k.get("platform")
     if pl is not None and (not isinstance(pl, list) or not pl or any(x not in ("android", "ios", "pc", "web") for x in pl)):
         hata.append("platform: android | ios | pc | web listesi")
@@ -151,7 +156,7 @@ def ekle(tur: str, taslak_yol: str, gorsel_yol: str) -> None:
         if any(k["id"] == kimlik for k in akis.get(liste, [])):
             sys.exit("bu kimlik zaten var: %s (önce sil ya da 'kisa' ver)" % kimlik)
     kayit = {"id": kimlik, "tarih": tarih}
-    for alan in ("etiket", "surum", "baslik", "ozet", "metin", "baglanti", "platform"):
+    for alan in ("etiket", "surum", "baslik", "ozet", "metin", "baglanti", "platform", "form"):
         if t.get(alan):
             kayit[alan] = t[alan]
     kayit["gorsel"] = gorsel_hazirla(gorsel_yol, kimlik)
@@ -206,6 +211,8 @@ def denetle() -> None:
 
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):   # Türkçe Windows konsolu (cp1254) "→" yazamıyor
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     a = sys.argv[1:]
     if len(a) == 4 and a[0] == "ekle":
         ekle(a[1], a[2], a[3])

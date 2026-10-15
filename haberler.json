@@ -1,8 +1,45 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-15T18:46:44Z",
+ "guncelleme": "2026-10-15T19:16:07Z",
  "haberler": [
+  {
+   "id": "2026-10-15-moderator-araniyor",
+   "tarih": "2026-10-15",
+   "etiket": {
+    "tr": "İlan",
+    "en": "Join us"
+   },
+   "baslik": {
+    "tr": "Topluluk moderatörleri arıyoruz",
+    "en": "We're looking for community moderators"
+   },
+   "ozet": {
+    "tr": "ReBirth için bir Reddit topluluğu kuracak, yönetecek ve moderatörlüğünü yapacak oyuncular arıyoruz. Başvuru formu haberin detayında.",
+    "en": "We're looking for players to start, run and moderate a Reddit community for ReBirth. The application form is in the full post."
+   },
+   "metin": {
+    "tr": [
+     "ReBirth oyuncularının hata bildirebileceği, strateji paylaşabileceği ve güncellemeleri konuşabileceği bir Reddit topluluğu kurmak istiyoruz. Bu topluluğu oyunu bilen ve seven oyuncuların yönetmesini istiyoruz.",
+     "• Topluluğu kurmak; kuralları, etiketleri ve sabit gönderileri düzenlemek",
+     "• Gönderileri ve yorumları düzenli takip etmek, spam ve kural dışı içerikleri kaldırmak",
+     "• Hata bildirimlerini ve önerileri derleyip bize iletmek",
+     "Aradığımız: bir süredir kullandığınız, temiz geçmişli bir Reddit hesabı; haftada birkaç saat ayırabilmek; oyuncularla sakin ve saygılı iletişim; 18 yaşından büyük olmak. Daha önce moderatörlük yapmış olmanız artı, şart değil.",
+     "Başvurmak için aşağıdaki formu doldurun. \"Başvuruyu gönder\" e-posta uygulamanızı hazır bir mesajla açar; göndermeniz yeterli. Başvuruları tek tek okuyup e-postayla dönüyoruz."
+    ],
+    "en": [
+     "We want to start a Reddit community where ReBirth players can report bugs, share strategies and talk about updates, and we'd like it to be run by players who know and love the game.",
+     "• Set up the community: rules, post flairs and pinned posts",
+     "• Keep an eye on posts and comments, and remove spam and rule-breaking content",
+     "• Gather bug reports and suggestions and pass them on to us",
+     "What we're looking for: a Reddit account you've used for a while with a clean history, a few hours a week, calm and respectful communication with players, and being 18 or older. Moderation experience is a plus, not a requirement.",
+     "To apply, fill in the form below. \"Send application\" opens your email app with a ready-made message, so all you need to do is send it. We read every application and reply by email."
+    ]
+   },
+   "form": "moderator",
+   "gorsel": "assets/img/haber/2026-10-15-moderator-araniyor-bc71d7.jpg",
+   "eklendi": "2026-10-15T19:16:07.988440Z"
+  },
   {
    "id": "2026-10-15-kara-kolera",
    "tarih": "2026-10-15",

@@ -1,5 +1,6 @@
 /* ReBirth — haberler.html: haberler.json akışını çizer (oyunun ana menüsü de aynı dosyayı okur; ekleme: tools/haber_ekle.py).
-   Dil doc.js'ten gelir (html lang); dil düğmesi değişince yeniden çizilir. #<kimlik> ile gelinirse o kayıt açılır ve vurgulanır. */
+   Dil doc.js'ten gelir (html lang); dil düğmesi değişince yeniden çizilir. #<kimlik> ile gelinirse o kayıt açılır ve vurgulanır.
+   Kayıtta "form" varsa altına başvuru formu kurulur (js/basvuru.js). */
 (function () {
   "use strict";
   var AYLAR = {
@@ -67,6 +68,11 @@
         a.target = "_blank";
         a.rel = "noopener";
         govde.appendChild(a);
+      }
+      if (k.form && window.RBBasvuru) {   // başvuru formu (js/basvuru.js); haberin kendisine gelindiyse açık
+        var fk = el("div", "apl");
+        govde.appendChild(fk);
+        window.RBBasvuru.kur(fk, k.form, dil(), decodeURIComponent((location.hash || "").slice(1)) === k.id);
       }
       art.appendChild(govde);
       liste.appendChild(art);

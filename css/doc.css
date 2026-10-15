@@ -89,3 +89,35 @@ a:hover { color: var(--accent-h); }
 .news-body p { margin: 6px 0; }
 .news-body ul { margin: 6px 0; }
 .news-btn { margin-top: 10px; padding: 10px 16px; font-size: 13px; }
+
+/* haberdeki başvuru formu (js/basvuru.js): e-posta uygulamasını hazır mesajla açar */
+.apl { margin-top: 12px; }
+.apl-form { margin-top: 14px; padding: 18px; border-radius: 8px; background: var(--bg); border: 1px solid var(--line2); }
+.apl-title { margin: 0 0 4px !important; }
+.apl-note { color: var(--muted) !important; font-size: 14px; margin: 0 0 14px !important; }
+.apl-after { margin: 12px 0 0 !important; }
+.apl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; align-items: end; }
+@media (max-width: 620px) { .apl-grid { grid-template-columns: 1fr; } }
+.apl-field { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.apl-wide { grid-column: 1 / -1; margin-top: 12px; }
+.apl-grid .apl-wide { margin-top: 0; }
+.apl-label { font-family: var(--f-caps); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; color: var(--cream2); }
+.apl-form input[type=text], .apl-form input[type=tel], .apl-form input[type=number], .apl-form select, .apl-form textarea {
+  width: 100%; font: inherit; font-size: 16px; color: var(--text); background: var(--bg2); border: 1px solid var(--line2);
+  border-radius: var(--radius); padding: 10px 12px; }
+.apl-form textarea { resize: vertical; min-height: 120px; line-height: 1.5; }
+.apl-form select { appearance: none; -webkit-appearance: none; padding-right: 34px; cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, var(--accent) 50%), linear-gradient(135deg, var(--accent) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }
+.apl-form select option { background: var(--bg2); color: var(--text); }
+.apl-form input:focus, .apl-form select:focus, .apl-form textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(241,173,42,.18); }
+.apl-form input:user-invalid, .apl-form select:user-invalid, .apl-form textarea:user-invalid { border-color: var(--bad); }
+.apl-form ::placeholder { color: rgba(168,160,145,.7); }
+.apl-check { display: flex; align-items: center; gap: 10px; margin: 14px 0 0; color: var(--cream2); cursor: pointer; }
+.apl-check input { width: 20px; height: 20px; accent-color: var(--accent); flex: none; }
+.apl-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 16px; }
+.apl-send { border: 0; cursor: pointer; }
+.apl-copy { background: none; border: 1px solid var(--line2); color: var(--cream2); border-radius: var(--radius); padding: 12px 16px; cursor: pointer;
+  font-family: var(--f-caps); font-weight: 700; text-transform: uppercase; letter-spacing: .1em; font-size: 14px; }
+.apl-copy:hover { border-color: var(--accent); color: var(--accent); }
+.apl-open { border: 0; cursor: pointer; }
