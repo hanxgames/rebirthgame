@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-15T17:45:01Z",
+ "guncelleme": "2026-10-15T18:46:44Z",
  "haberler": [
   {
    "id": "2026-10-15-kara-kolera",
@@ -78,39 +78,6 @@
     "pc",
     "web"
    ]
-  },
-  {
-   "id": "2026-10-14-reddit-toplulugu",
-   "tarih": "2026-10-14",
-   "etiket": {
-    "tr": "Topluluk",
-    "en": "Community"
-   },
-   "baslik": {
-    "tr": "Reddit topluluğumuz açıldı",
-    "en": "Join our Reddit community"
-   },
-   "ozet": {
-    "tr": "r/ReBirthGame'de hata bildirin, öneride bulunun, stratejilerinizi paylaşın. Güncelleme notlarını ilk orada duyuruyoruz.",
-    "en": "Report bugs, suggest ideas and share your strategies on r/ReBirthGame. Patch notes land there first."
-   },
-   "metin": {
-    "tr": [
-     "ReBirth'ün resmî topluluğu r/ReBirthGame açıldı. Her mesajı okuyoruz.",
-     "• Hata bildirimleri ve öneriler",
-     "• Strateji ve harekât paylaşımları",
-     "• Güncelleme notları ve yaklaşan etkinlikler"
-    ],
-    "en": [
-     "ReBirth's official community, r/ReBirthGame, is open. We read every post.",
-     "• Bug reports and suggestions",
-     "• Strategy and campaign stories",
-     "• Patch notes and upcoming events"
-    ]
-   },
-   "baglanti": "https://www.reddit.com/r/ReBirthGame/",
-   "gorsel": "assets/img/haber/2026-10-14-reddit-toplulugu-11129e.jpg",
-   "eklendi": "2026-10-15T16:43:54.000000Z"
   }
  ],
  "guncellemeler": [
