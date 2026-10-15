@@ -11,6 +11,17 @@
   var akis = null;
   var tur = "haberler";
   var liste = document.getElementById("newsList");
+  var yukleniyor = false;
+
+  // sayfa önbellekten eski hâliyle geldiyse (Pages 10 dk önbellekler; akış ise her seferinde taze) form betiğini sonradan yükle
+  function formBetigi() {
+    if (yukleniyor) return;
+    yukleniyor = true;
+    var s = document.createElement("script");
+    s.src = "js/basvuru.js?v=" + encodeURIComponent((akis && akis.guncelleme) || Date.now());
+    s.onload = ciz;
+    document.head.appendChild(s);
+  }
 
   function dil() { return document.documentElement.lang === "tr" ? "tr" : "en"; }
   function metin(d) { if (!d) return ""; return d[dil()] || d.en || d.tr || ""; }
@@ -73,6 +84,8 @@
         var fk = el("div", "apl");
         govde.appendChild(fk);
         window.RBBasvuru.kur(fk, k.form, dil(), decodeURIComponent((location.hash || "").slice(1)) === k.id);
+      } else if (k.form) {
+        formBetigi();
       }
       art.appendChild(govde);
       liste.appendChild(art);
