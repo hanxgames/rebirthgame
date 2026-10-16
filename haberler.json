@@ -1,8 +1,50 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-15T19:16:07Z",
+ "guncelleme": "2026-10-16T05:18:47Z",
  "haberler": [
+  {
+   "id": "2026-10-16-icerik-ureticileri",
+   "tarih": "2026-10-16",
+   "etiket": {
+    "tr": "İş birliği",
+    "en": "Collab"
+   },
+   "baslik": {
+    "tr": "İçerik üreticileri arıyoruz",
+    "en": "Calling all content creators"
+   },
+   "ozet": {
+    "tr": "ReBirth hakkında video, yayın ya da gönderi hazırlamak ister misiniz? İçerik üreticilerine ücretsiz Premium ve tüm etkinliklere erken erişim veriyoruz. Başvuru: hanxdestek@gmail.com",
+    "en": "Want to make videos, streams or posts about ReBirth? Creators get free Premium and early access to every event. Apply at hanxdestek@gmail.com"
+   },
+   "metin": {
+    "tr": [
+     "YouTube, TikTok, Instagram, Twitch ya da başka bir platformda ReBirth hakkında içerik üretmek istiyorsanız sizinle çalışmak istiyoruz. Oynanış videosu, canlı yayın, rehber, kısa video ya da strateji paylaşımı fark etmez; büyük bir kitleniz olması da şart değil.",
+     "İçerik üreticilerimize sunduklarımız:",
+     "• Ücretsiz Premium: bütün haritalar, Kriz Masası ve Hava Kuvvetleri açık, reklam yok",
+     "• Kara Kolera gibi her etkinliğe ve yeni güncellemelere herkesten önce erişim",
+     "• Geliştiriciyle doğrudan iletişim; tanıtım görselleri ve fragmanlar",
+     "Başvurmak için hanxdestek@gmail.com adresine bir e-posta gönderin. E-postanızda şunlar olsun:",
+     "• Sosyal medya hesaplarınızın bağlantıları",
+     "• Nasıl bir içerik üretmek istediğiniz (örneğin oynanış serisi, kısa videolar, canlı yayın, rehber)",
+     "Her başvuruyu okuyup e-postayla dönüyoruz."
+    ],
+    "en": [
+     "If you'd like to make content about ReBirth on YouTube, TikTok, Instagram, Twitch or anywhere else, we'd love to work with you. Gameplay videos, streams, guides, short clips or strategy breakdowns are all welcome, and you don't need a big audience.",
+     "What creators get:",
+     "• Free Premium: every map, the Crisis Desk and the Air Force unlocked, no ads",
+     "• Early access to every event, like Black Cholera, and to new updates before anyone else",
+     "• A direct line to the developer, plus promo art and trailers",
+     "To apply, send an email to hanxdestek@gmail.com with:",
+     "• Links to your social media channels",
+     "• What kind of content you'd like to make (for example a gameplay series, short videos, streams or guides)",
+     "We read every application and reply by email."
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-16-icerik-ureticileri-3cb694.jpg",
+   "eklendi": "2026-10-16T05:18:47.590159Z"
+  },
   {
    "id": "2026-10-15-moderator-araniyor",
    "tarih": "2026-10-15",
