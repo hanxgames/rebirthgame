@@ -1,6 +1,6 @@
 # ReBirth — tanıtım sitesi
 
-**https://hanxgames.github.io/rebirthgame/**
+**https://rebirthgame.tr/**
 
 HanX Games'in 3D mobil strateji oyunu **ReBirth** için tanıtım sitesi: kaydırmalı giriş filmi, oyunun gerçek haritasıyla
 etkileşimli harekât haritası, felaket efektleri, oyun içi seslendirmeli telsiz, kriz masası kartları, gündüz/gece karşılaştırması,

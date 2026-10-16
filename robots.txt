@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /oyun.html
-Sitemap: https://hanxgames.github.io/rebirthgame/sitemap.xml
+Sitemap: https://rebirthgame.tr/sitemap.xml
