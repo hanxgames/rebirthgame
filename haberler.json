@@ -1,8 +1,50 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-16T05:18:47Z",
+ "guncelleme": "2026-10-17T21:24:50Z",
  "haberler": [
+  {
+   "id": "2026-10-18-kriz-masasi-2",
+   "tarih": "2026-10-18",
+   "etiket": {
+    "tr": "Yeni içerik",
+    "en": "New content"
+   },
+   "baslik": {
+    "tr": "Kriz Masası 2.0: yedi görev, yedi ayrı oyun",
+    "en": "Crisis Desk 2.0: seven missions, seven games"
+   },
+   "ozet": {
+    "tr": "Kriz Masası baştan yazıldı. Her görevin artık kendi masası, kendi kuralları ve haritada kendi 3B sahnesi var: barajı ayakta tut, salgının kaynağını bul, başkenti savun.",
+    "en": "The Crisis Desk has been rebuilt from scratch. Every mission now has its own desk, its own rules and its own 3D set pieces: save the dam, find the source of the outbreak, defend the capital."
+   },
+   "metin": {
+    "tr": [
+     "Kriz Masası eskiden asıl harekâtın süre sınırlı bir kopyasıydı: \"barajı 70 günde onar\" deniyordu ama çatlaklar için yapabileceğiniz bir şey yoktu, isyancılar da barajla ilgisi olmayan kasabalara saldırıyordu. 2.0.7 ile yedi görevin her biri kendi başına bir oyun oldu.",
+     "• Barajın Gölgesinde: çatlaklara harç basın, yağış tahminine bakarak savak kapaklarını açın; kapakları fazla açarsanız aşağıdaki kasaba sular altında kalır",
+     "• Kolera Salgını: sokak planındaki vakaları okuyun, pompalardan numune alın ve kirli pompayı kapatın; yanlış pompayı kapatırsanız bir mahalle susuz kalır",
+     "• Kuşatılmış Başkent: dört kapıyı on dalgaya karşı tutun; barikat kurun, mayın döşeyin, keşifle sıradaki dalganın hangi kapıya geleceğini öğrenin",
+     "• Seçime 60 Gün: her hafta kampanya kartı oynayın, canlı tartışmaya çıkın, son on günde polis ve gözlemcileri sandıklara yerleştirin",
+     "• Yardım Koridoru: yol ağında konvoy rotası çizin; gizli tuzaklar ve pusular İHA ya da muhbir ortaya çıkarana dek soru işareti olarak kalır",
+     "• Yılanın Başı: on iki olası yer, tek gerçek karargâh; muhbir ihbarları, telsiz kerterizleri ve İHA taramalarıyla adayları eleyin",
+     "• Kış Kapıda: soba, battaniye ve yakıt kasalarını çadırkentlere taşıyın, prefabrik üretimini sıraya koyun, ilk kar yağmadan herkesi barındırın",
+     "Her görev danışmanın kısa öğreticisiyle başlıyor ve haritada kendi 3B sahnesi var: çatlayan baraj, kuşatma halkası, karla kaplanan yollar. Kriz Masası Premium'a özel; bilgisayar sürümünde baştan açık."
+    ],
+    "en": [
+     "The Crisis Desk used to be the main campaign with a timer bolted on: \"repair the dam in 70 days\", while there was nothing to actually do about the cracks and insurgents raided towns that had nothing to do with the dam. In 2.0.7 every one of the seven missions is its own game.",
+     "• In the Shadow of the Dam: inject grout into the cracks and open the spillway gates according to the rain forecast; open too many and the town downstream floods",
+     "• Cholera Outbreak: read the cases on the street plan, sample the pumps and close the contaminated one; close the wrong pump and a neighbourhood goes without water",
+     "• Capital Under Siege: hold four gates against ten waves; build barricades, lay mines and scout ahead to learn which gate the next wave will hit",
+     "• 60 Days to the Election: play a campaign card every week, face live TV debates and place police and observer teams at the polling stations in the last ten days",
+     "• Aid Corridor: draw convoy routes on the road network; hidden traps and ambushes stay as question marks until drones or informants reveal them",
+     "• Head of the Snake: twelve candidate sites, one real headquarters; narrow them down with informant tips, radio bearings and drone scans",
+     "• Winter Draws Near: move stoves, blankets and fuel crates to the tent camps, queue prefab production and get every family sheltered before the first snowfall",
+     "Every mission opens with a short tutorial from your advisor and has its own 3D set pieces on the map: a cracking dam, a siege ring, snow-covered roads. The Crisis Desk is part of Premium on mobile and fully included in the PC version."
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-18-kriz-masasi-2-86ad9b.jpg",
+   "eklendi": "2026-10-17T21:23:47.639662Z"
+  },
   {
    "id": "2026-10-16-icerik-ureticileri",
    "tarih": "2026-10-16",
@@ -160,6 +202,47 @@
   }
  ],
  "guncellemeler": [
+  {
+   "id": "2026-10-17-surum-2-0-7",
+   "tarih": "2026-10-17",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update"
+   },
+   "surum": "2.0.7",
+   "baslik": {
+    "tr": "Sürüm 2.0.7: Kriz Masası 2.0",
+    "en": "Version 2.0.7: Crisis Desk 2.0"
+   },
+   "ozet": {
+    "tr": "Kriz Masası'nın yedi görevi artık yedi ayrı oyun. Binalara göre gerçekçi birim boyları, temizlenen haritalar ve yangınların altında doğal is izleri.",
+    "en": "The seven Crisis Desk missions are now seven separate games. Units sized to buildings, cleaner maps and natural scorch marks under fires."
+   },
+   "metin": {
+    "tr": [
+     "• Kriz Masası yeniden tasarlandı: her görevin kendi masası (mini oyunu), kendi kuralları, kararları ve haritada kendi 3B sahnesi var. Görevle ilgisi olmayan sistemler kapalı, her görev danışmanın kısa öğreticisiyle başlıyor (Premium)",
+     "• Barajın çatlaklarına harç bas, kirli pompayı bul, başkentin dört kapısını tut, seçim kampanyası yönet, konvoy rotası çiz, isyancı karargâhını ipuçlarından bul, ilk kardan önce herkesi barındır",
+     "• Araçlar, askerler ve zombiler binalara göre gerçekçi boyda; zombi artık kamp duvarından uzun değil",
+     "• Haritalar temizlendi: havada kalan ya da araziye gömülen yol uçları, iç içe geçmiş köprüler, evlerin üstüne düşen liman vinci ve yeni yapıların içinden çıkan ağaçlar düzeltildi",
+     "• Yangınların altındaki siyah daireler yerine doğal is izleri",
+     "• 2.300'den fazla yeni metin İngilizce, İspanyolca, Portekizce, Almanca ve Fransızcaya çevrildi",
+     "• Kara Kolera etkinliği 31 Ekim'de başlıyor (Premium)",
+     "• Performans ve kararlılık iyileştirmeleri"
+    ],
+    "en": [
+     "• The Crisis Desk has been redesigned: every mission has its own desk (a mini-game), its own rules and decisions, and its own 3D set pieces on the map. Systems that have nothing to do with the mission are switched off, and every mission opens with a short tutorial from your advisor (Premium)",
+     "• Grout a cracking dam, find the contaminated pump, hold the capital's four gates, run an election campaign, plan convoy routes, track down the rebel hideout from clues and shelter every family before the first snow",
+     "• Vehicles, soldiers and zombies are now realistically sized next to buildings; a zombie is no longer taller than the camp wall",
+     "• Cleaner maps: no more floating or buried road ends, overlapping bridges, a port crane sitting on top of houses or trees growing through new buildings",
+     "• Natural scorch marks instead of dark circles under fires",
+     "• More than 2,300 new lines translated into English, Spanish, Portuguese, German and French",
+     "• The Black Cholera event begins October 31 (Premium)",
+     "• Performance and stability improvements"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-17-surum-2-0-7-e5d919.jpg",
+   "eklendi": "2026-10-17T21:24:50.879848Z"
+  },
   {
    "id": "2026-10-15-surum-2-0-6",
    "tarih": "2026-10-15",
