@@ -38,6 +38,49 @@
     return e;
   }
 
+  // Anket (oyun 2.0.8+): oy oyunda verilir (Android, oyuncu başına tek oy); site sayıları Realtime Database'den canlı okur.
+  var DB = "https://dead-mans-deck-global-default-rtdb.europe-west1.firebasedatabase.app";
+  var ANKET_YAZI = {
+    tr: { oy: "Oy vermek için oyunu açın: ana menüdeki Haberler kartında şıklara dokunun (Android, 2.0.8 ve sonrası).", toplam: " oy", bitti: "Anket sona erdi.", yok: "Henüz oy yok." },
+    en: { oy: "Vote in the game: tap an option on the News card in the main menu (Android, version 2.0.8 or later).", toplam: " votes", bitti: "This poll has closed.", yok: "No votes yet." }
+  };
+  function anketKutusu(an) {
+    var y = ANKET_YAZI[dil()];
+    var kutu = el("div", "poll");
+    kutu.appendChild(el("h3", "poll-q", metin(an.soru)));
+    var satirlar = {};
+    an.secenekler.forEach(function (x) {
+      var s = el("div", "poll-opt");
+      var ust = el("div", "poll-top");
+      ust.appendChild(el("span", "poll-name", metin(x.metin)));
+      var yuzde = el("span", "poll-pct", "");
+      ust.appendChild(yuzde);
+      s.appendChild(ust);
+      if (x.aciklama) s.appendChild(el("div", "poll-desc", metin(x.aciklama)));
+      var bar = el("div", "poll-bar");
+      var dolgu = el("i");
+      bar.appendChild(dolgu);
+      s.appendChild(bar);
+      kutu.appendChild(s);
+      satirlar[x.id] = { yuzde: yuzde, dolgu: dolgu };
+    });
+    var bitti = an.bitis && new Date().toISOString().slice(0, 10) > an.bitis;
+    var alt = el("p", "poll-note", bitti ? y.bitti : y.oy);
+    kutu.appendChild(alt);
+    fetch(DB + "/anket/" + an.id + "/sayi.json").then(function (r) { return r.json(); }).then(function (d) {
+      d = d || {};
+      var top = 0;
+      an.secenekler.forEach(function (x) { top += +(d[x.id] || 0); });
+      an.secenekler.forEach(function (x) {
+        var n = +(d[x.id] || 0), p = top ? Math.round(100 * n / top) : 0;
+        satirlar[x.id].yuzde.textContent = top ? p + "%" : "";
+        satirlar[x.id].dolgu.style.width = p + "%";
+      });
+      alt.textContent = (bitti ? y.bitti + " " : y.oy + " ") + (top ? "(" + top + y.toplam + ")" : y.yok);
+    }).catch(function () {});
+    return kutu;
+  }
+
   function ciz() {
     if (!akis) return;
     Array.prototype.forEach.call(document.querySelectorAll(".news-tab"), function (b) {
@@ -80,6 +123,7 @@
         a.rel = "noopener";
         govde.appendChild(a);
       }
+      if (k.anket && k.anket.secenekler) govde.appendChild(anketKutusu(k.anket));
       if (k.form && window.RBBasvuru) {   // başvuru düğmesi (js/basvuru.js → Google Formlar)
         var fk = el("div", "apl");
         govde.appendChild(fk);

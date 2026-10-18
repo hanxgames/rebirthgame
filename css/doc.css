@@ -93,3 +93,14 @@ a:hover { color: var(--accent-h); }
 /* haberdeki başvuru düğmesi (js/basvuru.js): Google Formlar'daki formu açar */
 .apl { margin-top: 12px; }
 .apl-note { color: var(--muted) !important; font-size: 13px; margin: 6px 0 0 !important; }
+
+/* haber anketi (oyun 2.0.8+): şıklar ve canlı sonuç çubukları */
+.poll { margin: 14px 0 6px; padding: 14px 16px; border: 1px solid rgba(241,173,42,.45); border-radius: 6px; background: rgba(255,255,255,.03); }
+.poll-q { margin: 0 0 10px; font-size: 1.05rem; }
+.poll-opt { margin: 10px 0; }
+.poll-top { display: flex; justify-content: space-between; gap: 12px; font-weight: 600; }
+.poll-pct { color: #f1ad2a; font-variant-numeric: tabular-nums; }
+.poll-desc { font-size: .9rem; opacity: .75; margin-top: 2px; }
+.poll-bar { height: 7px; border-radius: 4px; background: rgba(255,255,255,.08); margin-top: 6px; overflow: hidden; }
+.poll-bar i { display: block; height: 100%; width: 0; background: #f1ad2a; transition: width .6s ease; }
+.poll-note { font-size: .88rem; opacity: .8; margin: 10px 0 0; }

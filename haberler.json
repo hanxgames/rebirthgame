@@ -1,8 +1,93 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-18T12:05:16Z",
+ "guncelleme": "2026-10-18T12:31:57Z",
  "haberler": [
+  {
+   "id": "2026-10-18-anket-sonraki-mod",
+   "tarih": "2026-10-18",
+   "etiket": {
+    "tr": "Anket",
+    "en": "Poll"
+   },
+   "baslik": {
+    "tr": "Sıradaki oyun modunu sen seç",
+    "en": "You choose the next game mode"
+   },
+   "ozet": {
+    "tr": "İsyancı Modu mu, Sefer Modu mu, yeni doğal afetler mi, yeni haritalar mı? Oyunu bu kartın üzerinden ver, sonuçları hemen gör (sürüm 2.0.8 ve sonrası).",
+    "en": "Insurgent Mode, Campaign Mode, new natural disasters or new maps? Vote right on this card and see the results instantly (version 2.0.8 or later)."
+   },
+   "metin": {
+    "tr": [
+     "Sıradaki büyük güncellemede ne olacağını sizinle birlikte seçmek istiyoruz. Dört seçenek var:",
+     "• İsyancı Modu: bu sefer öbür taraf sizsiniz. Gölge Cephesi'ni yönetin, şehirlere sızın, halk desteği toplayın, sabotaj yapın ve dışarıdan destek bulun.",
+     "• Sefer Modu: tek bir vilayet yerine uzun soluklu bir ülke yönetin. Vilayetleri sırayla ayağa kaldırın, komşu ülkelerle diplomasi yapın.",
+     "• Yeni Doğal Afetler: yeni felaketler ve onlara özgü tehditler, girişimler ve olaylar.",
+     "• Yeni Haritalar: yeni vilayetler, yeni coğrafyalar, yeni stratejiler.",
+     "Oy vermek için oyunun ana menüsündeki Haberler kartında bir şıkka dokunmanız yeterli (Android, sürüm 2.0.8 ve sonrası). Her oyuncunun bir oy hakkı var; sonuçlar oy verdikten hemen sonra görünür."
+    ],
+    "en": [
+     "We'd like to choose what comes in the next big update together with you. There are four options:",
+     "• Insurgent Mode: this time you're on the other side. Lead the Shadow Front, infiltrate the cities, win popular support, sabotage and find backing from abroad.",
+     "• Campaign Mode: rule a whole country over the long haul instead of a single province. Rebuild provinces one by one and deal with neighbouring countries.",
+     "• New Natural Disasters: new catastrophes with their own threats, initiatives and events.",
+     "• New Maps: new provinces, new landscapes, new strategies.",
+     "To vote, just tap an option on the News card in the game's main menu (Android, version 2.0.8 or later). Every player gets one vote, and the results show up right after you vote."
+    ]
+   },
+   "platform": [
+    "android"
+   ],
+   "anket": {
+    "id": "sonraki_mod",
+    "soru": {
+     "tr": "Sıradaki oyun modu ne olsun?",
+     "en": "What should the next game mode be?"
+    },
+    "secenekler": [
+     {
+      "id": "isyanci",
+      "metin": {
+       "tr": "İsyancı Modu",
+       "en": "Insurgent Mode"
+      },
+      "aciklama": {
+       "tr": "Gölge Cephesi'ni yönetip isyancıları kontrol edin",
+       "en": "Lead the Shadow Front and control the insurgents"
+      }
+     },
+     {
+      "id": "sefer",
+      "metin": {
+       "tr": "Sefer Modu",
+       "en": "Campaign Mode"
+      },
+      "aciklama": {
+       "tr": "Uzun soluklu bir ülkeyi yönetin",
+       "en": "Rule a whole country over the long haul"
+      }
+     },
+     {
+      "id": "afet",
+      "metin": {
+       "tr": "Yeni Doğal Afetler",
+       "en": "New Natural Disasters"
+      }
+     },
+     {
+      "id": "harita",
+      "metin": {
+       "tr": "Yeni Haritalar",
+       "en": "New Maps"
+      }
+     }
+    ],
+    "bitis": "2026-11-30"
+   },
+   "gorsel": "assets/img/haber/2026-10-18-anket-sonraki-mod-6f4c96.jpg",
+   "eklendi": "2026-10-18T12:31:57.686302Z"
+  },
   {
    "id": "2026-10-18-kriz-masasi-2",
    "tarih": "2026-10-18",

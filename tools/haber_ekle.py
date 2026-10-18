@@ -22,8 +22,17 @@ taslak.json (TR ve EN zorunlu; oyunun diğer dilleri İngilizcesini gösterir):
     "baglanti": "https://...",                   # isteğe bağlı: "Detayları gör" bu adresi açar (yoksa haberler.html#<id>)
     "platform": ["android", "pc", "web"],        # isteğe bağlı: oyunda yalnız bu platformlarda (android|ios|pc|web) görünür;
                                                  #   başka mağazaya satış bağlantısı veren haberi iOS'a koyma (App Store 3.1.1)
-    "form": "moderator"                          # isteğe bağlı: haberler.html'de haberin altına başvuru düğmesi (js/basvuru.js
-  }                                              #   FORMLAR: kimlik → Google Formlar bağlantısı; site bir şey saklamaz)
+    "form": "moderator",                         # isteğe bağlı: haberler.html'de haberin altına başvuru düğmesi (js/basvuru.js
+                                                 #   FORMLAR: kimlik → Google Formlar bağlantısı; site bir şey saklamaz)
+    "anket": {                                   # isteğe bağlı (oyun 2.0.8+): şıklar oyundaki kartta, tek dokunuşla oy (Android);
+      "id": "sonraki_mod",                       #   oylar Firebase Realtime Database anket/<id>/ (oyuncu başına tek oy, kurallar
+      "soru": {"tr": "...", "en": "..."},        #   ReBirth deposunda panel/database.rules.json); sayılar herkese açık, haberler.html
+      "secenekler": [                            #   canlı sonuçları gösterir. Kimlikler [a-z0-9_]{2,40}, 2–6 şık.
+        {"id": "isyanci", "metin": {"tr": "...", "en": "..."}, "aciklama": {"tr": "...", "en": "..."}}
+      ],
+      "bitis": "2026-11-30"                      #   isteğe bağlı: bu günden sonra yalnız sonuç gösterilir
+    }
+  }
 Görsel her biçimde olabilir: 16:9 kırpılır, 640x360 JPEG'e çevrilir (Pillow). Ardından siteyi yayınla (git push):
 oyun ana menü her açıldığında ve açıkken 5 dakikada bir akışı yeniden okur.
 """
@@ -113,6 +122,29 @@ def denetle_kayit(k: dict) -> list:
         hata.append("baglanti https olmalı")
     if k.get("form") is not None and k.get("form") not in FORMLAR:
         hata.append("form: " + " | ".join(FORMLAR))
+    an = k.get("anket")
+    if an is not None:
+        kim = r"[a-z0-9_]{2,40}"
+        sec = an.get("secenekler") if isinstance(an, dict) else None
+        if not isinstance(an, dict) or not re.fullmatch(kim, str(an.get("id", ""))):
+            hata.append("anket.id [a-z0-9_]{2,40}")
+        elif not isinstance(an.get("soru"), dict) or any(not str(an["soru"].get(d, "")).strip() for d in DILLER):
+            hata.append("anket.soru (tr + en)")
+        elif not isinstance(sec, list) or not 2 <= len(sec) <= 6:
+            hata.append("anket.secenekler: 2–6 şık")
+        else:
+            gorulen = set()
+            for x in sec:
+                if not isinstance(x, dict) or not re.fullmatch(kim, str(x.get("id", ""))) or x["id"] in gorulen \
+                        or not isinstance(x.get("metin"), dict) or any(not str(x["metin"].get(d, "")).strip() for d in DILLER):
+                    hata.append("anket şıkkı: id [a-z0-9_]{2,40} (benzersiz) + metin (tr + en)")
+                    break
+                gorulen.add(x["id"])
+        if isinstance(an, dict) and an.get("bitis"):
+            try:
+                datetime.date.fromisoformat(str(an["bitis"]))
+            except ValueError:
+                hata.append("anket.bitis (YYYY-AA-GG)")
     pl = k.get("platform")
     if pl is not None and (not isinstance(pl, list) or not pl or any(x not in ("android", "ios", "pc", "web") for x in pl)):
         hata.append("platform: android | ios | pc | web listesi")
@@ -156,7 +188,7 @@ def ekle(tur: str, taslak_yol: str, gorsel_yol: str) -> None:
         if any(k["id"] == kimlik for k in akis.get(liste, [])):
             sys.exit("bu kimlik zaten var: %s (önce sil ya da 'kisa' ver)" % kimlik)
     kayit = {"id": kimlik, "tarih": tarih}
-    for alan in ("etiket", "surum", "baslik", "ozet", "metin", "baglanti", "platform", "form"):
+    for alan in ("etiket", "surum", "baslik", "ozet", "metin", "baglanti", "platform", "form", "anket"):
         if t.get(alan):
             kayit[alan] = t[alan]
     kayit["gorsel"] = gorsel_hazirla(gorsel_yol, kimlik)
