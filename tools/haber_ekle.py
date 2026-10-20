@@ -10,7 +10,8 @@ görselleri kendi önbelleğinden siler).
   python tools/haber_ekle.py liste
   python tools/haber_ekle.py denetle                                  # şema, görseller, yetim dosyalar (siler)
 
-taslak.json (TR ve EN zorunlu; oyunun diğer dilleri İngilizcesini gösterir):
+taslak.json (TR ve EN zorunlu; baslik/ozet/etiket/metin'e isteğe bağlı başka dil anahtarları da eklenebilir: es, pt_BR, de, fr,
+id, ja, ko, zh_CN, zh_TW — oyun kendi dilindeki anahtarı gösterir, yoksa İngilizcesini; haberler.html yalnız tr/en gösterir):
   {
     "tarih": "2026-10-15",                       # yoksa bugün
     "kisa": "kara-kolera",                       # kimliğin sonu; yoksa İngilizce başlıktan
