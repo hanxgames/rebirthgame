@@ -37,6 +37,16 @@
     if (icerik != null) e.textContent = icerik;
     return e;
   }
+  // başlık CSS ile büyük harf olur; Türkçede Latin marka adları noktasız kalsın ("REDDİT", "REBİRTH" olmasın; oyunda Defs.tr_upper)
+  function baslikEl(s) {
+    var h = el("h2", "news-title");
+    String(s).split(/((?:r\/)?(?:ReBirth|Reddit)[A-Za-z]*)/).forEach(function (p, i) {
+      if (!p) return;
+      if (i % 2) { var b = el("span", null, p); b.lang = "en"; h.appendChild(b); }
+      else h.appendChild(document.createTextNode(p));
+    });
+    return h;
+  }
 
   // Anket (oyun 2.0.8+): oy oyunda verilir (Android, oyuncu başına tek oy); site sayıları Realtime Database'den canlı okur.
   var DB = "https://dead-mans-deck-global-default-rtdb.europe-west1.firebasedatabase.app";
@@ -103,7 +113,7 @@
       if (k.etiket) ust.appendChild(el("span", "news-tag", metin(k.etiket)));
       if (k.surum) ust.appendChild(el("span", "news-tag", "v" + k.surum));
       govde.appendChild(ust);
-      govde.appendChild(el("h2", "news-title", metin(k.baslik)));
+      govde.appendChild(baslikEl(metin(k.baslik)));
       govde.appendChild(el("p", "news-sum", metin(k.ozet)));
       var satirlar = (k.metin && (k.metin[dil()] || k.metin.en || k.metin.tr)) || [];
       var ul = null;

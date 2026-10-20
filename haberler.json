@@ -1,8 +1,74 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-20T07:35:39Z",
+ "guncelleme": "2026-10-20T17:06:38Z",
  "haberler": [
+  {
+   "id": "2026-10-20-reddit-rebirthsocial",
+   "tarih": "2026-10-20",
+   "etiket": {
+    "tr": "Topluluk",
+    "en": "Community",
+    "es": "Comunidad",
+    "pt_BR": "Comunidade",
+    "de": "Community",
+    "fr": "Communauté",
+    "id": "Komunitas",
+    "ja": "コミュニティ",
+    "ko": "커뮤니티",
+    "zh_CN": "社区",
+    "zh_TW": "社群"
+   },
+   "baslik": {
+    "tr": "Reddit topluluğumuza katıl",
+    "en": "Join our Reddit community: r/ReBirthSocial",
+    "es": "Únete a nuestra comunidad de Reddit: r/ReBirthSocial",
+    "pt_BR": "Participe da nossa comunidade no Reddit: r/ReBirthSocial",
+    "de": "Werde Teil unserer Reddit-Community: r/ReBirthSocial",
+    "fr": "Rejoignez notre communauté Reddit : r/ReBirthSocial",
+    "id": "Gabung komunitas Reddit kami: r/ReBirthSocial",
+    "ja": "Redditコミュニティに参加しよう：r/ReBirthSocial",
+    "ko": "Reddit 커뮤니티에 참여하세요: r/ReBirthSocial",
+    "zh_CN": "加入我们的 Reddit 社区：r/ReBirthSocial",
+    "zh_TW": "加入我們的 Reddit 社群：r/ReBirthSocial"
+   },
+   "ozet": {
+    "tr": "ReBirth'ün resmî Reddit topluluğu açık. Harekâtlarını ve taktiklerini paylaş, öneri ve hata bildir, güncelleme duyurularını ve anketleri ilk sen gör.",
+    "en": "ReBirth's official Reddit community is open. Share your campaigns and tactics, post ideas and bug reports, and be the first to see update news and polls.",
+    "es": "La comunidad oficial de ReBirth en Reddit ya está abierta. Comparte tus campañas y tácticas, publica ideas y errores, y sé el primero en ver novedades y encuestas.",
+    "pt_BR": "A comunidade oficial do ReBirth no Reddit está aberta. Compartilhe suas campanhas e táticas, envie ideias e bugs e veja primeiro as novidades e enquetes.",
+    "de": "Die offizielle ReBirth-Community auf Reddit ist eröffnet. Teile deine Feldzüge und Taktiken, poste Ideen und Fehlerberichte und erfahre als Erstes von Updates und Umfragen.",
+    "fr": "La communauté Reddit officielle de ReBirth est ouverte. Partagez vos campagnes et tactiques, proposez des idées, signalez des bugs et découvrez en premier les nouveautés et sondages.",
+    "id": "Komunitas Reddit resmi ReBirth sudah dibuka. Bagikan kampanye dan taktikmu, kirim ide dan laporan bug, dan jadilah yang pertama melihat kabar pembaruan dan polling.",
+    "ja": "ReBirth公式Redditコミュニティがオープン！作戦や戦術を共有したり、アイデアや不具合を投稿したり、アップデート情報やアンケートをいち早くチェックしよう。",
+    "ko": "ReBirth 공식 Reddit 커뮤니티가 열렸습니다. 작전과 전술을 공유하고, 아이디어와 버그를 제보하고, 업데이트 소식과 투표를 가장 먼저 확인하세요.",
+    "zh_CN": "ReBirth 官方 Reddit 社区现已开放。分享你的战役和战术，提出建议、反馈错误，第一时间了解更新消息和投票。",
+    "zh_TW": "ReBirth 官方 Reddit 社群現已開放。分享你的戰役和戰術，提出建議、回報錯誤，第一時間掌握更新消息和投票。"
+   },
+   "metin": {
+    "tr": [
+     "ReBirth oyuncuları artık Reddit'te bir arada: r/ReBirthSocial, oyunun resmî topluluğu.",
+     "• Harekâtlarından ekran görüntülerini, zor kazanılmış zaferlerini ve en çetin krizlerini paylaş",
+     "• Strateji ipuçları, harita taktikleri ve Kriz Masası çözümleri üzerine konuş",
+     "• Öneri ve hata bildirimlerini yaz; hata bildiriminde platformu, oyun sürümünü (ana menünün sağ üst köşesinde), cihazı, haritayı ve oyun gününü eklemeyi unutma",
+     "• Güncelleme notlarını, etkinlik duyurularını ve sıradaki içerik anketlerini orada da takip et",
+     "Türkçe ve İngilizce gönderilerin hepsi hoş karşılanır. Lütfen topluluk kurallarına uy ve birbirimize saygılı olalım.",
+     "Katılmak için bağlantıya dokun ya da Reddit'te r/ReBirthSocial'ı ara. Orada görüşmek üzere!"
+    ],
+    "en": [
+     "ReBirth players now have a home on Reddit: r/ReBirthSocial, the game's official community.",
+     "• Share screenshots of your campaigns, hard-won victories and toughest crises",
+     "• Talk strategy tips, map tactics and Crisis Desk solutions",
+     "• Post ideas and bug reports; for bugs, please include your platform, game version (top-right corner of the main menu), device, map and in-game day",
+     "• Follow update notes, event announcements and polls about upcoming content there too",
+     "Posts in English and Turkish are all welcome. Please follow the community rules and be respectful to each other.",
+     "Tap the link to join, or search for r/ReBirthSocial on Reddit. See you there!"
+    ]
+   },
+   "baglanti": "https://www.reddit.com/r/ReBirthSocial/",
+   "gorsel": "assets/img/haber/2026-10-20-reddit-rebirthsocial-d97970.jpg",
+   "eklendi": "2026-10-20T17:06:38.732797Z"
+  },
   {
    "id": "2026-10-20-yeni-diller-2-0-9",
    "tarih": "2026-10-20",
@@ -157,48 +223,6 @@
    "eklendi": "2026-10-18T12:31:57.686302Z"
   },
   {
-   "id": "2026-10-18-kriz-masasi-2",
-   "tarih": "2026-10-18",
-   "etiket": {
-    "tr": "Yeni içerik",
-    "en": "New content"
-   },
-   "baslik": {
-    "tr": "Kriz Masası 2.0: yedi görev, yedi ayrı oyun",
-    "en": "Crisis Desk 2.0: seven missions, seven games"
-   },
-   "ozet": {
-    "tr": "Kriz Masası baştan yazıldı. Her görevin artık kendi masası, kendi kuralları ve haritada kendi 3B sahnesi var: barajı ayakta tut, salgının kaynağını bul, başkenti savun.",
-    "en": "The Crisis Desk has been rebuilt from scratch. Every mission now has its own desk, its own rules and its own 3D set pieces: save the dam, find the source of the outbreak, defend the capital."
-   },
-   "metin": {
-    "tr": [
-     "Kriz Masası eskiden asıl harekâtın süre sınırlı bir kopyasıydı: \"barajı 70 günde onar\" deniyordu ama çatlaklar için yapabileceğiniz bir şey yoktu, isyancılar da barajla ilgisi olmayan kasabalara saldırıyordu. 2.0.7 ile yedi görevin her biri kendi başına bir oyun oldu.",
-     "• Barajın Gölgesinde: çatlaklara harç basın, yağış tahminine bakarak savak kapaklarını açın; kapakları fazla açarsanız aşağıdaki kasaba sular altında kalır",
-     "• Kolera Salgını: sokak planındaki vakaları okuyun, pompalardan numune alın ve kirli pompayı kapatın; yanlış pompayı kapatırsanız bir mahalle susuz kalır",
-     "• Kuşatılmış Başkent: dört kapıyı on dalgaya karşı tutun; barikat kurun, mayın döşeyin, keşifle sıradaki dalganın hangi kapıya geleceğini öğrenin",
-     "• Seçime 60 Gün: her hafta kampanya kartı oynayın, canlı tartışmaya çıkın, son on günde polis ve gözlemcileri sandıklara yerleştirin",
-     "• Yardım Koridoru: yol ağında konvoy rotası çizin; gizli tuzaklar ve pusular İHA ya da muhbir ortaya çıkarana dek soru işareti olarak kalır",
-     "• Yılanın Başı: on iki olası yer, tek gerçek karargâh; muhbir ihbarları, telsiz kerterizleri ve İHA taramalarıyla adayları eleyin",
-     "• Kış Kapıda: soba, battaniye ve yakıt kasalarını çadırkentlere taşıyın, prefabrik üretimini sıraya koyun, ilk kar yağmadan herkesi barındırın",
-     "Her görev danışmanın kısa öğreticisiyle başlıyor ve haritada kendi 3B sahnesi var: çatlayan baraj, kuşatma halkası, karla kaplanan yollar. Kriz Masası Premium'a özel; bilgisayar sürümünde baştan açık."
-    ],
-    "en": [
-     "The Crisis Desk used to be the main campaign with a timer bolted on: \"repair the dam in 70 days\", while there was nothing to actually do about the cracks and insurgents raided towns that had nothing to do with the dam. In 2.0.7 every one of the seven missions is its own game.",
-     "• In the Shadow of the Dam: inject grout into the cracks and open the spillway gates according to the rain forecast; open too many and the town downstream floods",
-     "• Cholera Outbreak: read the cases on the street plan, sample the pumps and close the contaminated one; close the wrong pump and a neighbourhood goes without water",
-     "• Capital Under Siege: hold four gates against ten waves; build barricades, lay mines and scout ahead to learn which gate the next wave will hit",
-     "• 60 Days to the Election: play a campaign card every week, face live TV debates and place police and observer teams at the polling stations in the last ten days",
-     "• Aid Corridor: draw convoy routes on the road network; hidden traps and ambushes stay as question marks until drones or informants reveal them",
-     "• Head of the Snake: twelve candidate sites, one real headquarters; narrow them down with informant tips, radio bearings and drone scans",
-     "• Winter Draws Near: move stoves, blankets and fuel crates to the tent camps, queue prefab production and get every family sheltered before the first snowfall",
-     "Every mission opens with a short tutorial from your advisor and has its own 3D set pieces on the map: a cracking dam, a siege ring, snow-covered roads. The Crisis Desk is part of Premium on mobile and fully included in the PC version."
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-18-kriz-masasi-2-86ad9b.jpg",
-   "eklendi": "2026-10-17T21:23:47.639662Z"
-  },
-  {
    "id": "2026-10-16-icerik-ureticileri",
    "tarih": "2026-10-16",
    "etiket": {
@@ -278,6 +302,80 @@
   }
  ],
  "guncellemeler": [
+  {
+   "id": "2026-10-20-surum-2-0-9",
+   "tarih": "2026-10-20",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update",
+    "es": "Actualización",
+    "pt_BR": "Atualização",
+    "de": "Update",
+    "fr": "Mise à jour",
+    "id": "Pembaruan",
+    "ja": "アップデート",
+    "ko": "업데이트",
+    "zh_CN": "更新",
+    "zh_TW": "更新"
+   },
+   "surum": "2.0.9",
+   "baslik": {
+    "tr": "Sürüm 2.0.9: Daha akıcı, 11 dilde",
+    "en": "Version 2.0.9: Smoother, in 11 languages",
+    "es": "Versión 2.0.9: Más fluido y en 11 idiomas",
+    "pt_BR": "Versão 2.0.9: Mais fluido e em 11 idiomas",
+    "de": "Version 2.0.9: Flüssiger und in 11 Sprachen",
+    "fr": "Version 2.0.9 : Plus fluide, en 11 langues",
+    "id": "Versi 2.0.9: Lebih lancar, dalam 11 bahasa",
+    "ja": "バージョン2.0.9：より滑らかに、11言語に対応",
+    "ko": "버전 2.0.9: 더 부드럽게, 11개 언어로",
+    "zh_CN": "版本 2.0.9：更流畅，支持 11 种语言",
+    "zh_TW": "版本 2.0.9：更流暢，支援 11 種語言"
+   },
+   "ozet": {
+    "tr": "Görüntüden ödün vermeden daha akıcı oyun, efektlerde daha az takılma, cihazına göre otomatik grafik ayarı, 5 yeni dil ve Google Play Games başarımları, skor tabloları ve bulut kaydı.",
+    "en": "Smoother play without sacrificing visuals, fewer stutters on effects, automatic graphics for your device, 5 new languages, and Google Play Games achievements, leaderboards and cloud save.",
+    "es": "Juego más fluido sin sacrificar los gráficos, menos tirones en los efectos, gráficos automáticos según tu dispositivo, 5 idiomas nuevos y logros, clasificaciones y guardado en la nube de Google Play Juegos.",
+    "pt_BR": "Jogo mais fluido sem perder qualidade visual, menos travadas nos efeitos, gráficos automáticos para o seu aparelho, 5 novos idiomas e conquistas, placares e salvamento na nuvem do Google Play Games.",
+    "de": "Flüssigeres Spiel ohne Abstriche bei der Grafik, weniger Ruckler bei Effekten, automatische Grafik für dein Gerät, 5 neue Sprachen sowie Erfolge, Bestenlisten und Cloud-Speicherung in Google Play Spiele.",
+    "fr": "Un jeu plus fluide sans sacrifier les graphismes, moins de saccades sur les effets, des graphismes automatiques selon votre appareil, 5 nouvelles langues, ainsi que succès, classements et sauvegarde dans le cloud Google Play Jeux.",
+    "id": "Permainan lebih lancar tanpa mengorbankan grafis, lebih sedikit patah-patah saat efek muncul, grafis otomatis sesuai perangkatmu, 5 bahasa baru, serta pencapaian, papan peringkat, dan simpanan cloud Google Play Game.",
+    "ja": "画質を落とさずに動作がより滑らかに。エフェクトのカクつきを軽減し、端末に合わせた画質の自動設定、5つの新言語、Google Play Gamesの実績・リーダーボード・クラウドセーブに対応しました。",
+    "ko": "화질 저하 없이 더 부드러운 플레이, 효과 끊김 감소, 기기에 맞춘 자동 그래픽 설정, 5개 언어 추가, Google Play 게임즈 업적·리더보드·클라우드 저장을 지원합니다.",
+    "zh_CN": "画质不打折，运行更流畅：特效卡顿更少，画质根据设备自动调整，新增 5 种语言，并支持 Google Play 游戏成就、排行榜和云存档。",
+    "zh_TW": "畫質不打折，執行更流暢：特效卡頓更少，畫質依裝置自動調整，新增 5 種語言，並支援 Google Play 遊戲成就、排行榜和雲端存檔。"
+   },
+   "metin": {
+    "tr": [
+     "Oyuncularımızdan en çok gelen geri bildirim, bütçe telefonlarda kare hızının düşük kalmasıydı. 2.0.9'un odağı bu: oyunu görüntü kalitesinden ödün vermeden daha akıcı hâle getirdik.",
+     "• Otomatik grafik ayarı artık telefonlarda da açık: oyun kare hızını izler, 30 FPS'in altında kalırsa kaliteyi kendisi bir kademe indirir (Yüksek → Orta → Düşük). Ayarlar'dan kaliteyi kendin seçersen otomatik ayar devre dışı kalır",
+     "• Görüntüyü bozmadan hızlandırma: arazi, ağaç ve su gölgelendiricileri sadeleştirildi; boşta bekleyen efektler artık çizilmiyor; harita etiketleri, birlikler ve gökyüzü yansıması yalnız değiştiklerinde yeniden hesaplanıyor. Her adım eski görüntüyle piksel piksel karşılaştırıldı",
+     "• Test telefonumuzda ekran kartının her karedeki iş yükü Orta kalitede %6,5, Düşük'te %6 azaldı. Otomatik ayarla zayıf telefonlarda iş yükü 2,3 kat düşüyor: Orta kalitede 10 FPS alan bir telefon yaklaşık 23 FPS'e çıkıyor",
+     "• Daha az takılma: efektler, gece ışıkları ve jet artık harita yüklenirken önceden hazırlanıyor. İlk hava saldırısındaki en uzun takılma 460 ms'den 126 ms'ye, ilk gecedeki 242 ms'den 60 ms'ye indi",
+     "• 5 yeni dil: Japonca, Korece, Basitleştirilmiş Çince, Geleneksel Çince ve Endonezce. ReBirth artık 11 dilde",
+     "• Google Play Games: 32 başarım ve iki skor tablosu (en yüksek puan ve en hızlı zafer)",
+     "• Bulut kaydı: başarımların, kariyer istatistiklerin ve kayıtların Google Play Games hesabında saklanır; yeni bir telefonda oyunu kurduğunda kaldığın yerden devam edersin",
+     "• Haber kartlarında beğen / beğenme düğmeleri: duyurular hakkındaki fikrini tek dokunuşla bildir",
+     "• Hata düzeltmeleri ve kararlılık iyileştirmeleri; ana menüde ankete oy verip harekâta girdikten sonra menüye dönünce nadiren yaşanan çökme giderildi",
+     "Güncellemeyi Google Play'den indirebilirsin. Sıradaki iyileştirmeler üzerinde çalışmaya devam ediyoruz; geri bildirimlerin için teşekkürler!"
+    ],
+    "en": [
+     "The feedback we heard most from players was that the frame rate stayed low on budget phones. That is the focus of 2.0.9: we made the game smoother without sacrificing visual quality.",
+     "• Automatic graphics are now on for phones too: the game watches the frame rate and, if it stays below 30 FPS, lowers the quality by one step on its own (High → Medium → Low). If you pick a quality yourself in Settings, the automatic setting turns off",
+     "• Faster without changing the picture: the terrain, tree and water shaders were streamlined; idle effects are no longer drawn; map labels, units and sky reflections are only recalculated when they change. Every step was compared pixel by pixel against the original image",
+     "• On our test phone, the graphics card's work per frame dropped by 6.5% on Medium and 6% on Low. With automatic graphics, weak phones do 2.3 times less work: a phone that ran at 10 FPS on Medium now gets about 23 FPS",
+     "• Fewer stutters: effects, night lights and the jet are now prepared while the map loads. The longest hitch in the first air strike dropped from 460 ms to 126 ms, and in the first night from 242 ms to 60 ms",
+     "• 5 new languages: Japanese, Korean, Simplified Chinese, Traditional Chinese and Indonesian. ReBirth is now available in 11 languages",
+     "• Google Play Games: 32 achievements and two leaderboards (highest score and fastest victory)",
+     "• Cloud save: your achievements, career stats and saves are stored in your Google Play Games account, so you can pick up where you left off when you install the game on a new phone",
+     "• Like / dislike buttons on news cards: tell us what you think of an announcement with a single tap",
+     "• Bug fixes and stability improvements, including a rare crash when returning to the main menu after voting in a poll and starting a campaign",
+     "Get the update on Google Play. We keep working on the next improvements; thank you for your feedback!"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-20-surum-2-0-9-2d83ea.jpg",
+   "eklendi": "2026-10-20T17:06:25.641180Z"
+  },
   {
    "id": "2026-10-17-surum-2-0-7",
    "tarih": "2026-10-17",
@@ -425,39 +523,6 @@
    },
    "gorsel": "assets/img/haber/2026-10-14-surum-2-0-4-34e962.jpg",
    "eklendi": "2026-10-15T16:43:52.000000Z"
-  },
-  {
-   "id": "2026-10-13-surum-2-0-3",
-   "tarih": "2026-10-13",
-   "etiket": {
-    "tr": "Güncelleme",
-    "en": "Update"
-   },
-   "surum": "2.0.3",
-   "baslik": {
-    "tr": "Sürüm 2.0.3: hava harekâtı sinematiği",
-    "en": "Version 2.0.3: air strike cinematics"
-   },
-   "ozet": {
-    "tr": "Hava vuruşlarında kamera jeti izliyor ve patlamayı yakından gösteriyor. Kriz Masası düzeltmeleri ve daha akıcı oyun.",
-    "en": "During air strikes the camera follows your jet and watches the impact up close. Plus Crisis Desk fixes and smoother play."
-   },
-   "metin": {
-    "tr": [
-     "• Jet üsten hedefe uçar ve füzeyi atar; kamera patlamayı hedefin üstünden izler",
-     "• İlk dokunuşta kontrol hemen size döner; Ayarlar → Hava harekâtı kamerası ile kapatılabilir",
-     "• Kriz Masası'nda yeniden başlatma ve pencere düzeltmeleri",
-     "• Uzun harekâtlarda daha akıcı kare hızı"
-    ],
-    "en": [
-     "• Your jet flies from the base to the target and fires; the camera watches the blast from above the target",
-     "• The first tap hands control straight back to you; turn it off in Settings → Air strike camera",
-     "• Crisis Desk restart and window fixes",
-     "• Smoother frame rate in long campaigns"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-13-surum-2-0-3-d1ce7a.jpg",
-   "eklendi": "2026-10-15T16:43:51.000000Z"
   }
  ]
 }
