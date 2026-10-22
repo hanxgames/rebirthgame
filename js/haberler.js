@@ -48,6 +48,52 @@
     return h;
   }
 
+  // Video (kayıtta "video": {tr, en}): Türkçe sayfa tr'yi, İngilizce sayfa (oyunun diğer bütün dilleri) en'i oynatır. YouTube
+  // oynatıcısı yalnız tıklayınca youtube-nocookie'den yüklenir; o zamana dek kapak sitenin kendi görselidir (privacy.html §5).
+  var OYNAT = { tr: "Videoyu oynat", en: "Play video" };
+  function videoKaynak(u) {
+    var m = /(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:\S*&)?v=|shorts\/|embed\/|live\/))([A-Za-z0-9_-]{11})/.exec(u || "");
+    if (m) return { yt: m[1] };
+    return /\.(mp4|webm)(\?|$)/i.test(u || "") ? { dosya: u } : null;
+  }
+  function videoKutusu(k) {
+    var v = k.video || {};
+    var kaynak = videoKaynak(dil() === "tr" ? (v.tr || v.en) : (v.en || v.tr));
+    if (!kaynak) return null;
+    var kutu = el("button", "news-video");
+    kutu.type = "button";
+    kutu.setAttribute("aria-label", OYNAT[dil()] + ": " + metin(k.baslik));
+    var kapak = el("img");
+    kapak.src = k.gorsel;
+    kapak.alt = "";
+    kapak.width = 640;
+    kapak.height = 360;
+    kutu.appendChild(kapak);
+    kutu.appendChild(el("span", "news-play"));
+    kutu.appendChild(el("span", "news-video__etiket", OYNAT[dil()]));
+    kutu.addEventListener("click", function () {
+      var oyn;
+      if (kaynak.yt) {
+        oyn = el("iframe");
+        oyn.src = "https://www.youtube-nocookie.com/embed/" + kaynak.yt + "?autoplay=1&rel=0&playsinline=1&hl=" + dil();
+        oyn.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+        oyn.referrerPolicy = "strict-origin-when-cross-origin";
+      } else {
+        oyn = el("video");
+        oyn.src = kaynak.dosya;
+        oyn.poster = k.gorsel;
+        oyn.controls = true;
+        oyn.autoplay = true;
+        oyn.playsInline = true;
+      }
+      oyn.title = metin(k.baslik);
+      var yer = el("div", "news-video is-on");
+      yer.appendChild(oyn);
+      kutu.replaceWith(yer);
+    });
+    return kutu;
+  }
+
   // Anket (oyun 2.0.8+): oy oyunda verilir (Android, oyuncu başına tek oy); site sayıları Realtime Database'den canlı okur.
   var DB = "https://dead-mans-deck-global-default-rtdb.europe-west1.firebasedatabase.app";
   var ANKET_YAZI = {
@@ -101,13 +147,19 @@
     (akis[tur] || []).forEach(function (k) {
       var art = el("article", "news-item");
       art.id = k.id;
-      var img = el("img", "news-img");
-      img.src = k.gorsel;
-      img.alt = "";
-      img.loading = "lazy";
-      img.width = 640;
-      img.height = 360;
-      art.appendChild(img);
+      var vid = k.video ? videoKutusu(k) : null;
+      if (vid) {   // videolu kayıt tek sütun: oynatıcı kapağı üstte, tam genişlikte
+        art.classList.add("has-video");
+        art.appendChild(vid);
+      } else {
+        var img = el("img", "news-img");
+        img.src = k.gorsel;
+        img.alt = "";
+        img.loading = "lazy";
+        img.width = 640;
+        img.height = 360;
+        art.appendChild(img);
+      }
       var govde = el("div", "news-body");
       var ust = el("div", "news-meta", tarih(k.tarih));
       if (k.etiket) ust.appendChild(el("span", "news-tag", metin(k.etiket)));

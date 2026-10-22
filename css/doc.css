@@ -90,6 +90,27 @@ a:hover { color: var(--accent-h); }
 .news-body ul { margin: 6px 0; }
 .news-btn { margin-top: 10px; padding: 10px 16px; font-size: 13px; }
 
+/* videolu haber (js/haberler.js videoKutusu): tek sütun, üstte kapak + oynat düğmesi; tıklayınca oynatıcı */
+.news-item.has-video { grid-template-columns: 1fr; }
+.news-video { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; padding: 0; border: 1px solid var(--line2); border-radius: 4px;
+  overflow: hidden; background: #000; cursor: pointer; color: var(--cream); font: inherit; }
+.news-video img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease, filter .3s ease; }
+.news-video::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,.55)); pointer-events: none; }
+.news-play { position: absolute; left: 50%; top: 50%; width: 76px; height: 76px; margin: -38px 0 0 -38px; border-radius: 50%; z-index: 1;
+  background: rgba(241,173,42,.92); box-shadow: 0 6px 24px rgba(0,0,0,.45); transition: transform .2s ease; }
+.news-play::before { content: ""; position: absolute; left: 30px; top: 22px; border-style: solid; border-width: 16px 0 16px 26px;
+  border-color: transparent transparent transparent #191817; }
+.news-video__etiket { position: absolute; left: 16px; bottom: 12px; z-index: 1; font-family: var(--f-caps); font-weight: 700; text-transform: uppercase;
+  letter-spacing: .14em; font-size: 13px; text-shadow: 0 1px 3px rgba(0,0,0,.8); }
+.news-video:hover img, .news-video:focus-visible img { transform: scale(1.02); filter: brightness(1.08); }
+.news-video:hover .news-play, .news-video:focus-visible .news-play { transform: scale(1.08); }
+.news-video:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.news-video.is-on { cursor: auto; }
+.news-video.is-on::after { display: none; }
+.news-video iframe, .news-video video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+@media (max-width: 680px) { .news-play { width: 60px; height: 60px; margin: -30px 0 0 -30px; }
+  .news-play::before { left: 23px; top: 17px; border-width: 13px 0 13px 21px; } }
+
 /* haberdeki başvuru düğmesi (js/basvuru.js): Google Formlar'daki formu açar */
 .apl { margin-top: 12px; }
 .apl-note { color: var(--muted) !important; font-size: 13px; margin: 6px 0 0 !important; }

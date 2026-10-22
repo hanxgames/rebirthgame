@@ -20,10 +20,12 @@ Her türde en çok **5** kayıt tutulur: yenisi eklenince en eskisi akıştan d�
 ```
 python tools/haber_ekle.py ekle haber taslak.json gorsel.jpg        # yeni haber (görsel 16:9 kırpılır, 640x360 JPEG)
 python tools/haber_ekle.py ekle guncelleme taslak.json gorsel.png   # yeni güncelleme notu
+python tools/haber_ekle.py video <id> <tr_adres> <en_adres>   # habere video (YouTube ya da .mp4); "- -" kaldırır
 python tools/haber_ekle.py sil <id> · liste · denetle
 ```
 Taslak biçimi betiğin başında (başlık / özet / metin TR + EN zorunlu; oyunun diğer dilleri İngilizcesini gösterir; `baglanti` verilirse
-oyundaki "Detayları gör" o adresi, verilmezse `haberler.html#<id>` açar). Ardından siteyi yayınla (git push): GitHub Pages birkaç
+oyundaki "Detayları gör" o adresi, verilmezse `haberler.html#<id>` açar). `video` verilen kayıt sayfada üstte oynatıcıyla açılır: Türkçe sayfa
+`tr`, İngilizce sayfa (oyunun diğer bütün dilleri) `en` videosunu oynatır; YouTube oynatıcısı yalnız tıklayınca yüklenir (privacy.html §5). Ardından siteyi yayınla (git push): GitHub Pages birkaç
 dakikada günceller, oyun dakikalık sorgu parametresiyle önbelleği aşar.
 
 Oyundaki tüm yer, kurum ve kişi adları kurgusaldır. © 2026 HanX Games.

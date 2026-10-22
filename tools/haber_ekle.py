@@ -7,6 +7,7 @@ görselleri kendi önbelleğinden siler).
   python tools/haber_ekle.py ekle haber taslak.json gorsel.jpg        # yeni haber
   python tools/haber_ekle.py ekle guncelleme taslak.json gorsel.png   # yeni güncelleme notu
   python tools/haber_ekle.py sil <id>                                 # kaydı ve görselini kaldır
+  python tools/haber_ekle.py video <id> <tr_adres> <en_adres>         # var olan kayda video ekle/değiştir ("-" "-": kaldır)
   python tools/haber_ekle.py liste
   python tools/haber_ekle.py denetle                                  # şema, görseller, yetim dosyalar (siler)
 
@@ -21,6 +22,11 @@ id, ja, ko, zh_CN, zh_TW — oyun kendi dilindeki anahtarı gösterir, yoksa İn
     "ozet":   {"tr": "...", "en": "..."},        # oyundaki kartta görünür (2-3 satır)
     "metin":  {"tr": ["paragraf", "• madde"], "en": [...]},   # haberler.html'de; "• " ile başlayan satır madde olur
     "baglanti": "https://...",                   # isteğe bağlı: "Detayları gör" bu adresi açar (yoksa haberler.html#<id>)
+    "video": {"tr": "https://youtu.be/...", "en": "https://youtu.be/..."},
+                                                 # isteğe bağlı: haberler.html'de kartın üstünde video (oyun göstermez; oyundan
+                                                 #   gelen bağlantı ?lang=tr|en taşır: Türkçe oyuncu tr'yi, diğer bütün diller en'i
+                                                 #   izler). YouTube (watch/youtu.be/shorts/embed) ya da .mp4/.webm (https ya da
+                                                 #   assets/...). YouTube oynatıcısı yalnız tıklayınca youtube-nocookie'den yüklenir.
     "platform": ["android", "pc", "web"],        # isteğe bağlı: oyunda yalnız bu platformlarda (android|ios|pc|web) görünür;
                                                  #   başka mağazaya satış bağlantısı veren haberi iOS'a koyma (App Store 3.1.1)
     "form": "moderator",                         # isteğe bağlı: haberler.html'de haberin altına başvuru düğmesi (js/basvuru.js
@@ -53,6 +59,8 @@ EN_COK = 5
 BOY = (640, 360)
 DILLER = ("tr", "en")
 FORMLAR = ("moderator",)   # js/basvuru.js FORMLAR'daki kimlikler (Google Formlar bağlantıları)
+VIDEO = re.compile(r"https://(www\.|m\.)?(youtube\.com/(watch\?(\S*&)?v=|shorts/|embed/|live/)|youtu\.be/)[A-Za-z0-9_-]{11}([?&#]\S*)?"
+                   r"|(https://\S+|assets/\S+)\.(mp4|webm)(\?\S*)?")   # video alanı: YouTube ya da dosya
 
 
 def oku() -> dict:
@@ -121,6 +129,9 @@ def denetle_kayit(k: dict) -> list:
     b = k.get("baglanti", "")
     if b and not str(b).startswith("https://"):
         hata.append("baglanti https olmalı")
+    v = k.get("video")
+    if v is not None and (not isinstance(v, dict) or any(not VIDEO.fullmatch(str(v.get(d, ""))) for d in DILLER)):
+        hata.append("video {tr, en}: YouTube ya da .mp4/.webm adresi")
     if k.get("form") is not None and k.get("form") not in FORMLAR:
         hata.append("form: " + " | ".join(FORMLAR))
     an = k.get("anket")
@@ -189,7 +200,7 @@ def ekle(tur: str, taslak_yol: str, gorsel_yol: str) -> None:
         if any(k["id"] == kimlik for k in akis.get(liste, [])):
             sys.exit("bu kimlik zaten var: %s (önce sil ya da 'kisa' ver)" % kimlik)
     kayit = {"id": kimlik, "tarih": tarih}
-    for alan in ("etiket", "surum", "baslik", "ozet", "metin", "baglanti", "platform", "form", "anket"):
+    for alan in ("etiket", "surum", "baslik", "ozet", "metin", "baglanti", "video", "platform", "form", "anket"):
         if t.get(alan):
             kayit[alan] = t[alan]
     kayit["gorsel"] = gorsel_hazirla(gorsel_yol, kimlik)
@@ -216,6 +227,25 @@ def sil(kimlik: str) -> None:
     yetim_sil(akis)
     yaz(akis)
     print("silindi:", kimlik)
+
+
+def video(kimlik: str, tr: str, en: str) -> None:
+    akis = oku()
+    for liste in TURLER.values():
+        for k in akis.get(liste, []):
+            if k["id"] != kimlik:
+                continue
+            if tr == en == "-":
+                k.pop("video", None)
+            else:
+                k["video"] = {"tr": tr, "en": en}
+                hata = denetle_kayit(k)
+                if hata:
+                    sys.exit("video: " + ", ".join(hata))
+            yaz(akis)
+            print("video:", kimlik, "→", k.get("video", "kaldırıldı"))
+            return
+    sys.exit("bulunamadı: " + kimlik)
 
 
 def liste() -> None:
@@ -249,6 +279,8 @@ if __name__ == "__main__":
     a = sys.argv[1:]
     if len(a) == 4 and a[0] == "ekle":
         ekle(a[1], a[2], a[3])
+    elif len(a) == 4 and a[0] == "video":
+        video(a[1], a[2], a[3])
     elif len(a) == 2 and a[0] == "sil":
         sil(a[1])
     elif a == ["liste"]:

@@ -1,8 +1,75 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-20T17:06:38Z",
+ "guncelleme": "2026-10-22T15:52:43Z",
  "haberler": [
+  {
+   "id": "2026-10-22-golge-cephesi",
+   "tarih": "2026-10-22",
+   "etiket": {
+    "tr": "Yakında",
+    "en": "Coming soon",
+    "es": "Próximamente",
+    "pt_BR": "Em breve",
+    "de": "Demnächst",
+    "fr": "Bientôt",
+    "id": "Segera hadir",
+    "ja": "近日登場",
+    "ko": "출시 예정",
+    "zh_CN": "即将推出",
+    "zh_TW": "即將推出"
+   },
+   "baslik": {
+    "tr": "Hikâyeye bir de Gölge Cephesi'nden bakın!",
+    "en": "See the story through the Shadow Front's eyes!",
+    "es": "¡Mira la historia desde el lado del Frente Sombra!",
+    "pt_BR": "Veja a história pelo lado da Frente Sombria!",
+    "de": "Erlebe die Geschichte aus Sicht der Schattenfront!",
+    "fr": "Vivez l'histoire du côté du Front de l'Ombre !",
+    "id": "Lihat kisahnya dari sisi Front Bayangan!",
+    "ja": "影の戦線の視点で物語を見よう！",
+    "ko": "그림자 전선의 시선으로 이야기를 보세요!",
+    "zh_CN": "从暗影阵线的视角重看这段故事！",
+    "zh_TW": "從暗影陣線的視角重看這段故事！"
+   },
+   "ozet": {
+    "tr": "Bu sefer isyan sensin. Yeni mod Gölge Cephesi bir sonraki güncellemeyle (2.1.1) geliyor: Konsey'i yönet, halkın güvenini kazan, misyonu barış masasına oturt. Premium içerik.",
+    "en": "This time, you are the uprising. The new Shadow Front mode arrives in the next update (2.1.1): lead the Council, win the people's trust and bring the mission to the peace table. Premium content.",
+    "es": "Esta vez, la rebelión eres tú. El nuevo modo Frente Sombra llega en la próxima actualización (2.1.1): dirige el Consejo, gánate la confianza del pueblo y lleva a la misión a la mesa de paz. Contenido Premium.",
+    "pt_BR": "Desta vez, a revolta é você. O novo modo Frente Sombria chega na próxima atualização (2.1.1): comande o Conselho, conquiste a confiança do povo e leve a missão à mesa de paz. Conteúdo Premium.",
+    "de": "Diesmal bist du der Aufstand. Der neue Modus Schattenfront kommt mit dem nächsten Update (2.1.1): Führe den Rat, gewinne das Vertrauen der Bevölkerung und bring die Mission an den Verhandlungstisch. Premium-Inhalt.",
+    "fr": "Cette fois, la révolte, c'est vous. Le nouveau mode Front de l'Ombre arrive avec la prochaine mise à jour (2.1.1) : dirigez le Conseil, gagnez la confiance du peuple et amenez la mission à la table des négociations. Contenu Premium.",
+    "id": "Kali ini, kamulah perlawanannya. Mode baru Front Bayangan hadir di pembaruan berikutnya (2.1.1): pimpin Dewan, raih kepercayaan rakyat, dan bawa misi ke meja perdamaian. Konten Premium.",
+    "ja": "今度は、あなたが蜂起する側だ。新モード「影の戦線」が次回アップデート（2.1.1）で登場。評議会を率い、民衆の信頼を勝ち取り、ミッションを和平交渉の席に着かせよう。プレミアムコンテンツ。",
+    "ko": "이번에는 당신이 봉기의 주인공입니다. 새 모드 '그림자 전선'이 다음 업데이트(2.1.1)에서 찾아옵니다. 평의회를 이끌고, 민심을 얻고, 임무단을 평화 협상 테이블로 불러내세요. 프리미엄 콘텐츠.",
+    "zh_CN": "这一次，你就是起义者。新模式“暗影阵线”将在下次更新（2.1.1）中推出：领导议会，赢得民众信任，迫使任务团坐上和平谈判桌。高级版内容。",
+    "zh_TW": "這一次，你就是起義者。新模式「暗影陣線」將在下次更新（2.1.1）中推出：領導議會，贏得民眾信任，迫使任務團坐上和平談判桌。進階版內容。"
+   },
+   "metin": {
+    "tr": [
+     "Depremden sonra devlet dağıldı; vilayetin kaderini artık yabancı bir misyon yazıyor. Gölge Cephesi, kendi topraklarını kendisi yönetmek isteyen insanların hareketi: çiftçiler, öğretmenler, madenciler. ReBirth'te ilk kez öteki taraftasın.",
+     "• Konsey'i yönet: hücreleri örgütle, her kararın bedelini tart",
+     "• Halkın güvenini kazan: gücün halktan gelir, siviller asla hedef değil",
+     "• Yolda jandarma kontrol noktalarından geç: sorulara vereceğin cevaplar hücrenin kaderini belirler",
+     "• Misyonu barış masasına oturt",
+     "• Karşında oyunu bilen bir misyon: Kolay, Orta ve Zor; üç vilayette oynanır",
+     "• Moda özel arayüz ve seslendirme",
+     "Gölge Cephesi bir sonraki güncellemeyle (2.1.1) geliyor ve Premium içerik olacak."
+    ],
+    "en": [
+     "After the earthquake the state fell apart, and a foreign mission now decides the province's fate. The Shadow Front is a movement of people who want to govern their own land: farmers, teachers, miners. For the first time in ReBirth, you are on the other side.",
+     "• Lead the Council: organize your cells and weigh the cost of every decision",
+     "• Win the people's trust: your strength comes from the people, and civilians are never a target",
+     "• Get past gendarmerie checkpoints on the road: your answers decide the fate of your cell",
+     "• Bring the mission to the peace table",
+     "• Face a mission that knows the game: Easy, Medium and Hard, across three provinces",
+     "• A dedicated interface and voice acting for the mode",
+     "The Shadow Front arrives in the next update (2.1.1) as Premium content."
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-22-golge-cephesi-f5079f.jpg",
+   "eklendi": "2026-10-22T15:51:04.629596Z"
+  },
   {
    "id": "2026-10-20-reddit-rebirthsocial",
    "tarih": "2026-10-20",
@@ -68,74 +135,6 @@
    "baglanti": "https://www.reddit.com/r/ReBirthSocial/",
    "gorsel": "assets/img/haber/2026-10-20-reddit-rebirthsocial-d97970.jpg",
    "eklendi": "2026-10-20T17:06:38.732797Z"
-  },
-  {
-   "id": "2026-10-20-yeni-diller-2-0-9",
-   "tarih": "2026-10-20",
-   "etiket": {
-    "tr": "Duyuru",
-    "en": "Announcement",
-    "es": "Anuncio",
-    "pt_BR": "Anúncio",
-    "de": "Ankündigung",
-    "fr": "Annonce",
-    "id": "Pengumuman",
-    "ja": "お知らせ",
-    "ko": "공지",
-    "zh_CN": "公告",
-    "zh_TW": "公告"
-   },
-   "surum": "2.0.9",
-   "baslik": {
-    "tr": "2.0.9 ile 5 yeni dil: Birlikte daha güçlüyüz",
-    "en": "5 new languages in 2.0.9: Stronger together",
-    "es": "5 idiomas nuevos en la 2.0.9: Juntos somos más fuertes",
-    "pt_BR": "5 novos idiomas na 2.0.9: Juntos somos mais fortes",
-    "de": "5 neue Sprachen in 2.0.9: Gemeinsam stärker",
-    "fr": "5 nouvelles langues dans la 2.0.9 : Plus forts ensemble",
-    "id": "5 bahasa baru di 2.0.9: Bersama kita lebih kuat",
-    "ja": "2.0.9で5つの新言語に対応：共に、より強く",
-    "ko": "2.0.9에서 5개 언어 추가: 함께라면 더 강하다",
-    "zh_CN": "2.0.9 新增 5 种语言：团结就是力量",
-    "zh_TW": "2.0.9 新增 5 種語言：團結就是力量"
-   },
-   "ozet": {
-    "tr": "2.0.9 güncellemesiyle ReBirth'e Japonca, Korece, Basitleştirilmiş ve Geleneksel Çince ile Endonezce geliyor. Oyun 11 dile çıkıyor; İspanyolca çeviri de baştan sona tamamlandı.",
-    "en": "The 2.0.9 update brings Japanese, Korean, Simplified and Traditional Chinese, and Indonesian to ReBirth. The game grows to 11 languages, and the Spanish translation is now complete.",
-    "es": "La actualización 2.0.9 trae a ReBirth el japonés, el coreano, el chino simplificado y tradicional, y el indonesio. El juego llega a 11 idiomas y la traducción al español ya está completa.",
-    "pt_BR": "A atualização 2.0.9 traz japonês, coreano, chinês simplificado e tradicional, e indonésio para ReBirth. O jogo chega a 11 idiomas.",
-    "de": "Das Update 2.0.9 bringt Japanisch, Koreanisch, vereinfachtes und traditionelles Chinesisch sowie Indonesisch zu ReBirth. Das Spiel wächst auf 11 Sprachen.",
-    "fr": "La mise à jour 2.0.9 apporte le japonais, le coréen, le chinois simplifié et traditionnel, ainsi que l'indonésien à ReBirth. Le jeu passe à 11 langues.",
-    "id": "Pembaruan 2.0.9 menghadirkan bahasa Jepang, Korea, Mandarin Sederhana dan Tradisional, serta Bahasa Indonesia ke ReBirth. Game ini kini hadir dalam 11 bahasa.",
-    "ja": "アップデート2.0.9で、ReBirthに日本語・韓国語・簡体字中国語・繁体字中国語・インドネシア語が加わります。全11言語でお楽しみいただけます。",
-    "ko": "2.0.9 업데이트로 ReBirth에 일본어, 한국어, 중국어 간체·번체, 인도네시아어가 추가됩니다. 이제 11개 언어로 즐길 수 있습니다.",
-    "zh_CN": "2.0.9 更新将为 ReBirth 带来日语、韩语、简体中文、繁体中文和印尼语，游戏将支持 11 种语言。",
-    "zh_TW": "2.0.9 更新將為 ReBirth 帶來日語、韓語、簡體中文、繁體中文和印尼語，遊戲將支援 11 種語言。"
-   },
-   "metin": {
-    "tr": [
-     "Topluluğumuzdan en sık gelen isteklerden biri daha fazla dil desteğiydi. 2.0.9 güncellemesiyle ReBirth beş yeni dil kazanıyor ve toplam 11 dilde oynanabilir hâle geliyor.",
-     "• Yeni diller: Japonca (日本語), Korece (한국어), Basitleştirilmiş Çince (简体中文), Geleneksel Çince (繁體中文) ve Endonezce (Bahasa Indonesia)",
-     "• Oyunun tamamı çevrildi: arayüz, olaylar, Kriz Masası görevleri, Kara Kolera etkinliği, rehberli tur ve gazete; her dilde 5.000'i aşkın metin",
-     "• Çince, Japonca ve Korece için yeni yazı tipleri eklendi; bütün karakterler eksiksiz görünüyor",
-     "• Telefonunun dili bu dillerden biriyse oyun ilk açılışta kendiliğinden o dilde başlar; istediğin zaman Ayarlar'dan değiştirebilirsin",
-     "• İspanyolca çeviri de gözden geçirilip tamamlandı; Meksika, Arjantin ya da ABD gibi bölge ayarlı telefonlarda da kendiliğinden İspanyolca açılır",
-     "Seslendirmeler Türkçe ve İngilizce olarak devam ediyor.",
-     "2.0.9 ayrıca bütçe telefonlarda kare hızını artıran performans iyileştirmeleri ve otomatik grafik ayarı da getiriyor. Birlikte daha güçlüyüz!"
-    ],
-    "en": [
-     "More language support has been one of the most frequent requests from our community. With the 2.0.9 update, ReBirth gains five new languages and becomes playable in 11 languages in total.",
-     "• New languages: Japanese (日本語), Korean (한국어), Simplified Chinese (简体中文), Traditional Chinese (繁體中文) and Indonesian (Bahasa Indonesia)",
-     "• The whole game is translated: interface, events, Crisis Desk missions, the Black Cholera event, the guided tour and the newspaper; more than 5,000 texts per language",
-     "• New fonts for Chinese, Japanese and Korean, so every character displays correctly",
-     "• If your phone is set to one of these languages, the game starts in it automatically on first launch; you can change it any time in Settings",
-     "• The Spanish translation has been reviewed and completed, and phones set to regional Spanish (Mexico, Argentina, US and more) now open in Spanish automatically",
-     "Voice-over remains available in Turkish and English.",
-     "2.0.9 also brings performance improvements that raise frame rates on budget phones, plus automatic graphics adjustment. Stronger together!"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-20-yeni-diller-2-0-9-f686cc.jpg",
-   "eklendi": "2026-10-20T07:35:39.884467Z"
   },
   {
    "id": "2026-10-18-anket-sonraki-mod",
