@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-22T15:59:07Z",
+ "guncelleme": "2026-10-22T17:06:07Z",
  "haberler": [
   {
    "id": "2026-10-22-golge-cephesi",
@@ -74,7 +74,11 @@
    "video": {
     "tr": "assets/video/haber/2026-10-22-golge-cephesi-tr-4e110d.mp4",
     "en": "assets/video/haber/2026-10-22-golge-cephesi-en-57212c.mp4",
-    "kapak": "assets/video/haber/2026-10-22-golge-cephesi-kapak-7334cc.jpg"
+    "kapak": "assets/video/haber/2026-10-22-golge-cephesi-kapak-7334cc.jpg",
+    "youtube": {
+     "tr": "https://youtu.be/w7h9feavdhY",
+     "en": "https://youtu.be/1NdLnErHS3U"
+    }
    }
   },
   {

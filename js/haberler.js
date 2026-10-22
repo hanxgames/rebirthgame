@@ -51,6 +51,7 @@
   // Video (kayıtta "video": {tr, en}): Türkçe sayfa tr'yi, İngilizce sayfa (oyunun diğer bütün dilleri) en'i oynatır. YouTube
   // oynatıcısı yalnız tıklayınca youtube-nocookie'den yüklenir; o zamana dek kapak sitenin kendi görselidir (privacy.html §5).
   var OYNAT = { tr: "Videoyu oynat", en: "Play video" };
+  var YOUTUBE = { tr: "YouTube'da izle", en: "Watch on YouTube" };
   function videoKaynak(u) {
     var m = /(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:\S*&)?v=|shorts\/|embed\/|live\/))([A-Za-z0-9_-]{11})/.exec(u || "");
     if (m) return { yt: m[1] };
@@ -185,6 +186,14 @@
         a.target = "_blank";
         a.rel = "noopener";
         govde.appendChild(a);
+      }
+      var yt = vid && k.video.youtube;   // sitede barınan videonun YouTube kopyası (kanala izlenme): dile göre bağlantı
+      if (yt && (yt[dil()] || yt.en)) {
+        var y = el("a", "doc-btn news-btn", YOUTUBE[dil()]);
+        y.href = yt[dil()] || yt.en;
+        y.target = "_blank";
+        y.rel = "noopener";
+        govde.appendChild(y);
       }
       if (k.anket && k.anket.secenekler) govde.appendChild(anketKutusu(k.anket));
       if (k.form && window.RBBasvuru) {   // başvuru düğmesi (js/basvuru.js → Google Formlar)

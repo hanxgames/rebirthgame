@@ -10,6 +10,8 @@ görselleri kendi önbelleğinden siler).
   python tools/haber_ekle.py video <id> <tr> <en> [kapak.jpg]          # var olan kayda video ekle/değiştir ("-" "-": kaldır);
                                                                       #   tr/en adres ya da yerel .mp4/.webm (assets/video/haber/'e
                                                                       #   kopyalanır, kayıt düşünce silinir); kapak 1280x720'e kırpılır
+  python tools/haber_ekle.py youtube <id> <tr_adres> <en_adres>       # sitede barınan videonun YouTube kopyası: altında
+                                                                      #   dile göre "YouTube'da izle" düğmesi ("-" "-": kaldır)
   python tools/haber_ekle.py liste
   python tools/haber_ekle.py denetle                                  # şema, görseller, yetim dosyalar (siler)
 
@@ -155,6 +157,10 @@ def denetle_kayit(k: dict) -> list:
     v = k.get("video")
     if v is not None and (not isinstance(v, dict) or any(not VIDEO.fullmatch(str(v.get(d, ""))) for d in DILLER)):
         hata.append("video {tr, en}: YouTube ya da .mp4/.webm adresi")
+    yt = v.get("youtube") if isinstance(v, dict) else None
+    if yt is not None and (not isinstance(yt, dict) or any(not VIDEO.fullmatch(str(yt.get(d, ""))) or "youtu" not in str(yt.get(d, ""))
+                                                           for d in DILLER)):
+        hata.append("video.youtube {tr, en}: YouTube adresi")
     if isinstance(v, dict):
         for x in [v.get(d, "") for d in DILLER] + [v.get("kapak", "")]:
             if str(x).startswith("assets/") and not os.path.exists(os.path.join(KOK, str(x))):
@@ -272,6 +278,8 @@ def video(kimlik: str, tr: str, en: str, kapak: str = "") -> None:
                 v = {"tr": video_kopyala(tr, kimlik, "tr"), "en": video_kopyala(en, kimlik, "en")}
                 if kapak:
                     v["kapak"] = gorsel_hazirla(kapak, kimlik + "-kapak", KAPAK_BOY, VIDEO_KLASOR)
+                if isinstance(k.get("video"), dict) and "youtube" in k["video"]:
+                    v["youtube"] = k["video"]["youtube"]
                 k["video"] = v
                 hata = denetle_kayit(k)
                 if hata:
@@ -282,6 +290,27 @@ def video(kimlik: str, tr: str, en: str, kapak: str = "") -> None:
             yetim_sil(akis)
             yaz(akis)
             print("video:", kimlik, "→", k.get("video", "kaldırıldı"))
+            return
+    sys.exit("bulunamadı: " + kimlik)
+
+
+def youtube(kimlik: str, tr: str, en: str) -> None:
+    akis = oku()
+    for liste in TURLER.values():
+        for k in akis.get(liste, []):
+            if k["id"] != kimlik:
+                continue
+            if not isinstance(k.get("video"), dict):
+                sys.exit("önce video ekle: " + kimlik)
+            if tr == en == "-":
+                k["video"].pop("youtube", None)
+            else:
+                k["video"]["youtube"] = {"tr": tr, "en": en}
+                hata = denetle_kayit(k)
+                if hata:
+                    sys.exit("youtube: " + ", ".join(hata))
+            yaz(akis)
+            print("youtube:", kimlik, "→", k["video"].get("youtube", "kaldırıldı"))
             return
     sys.exit("bulunamadı: " + kimlik)
 
@@ -319,6 +348,8 @@ if __name__ == "__main__":
         ekle(a[1], a[2], a[3])
     elif len(a) in (4, 5) and a[0] == "video":
         video(*a[1:])
+    elif len(a) == 4 and a[0] == "youtube":
+        youtube(a[1], a[2], a[3])
     elif len(a) == 2 and a[0] == "sil":
         sil(a[1])
     elif a == ["liste"]:
