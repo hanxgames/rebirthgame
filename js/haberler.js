@@ -63,11 +63,12 @@
     var kutu = el("button", "news-video");
     kutu.type = "button";
     kutu.setAttribute("aria-label", OYNAT[dil()] + ": " + metin(k.baslik));
+    var poster = v.kapak || k.gorsel;   // kapak: videonun 1280x720 karesi (yoksa haberin 640x360 görseli)
     var kapak = el("img");
-    kapak.src = k.gorsel;
+    kapak.src = poster;
     kapak.alt = "";
-    kapak.width = 640;
-    kapak.height = 360;
+    kapak.width = v.kapak ? 1280 : 640;
+    kapak.height = v.kapak ? 720 : 360;
     kutu.appendChild(kapak);
     kutu.appendChild(el("span", "news-play"));
     kutu.appendChild(el("span", "news-video__etiket", OYNAT[dil()]));
@@ -81,7 +82,7 @@
       } else {
         oyn = el("video");
         oyn.src = kaynak.dosya;
-        oyn.poster = k.gorsel;
+        oyn.poster = poster;
         oyn.controls = true;
         oyn.autoplay = true;
         oyn.playsInline = true;

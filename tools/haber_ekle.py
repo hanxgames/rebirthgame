@@ -7,7 +7,9 @@ görselleri kendi önbelleğinden siler).
   python tools/haber_ekle.py ekle haber taslak.json gorsel.jpg        # yeni haber
   python tools/haber_ekle.py ekle guncelleme taslak.json gorsel.png   # yeni güncelleme notu
   python tools/haber_ekle.py sil <id>                                 # kaydı ve görselini kaldır
-  python tools/haber_ekle.py video <id> <tr_adres> <en_adres>         # var olan kayda video ekle/değiştir ("-" "-": kaldır)
+  python tools/haber_ekle.py video <id> <tr> <en> [kapak.jpg]          # var olan kayda video ekle/değiştir ("-" "-": kaldır);
+                                                                      #   tr/en adres ya da yerel .mp4/.webm (assets/video/haber/'e
+                                                                      #   kopyalanır, kayıt düşünce silinir); kapak 1280x720'e kırpılır
   python tools/haber_ekle.py liste
   python tools/haber_ekle.py denetle                                  # şema, görseller, yetim dosyalar (siler)
 
@@ -22,11 +24,13 @@ id, ja, ko, zh_CN, zh_TW — oyun kendi dilindeki anahtarı gösterir, yoksa İn
     "ozet":   {"tr": "...", "en": "..."},        # oyundaki kartta görünür (2-3 satır)
     "metin":  {"tr": ["paragraf", "• madde"], "en": [...]},   # haberler.html'de; "• " ile başlayan satır madde olur
     "baglanti": "https://...",                   # isteğe bağlı: "Detayları gör" bu adresi açar (yoksa haberler.html#<id>)
-    "video": {"tr": "https://youtu.be/...", "en": "https://youtu.be/..."},
+    "video": {"tr": "https://youtu.be/...", "en": "https://youtu.be/...", "kapak": "assets/video/haber/..."},
                                                  # isteğe bağlı: haberler.html'de kartın üstünde video (oyun göstermez; oyundan
                                                  #   gelen bağlantı ?lang=tr|en taşır: Türkçe oyuncu tr'yi, diğer bütün diller en'i
                                                  #   izler). YouTube (watch/youtu.be/shorts/embed) ya da .mp4/.webm (https ya da
                                                  #   assets/...). YouTube oynatıcısı yalnız tıklayınca youtube-nocookie'den yüklenir.
+                                                 #   kapak isteğe bağlı (oynat düğmesinin ve oynatıcının görseli; yoksa gorsel).
+                                                 #   Yerel dosyaları "video" komutu kopyalar (ekle'de adres verilir).
     "platform": ["android", "pc", "web"],        # isteğe bağlı: oyunda yalnız bu platformlarda (android|ios|pc|web) görünür;
                                                  #   başka mağazaya satış bağlantısı veren haberi iOS'a koyma (App Store 3.1.1)
     "form": "moderator",                         # isteğe bağlı: haberler.html'de haberin altına başvuru düğmesi (js/basvuru.js
@@ -54,6 +58,8 @@ import sys
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 AKIS = os.path.join(KOK, "haberler.json")
 GORSEL_KLASOR = "assets/img/haber"
+VIDEO_KLASOR = "assets/video/haber"   # habere kopyalanan videolar ve kapakları (kayıt düşünce silinir)
+KAPAK_BOY = (1280, 720)
 TURLER = {"haber": "haberler", "guncelleme": "guncellemeler"}
 EN_COK = 5
 BOY = (640, 360)
@@ -85,12 +91,12 @@ def kisalt(metin: str) -> str:
     return s[:40].strip("-") or "haber"
 
 
-def gorsel_hazirla(kaynak: str, kimlik: str) -> str:
+def gorsel_hazirla(kaynak: str, kimlik: str, boy: tuple = BOY, klasor: str = GORSEL_KLASOR) -> str:
     from PIL import Image
     im = Image.open(kaynak)
     im = im.convert("RGB")
     w, h = im.size
-    oran = BOY[0] / BOY[1]
+    oran = boy[0] / boy[1]
     if w / h > oran:          # fazla geniş: yanlardan kırp
         yw = int(round(h * oran))
         x0 = (w - yw) // 2
@@ -99,16 +105,33 @@ def gorsel_hazirla(kaynak: str, kimlik: str) -> str:
         yh = int(round(w / oran))
         y0 = max(0, int((h - yh) * 0.4))
         im = im.crop((0, y0, w, y0 + yh))
-    im = im.resize(BOY, Image.LANCZOS)
+    im = im.resize(boy, Image.LANCZOS)
     tampon = io.BytesIO()
     im.save(tampon, "JPEG", quality=82, optimize=True, progressive=True)
     veri = tampon.getvalue()
     # dosya adına içerik özeti: aynı kimlikte görsel değişirse oyun önbelleği yenisini indirir
     ad = "%s-%s.jpg" % (kimlik, hashlib.sha1(veri).hexdigest()[:6])
-    os.makedirs(os.path.join(KOK, GORSEL_KLASOR), exist_ok=True)
-    with open(os.path.join(KOK, GORSEL_KLASOR, ad), "wb") as f:
+    os.makedirs(os.path.join(KOK, klasor), exist_ok=True)
+    with open(os.path.join(KOK, klasor, ad), "wb") as f:
         f.write(veri)
-    return GORSEL_KLASOR + "/" + ad
+    return klasor + "/" + ad
+
+
+def video_kopyala(kaynak: str, kimlik: str, dil: str) -> str:
+    """yerel .mp4/.webm → assets/video/haber/<id>-<dil>-<özet>.<uzantı> (adres verildiyse aynen döner)"""
+    if not os.path.isfile(kaynak):
+        return kaynak
+    uz = os.path.splitext(kaynak)[1].lower()
+    if uz not in (".mp4", ".webm"):
+        sys.exit("video dosyası .mp4 ya da .webm olmalı: " + kaynak)
+    with open(kaynak, "rb") as f:
+        veri = f.read()
+    ad = "%s-%s-%s%s" % (kimlik, dil, hashlib.sha1(veri).hexdigest()[:6], uz)
+    os.makedirs(os.path.join(KOK, VIDEO_KLASOR), exist_ok=True)
+    with open(os.path.join(KOK, VIDEO_KLASOR, ad), "wb") as f:
+        f.write(veri)
+    print("  %s: %.1f MB → %s/%s" % (dil, len(veri) / 1e6, VIDEO_KLASOR, ad))
+    return VIDEO_KLASOR + "/" + ad
 
 
 def denetle_kayit(k: dict) -> list:
@@ -132,6 +155,10 @@ def denetle_kayit(k: dict) -> list:
     v = k.get("video")
     if v is not None and (not isinstance(v, dict) or any(not VIDEO.fullmatch(str(v.get(d, ""))) for d in DILLER)):
         hata.append("video {tr, en}: YouTube ya da .mp4/.webm adresi")
+    if isinstance(v, dict):
+        for x in [v.get(d, "") for d in DILLER] + [v.get("kapak", "")]:
+            if str(x).startswith("assets/") and not os.path.exists(os.path.join(KOK, str(x))):
+                hata.append("video dosyası yok: " + str(x))
     if k.get("form") is not None and k.get("form") not in FORMLAR:
         hata.append("form: " + " | ".join(FORMLAR))
     an = k.get("anket")
@@ -178,13 +205,17 @@ def sirala_kirp(akis: dict) -> list:
 
 def yetim_sil(akis: dict) -> list:
     kullanilan = {os.path.basename(k.get("gorsel", "")) for liste in TURLER.values() for k in akis.get(liste, [])}
-    klasor = os.path.join(KOK, GORSEL_KLASOR)
+    for liste in TURLER.values():   # habere kopyalanmış video ve kapak dosyaları
+        for k in akis.get(liste, []):
+            if isinstance(k.get("video"), dict):
+                kullanilan |= {os.path.basename(str(x)) for x in k["video"].values() if str(x).startswith(VIDEO_KLASOR + "/")}
     silinen = []
-    if os.path.isdir(klasor):
-        for ad in os.listdir(klasor):
-            if ad not in kullanilan:
-                os.remove(os.path.join(klasor, ad))
-                silinen.append(ad)
+    for klasor in (os.path.join(KOK, GORSEL_KLASOR), os.path.join(KOK, VIDEO_KLASOR)):
+        if os.path.isdir(klasor):
+            for ad in os.listdir(klasor):
+                if ad not in kullanilan:
+                    os.remove(os.path.join(klasor, ad))
+                    silinen.append(ad)
     return silinen
 
 
@@ -229,7 +260,7 @@ def sil(kimlik: str) -> None:
     print("silindi:", kimlik)
 
 
-def video(kimlik: str, tr: str, en: str) -> None:
+def video(kimlik: str, tr: str, en: str, kapak: str = "") -> None:
     akis = oku()
     for liste in TURLER.values():
         for k in akis.get(liste, []):
@@ -238,10 +269,17 @@ def video(kimlik: str, tr: str, en: str) -> None:
             if tr == en == "-":
                 k.pop("video", None)
             else:
-                k["video"] = {"tr": tr, "en": en}
+                v = {"tr": video_kopyala(tr, kimlik, "tr"), "en": video_kopyala(en, kimlik, "en")}
+                if kapak:
+                    v["kapak"] = gorsel_hazirla(kapak, kimlik + "-kapak", KAPAK_BOY, VIDEO_KLASOR)
+                k["video"] = v
                 hata = denetle_kayit(k)
                 if hata:
+                    for x in v.values():   # yarım kalan kopyaları bırakma
+                        if str(x).startswith(VIDEO_KLASOR + "/") and os.path.exists(os.path.join(KOK, x)):
+                            os.remove(os.path.join(KOK, x))
                     sys.exit("video: " + ", ".join(hata))
+            yetim_sil(akis)
             yaz(akis)
             print("video:", kimlik, "→", k.get("video", "kaldırıldı"))
             return
@@ -279,8 +317,8 @@ if __name__ == "__main__":
     a = sys.argv[1:]
     if len(a) == 4 and a[0] == "ekle":
         ekle(a[1], a[2], a[3])
-    elif len(a) == 4 and a[0] == "video":
-        video(a[1], a[2], a[3])
+    elif len(a) in (4, 5) and a[0] == "video":
+        video(*a[1:])
     elif len(a) == 2 and a[0] == "sil":
         sil(a[1])
     elif a == ["liste"]:

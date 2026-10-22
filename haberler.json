@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-22T15:52:43Z",
+ "guncelleme": "2026-10-22T15:59:07Z",
  "haberler": [
   {
    "id": "2026-10-22-golge-cephesi",
@@ -47,6 +47,7 @@
    },
    "metin": {
     "tr": [
+     "Gölge Cephesi'nin giriş sinematiğini yukarıda izleyebilirsin: oyunun kendi sahneleri ve seslendirmesiyle.",
      "Depremden sonra devlet dağıldı; vilayetin kaderini artık yabancı bir misyon yazıyor. Gölge Cephesi, kendi topraklarını kendisi yönetmek isteyen insanların hareketi: çiftçiler, öğretmenler, madenciler. ReBirth'te ilk kez öteki taraftasın.",
      "• Konsey'i yönet: hücreleri örgütle, her kararın bedelini tart",
      "• Halkın güvenini kazan: gücün halktan gelir, siviller asla hedef değil",
@@ -57,6 +58,7 @@
      "Gölge Cephesi bir sonraki güncellemeyle (2.1.1) geliyor ve Premium içerik olacak."
     ],
     "en": [
+     "Watch the Shadow Front's opening cinematic above, made from the game's own scenes and voice acting.",
      "After the earthquake the state fell apart, and a foreign mission now decides the province's fate. The Shadow Front is a movement of people who want to govern their own land: farmers, teachers, miners. For the first time in ReBirth, you are on the other side.",
      "• Lead the Council: organize your cells and weigh the cost of every decision",
      "• Win the people's trust: your strength comes from the people, and civilians are never a target",
@@ -68,7 +70,12 @@
     ]
    },
    "gorsel": "assets/img/haber/2026-10-22-golge-cephesi-f5079f.jpg",
-   "eklendi": "2026-10-22T15:51:04.629596Z"
+   "eklendi": "2026-10-22T15:51:04.629596Z",
+   "video": {
+    "tr": "assets/video/haber/2026-10-22-golge-cephesi-tr-4e110d.mp4",
+    "en": "assets/video/haber/2026-10-22-golge-cephesi-en-57212c.mp4",
+    "kapak": "assets/video/haber/2026-10-22-golge-cephesi-kapak-7334cc.jpg"
+   }
   },
   {
    "id": "2026-10-20-reddit-rebirthsocial",

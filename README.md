@@ -20,7 +20,8 @@ Her türde en çok **5** kayıt tutulur: yenisi eklenince en eskisi akıştan d�
 ```
 python tools/haber_ekle.py ekle haber taslak.json gorsel.jpg        # yeni haber (görsel 16:9 kırpılır, 640x360 JPEG)
 python tools/haber_ekle.py ekle guncelleme taslak.json gorsel.png   # yeni güncelleme notu
-python tools/haber_ekle.py video <id> <tr_adres> <en_adres>   # habere video (YouTube ya da .mp4); "- -" kaldırır
+python tools/haber_ekle.py video <id> <tr> <en> [kapak.jpg]   # habere video: YouTube adresi ya da yerel .mp4 (assets/video/haber/'e
+                                                            # kopyalanır, kayıt düşünce silinir); "- -" kaldırır
 python tools/haber_ekle.py sil <id> · liste · denetle
 ```
 Taslak biçimi betiğin başında (başlık / özet / metin TR + EN zorunlu; oyunun diğer dilleri İngilizcesini gösterir; `baglanti` verilirse
