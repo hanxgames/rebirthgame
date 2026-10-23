@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-23T14:54:07Z",
+ "guncelleme": "2026-10-23T17:58:39Z",
  "haberler": [
   {
    "id": "2026-10-22-golge-cephesi",
@@ -151,33 +151,62 @@
    "id": "2026-10-18-anket-sonraki-mod",
    "tarih": "2026-10-18",
    "etiket": {
-    "tr": "Anket",
-    "en": "Poll"
+    "tr": "Anket sonucu",
+    "en": "Poll result",
+    "es": "Resultado",
+    "pt_BR": "Resultado",
+    "de": "Ergebnis",
+    "fr": "Résultat",
+    "id": "Hasil polling",
+    "ja": "アンケート結果",
+    "ko": "투표 결과",
+    "zh_CN": "投票结果",
+    "zh_TW": "投票結果"
    },
    "baslik": {
-    "tr": "Sıradaki oyun modunu sen seç",
-    "en": "You choose the next game mode"
+    "tr": "Anket sonucu: Gölge Cephesi modu seçildi",
+    "en": "Poll result: the Shadow Front mode wins",
+    "es": "Resultado de la encuesta: gana el modo Frente Sombra",
+    "pt_BR": "Resultado da enquete: vence o modo Frente Sombria",
+    "de": "Umfrageergebnis: Der Modus Schattenfront gewinnt",
+    "fr": "Résultat du sondage : le mode Front de l'Ombre l'emporte",
+    "id": "Hasil polling: mode Front Bayangan terpilih",
+    "ja": "アンケート結果：「影の戦線」モードに決定",
+    "ko": "투표 결과: '그림자 전선' 모드 선정",
+    "zh_CN": "投票结果：“暗影阵线”模式胜出",
+    "zh_TW": "投票結果：「暗影陣線」模式勝出"
    },
    "ozet": {
-    "tr": "İsyancı Modu mu, Sefer Modu mu, yeni doğal afetler mi, yeni haritalar mı? Oyunu bu kartın üzerinden ver, sonuçları hemen gör (sürüm 2.0.8 ve sonrası).",
-    "en": "Insurgent Mode, Campaign Mode, new natural disasters or new maps? Vote right on this card and see the results instantly (version 2.0.8 or later)."
+    "tr": "Anket sona erdi: 108 oyun 53'ünü alan İsyancı Modu kazandı. Gölge Cephesi modu 2.1.1 ile yayında; sonuçları bu kartta görebilirsin. Oy veren herkese teşekkürler!",
+    "en": "The poll has closed: Insurgent Mode won with 53 of 108 votes. The Shadow Front mode is out now in 2.1.1, and the results are on this card. Thanks to everyone who voted!",
+    "es": "La encuesta ha terminado: ganó el Modo Insurgente con 53 de 108 votos. El modo Frente Sombra ya está disponible en la 2.1.1 y los resultados están en esta tarjeta. ¡Gracias a todos los que votaron!",
+    "pt_BR": "A enquete terminou: o Modo Insurgente venceu com 53 de 108 votos. O modo Frente Sombria já está disponível na 2.1.1, e os resultados estão neste cartão. Obrigado a todos que votaram!",
+    "de": "Die Umfrage ist beendet: Der Aufständischen-Modus hat mit 53 von 108 Stimmen gewonnen. Der Modus Schattenfront ist jetzt mit 2.1.1 verfügbar, die Ergebnisse siehst du auf dieser Karte. Danke an alle, die abgestimmt haben!",
+    "fr": "Le sondage est terminé : le mode Insurgé l'emporte avec 53 voix sur 108. Le mode Front de l'Ombre est disponible avec la 2.1.1, et les résultats sont sur cette carte. Merci à tous ceux qui ont voté !",
+    "id": "Polling telah ditutup: Mode Pemberontak menang dengan 53 dari 108 suara. Mode Front Bayangan kini hadir di 2.1.1, dan hasilnya ada di kartu ini. Terima kasih untuk semua yang memilih!",
+    "ja": "アンケートは終了しました。108票中53票を集めた「反乱モード」が1位に。「影の戦線」モードはアップデート2.1.1で登場済みです。結果はこのカードで確認できます。投票してくれた皆さん、ありがとう！",
+    "ko": "투표가 종료되었습니다. 108표 중 53표를 얻은 '반란군 모드'가 1위를 차지했습니다. '그림자 전선' 모드는 2.1.1 업데이트로 출시되었으며, 결과는 이 카드에서 확인할 수 있습니다. 투표해 주신 모든 분께 감사드립니다!",
+    "zh_CN": "投票已结束：“叛乱模式”以108票中的53票胜出。“暗影阵线”模式已随 2.1.1 更新上线，结果可在此卡片中查看。感谢所有参与投票的玩家！",
+    "zh_TW": "投票已結束：「叛亂模式」以108票中的53票勝出。「暗影陣線」模式已隨 2.1.1 更新上線，結果可在此卡片中查看。感謝所有參與投票的玩家！"
    },
    "metin": {
     "tr": [
-     "Sıradaki büyük güncellemede ne olacağını sizinle birlikte seçmek istiyoruz. Dört seçenek var:",
-     "• İsyancı Modu: bu sefer öbür taraf sizsiniz. Gölge Cephesi'ni yönetin, şehirlere sızın, halk desteği toplayın, sabotaj yapın ve dışarıdan destek bulun.",
-     "• Sefer Modu: tek bir vilayet yerine uzun soluklu bir ülke yönetin. Vilayetleri sırayla ayağa kaldırın, komşu ülkelerle diplomasi yapın.",
-     "• Yeni Doğal Afetler: yeni felaketler ve onlara özgü tehditler, girişimler ve olaylar.",
-     "• Yeni Haritalar: yeni vilayetler, yeni coğrafyalar, yeni stratejiler.",
-     "Oy vermek için oyunun ana menüsündeki Haberler kartında bir şıkka dokunmanız yeterli (Android, sürüm 2.0.8 ve sonrası). Her oyuncunun bir oy hakkı var; sonuçlar oy verdikten hemen sonra görünür."
+     "Anket sona erdi. Sıradaki büyük güncellemede ne olacağını sizinle birlikte seçtik ve kazanan belli oldu: İsyancı Modu.",
+     "• İsyancı Modu: 53 oy (%49)",
+     "• Sefer Modu: 43 oy (%40)",
+     "• Yeni Doğal Afetler: 7 oy (%6)",
+     "• Yeni Haritalar: 5 oy (%5)",
+     "Kazanan mod, Gölge Cephesi adıyla 2.1.1 güncellemesinde yayında: bu kez isyancı sensin. Gizli hücrelerini yönet, halkı kazan, misyonu barış masasına oturt. Ayrıntılar Güncelleme notları sekmesinde.",
+     "Sefer Modu da yakın bir ikinci oldu; bu ilgiyi not ettik. Oy veren herkese teşekkürler!"
     ],
     "en": [
-     "We'd like to choose what comes in the next big update together with you. There are four options:",
-     "• Insurgent Mode: this time you're on the other side. Lead the Shadow Front, infiltrate the cities, win popular support, sabotage and find backing from abroad.",
-     "• Campaign Mode: rule a whole country over the long haul instead of a single province. Rebuild provinces one by one and deal with neighbouring countries.",
-     "• New Natural Disasters: new catastrophes with their own threats, initiatives and events.",
-     "• New Maps: new provinces, new landscapes, new strategies.",
-     "To vote, just tap an option on the News card in the game's main menu (Android, version 2.0.8 or later). Every player gets one vote, and the results show up right after you vote."
+     "The poll has closed. We picked what comes in the next big update together with you, and the winner is Insurgent Mode.",
+     "• Insurgent Mode: 53 votes (49%)",
+     "• Campaign Mode: 43 votes (40%)",
+     "• New Natural Disasters: 7 votes (6%)",
+     "• New Maps: 5 votes (5%)",
+     "The winning mode is out now in update 2.1.1 as the Shadow Front: this time you are the rebellion. Lead secret cells, win the people over and bring the mission to the peace table. See the Patch notes tab for details.",
+     "Campaign Mode came a close second, and we've taken note. Thanks to everyone who voted!"
     ]
    },
    "platform": [
@@ -227,7 +256,7 @@
       }
      }
     ],
-    "bitis": "2026-11-30"
+    "bitis": "2026-10-22"
    },
    "gorsel": "assets/img/haber/2026-10-18-anket-sonraki-mod-6f4c96.jpg",
    "eklendi": "2026-10-18T12:31:57.686302Z"
