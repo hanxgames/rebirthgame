@@ -1,23 +1,23 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-22T21:22:09Z",
+ "guncelleme": "2026-10-23T14:54:07Z",
  "haberler": [
   {
    "id": "2026-10-22-golge-cephesi",
    "tarih": "2026-10-22",
    "etiket": {
-    "tr": "Yakında",
-    "en": "Coming soon",
-    "es": "Próximamente",
-    "pt_BR": "Em breve",
-    "de": "Demnächst",
-    "fr": "Bientôt",
-    "id": "Segera hadir",
-    "ja": "近日登場",
-    "ko": "출시 예정",
-    "zh_CN": "即将推出",
-    "zh_TW": "即將推出"
+    "tr": "Yeni mod",
+    "en": "New mode",
+    "es": "Nuevo modo",
+    "pt_BR": "Novo modo",
+    "de": "Neuer Modus",
+    "fr": "Nouveau mode",
+    "id": "Mode baru",
+    "ja": "新モード",
+    "ko": "새 모드",
+    "zh_CN": "新模式",
+    "zh_TW": "新模式"
    },
    "baslik": {
     "tr": "Hikâyeye bir de Gölge Cephesi'nden bakın!",
@@ -33,17 +33,17 @@
     "zh_TW": "從暗影陣線的視角重看這段故事！"
    },
    "ozet": {
-    "tr": "Bu sefer isyan sensin. Yeni mod Gölge Cephesi bir sonraki güncellemeyle (2.1.1) geliyor: Konsey'i yönet, halkın güvenini kazan, misyonu barış masasına oturt.",
-    "en": "This time, you are the uprising. The new Shadow Front mode arrives in the next update (2.1.1): lead the Council, win the people's trust and bring the mission to the peace table.",
-    "es": "Esta vez, la rebelión eres tú. El nuevo modo Frente Sombra llega en la próxima actualización (2.1.1): dirige el Consejo, gánate la confianza del pueblo y lleva a la misión a la mesa de paz.",
-    "pt_BR": "Desta vez, a revolta é você. O novo modo Frente Sombria chega na próxima atualização (2.1.1): comande o Conselho, conquiste a confiança do povo e leve a missão à mesa de paz.",
-    "de": "Diesmal bist du der Aufstand. Der neue Modus Schattenfront kommt mit dem nächsten Update (2.1.1): Führe den Rat, gewinne das Vertrauen der Bevölkerung und bring die Mission an den Verhandlungstisch.",
-    "fr": "Cette fois, la révolte, c'est vous. Le nouveau mode Front de l'Ombre arrive avec la prochaine mise à jour (2.1.1) : dirigez le Conseil, gagnez la confiance du peuple et amenez la mission à la table des négociations.",
-    "id": "Kali ini, kamulah perlawanannya. Mode baru Front Bayangan hadir di pembaruan berikutnya (2.1.1): pimpin Dewan, raih kepercayaan rakyat, dan bawa misi ke meja perdamaian.",
-    "ja": "今度は、あなたが蜂起する側だ。新モード「影の戦線」が次回アップデート（2.1.1）で登場。評議会を率い、民衆の信頼を勝ち取り、ミッションを和平交渉の席に着かせよう。",
-    "ko": "이번에는 당신이 봉기의 주인공입니다. 새 모드 '그림자 전선'이 다음 업데이트(2.1.1)에서 찾아옵니다. 평의회를 이끌고, 민심을 얻고, 임무단을 평화 협상 테이블로 불러내세요.",
-    "zh_CN": "这一次，你就是起义者。新模式“暗影阵线”将在下次更新（2.1.1）中推出：领导议会，赢得民众信任，迫使任务团坐上和平谈判桌。",
-    "zh_TW": "這一次，你就是起義者。新模式「暗影陣線」將在下次更新（2.1.1）中推出：領導議會，贏得民眾信任，迫使任務團坐上和平談判桌。"
+    "tr": "Bu sefer isyan sensin. Yeni mod Gölge Cephesi 2.1.1 ile yayında: Konsey'i yönet, halkın güvenini kazan, misyonu barış masasına oturt.",
+    "en": "This time, you are the uprising. The new Shadow Front mode is out now in 2.1.1: lead the Council, win the people's trust and bring the mission to the peace table.",
+    "es": "Esta vez, la rebelión eres tú. El nuevo modo Frente Sombra ya está disponible en la 2.1.1: dirige el Consejo, gánate la confianza del pueblo y lleva a la misión a la mesa de paz.",
+    "pt_BR": "Desta vez, a revolta é você. O novo modo Frente Sombria já está disponível na 2.1.1: comande o Conselho, conquiste a confiança do povo e leve a missão à mesa de paz.",
+    "de": "Diesmal bist du der Aufstand. Der neue Modus Schattenfront ist jetzt mit 2.1.1 verfügbar: Führe den Rat, gewinne das Vertrauen der Bevölkerung und bring die Mission an den Verhandlungstisch.",
+    "fr": "Cette fois, la révolte, c'est vous. Le nouveau mode Front de l'Ombre est disponible avec la 2.1.1 : dirigez le Conseil, gagnez la confiance du peuple et amenez la mission à la table des négociations.",
+    "id": "Kali ini, kamulah perlawanannya. Mode baru Front Bayangan kini hadir di 2.1.1: pimpin Dewan, raih kepercayaan rakyat, dan bawa misi ke meja perdamaian.",
+    "ja": "今度は、あなたが蜂起する側だ。新モード「影の戦線」がアップデート2.1.1で登場。評議会を率い、民衆の信頼を勝ち取り、ミッションを和平交渉の席に着かせよう。",
+    "ko": "이번에는 당신이 봉기의 주인공입니다. 새 모드 '그림자 전선'이 2.1.1 업데이트로 출시되었습니다. 평의회를 이끌고, 민심을 얻고, 임무단을 평화 협상 테이블로 불러내세요.",
+    "zh_CN": "这一次，你就是起义者。新模式“暗影阵线”已随 2.1.1 更新上线：领导议会，赢得民众信任，迫使任务团坐上和平谈判桌。",
+    "zh_TW": "這一次，你就是起義者。新模式「暗影陣線」已隨 2.1.1 更新上線：領導議會，贏得民眾信任，迫使任務團坐上和平談判桌。"
    },
    "metin": {
     "tr": [
@@ -55,7 +55,7 @@
      "• Misyonu barış masasına oturt",
      "• Karşında oyunu bilen bir misyon: Kolay, Orta ve Zor; üç vilayette oynanır",
      "• Moda özel arayüz ve seslendirme",
-     "Gölge Cephesi bir sonraki güncellemeyle (2.1.1) geliyor."
+     "Gölge Cephesi 2.1.1 ile yayında; güncellemeyi Google Play'den indirebilirsin."
     ],
     "en": [
      "Watch the Shadow Front's opening cinematic above, made from the game's own scenes and voice acting.",
@@ -66,7 +66,7 @@
      "• Bring the mission to the peace table",
      "• Face a mission that knows the game: Easy, Medium and Hard, across three provinces",
      "• A dedicated interface and voice acting for the mode",
-     "The Shadow Front arrives in the next update (2.1.1)."
+     "The Shadow Front is out now in 2.1.1; get the update on Google Play."
     ]
    },
    "gorsel": "assets/img/haber/2026-10-22-golge-cephesi-f5079f.jpg",
@@ -313,6 +313,76 @@
  ],
  "guncellemeler": [
   {
+   "id": "2026-10-23-surum-2-1-1",
+   "tarih": "2026-10-23",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update",
+    "es": "Actualización",
+    "pt_BR": "Atualização",
+    "de": "Update",
+    "fr": "Mise à jour",
+    "id": "Pembaruan",
+    "ja": "アップデート",
+    "ko": "업데이트",
+    "zh_CN": "更新",
+    "zh_TW": "更新"
+   },
+   "surum": "2.1.1",
+   "baslik": {
+    "tr": "Sürüm 2.1.1: Gölge Cephesi yayında",
+    "en": "Version 2.1.1: Shadow Front is here",
+    "es": "Versión 2.1.1: llega Frente Sombra",
+    "pt_BR": "Versão 2.1.1: chegou a Frente Sombria",
+    "de": "Version 2.1.1: Die Schattenfront ist da",
+    "fr": "Version 2.1.1 : le Front de l'Ombre est là",
+    "id": "Versi 2.1.1: Front Bayangan hadir",
+    "ja": "バージョン2.1.1：「影の戦線」登場",
+    "ko": "버전 2.1.1: 그림자 전선 출시",
+    "zh_CN": "版本 2.1.1：暗影阵线上线",
+    "zh_TW": "版本 2.1.1：暗影陣線上線"
+   },
+   "ozet": {
+    "tr": "Yeni mod Gölge Cephesi: bu kez isyancı sensin. Gizli hücrelerini yönet, halkı kazan, misyonu barış masasına oturt. Ayrıca zafer ekranlarında Paylaş düğmesi ve efektlerde takılmaya son.",
+    "en": "New mode, Shadow Front: this time you are the rebellion. Lead secret cells, win the people over and bring the mission to the peace table. Plus a Share button on victory screens and no more stutter on effects.",
+    "es": "Nuevo modo, Frente Sombra: esta vez la rebelión eres tú. Dirige células secretas, gánate al pueblo y sienta a la Misión en la mesa de paz. Además, botón Compartir en las pantallas de victoria y adiós a los tirones en los efectos.",
+    "pt_BR": "Novo modo, Frente Sombria: desta vez a rebelião é você. Comande células secretas, conquiste o povo e leve a Missão à mesa da paz. Além disso, botão Compartilhar nas telas de vitória e fim das travadas nos efeitos.",
+    "de": "Neuer Modus Schattenfront: Diesmal bist du der Aufstand. Führe geheime Zellen, gewinne das Volk und bring die Mission an den Friedenstisch. Dazu eine Teilen-Schaltfläche auf den Siegesbildschirmen und kein Ruckeln mehr bei Effekten.",
+    "fr": "Nouveau mode, Front de l'Ombre : cette fois, la rébellion, c'est vous. Dirigez des cellules secrètes, gagnez le peuple et amenez la Mission à la table de paix. Aussi : un bouton Partager sur les écrans de victoire et plus de saccades sur les effets.",
+    "id": "Mode baru, Front Bayangan: kali ini kamulah pemberontaknya. Pimpin sel rahasia, rebut hati rakyat, dan bawa Misi ke meja perdamaian. Plus tombol Bagikan di layar kemenangan dan efek tanpa patah-patah.",
+    "ja": "新モード「影の戦線」：今度はあなたが反乱だ。秘密のセルを率い、民衆の心をつかみ、ミッションを和平の席に着かせよう。勝利画面のシェアボタン追加、エフェクトのカクつき解消も。",
+    "ko": "새 모드 '그림자 전선': 이번에는 당신이 반란입니다. 비밀 조직을 이끌고, 민심을 얻고, 임무단을 평화 협상 테이블에 앉히세요. 승리 화면 공유 버튼 추가, 효과 끊김 해결도 함께.",
+    "zh_CN": "新模式“暗影阵线”：这一次，你就是叛乱。领导秘密小组，赢得民心，让特派团坐上和平谈判桌。另有胜利画面分享按钮，特效卡顿也已修复。",
+    "zh_TW": "新模式「暗影陣線」：這一次，你就是叛亂。領導秘密小組，贏得民心，讓特派團坐上和平談判桌。另有勝利畫面分享按鈕，特效卡頓也已修正。"
+   },
+   "metin": {
+    "tr": [
+     "2.1.1 ile ReBirth'te ilk kez öteki taraftasın: yeni mod Gölge Cephesi yayında.",
+     "• Bu kez isyancı sensin: gizli hücrelerini yönet, halkı kazan, misyonu barış masasına oturt",
+     "• Her eylemin haritada görünen, zincirleme sonuçları var: baskı artınca misyon şehirlerden çekiliyor ve ajanlarıyla peşine düşüyor",
+     "• Konsey kararları, yolda jandarma kontrol noktaları ve oyunu bilen bir misyon: Kolay, Orta ve Zor; üç vilayette",
+     "• Moda özel arayüz, giriş sineması ve seslendirme",
+     "• Zafer ekranlarında Paylaş düğmesi: kazandığın harekâtı arkadaşlarınla paylaş",
+     "• Daha akıcı oyun: efektler ilk kez göründüğünde yaşanan takılmalar giderildi",
+     "• Çeviri ve arayüz düzeltmeleri",
+     "Gölge Cephesi'nin giriş sinematiğini Haberler sekmesindeki duyuruda izleyebilirsin. Güncellemeyi Google Play'den indirebilirsin."
+    ],
+    "en": [
+     "With 2.1.1 you are on the other side for the first time in ReBirth: the new Shadow Front mode is out now.",
+     "• This time you are the rebellion: lead secret cells, win the people over and bring the mission to the peace table",
+     "• Every action has visible, chain-reaction consequences on the map: under pressure the mission pulls out of cities and sends agents after you",
+     "• Council resolutions, gendarmerie checkpoints on the road and a mission that knows the game: Easy, Medium and Hard, across three provinces",
+     "• A dedicated interface, opening cinematic and voice acting for the mode",
+     "• Share button on victory screens: share a campaign you won with your friends",
+     "• Smoother play: no more stutter when effects appear for the first time",
+     "• Translation and interface fixes",
+     "Watch the Shadow Front's opening cinematic in the announcement on the News tab. Get the update on Google Play."
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-23-surum-2-1-1-84a86a.jpg",
+   "eklendi": "2026-10-23T14:54:07.850207Z"
+  },
+  {
    "id": "2026-10-23-surum-2-1-0",
    "tarih": "2026-10-23",
    "etiket": {
@@ -541,41 +611,6 @@
    },
    "gorsel": "assets/img/haber/2026-10-15-surum-2-0-6-03536f.jpg",
    "eklendi": "2026-10-15T17:45:01.596430Z"
-  },
-  {
-   "id": "2026-10-14-surum-2-0-5",
-   "tarih": "2026-10-14",
-   "etiket": {
-    "tr": "Güncelleme",
-    "en": "Update"
-   },
-   "surum": "2.0.5",
-   "baslik": {
-    "tr": "Sürüm 2.0.5 yayında",
-    "en": "Version 2.0.5 is out"
-   },
-   "ozet": {
-    "tr": "Yeni harekât ekranı, ilk açılışta rehberli eğitim ve isyancı saldırılarını haritada gösteren uyarı.",
-    "en": "A new campaign screen, a guided tutorial on first launch and alerts that point you straight to insurgent attacks."
-   },
-   "metin": {
-    "tr": [
-     "• Hızlı başla: tek dokunuşla üç haritadan birinde harekâta başlayın",
-     "• Özel harekât: senaryo, doktrin ve zorluğu siz seçin",
-     "• Eğitim harekâtı: oyunu rehberli turla adım adım öğrenin; yeni oyuncular doğrudan eğitimle başlar",
-     "• Saldırı uyarısı: saldırı ekran dışındaysa kenarda bölgeyi gösteren kırmızı ok belirir, dokununca kamera oraya gider; bölge haritada kırmızı yanıp söner",
-     "• Harita katmanları daha belirgin"
-    ],
-    "en": [
-     "• Quick start: begin a campaign on any of the three maps with a single tap",
-     "• Custom campaign: pick the scenario, doctrine and difficulty yourself",
-     "• Training campaign: learn the game step by step with the guided tour; new players start right there",
-     "• Attack alerts: when an attack happens off screen, a red arrow on the edge points to it and takes the camera there; the district flashes red on the map",
-     "• Clearer map layers"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-14-surum-2-0-5-24319e.jpg",
-   "eklendi": "2026-10-15T16:43:53.000000Z"
   }
  ]
 }
