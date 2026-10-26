@@ -1,8 +1,78 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-23T17:58:39Z",
+ "guncelleme": "2026-10-26T17:02:12Z",
  "haberler": [
+  {
+   "id": "2026-10-26-sefer-yakinda",
+   "tarih": "2026-10-26",
+   "etiket": {
+    "tr": "Yakında",
+    "en": "Coming soon",
+    "es": "Próximamente",
+    "pt_BR": "Em breve",
+    "de": "Demnächst",
+    "fr": "Bientôt",
+    "id": "Segera hadir",
+    "ja": "近日登場",
+    "ko": "출시 예정",
+    "zh_CN": "即将推出",
+    "zh_TW": "即將推出"
+   },
+   "baslik": {
+    "tr": "Ülkeni sen yöneteceksin: Sefer modu yakında geliyor!",
+    "en": "Run your own country: Statecraft mode is coming soon!",
+    "es": "Dirige tu propio país: ¡el modo Estadista llega pronto!",
+    "pt_BR": "Governe seu próprio país: o modo Estadista chega em breve!",
+    "de": "Regiere dein eigenes Land: Der Modus Staatskunst kommt bald!",
+    "fr": "Dirigez votre propre pays : le mode Gouverner arrive bientôt !",
+    "id": "Pimpin negaramu sendiri: mode Negarawan segera hadir!",
+    "ja": "自分の国を動かせ：新モード「国家経営」近日登場！",
+    "ko": "나라를 직접 이끌어라: '국가 경영' 모드 곧 출시!",
+    "zh_CN": "亲手治理你的国家：“治国”模式即将推出！",
+    "zh_TW": "親手治理你的國家：「治國」模式即將推出！"
+   },
+   "ozet": {
+    "tr": "Harekât bitti, Misyon çekildi: artık başbakan sensin. Meclisten kanun geçir, ekonomiyi büyüt, komşularla diplomasi yürüt ve ülkeni Aldorya'nın lideri yap. Fragmanı izle!",
+    "en": "The campaign is over and the Mission has left: now you are the prime minister. Pass laws, grow the economy, deal with your neighbours and make your country the leader of Aldorya. Watch the trailer!",
+    "es": "La campaña terminó y la Misión se fue: ahora tú eres el primer ministro. Aprueba leyes, haz crecer la economía, negocia con tus vecinos y convierte a tu país en el líder de Aldorya. ¡Mira el tráiler!",
+    "pt_BR": "A campanha acabou e a Missão partiu: agora você é o primeiro-ministro. Aprove leis, faça a economia crescer, negocie com os vizinhos e torne seu país o líder de Aldorya. Assista ao trailer!",
+    "de": "Der Einsatz ist vorbei, die Mission ist abgezogen: Jetzt bist du Regierungschef. Bring Gesetze durch, lass die Wirtschaft wachsen, verhandle mit deinen Nachbarn und mach dein Land zur Führungsmacht Aldoryas. Sieh dir den Trailer an!",
+    "fr": "La campagne est terminée et la Mission est partie : c'est vous le Premier ministre. Faites voter des lois, développez l'économie, négociez avec vos voisins et faites de votre pays le leader d'Aldorya. Regardez la bande-annonce !",
+    "id": "Kampanye usai dan Misi telah pergi: kini kamulah perdana menterinya. Sahkan undang-undang, kembangkan ekonomi, berdiplomasi dengan tetangga, dan jadikan negaramu pemimpin Aldorya. Tonton trailernya!",
+    "ja": "作戦は終わり、ミッションは撤収した。今度はあなたが首相だ。法律を通し、経済を育て、隣国と外交を重ね、自国をAldorya大陸の盟主へ。トレーラーをチェック！",
+    "ko": "작전은 끝났고 임무단은 떠났습니다. 이제 당신이 총리입니다. 법안을 통과시키고, 경제를 키우고, 이웃 나라와 외교를 펼쳐 조국을 Aldorya의 리더로 만드세요. 트레일러를 확인하세요!",
+    "zh_CN": "行动结束，特派团已撤离：现在你就是总理。通过法案、发展经济、与邻国周旋，让你的国家成为Aldorya的领袖。快来看预告片！",
+    "zh_TW": "行動結束，特派團已撤離：現在你就是總理。通過法案、發展經濟、與鄰國周旋，讓你的國家成為Aldorya的領袖。快來看預告片！"
+   },
+   "metin": {
+    "tr": [
+     "ReBirth'te yeni bir dönem başlıyor. Sefer, oyunun büyük strateji modu: harekât bitmiş, Misyon çekilmiştir; felaketten yeni çıkmış ülkenin yönetimi artık sende. Yukarıdaki fragmanda ilk bakışı izleyebilirsin.",
+     "• Aldorya kıtasında Tarsel, Kesra ya da Varzan'ı yönet; komşu ülkeleri Kolay, Orta ya da Zor zorlukta rakip yönetimler oynar",
+     "• Meclisten kanun geçir, bakanlarını seç, seçimleri kazan",
+     "• Araştırma yap, ekonomiyi büyüt; komşularla ve okyanus ötesi güçlerle diplomasi ve ticaret yürüt",
+     "• Birliklerini yollar boyunca konuşlandır, SİHA'larla devriye kur; Gölge Cephesi'nden kopan örgütleri tespit et ve operasyonla etkisiz hâle getir",
+     "• Her kararın zincirleme etkisi var: attığın her adıma ülken ve komşuların tepki verir",
+     "Sefer modu yakında geliyor. Kıtanın lideri olmaya hazır mısın?"
+    ],
+    "en": [
+     "A new era begins in ReBirth. Statecraft is the game's grand strategy mode: the campaign is over, the Mission has left, and your country, just out of the disaster, is now yours to run. Watch the first look in the trailer above.",
+     "• Lead Tarsel, Kesra or Varzan on the continent of Aldorya, while rival governments run your neighbours on Easy, Medium or Hard",
+     "• Pass laws in parliament, pick your ministers and win elections",
+     "• Research, grow the economy, and handle diplomacy and trade with your neighbours and with powers beyond the ocean",
+     "• Deploy your units along the roads and set up drone patrols; track down the groups that split off from the Shadow Front and take them out in planned operations",
+     "• Every decision sets off a chain reaction: your country and your neighbours respond to every move you make",
+     "Statecraft mode is coming soon. Are you ready to lead the continent?"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-26-sefer-yakinda-0a76e8.jpg",
+   "eklendi": "2026-10-26T17:02:11.369872Z",
+   "video": {
+    "tr": "assets/video/haber/2026-10-26-sefer-yakinda-tr-2f9da7.mp4",
+    "en": "assets/video/haber/2026-10-26-sefer-yakinda-en-76a631.mp4",
+    "kapak": "assets/video/haber/2026-10-26-sefer-yakinda-kapak-af30f3.jpg"
+   }
+  },
   {
    "id": "2026-10-22-golge-cephesi",
    "tarih": "2026-10-22",
@@ -260,48 +330,6 @@
    },
    "gorsel": "assets/img/haber/2026-10-18-anket-sonraki-mod-6f4c96.jpg",
    "eklendi": "2026-10-18T12:31:57.686302Z"
-  },
-  {
-   "id": "2026-10-16-icerik-ureticileri",
-   "tarih": "2026-10-16",
-   "etiket": {
-    "tr": "İş birliği",
-    "en": "Collab"
-   },
-   "baslik": {
-    "tr": "İçerik üreticileri arıyoruz",
-    "en": "Calling all content creators"
-   },
-   "ozet": {
-    "tr": "ReBirth hakkında video, yayın ya da gönderi hazırlamak ister misiniz? İçerik üreticilerine ücretsiz Premium ve tüm etkinliklere erken erişim veriyoruz. Başvuru: hanxdestek@gmail.com",
-    "en": "Want to make videos, streams or posts about ReBirth? Creators get free Premium and early access to every event. Apply at hanxdestek@gmail.com"
-   },
-   "metin": {
-    "tr": [
-     "YouTube, TikTok, Instagram, Twitch ya da başka bir platformda ReBirth hakkında içerik üretmek istiyorsanız sizinle çalışmak istiyoruz. Oynanış videosu, canlı yayın, rehber, kısa video ya da strateji paylaşımı fark etmez; büyük bir kitleniz olması da şart değil.",
-     "İçerik üreticilerimize sunduklarımız:",
-     "• Ücretsiz Premium: bütün haritalar, Kriz Masası ve Hava Kuvvetleri açık, reklam yok",
-     "• Kara Kolera gibi her etkinliğe ve yeni güncellemelere herkesten önce erişim",
-     "• Geliştiriciyle doğrudan iletişim; tanıtım görselleri ve fragmanlar",
-     "Başvurmak için hanxdestek@gmail.com adresine bir e-posta gönderin. E-postanızda şunlar olsun:",
-     "• Sosyal medya hesaplarınızın bağlantıları",
-     "• Nasıl bir içerik üretmek istediğiniz (örneğin oynanış serisi, kısa videolar, canlı yayın, rehber)",
-     "Her başvuruyu okuyup e-postayla dönüyoruz."
-    ],
-    "en": [
-     "If you'd like to make content about ReBirth on YouTube, TikTok, Instagram, Twitch or anywhere else, we'd love to work with you. Gameplay videos, streams, guides, short clips or strategy breakdowns are all welcome, and you don't need a big audience.",
-     "What creators get:",
-     "• Free Premium: every map, the Crisis Desk and the Air Force unlocked, no ads",
-     "• Early access to every event, like Black Cholera, and to new updates before anyone else",
-     "• A direct line to the developer, plus promo art and trailers",
-     "To apply, send an email to hanxdestek@gmail.com with:",
-     "• Links to your social media channels",
-     "• What kind of content you'd like to make (for example a gameplay series, short videos, streams or guides)",
-     "We read every application and reply by email."
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-16-icerik-ureticileri-3cb694.jpg",
-   "eklendi": "2026-10-16T05:18:47.590159Z"
   },
   {
    "id": "2026-10-15-kara-kolera",
