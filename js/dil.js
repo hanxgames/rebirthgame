@@ -62,9 +62,20 @@
     if (I[k] || k === "tr" || k === "en") { cb(); return; }
     if (yuklenen[k]) { yuklenen[k].push(cb); return; }
     yuklenen[k] = [cb];
+    var bitti = false;
+    function son() {
+      if (bitti) return;
+      bitti = true;
+      var l = yuklenen[k] || [];
+      yuklenen[k] = null;
+      l.forEach(function (f) { f(); });
+    }
     var s = document.createElement("script");
     s.src = "js/i18n/" + k + ".js?v=" + (window.RB_I18N_SURUM || 1);
-    s.onload = s.onerror = function () { var l = yuklenen[k]; yuklenen[k] = null; l.forEach(function (f) { f(); }); };
+    // ağ takılırsa sayfa 5 sn sonra İngilizceyle açılır; sözlük sonradan gelirse "rb:sozluk" olayı (main.js yeniden çizer)
+    s.onload = function () { if (bitti) document.dispatchEvent(new CustomEvent("rb:sozluk", { detail: k })); else son(); };
+    s.onerror = son;
+    setTimeout(son, 5000);
     document.head.appendChild(s);
   }
 

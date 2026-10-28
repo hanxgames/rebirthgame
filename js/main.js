@@ -741,7 +741,10 @@
   // süreli kampanya rozetleri (ör. PC çıkış indirimi) bitiş tarihinden sonra kendiliğinden kalkar
   $$("[data-sale-until]").forEach(function (e) { if (Date.now() > Date.parse(e.getAttribute("data-sale-until"))) e.remove(); });
   D.kanonik("https://rebirthgame.tr/");
+  var basladi = false;
+  document.addEventListener("rb:sozluk", function (e) { if (basladi && e.detail === lang) applyLang(false); });
   D.yukle(lang, function () {   // tr/en dışındaki dilin sözlüğü gelince (yükleme perdesi bu arada açık)
+    basladi = true;
     applyLang(true);
     observeReveals();
     navSolid();
