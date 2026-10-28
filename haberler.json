@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-26T17:02:12Z",
+ "guncelleme": "2026-10-28T04:56:33Z",
  "haberler": [
   {
    "id": "2026-10-26-sefer-yakinda",
@@ -370,6 +370,88 @@
  ],
  "guncellemeler": [
   {
+   "id": "2026-10-28-surum-2-1-2",
+   "tarih": "2026-10-28",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update",
+    "es": "Actualización",
+    "pt_BR": "Atualização",
+    "de": "Update",
+    "fr": "Mise à jour",
+    "id": "Pembaruan",
+    "ja": "アップデート",
+    "ko": "업데이트",
+    "zh_CN": "更新",
+    "zh_TW": "更新"
+   },
+   "surum": "2.1.2",
+   "baslik": {
+    "tr": "Sürüm 2.1.2: Oyuncu önerileriyle daha derin bir harekât",
+    "en": "Version 2.1.2: A deeper campaign, shaped by players",
+    "es": "Versión 2.1.2: Una campaña más profunda, hecha con los jugadores",
+    "pt_BR": "Versão 2.1.2: Uma campanha mais profunda, feita com os jogadores",
+    "de": "Version 2.1.2: Ein tieferer Einsatz, geprägt von euren Ideen",
+    "fr": "Version 2.1.2 : une campagne plus riche, façonnée par les joueurs",
+    "id": "Versi 2.1.2: Operasi yang lebih mendalam, dibentuk oleh pemain",
+    "ja": "バージョン2.1.2：プレイヤーの声で深まった作戦",
+    "ko": "버전 2.1.2: 플레이어 의견으로 더 깊어진 작전",
+    "zh_CN": "版本 2.1.2：玩家建议打造更有深度的战役",
+    "zh_TW": "版本 2.1.2：玩家建議打造更有深度的戰役"
+   },
+   "ozet": {
+    "tr": "Birliklere emir çarkı, bütçe açığında kademeli sonuçlar, belirgin zorluk farkları, senaryo birleştirme ve Gölge Cephesi'ne 5 strateji. Harekâtın Hikâyesi yenilendi, bildirilen hatalar düzeltildi.",
+    "en": "An order wheel for units, growing consequences for budget deficits, clearer difficulty levels, combined scenarios and 5 strategies for the Shadow Front. The Story of the Campaign is rebuilt and reported bugs are fixed.",
+    "es": "Rueda de órdenes para las unidades, consecuencias graduales del déficit, dificultades bien diferenciadas, escenarios combinables y 5 estrategias para el Frente Sombra. La historia de la campaña, renovada, y errores corregidos.",
+    "pt_BR": "Roda de ordens para as unidades, consequências graduais do déficit, dificuldades bem distintas, cenários combináveis e 5 estratégias para a Frente Sombria. A história da campanha renovada e bugs corrigidos.",
+    "de": "Befehlsrad für Einheiten, schrittweise Folgen bei Haushaltsdefiziten, deutlich unterschiedliche Schwierigkeitsgrade, kombinierbare Szenarien und 5 Strategien für die Schattenfront. Die Geschichte des Einsatzes ist neu, gemeldete Fehler sind behoben.",
+    "fr": "Roue des ordres pour les unités, conséquences progressives du déficit, niveaux de difficulté bien distincts, scénarios combinables et 5 stratégies pour le Front de l'Ombre. L'histoire de la campagne est repensée et les bugs signalés sont corrigés.",
+    "id": "Roda perintah untuk unit, dampak bertahap defisit anggaran, tingkat kesulitan yang lebih jelas, skenario yang bisa digabung, dan 5 strategi untuk Front Bayangan. Kisah Operasi diperbarui dan bug yang dilaporkan diperbaiki.",
+    "ja": "部隊への命令ホイール、財政赤字の段階的な影響、はっきり差がつく難易度、シナリオの組み合わせ、影の戦線に5つの戦略。作戦の記録を刷新し、報告された不具合も修正しました。",
+    "ko": "부대 명령 휠, 재정 적자의 단계적 결과, 확실히 달라진 난이도, 시나리오 조합, 그림자 전선의 5가지 전략. 작전의 기록이 새로워졌고 제보된 버그도 수정했습니다.",
+    "zh_CN": "部队指令轮、财政赤字的渐进后果、区分明显的难度、可组合的情景，以及暗影阵线的 5 种策略。战役纪事全面翻新，并修复了玩家反馈的问题。",
+    "zh_TW": "部隊指令輪、財政赤字的漸進後果、區分明顯的難度、可組合的情境，以及暗影陣線的 5 種策略。戰役紀事全面翻新，並修正了玩家回報的問題。"
+   },
+   "metin": {
+    "tr": [
+     "2.1.2, büyük ölçüde oyuncularımızın önerileriyle şekillendi.",
+     "• Emir çarkı: birliğe dokun, emirleri çevresindeki dilimlerden ver; üst üste binen birliklerde hangisini istediğini seç",
+     "• Bütçe açığı artık oyunu hemen bitirmiyor: açık büyüdükçe ve uzadıkça faiz, hizmetler ve halk desteğinde kademeli sonuçlar doğuruyor",
+     "• Siyasi sermaye dengesi: erken oyunda daha bol, biriktirmek pahalı; geç dönem için yeni kararlar",
+     "• Kolay, Orta ve Zor arasında belirgin farklar: olaylar, isyancıların davranışı ve uluslararası tepki zorluğa göre değişiyor",
+     "• Özel harekât yenilendi: Harita, Senaryo, Doktrin ve Zorluk ayrı sekmelerde; senaryoları birleştirip kendi meydan okumanı kur",
+     "• Enflasyonun nedenini gör: göstergede tahmin ve ayrıntılı döküm",
+     "• 13 yeni olay, dengelenmiş karar seçenekleri, orta ve geç döneme özgü baskılar",
+     "• Yeni İyileşme katmanı; ana menüde Haberler panelini gizleyebilirsin",
+     "• Harekâtın Hikâyesi: okunabilir hız, duraklat, önceki/sonraki an ve 0,5×–2× hız",
+     "• Gölge Cephesi: 5 strateji, karakol baskını planı, Dikkat ve militan dengesi, yeni Konsey kararları, çeşitlenen kontrol noktaları",
+     "• Kriz Masası: Baraj ve Karargâh görevlerinde yıldız süreleri gevşetildi",
+     "• Düzeltildi: Gölge Cephesi'nde yeniden başlatınca kapanma, grafik ayarından sonra donan ekran, siyasi sermaye yetmediği hâlde seçilebilen seçenekler, İstihkâm Bölüğü inşaat kapasitesi",
+     "Teşekkürler Prempiti! Bu sürümdeki hata düzeltmelerinin ve değişikliklerin birçoğu oyuncumuz Prempiti'nin ayrıntılı geri bildiriminden geldi. Zaman ayırıp yazdığın için çok teşekkür ederiz.",
+     "Güncelleme PC'de itch.io'da; Google Play'de mağaza onayının ardından yayına girer."
+    ],
+    "en": [
+     "2.1.2 was shaped largely by suggestions from our players.",
+     "• Order wheel: tap a unit and pick orders from the slices around it; choose which unit you mean when several overlap",
+     "• Budget deficits no longer end the game at once: the bigger and longer the deficit, the heavier the interest, service cuts and loss of support",
+     "• Political capital rebalanced: more of it early on, hoarding it costs you; new decisions for the late game",
+     "• Easy, Medium and Hard now feel different: events, rebel behaviour and international reactions all scale with difficulty",
+     "• Custom campaign rebuilt: Map, Scenario, Doctrine and Difficulty on separate tabs; combine scenarios into your own challenge",
+     "• See why inflation moves: a forecast on the gauge and a detailed breakdown",
+     "• 13 new events, rebalanced decisions, mid and late game pressures",
+     "• New Healing map layer; hide the News panel on the main menu",
+     "• The Story of the Campaign: readable pacing, pause, previous/next moment and 0.5×–2× speed",
+     "• Shadow Front: 5 strategies, outpost raid plans, Heat and militant balance, new Council resolutions, more varied checkpoints",
+     "• Crisis Desk: more time for stars on the Dam and Headquarters missions",
+     "• Fixed: Shadow Front closing on restart, screen freezing after changing graphics settings, options that could be picked without enough political capital, Engineer Company build capacity",
+     "Thank you, Prempiti! Many of the fixes and changes in this update came from the detailed feedback of our player Prempiti. Thank you for taking the time to write to us.",
+     "The update is out now on PC (itch.io) and arrives on Google Play once store review is complete."
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-28-surum-2-1-2-71a492.jpg",
+   "eklendi": "2026-10-28T04:56:33.780839Z"
+  },
+  {
    "id": "2026-10-23-surum-2-1-1",
    "tarih": "2026-10-23",
    "etiket": {
@@ -631,43 +713,6 @@
    },
    "gorsel": "assets/img/haber/2026-10-17-surum-2-0-7-e5d919.jpg",
    "eklendi": "2026-10-17T21:24:50.879848Z"
-  },
-  {
-   "id": "2026-10-15-surum-2-0-6",
-   "tarih": "2026-10-15",
-   "etiket": {
-    "tr": "Güncelleme",
-    "en": "Update"
-   },
-   "surum": "2.0.6",
-   "baslik": {
-    "tr": "Sürüm 2.0.6: Kara Kolera geliyor",
-    "en": "Version 2.0.6: Black Cholera is coming"
-   },
-   "ozet": {
-    "tr": "Kara Kolera etkinliği, ana menüde haberler ve güncelleme notları, daha büyük menü düğmeleri ve MediaTek telefonlar için açılış düzeltmesi.",
-    "en": "The Black Cholera event, news and patch notes on the main menu, bigger menu buttons and a launch fix for MediaTek phones."
-   },
-   "metin": {
-    "tr": [
-     "• Yeni etkinlik: Kara Kolera 31 Ekim'de başlıyor. Karantina kampını savunun, laboratuvarda tedaviyi bulun, dozları dört şehre ulaştırın (Premium)",
-     "• Ana menüde Haberler ve Güncelleme notları: duyurular ve yenilikler artık oyunun içinde",
-     "• Oyun her açılışta ana menüden başlar; kaldığınız harekât \"Devam et\" ile sürer, kayıtlarınız korunur",
-     "• Ana menü düğmeleri daha büyük; Saha el kitabı artık Ayarlar'da",
-     "• Bazı MediaTek Dimensity işlemcili telefonlarda (ör. moto g54, moto g power 5G) açılışta kapanma düzeltildi",
-     "• Performans ve kararlılık iyileştirmeleri"
-    ],
-    "en": [
-     "• New event: Black Cholera begins October 31. Defend the quarantine camp, find the cure in the lab and get the doses to four cities (Premium)",
-     "• News and patch notes on the main menu: announcements and updates are now inside the game",
-     "• The game now always opens on the main menu; pick up your campaign with \"Continue\", your saves are kept",
-     "• Bigger main menu buttons; the Field Manual is now in Settings",
-     "• Fixed a crash on launch on some phones with MediaTek Dimensity chips (e.g. moto g54, moto g power 5G)",
-     "• Performance and stability improvements"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-15-surum-2-0-6-03536f.jpg",
-   "eklendi": "2026-10-15T17:45:01.596430Z"
   }
  ]
 }
