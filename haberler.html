@@ -22,7 +22,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/doc.css?v=4">
+<link rel="stylesheet" href="css/doc.css?v=5">
 <link rel="stylesheet" href="css/dil.css?v=1">
 </head>
 <body>
@@ -50,6 +50,14 @@
   </div>
   <div id="newsList" class="news-list" aria-live="polite"></div>
   <p id="newsEmpty" class="doc-meta" hidden><span data-t="news.empty">Couldn't load the news. Please try again in a moment.</span></p>
+  <aside class="news-cta">
+    <img class="news-cta__logo" src="assets/img/ui/logo.webp" alt="ReBirth" width="1200" height="560" loading="lazy">
+    <div class="news-cta__txt"><b data-t="cta.title">The province is waiting</b><span data-t="cta.free">Free to start · Plays offline · 11 languages</span></div>
+    <div class="news-cta__btns">
+      <a class="doc-btn" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dhaberler" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg><span data-t="cta.play">Get it on Google Play</span></a>
+      <a class="doc-btn doc-btn--ghost" href="https://hanx-games.itch.io/rebirth" target="_blank" rel="noopener"><span data-t="cta.pc">Play on PC</span><span class="news-cta__sale" data-sale-until="2026-11-30T20:59:00Z" data-t="cta.sale">50% off</span></a>
+    </div>
+  </aside>
 </div></main>
 
 <footer class="doc-foot"><div class="doc-wrap">
@@ -57,14 +65,15 @@
   <nav>
     <a href="./" data-keep-lang="./"><span data-t="nav.home">Home</span></a>
     <a href="privacy.html" data-keep-lang="privacy.html"><span data-t="nav.privacy">Privacy</span></a>
-    <a href="https://play.google.com/store/apps/details?id=com.hantro.business" target="_blank" rel="noopener">Google Play</a>
+    <a href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dhaberler_alt" target="_blank" rel="noopener">Google Play</a>
   </nav>
 </div></footer>
 
 <script src="js/dil.js?v=2"></script>
-<script src="js/doc.js?v=2"></script>
+<script src="js/doc.js?v=3"></script>
 <script src="js/basvuru.js?v=3"></script>
 <script src="js/paylas.js?v=2"></script>
 <script src="js/haberler.js?v=10"></script>
+<script src="js/sayac.js?v=1" defer></script>
 </body>
 </html>

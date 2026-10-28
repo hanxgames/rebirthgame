@@ -13,7 +13,7 @@ window.RB_I18N = {
     "hero.lead": "Bir vilayet yerle bir oldu. Boşluğu Gölge Cephesi doldurmaya çalışıyor. Uluslararası misyonun koordinatörü sensin: yeniden kur, halkın güvenini kazan, savaşı barış masasında bitir.",
     "hero.play": "Google Play'den indir",
     "hero.trailer": "Fragmanı izle",
-    "hero.ios": "Ayrıca App Store'da", "hero.pc": "Bilgisayarda oyna", "hero.sale": "%60 indirim", "cta.reddit": "<span lang=\"en\">Reddit</span> topluluğu",
+    "hero.ios": "Ayrıca App Store'da", "hero.pc": "Bilgisayarda oyna", "hero.sale": "%50 indirim", "cta.reddit": "<span lang=\"en\">Reddit</span> topluluğu",
     "hero.free": "Ücretsiz başla · İnternetsiz oyna · 11 dil",
     "hero.scroll": "Hikâyeye in",
     "ticker": ["3 harita", "3 felaket", "14 bölge", "40 girişim", "30 politika", "~80 dinamik olay", "7 görev, 7 mini oyun", "Hava kuvvetleri", "Gece-gündüz döngüsü", "TR / EN seslendirme", "11 dil", "İnternetsiz"],
@@ -128,6 +128,7 @@ window.RB_I18N = {
     "prem.prem": "Premium", "prem.premD": "Tek seferlik · Abonelik yok",
     "prem.p1": "Kesra Deltası ve Varzan Yaylası", "prem.p2": "Tüm senaryolar ve doktrinler", "prem.p3": "Kriz Masası ve Hava Kuvvetleri",
     "prem.p4": "Gelecek tüm haritalar ve etkinlikler", "prem.p5": "Reklamsız",
+    "prem.freeBtn": "Ücretsiz indir", "prem.note": "Premium oyunun içinden satın alınır.", "prem.pc": "Tam sürüm", "prem.pcD": "Windows · Linux · itch.io", "prem.c1": "Windows ve Linux için indirin", "prem.c2": "Kayıtlarınız bilgisayarınızda kalır", "prem.c3": "Tarayıcıda ücretsiz demo", "prem.pcBtn": "Tam sürümü indir",
 
     "faq.kicker": "Sık sorulanlar", "faq.title": "Merak edilenler",
     "faq.q1": "Hangi cihazlarda oynanır?", "faq.a1": "Android telefon ve tabletlerde (Google Play), iPhone ve iPad'de (App Store) ve bilgisayarda: Windows ve Linux sürümü ile tarayıcıda oynanan ücretsiz demo itch.io'da.",
@@ -158,7 +159,7 @@ window.RB_I18N = {
     "hero.lead": "A province lies in ruins, and the Shadow Front is filling the vacuum. You coordinate the international mission: rebuild, win the people's trust and end the war at the negotiating table.",
     "hero.play": "Get it on Google Play",
     "hero.trailer": "Watch the trailer",
-    "hero.ios": "Also on the App Store", "hero.pc": "Play on PC", "hero.sale": "60% off", "cta.reddit": "Reddit community",
+    "hero.ios": "Also on the App Store", "hero.pc": "Play on PC", "hero.sale": "50% off", "cta.reddit": "Reddit community",
     "hero.free": "Free to start · Plays offline · 11 languages",
     "hero.scroll": "Enter the story",
     "ticker": ["3 maps", "3 disasters", "14 districts", "40 initiatives", "30 policies", "~80 dynamic events", "7 missions, 7 mini-games", "Air force", "Day-night cycle", "TR / EN voice acting", "11 languages", "Plays offline"],
@@ -273,6 +274,7 @@ window.RB_I18N = {
     "prem.prem": "Premium", "prem.premD": "One-time · No subscription",
     "prem.p1": "Kesra Delta and Varzan Plateau", "prem.p2": "Every scenario and doctrine", "prem.p3": "Crisis Desk and Air Force",
     "prem.p4": "All future maps and events", "prem.p5": "No ads",
+    "prem.freeBtn": "Download free", "prem.note": "Premium is bought inside the game.", "prem.pc": "Full version", "prem.pcD": "Windows · Linux · itch.io", "prem.c1": "Download for Windows and Linux", "prem.c2": "Your saves stay on your computer", "prem.c3": "Free demo in your browser", "prem.pcBtn": "Get the full version",
 
     "faq.kicker": "FAQ", "faq.title": "Good questions",
     "faq.q1": "Which devices can I play on?", "faq.a1": "Android phones and tablets (Google Play), iPhone and iPad (App Store) and PC: the Windows and Linux version and a free browser demo are on itch.io.",

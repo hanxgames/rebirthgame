@@ -166,3 +166,16 @@ a:hover { color: var(--accent-h); }
 .pay-link { padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line2); background: transparent; color: var(--text); font-size: 13px;
   font-weight: 600; text-decoration: none; cursor: pointer; font-family: inherit; }
 .pay-link:hover { border-color: var(--accent); color: var(--accent-h); }
+
+/* haberlerin altındaki indirme kutusu */
+.news-cta { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 22px; margin: 34px 0 6px; padding: 22px 24px;
+  border-radius: 14px; border: 1px solid rgba(241,173,42,.45); background: linear-gradient(135deg, rgba(241,173,42,.14), rgba(241,173,42,.02) 60%), var(--bg2, #201e1c); }
+.news-cta__logo { width: 150px; height: auto; display: block; }
+.news-cta__txt { display: grid; gap: 4px; min-width: 0; }
+.news-cta__txt b { font-family: var(--f-display, Anton, sans-serif); font-weight: 400; text-transform: uppercase; font-size: 26px; line-height: 1.1; color: var(--cream, #ece4d0); }
+.news-cta__txt span { font-family: var(--f-caps); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; color: var(--muted); }
+.news-cta__btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+.doc-btn--ghost { background: transparent; color: var(--cream2, #dbd1ba); border: 1px solid var(--line2); }
+.doc-btn--ghost:hover { background: rgba(241,173,42,.1); color: var(--accent-h); border-color: var(--accent); }
+.news-cta__sale { font-size: 11px; letter-spacing: .06em; padding: 3px 8px; border-radius: 99px; background: var(--bad, #d8483b); color: #fff; }
+@media (max-width: 860px) { .news-cta { grid-template-columns: 1fr; text-align: center; justify-items: center; } .news-cta__btns { justify-content: center; } }

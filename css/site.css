@@ -398,6 +398,16 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .plan li::before { content: "✓"; color: var(--good); font-weight: 700; }
 .plan li.is-muted { color: var(--muted); }
 .plan li.is-muted::before { content: "•"; color: var(--muted); }
+.premium__grid .plan { display: flex; flex-direction: column; }
+.premium__grid .plan ul { margin-bottom: 26px; }
+.plan__btn { margin-top: auto; justify-content: center; }
+.plan__note { margin: 10px 0 0; font-size: 13px; color: var(--muted); text-align: center; }
+.premium__pc { max-width: 960px; margin-top: 22px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: center; }
+.premium__pc ul { margin-bottom: 24px; }
+.premium__pc .plan__btn { margin-top: 0; }
+.itch-kutu iframe { display: block; width: 552px; height: 167px; border: 0; border-radius: 10px; background: #1f1d1b; }
+@media (max-width: 1060px) { .premium__pc { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .itch-kutu { display: none; } .plan { padding: 26px 22px; } }
 
 /* ------------------------------------------------------------ sss */
 .faq__list { display: grid; gap: 10px; }

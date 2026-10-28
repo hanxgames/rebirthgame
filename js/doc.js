@@ -40,9 +40,19 @@
       es: "ReBirth — Noticias y notas de la versión", pt_BR: "ReBirth — Notícias e notas da atualização",
       de: "ReBirth — Nachrichten & Patchnotes", fr: "ReBirth — Actualités et notes de mise à jour",
       id: "ReBirth — Berita & Catatan Pembaruan", ja: "ReBirth — ニュース＆アップデート情報", ko: "ReBirth — 뉴스 및 업데이트 노트",
-      zh_CN: "ReBirth — 新闻与更新说明", zh_TW: "ReBirth — 新聞與更新說明" }
+      zh_CN: "ReBirth — 新闻与更新说明", zh_TW: "ReBirth — 新聞與更新說明" },
+    // haberlerin altındaki indirme kutusu (ana sayfa sözlüğünden: cta.title, hero.free, hero.play, hero.pc, hero.sale)
+    "cta.title": { tr: "Vilayet sizi bekliyor", en: "The province is waiting", es: "La provincia te espera", pt_BR: "A província está esperando", de: "Die Provinz wartet", fr: "La province vous attend", id: "Provinsi menantimu", ja: "州があなたを待っている", ko: "주가 당신을 기다립니다", zh_CN: "全省都在等你", zh_TW: "全省都在等你" },
+    "cta.free": { tr: "Ücretsiz başla · İnternetsiz oyna · 11 dil", en: "Free to start · Plays offline · 11 languages", es: "Empieza gratis · Juega sin conexión · 11 idiomas", pt_BR: "Comece grátis · Jogue offline · 11 idiomas", de: "Kostenlos starten · Offline spielbar · 11 Sprachen", fr: "Gratuit pour commencer · Jouable hors ligne · 11 langues", id: "Gratis untuk mulai · Bisa offline · 11 bahasa", ja: "基本無料 · オフライン対応 · 11言語", ko: "무료로 시작 · 오프라인 플레이 · 11개 언어", zh_CN: "免费开玩 · 支持离线 · 11种语言", zh_TW: "免費開玩 · 可離線遊玩 · 11種語言" },
+    "cta.play": { tr: "Google Play'den indir", en: "Get it on Google Play", es: "Disponible en Google Play", pt_BR: "Disponível no Google Play", de: "Jetzt bei Google Play", fr: "Disponible sur Google Play", id: "Dapatkan di Google Play", ja: "Google Playで入手", ko: "Google Play에서 받기", zh_CN: "在Google Play下载", zh_TW: "在Google Play下載" },
+    "cta.pc": { tr: "Bilgisayarda oyna", en: "Play on PC", es: "Jugar en PC", pt_BR: "Jogue no PC", de: "Auf dem PC spielen", fr: "Jouer sur PC", id: "Main di PC", ja: "PCでプレイ", ko: "PC에서 플레이", zh_CN: "在电脑上玩", zh_TW: "在電腦上玩" },
+    "cta.sale": { tr: "%50 indirim", en: "50% off", es: "50% de descuento", pt_BR: "50% de desconto", de: "50 % Rabatt", fr: "50% de réduction", id: "Diskon 50%", ja: "50%オフ", ko: "50% 할인", zh_CN: "立省50%", zh_TW: "現省50%" }
   };
   var root = document.documentElement;
+  // süreli indirim rozetleri bitiş tarihinden sonra kendiliğinden kalkar
+  Array.prototype.forEach.call(document.querySelectorAll("[data-sale-until]"), function (e) {
+    if (Date.now() > Date.parse(e.getAttribute("data-sale-until"))) e.remove();
+  });
   var lang = D.sec();
   function soz(k) { var d = SOZ[k] || {}; return d[lang] || d.en || ""; }
 
