@@ -1,8 +1,87 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-28T04:56:33Z",
+ "guncelleme": "2026-10-28T16:25:15Z",
  "haberler": [
+  {
+   "id": "2026-10-28-halvarya-saranis",
+   "tarih": "2026-10-28",
+   "etiket": {
+    "tr": "Yakında",
+    "en": "Coming soon",
+    "es": "Próximamente",
+    "pt_BR": "Em breve",
+    "de": "Demnächst",
+    "fr": "Bientôt",
+    "id": "Segera hadir",
+    "ja": "近日登場",
+    "ko": "출시 예정",
+    "zh_CN": "即将推出",
+    "zh_TW": "即將推出"
+   },
+   "baslik": {
+    "tr": "Sefer'e 2 yeni harita ve senaryo geliyor: Halvarya ve Saranis!",
+    "en": "Two new maps and scenarios are coming to Statecraft: Halvarya and Saranis!",
+    "es": "Dos nuevos mapas y escenarios llegan a Estadista: ¡Halvarya y Saranis!",
+    "pt_BR": "Dois novos mapas e cenários chegam ao Estadista: Halvarya e Saranis!",
+    "de": "Zwei neue Karten und Szenarien für Staatskunst: Halvarya und Saranis!",
+    "fr": "Deux nouvelles cartes et scénarios arrivent dans Gouverner : Halvarya et Saranis !",
+    "id": "Dua peta dan skenario baru untuk Negarawan: Halvarya dan Saranis!",
+    "ja": "「国家経営」に新マップ＆シナリオ2本：HalvaryaとSaranis！",
+    "ko": "'국가 경영'에 새 맵과 시나리오 2종: Halvarya와 Saranis!",
+    "zh_CN": "“治国”模式新增两张地图与剧本：Halvarya与Saranis！",
+    "zh_TW": "「治國」模式新增兩張地圖與劇本：Halvarya與Saranis！"
+   },
+   "ozet": {
+    "tr": "Sefer'de yönetebileceğin ülkeler beşe çıkıyor: kuzeyin karlı krallığı Halvarya ve güneyin tüccar cumhuriyeti Saranis geliyor. İkisinin de kendi haritası, hikâyesi, kuralları ve afetleri var.",
+    "en": "Statecraft grows to five playable countries: the snowy northern kingdom of Halvarya and the southern merchant republic of Saranis are on their way. Each has its own map, story, rules and disasters.",
+    "es": "Estadista crece a cinco países jugables: llegan Halvarya, el reino nevado del norte, y Saranis, la república mercantil del sur. Cada uno tiene su propio mapa, historia, reglas y desastres.",
+    "pt_BR": "O Estadista passa a ter cinco países jogáveis: chegam Halvarya, o reino nevado do norte, e Saranis, a república mercantil do sul. Cada um tem seu próprio mapa, história, regras e desastres.",
+    "de": "Staatskunst wächst auf fünf spielbare Länder: Halvarya, das verschneite Königreich im Norden, und Saranis, die Handelsrepublik im Süden, sind unterwegs. Jedes hat eigene Karte, Geschichte, Regeln und Katastrophen.",
+    "fr": "Gouverner passe à cinq pays jouables : Halvarya, le royaume enneigé du nord, et Saranis, la république marchande du sud, arrivent. Chacun a sa propre carte, son histoire, ses règles et ses catastrophes.",
+    "id": "Negarawan kini punya lima negara yang bisa dimainkan: Halvarya, kerajaan bersalju di utara, dan Saranis, republik dagang di selatan, segera hadir. Masing-masing punya peta, kisah, aturan, dan bencananya sendiri.",
+    "ja": "「国家経営」でプレイできる国が5つに。雪に覆われた北の王国Halvaryaと、南の商人共和国Saranisが登場予定。それぞれ専用のマップ、ストーリー、ルール、災害を備えています。",
+    "ko": "'국가 경영'에서 플레이할 수 있는 나라가 다섯 개로 늘어납니다. 눈 덮인 북쪽 왕국 Halvarya와 남쪽 상인 공화국 Saranis가 찾아옵니다. 두 나라 모두 고유한 맵, 이야기, 규칙, 재난을 갖추고 있습니다.",
+    "zh_CN": "“治国”模式的可玩国家增至五个：白雪覆盖的北方王国Halvarya与南方的商人共和国Saranis即将登场。两国各有专属地图、故事、规则与灾害。",
+    "zh_TW": "「治國」模式的可玩國家增至五個：白雪覆蓋的北方王國Halvarya與南方的商人共和國Saranis即將登場。兩國各有專屬地圖、故事、規則與災害。"
+   },
+   "metin": {
+    "tr": [
+     "Yakında gelecek Sefer modunda Aldorya kıtasının iki ülkesi daha yönetime açılıyor. Tarsel, Kesra ve Varzan'a kuzeyin Halvarya Krallığı ile güneyin Saranis Tüccar Cumhuriyeti katılıyor. İkisinin de kendi 3B haritası, hikâyesi, ülkeye özgü kuralları, 13 özel olayı ve afetleri var.",
+     "Halvarya Krallığı: Buzkırı'nın tacı",
+     "• Fiyortlu kıyılar, çam ormanları ve karlı Buzkırı Dağları; demir madenleri, Vesker tersanesi, sivri kuleli kraliyet kalesi ve kıtanın en güçlü ordusu",
+     "• Uzun kışlar bütçeyi sarsar: her sonbahar kışa piyasadan, stoktan ya da Lumenor'un enerji sözleşmesiyle hazırlan",
+     "• Yaşlı Kral IV. Edvar'ın güveni düşerse askerlik, basın ve göç kanunlarını imzalamadan bekletir; veraset sorusu Prenses Elira ile Prens Doran arasında büyür",
+     "• Kapalı ekonomiyi açmak büyüme getirir, ama işçiler, çiftçiler ve ordu tepki verir",
+     "• Çığ, kar fırtınası ve Isen Nehri'nin bahar taşkınları",
+     "Saranis Tüccar Cumhuriyeti: Dümen ve terazi",
+     "• Bir yarımada ve köprülerle bağlı üç ada; beyaz evler, zeytinlikler, bağlar, mavi kubbeli Dümen Sarayı ve Delmara limanı",
+     "• 1944'ten beri tarafsız: ordusu yok, güvenliğini ittifaklara ve sahil muhafızlarına emanet eder",
+     "• Bankaların sırrı hem servet hem risk: gizlilik mi şeffaflık mı, kararı sen verirsin; okyanus ötesindeki Atlanya hesap soruyor",
+     "• Liman kıtadaki her krizi ilk hisseden yer; işçi açığını göçle mi kapatacağına da sen karar verirsin",
+     "• Fırtına kabarmaları, maki yangınları ve ada depremleri",
+     "Kıtanın lideri olmak için artık beş yol var. Sen hangi ülkeyi seçeceksin?"
+    ],
+    "en": [
+     "Two more countries of the continent of Aldorya open up in the upcoming Statecraft mode. The northern Kingdom of Halvarya and the southern Merchant Republic of Saranis join Tarsel, Kesra and Varzan. Each has its own 3D map, story, country rules, 13 unique events and disasters.",
+     "Kingdom of Halvarya: The Crown of Buzkırı",
+     "• Fjord coasts, pine forests and the snowy Buzkırı Mountains; iron mines, the Vesker shipyard, a royal castle with soaring spires and the strongest army on the continent",
+     "• Long winters shake the budget: every autumn, prepare through the market, through stockpiles or with Lumenor's energy contract",
+     "• If his trust falls, the ageing King Edvar IV holds back military service, press and migration laws instead of signing them; the succession question grows between Princess Elira and Prince Doran",
+     "• Opening the closed economy brings growth, but workers, farmers and the army push back",
+     "• Avalanches, blizzards and the spring floods of the Isen River",
+     "Merchant Republic of Saranis: The helm and the scales",
+     "• A peninsula and three islands linked by bridges; white houses, olive groves, vineyards, the blue-domed Helm Palace and the port of Delmara",
+     "• Neutral since 1944: no army, its security rests on alliances and the coast guard",
+     "• Bank secrecy is both wealth and risk: secrecy or transparency, the choice is yours, while Atlanya across the ocean demands answers",
+     "• The port is the first to feel every crisis on the continent, and you decide whether to fill the labour gap with migration",
+     "• Storm surges, scrubland fires and island earthquakes",
+     "There are now five roads to leading the continent. Which country will you choose?"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-28-halvarya-saranis-17f1fd.jpg",
+   "eklendi": "2026-10-28T16:25:15.284496Z"
+  },
   {
    "id": "2026-10-26-sefer-yakinda",
    "tarih": "2026-10-26",
@@ -216,120 +295,6 @@
    "baglanti": "https://www.reddit.com/r/ReBirthSocial/",
    "gorsel": "assets/img/haber/2026-10-20-reddit-rebirthsocial-d97970.jpg",
    "eklendi": "2026-10-20T17:06:38.732797Z"
-  },
-  {
-   "id": "2026-10-18-anket-sonraki-mod",
-   "tarih": "2026-10-18",
-   "etiket": {
-    "tr": "Anket sonucu",
-    "en": "Poll result",
-    "es": "Resultado",
-    "pt_BR": "Resultado",
-    "de": "Ergebnis",
-    "fr": "Résultat",
-    "id": "Hasil polling",
-    "ja": "アンケート結果",
-    "ko": "투표 결과",
-    "zh_CN": "投票结果",
-    "zh_TW": "投票結果"
-   },
-   "baslik": {
-    "tr": "Anket sonucu: Gölge Cephesi modu seçildi",
-    "en": "Poll result: the Shadow Front mode wins",
-    "es": "Resultado de la encuesta: gana el modo Frente Sombra",
-    "pt_BR": "Resultado da enquete: vence o modo Frente Sombria",
-    "de": "Umfrageergebnis: Der Modus Schattenfront gewinnt",
-    "fr": "Résultat du sondage : le mode Front de l'Ombre l'emporte",
-    "id": "Hasil polling: mode Front Bayangan terpilih",
-    "ja": "アンケート結果：「影の戦線」モードに決定",
-    "ko": "투표 결과: '그림자 전선' 모드 선정",
-    "zh_CN": "投票结果：“暗影阵线”模式胜出",
-    "zh_TW": "投票結果：「暗影陣線」模式勝出"
-   },
-   "ozet": {
-    "tr": "Anket sona erdi: 108 oyun 53'ünü alan İsyancı Modu kazandı. Gölge Cephesi modu 2.1.1 ile yayında; sonuçları bu kartta görebilirsin. Oy veren herkese teşekkürler!",
-    "en": "The poll has closed: Insurgent Mode won with 53 of 108 votes. The Shadow Front mode is out now in 2.1.1, and the results are on this card. Thanks to everyone who voted!",
-    "es": "La encuesta ha terminado: ganó el Modo Insurgente con 53 de 108 votos. El modo Frente Sombra ya está disponible en la 2.1.1 y los resultados están en esta tarjeta. ¡Gracias a todos los que votaron!",
-    "pt_BR": "A enquete terminou: o Modo Insurgente venceu com 53 de 108 votos. O modo Frente Sombria já está disponível na 2.1.1, e os resultados estão neste cartão. Obrigado a todos que votaram!",
-    "de": "Die Umfrage ist beendet: Der Aufständischen-Modus hat mit 53 von 108 Stimmen gewonnen. Der Modus Schattenfront ist jetzt mit 2.1.1 verfügbar, die Ergebnisse siehst du auf dieser Karte. Danke an alle, die abgestimmt haben!",
-    "fr": "Le sondage est terminé : le mode Insurgé l'emporte avec 53 voix sur 108. Le mode Front de l'Ombre est disponible avec la 2.1.1, et les résultats sont sur cette carte. Merci à tous ceux qui ont voté !",
-    "id": "Polling telah ditutup: Mode Pemberontak menang dengan 53 dari 108 suara. Mode Front Bayangan kini hadir di 2.1.1, dan hasilnya ada di kartu ini. Terima kasih untuk semua yang memilih!",
-    "ja": "アンケートは終了しました。108票中53票を集めた「反乱モード」が1位に。「影の戦線」モードはアップデート2.1.1で登場済みです。結果はこのカードで確認できます。投票してくれた皆さん、ありがとう！",
-    "ko": "투표가 종료되었습니다. 108표 중 53표를 얻은 '반란군 모드'가 1위를 차지했습니다. '그림자 전선' 모드는 2.1.1 업데이트로 출시되었으며, 결과는 이 카드에서 확인할 수 있습니다. 투표해 주신 모든 분께 감사드립니다!",
-    "zh_CN": "投票已结束：“叛乱模式”以108票中的53票胜出。“暗影阵线”模式已随 2.1.1 更新上线，结果可在此卡片中查看。感谢所有参与投票的玩家！",
-    "zh_TW": "投票已結束：「叛亂模式」以108票中的53票勝出。「暗影陣線」模式已隨 2.1.1 更新上線，結果可在此卡片中查看。感謝所有參與投票的玩家！"
-   },
-   "metin": {
-    "tr": [
-     "Anket sona erdi. Sıradaki büyük güncellemede ne olacağını sizinle birlikte seçtik ve kazanan belli oldu: İsyancı Modu.",
-     "• İsyancı Modu: 53 oy (%49)",
-     "• Sefer Modu: 43 oy (%40)",
-     "• Yeni Doğal Afetler: 7 oy (%6)",
-     "• Yeni Haritalar: 5 oy (%5)",
-     "Kazanan mod, Gölge Cephesi adıyla 2.1.1 güncellemesinde yayında: bu kez isyancı sensin. Gizli hücrelerini yönet, halkı kazan, misyonu barış masasına oturt. Ayrıntılar Güncelleme notları sekmesinde.",
-     "Sefer Modu da yakın bir ikinci oldu; bu ilgiyi not ettik. Oy veren herkese teşekkürler!"
-    ],
-    "en": [
-     "The poll has closed. We picked what comes in the next big update together with you, and the winner is Insurgent Mode.",
-     "• Insurgent Mode: 53 votes (49%)",
-     "• Campaign Mode: 43 votes (40%)",
-     "• New Natural Disasters: 7 votes (6%)",
-     "• New Maps: 5 votes (5%)",
-     "The winning mode is out now in update 2.1.1 as the Shadow Front: this time you are the rebellion. Lead secret cells, win the people over and bring the mission to the peace table. See the Patch notes tab for details.",
-     "Campaign Mode came a close second, and we've taken note. Thanks to everyone who voted!"
-    ]
-   },
-   "platform": [
-    "android"
-   ],
-   "anket": {
-    "id": "sonraki_mod",
-    "soru": {
-     "tr": "Sıradaki oyun modu ne olsun?",
-     "en": "What should the next game mode be?"
-    },
-    "secenekler": [
-     {
-      "id": "isyanci",
-      "metin": {
-       "tr": "İsyancı Modu",
-       "en": "Insurgent Mode"
-      },
-      "aciklama": {
-       "tr": "Gölge Cephesi'ni yönetip isyancıları kontrol edin",
-       "en": "Lead the Shadow Front and control the insurgents"
-      }
-     },
-     {
-      "id": "sefer",
-      "metin": {
-       "tr": "Sefer Modu",
-       "en": "Campaign Mode"
-      },
-      "aciklama": {
-       "tr": "Uzun soluklu bir ülkeyi yönetin",
-       "en": "Rule a whole country over the long haul"
-      }
-     },
-     {
-      "id": "afet",
-      "metin": {
-       "tr": "Yeni Doğal Afetler",
-       "en": "New Natural Disasters"
-      }
-     },
-     {
-      "id": "harita",
-      "metin": {
-       "tr": "Yeni Haritalar",
-       "en": "New Maps"
-      }
-     }
-    ],
-    "bitis": "2026-10-22"
-   },
-   "gorsel": "assets/img/haber/2026-10-18-anket-sonraki-mod-6f4c96.jpg",
-   "eklendi": "2026-10-18T12:31:57.686302Z"
   },
   {
    "id": "2026-10-15-kara-kolera",
