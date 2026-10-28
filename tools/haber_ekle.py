@@ -2,7 +2,8 @@
 
 Her türde (haber / güncelleme notu) en çok `en_cok` (5) kayıt tutulur: yenisi eklenince en eskisi akıştan düşer ve
 görseli assets/img/haber/'den silinir (siteye ve oyuncuların cihazına boşa veri birikmez; oyun da akışta olmayan
-görselleri kendi önbelleğinden siler).
+görselleri kendi önbelleğinden siler). Her yazımda paylas/<tr|en>/<kimlik>.html paylaşım sayfaları da yenilenir (Open Graph
+önizlemesi; haberler.html'deki "Paylaş" düğmesi bu adresi verir, js/paylas.js hikâye/gönderi görselini tarayıcıda üretir).
 
   python tools/haber_ekle.py ekle haber taslak.json gorsel.jpg        # yeni haber
   python tools/haber_ekle.py ekle guncelleme taslak.json gorsel.png   # yeni güncelleme notu
@@ -85,6 +86,70 @@ def yaz(akis: dict) -> None:
         json.dump(akis, f, ensure_ascii=False, indent=1)
         f.write("\n")
     os.replace(tmp, AKIS)
+    paylas_sayfalari(akis)
+
+
+PAYLAS_KLASOR = "paylas"   # paylas/<dil>/<kimlik>.html: sosyal medya önizlemesi (Open Graph) + haberler.html#<kimlik>'e yönlendirme
+PAYLAS_SABLON = """<!doctype html>
+<html lang="{dil}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{baslik} · ReBirth</title>
+<meta name="description" content="{ozet}">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://rebirthgame.tr/haberler.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ReBirth">
+<meta property="og:locale" content="{yerel}">
+<meta property="og:title" content="{baslik}">
+<meta property="og:description" content="{ozet}">
+<meta property="og:url" content="https://rebirthgame.tr/paylas/{dil}/{kimlik}.html">
+<meta property="og:image" content="https://rebirthgame.tr/{gorsel}">
+<meta property="og:image:width" content="{gw}">
+<meta property="og:image:height" content="{gh}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#191817">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<style>body{{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#191817;color:#f2ebd9;font:17px/1.5 system-ui,sans-serif;text-align:center}}a{{color:#f1ad2a}}</style>
+<script>location.replace("../../haberler.html?lang={dil}#{kimlik}");</script>
+</head>
+<body><p><a href="../../haberler.html?lang={dil}#{kimlik}">{baslik}</a></p></body>
+</html>
+"""
+
+
+def paylas_sayfalari(akis: dict) -> None:
+    """Akıştaki her kayıt için tr ve en paylaşım sayfası yazar, akışta olmayanlarınkini siler (yönlendirme JS ile:
+    tarayıcılar haberin kendisine gider, önizleme robotları bu sayfanın Open Graph etiketlerini okur)."""
+    import html
+    from PIL import Image
+    istenen = set()
+    for liste in TURLER.values():
+        for k in akis.get(liste, []):
+            v = k.get("video") if isinstance(k.get("video"), dict) else {}
+            gorsel = v.get("kapak") or k["gorsel"]
+            try:
+                gw, gh = Image.open(os.path.join(KOK, gorsel)).size
+            except OSError:
+                gw, gh = BOY
+            for dil, yerel in (("tr", "tr_TR"), ("en", "en_US")):
+                d = lambda alan: html.escape(str(k.get(alan, {}).get(dil) or k.get(alan, {}).get("en", "")), quote=True)
+                yol = os.path.join(KOK, PAYLAS_KLASOR, dil, k["id"] + ".html")
+                istenen.add(os.path.normpath(yol))
+                os.makedirs(os.path.dirname(yol), exist_ok=True)
+                icerik = PAYLAS_SABLON.format(dil=dil, yerel=yerel, kimlik=k["id"], baslik=d("baslik"), ozet=d("ozet"),
+                                              gorsel=gorsel, gw=gw, gh=gh)
+                eski = open(yol, encoding="utf-8").read() if os.path.exists(yol) else None
+                if eski != icerik:
+                    with open(yol, "w", encoding="utf-8", newline="\n") as f:
+                        f.write(icerik)
+    for dil in ("tr", "en"):
+        klasor = os.path.join(KOK, PAYLAS_KLASOR, dil)
+        if os.path.isdir(klasor):
+            for ad in os.listdir(klasor):
+                if os.path.normpath(os.path.join(klasor, ad)) not in istenen:
+                    os.remove(os.path.join(klasor, ad))
 
 
 def kisalt(metin: str) -> str:
@@ -336,6 +401,8 @@ def denetle() -> None:
     silinen = yetim_sil(akis)
     if dusen or silinen or json.dumps(akis, ensure_ascii=False) != once:   # sıra da düzelir
         yaz(akis)
+    else:
+        paylas_sayfalari(akis)
     print("hata %d · düşen %s · silinen yetim görsel %s" % (n, dusen or "-", silinen or "-"))
     sys.exit(1 if n else 0)
 

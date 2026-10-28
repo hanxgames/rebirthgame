@@ -29,4 +29,10 @@ oyundaki "Detayları gör" o adresi, verilmezse `haberler.html#<id>` açar). `vi
 `tr`, İngilizce sayfa (oyunun diğer bütün dilleri) `en` videosunu oynatır; YouTube oynatıcısı yalnız tıklayınca yüklenir (privacy.html §5). Ardından siteyi yayınla (git push): GitHub Pages birkaç
 dakikada günceller, oyun dakikalık sorgu parametresiyle önbelleği aşar.
 
+**Paylaşım:** haberler.html'de her kartın altında "Paylaş" (`js/paylas.js`): haberin hikâye (1080×1920) ve gönderi (1080×1350)
+görseli tarayıcıda tuvalle çizilir; telefonda sistem paylaşım menüsüyle dosya olarak (Instagram, TikTok, YouTube, WhatsApp…),
+masaüstünde indirilerek paylaşılır; bağlantı kopyalama ve WhatsApp/X/Facebook/Telegram/Reddit bağlantıları. Bağlantı adresi
+`paylas/<tr|en>/<kimlik>.html`: Open Graph önizlemeli, `noindex` sayfa; tarayıcıyı haberler.html#<kimlik>'e yönlendirir.
+`haber_ekle.py` her yazımda bu sayfaları yeniler, akıştan düşenlerinkini siler.
+
 Oyundaki tüm yer, kurum ve kişi adları kurgusaldır. © 2026 HanX Games.

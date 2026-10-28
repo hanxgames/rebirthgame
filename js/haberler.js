@@ -196,6 +196,7 @@
         govde.appendChild(y);
       }
       if (k.anket && k.anket.secenekler) govde.appendChild(anketKutusu(k.anket));
+      if (window.RBPaylas) govde.appendChild(window.RBPaylas.dugme(k, dil()));   // hikâye/gönderi görseli + bağlantı (js/paylas.js)
       if (k.form && window.RBBasvuru) {   // başvuru düğmesi (js/basvuru.js → Google Formlar)
         var fk = el("div", "apl");
         govde.appendChild(fk);

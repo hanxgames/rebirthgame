@@ -125,3 +125,44 @@ a:hover { color: var(--accent-h); }
 .poll-bar { height: 7px; border-radius: 4px; background: rgba(255,255,255,.08); margin-top: 6px; overflow: hidden; }
 .poll-bar i { display: block; height: 100%; width: 0; background: #f1ad2a; transition: width .6s ease; }
 .poll-note { font-size: .88rem; opacity: .8; margin: 10px 0 0; }
+
+/* haber paylaşımı (js/paylas.js): kart düğmesi + hikâye/gönderi görselli pencere */
+.news-share { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 9px 16px; border-radius: 999px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line2); color: var(--text); font-family: var(--f-caps); font-weight: 700; text-transform: uppercase;
+  letter-spacing: .1em; font-size: 13px; transition: border-color .2s, color .2s, background .2s; }
+.news-share:hover, .news-share:focus-visible { border-color: var(--accent); color: var(--accent-h); background: rgba(241,173,42,.08); }
+.news-share svg, .pay-main svg { width: 16px; height: 16px; fill: currentColor; flex: none; }
+.pay-acik, .pay-acik body { overflow: hidden; }
+.pay-ov { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 16px; background: rgba(10,9,8,.78);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); animation: payIn .2s ease-out; }
+@keyframes payIn { from { opacity: 0; } }
+.pay-box { position: relative; width: min(440px, 100%); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow: auto;
+  background: var(--bg2); border: 1px solid var(--line2); border-radius: 14px; padding: 20px 20px 18px; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+.pay-h { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: 26px; color: var(--cream); margin: 0 40px 14px 0; }
+.pay-x { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line2); background: transparent;
+  color: var(--text); font-size: 22px; line-height: 1; cursor: pointer; }
+.pay-x:hover { border-color: var(--accent); color: var(--accent-h); }
+.pay-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; }
+.pay-tab { padding: 9px 10px; border-radius: 8px; border: 1px solid var(--line2); background: transparent; color: var(--muted); cursor: pointer;
+  font-family: var(--f-caps); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; }
+.pay-tab.is-on { background: var(--accent); border-color: var(--accent); color: var(--ink); }
+.pay-prev { position: relative; display: grid; place-items: center; margin: 0 auto 14px; background: #121110; border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--line); aspect-ratio: 9 / 16; height: min(46vh, 460px); max-width: 100%; }
+.pay-prev--gonderi { aspect-ratio: 4 / 5; }
+.pay-prev img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.pay-wait { position: absolute; color: var(--muted); font-size: 14px; display: none; }
+.pay-prev.is-wait .pay-wait { display: block; }
+.pay-prev.is-wait img { visibility: hidden; }
+.pay-act { display: flex; flex-wrap: wrap; gap: 8px; }
+.pay-main { flex: 1 1 auto; justify-content: center; border: 0; cursor: pointer; }
+.pay-main:disabled { opacity: .5; cursor: progress; }
+.pay-sec { padding: 12px 16px; border-radius: var(--radius); border: 1px solid var(--line2); background: transparent; color: var(--text); cursor: pointer;
+  font-family: var(--f-caps); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; }
+.pay-sec:hover { border-color: var(--accent); color: var(--accent-h); }
+.pay-ipucu { color: var(--muted); font-size: 13.5px; line-height: 1.45; margin: 12px 0 0; }
+.pay-links { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+.pay-links__t { display: block; font-family: var(--f-caps); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.pay-links__row { display: flex; flex-wrap: wrap; gap: 6px; }
+.pay-link { padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line2); background: transparent; color: var(--text); font-size: 13px;
+  font-weight: 600; text-decoration: none; cursor: pointer; font-family: inherit; }
+.pay-link:hover { border-color: var(--accent); color: var(--accent-h); }
