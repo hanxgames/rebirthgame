@@ -1,8 +1,67 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-28T16:27:40Z",
+ "guncelleme": "2026-10-28T20:52:07Z",
  "haberler": [
+  {
+   "id": "2026-10-29-cumhuriyet-bayrami",
+   "tarih": "2026-10-29",
+   "etiket": {
+    "tr": "Bayram",
+    "en": "Holiday",
+    "es": "Festividad",
+    "pt_BR": "Feriado",
+    "de": "Feiertag",
+    "fr": "Fête nationale",
+    "id": "Perayaan",
+    "ja": "記念日",
+    "ko": "기념일",
+    "zh_CN": "节日",
+    "zh_TW": "節日"
+   },
+   "baslik": {
+    "tr": "Türkiye Cumhuriyeti 103 Yaşında!",
+    "en": "The Republic of Türkiye Turns 103!",
+    "es": "¡La República de Türkiye cumple 103 años!",
+    "pt_BR": "A República da Türkiye completa 103 anos!",
+    "de": "Die Republik Türkiye wird 103!",
+    "fr": "La République de Türkiye a 103 ans !",
+    "id": "Republik Türkiye Berusia 103 Tahun!",
+    "ja": "トルコ共和国、建国103周年！",
+    "ko": "Türkiye 공화국 수립 103주년!",
+    "zh_CN": "土耳其共和国成立103周年！",
+    "zh_TW": "土耳其共和國成立103週年！"
+   },
+   "ozet": {
+    "tr": "29 Ekim 1923'te ilan edilen Cumhuriyetimizin 103. yılını coşkuyla kutluyor, kurucumuz Gazi Mustafa Kemal Atatürk'ü saygı ve minnetle anıyoruz. Yaşasın Cumhuriyet!",
+    "en": "We proudly celebrate the 103rd anniversary of the Republic of Türkiye, proclaimed on 29 October 1923, and remember its founder Mustafa Kemal Atatürk with respect and gratitude.",
+    "es": "Celebramos con orgullo el 103.º aniversario de la República de Türkiye, proclamada el 29 de octubre de 1923, y recordamos con respeto y gratitud a su fundador, Mustafa Kemal Atatürk.",
+    "pt_BR": "Celebramos com orgulho os 103 anos da República da Türkiye, proclamada em 29 de outubro de 1923, e lembramos com respeito e gratidão seu fundador, Mustafa Kemal Atatürk.",
+    "de": "Wir feiern stolz den 103. Jahrestag der Republik Türkiye, ausgerufen am 29. Oktober 1923, und gedenken ihres Gründers Mustafa Kemal Atatürk mit Respekt und Dankbarkeit.",
+    "fr": "Nous célébrons avec fierté le 103e anniversaire de la République de Türkiye, proclamée le 29 octobre 1923, et rendons hommage avec respect et gratitude à son fondateur, Mustafa Kemal Atatürk.",
+    "id": "Kami merayakan dengan bangga 103 tahun Republik Türkiye yang diproklamasikan pada 29 Oktober 1923, dan mengenang pendirinya, Mustafa Kemal Atatürk, dengan hormat dan rasa terima kasih.",
+    "ja": "1923年10月29日に宣言されたトルコ共和国の建国103周年を心から祝い、建国の父ムスタファ・ケマル・アタテュルクに敬意と感謝を捧げます。",
+    "ko": "1923년 10월 29일 선포된 Türkiye 공화국의 수립 103주년을 기쁜 마음으로 축하하며, 건국의 아버지 Mustafa Kemal Atatürk를 존경과 감사로 기립니다.",
+    "zh_CN": "热烈庆祝1923年10月29日宣告成立的土耳其共和国成立103周年，并以敬意与感激之心怀念国父阿塔图尔克。",
+    "zh_TW": "熱烈慶祝1923年10月29日宣告成立的土耳其共和國成立103週年，並以敬意與感激之心懷念國父阿塔圖克。"
+   },
+   "metin": {
+    "tr": [
+     "29 Ekim 1923'te ilan edilen Türkiye Cumhuriyeti 103 yaşında! Cumhuriyet Bayramımızı büyük bir coşku ve gururla kutluyoruz.",
+     "Cumhuriyetimizin kurucusu Gazi Mustafa Kemal Atatürk'ü, silah arkadaşlarını ve bu toprakları bize emanet eden tüm şehitlerimizi saygı, minnet ve rahmetle anıyoruz.",
+     "“Benim naçiz vücudum elbet bir gün toprak olacaktır, fakat Türkiye Cumhuriyeti ilelebet payidar kalacaktır.” — Mustafa Kemal Atatürk",
+     "HanX Games ailesi olarak tüm oyuncularımızın Cumhuriyet Bayramı'nı kutlarız. Nice mutlu yıllara, yaşasın Cumhuriyet!"
+    ],
+    "en": [
+     "The Republic of Türkiye, proclaimed on 29 October 1923, turns 103! We celebrate Republic Day with great joy and pride.",
+     "We remember with respect and gratitude Mustafa Kemal Atatürk, the founder of the Republic, his comrades in arms and all who gave their lives for this land.",
+     "“My humble body will one day turn to dust, but the Republic of Türkiye will stand forever.” — Mustafa Kemal Atatürk",
+     "From all of us at HanX Games, happy Republic Day to our players in Türkiye and around the world. Long live the Republic!"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-29-cumhuriyet-bayrami-9a8fcb.jpg",
+   "eklendi": "2026-10-28T20:52:07.290677Z"
+  },
   {
    "id": "2026-10-28-halvarya-saranis",
    "tarih": "2026-10-28",
@@ -221,72 +280,6 @@
      "en": "https://youtu.be/1NdLnErHS3U"
     }
    }
-  },
-  {
-   "id": "2026-10-20-reddit-rebirthsocial",
-   "tarih": "2026-10-20",
-   "etiket": {
-    "tr": "Topluluk",
-    "en": "Community",
-    "es": "Comunidad",
-    "pt_BR": "Comunidade",
-    "de": "Community",
-    "fr": "Communauté",
-    "id": "Komunitas",
-    "ja": "コミュニティ",
-    "ko": "커뮤니티",
-    "zh_CN": "社区",
-    "zh_TW": "社群"
-   },
-   "baslik": {
-    "tr": "Reddit topluluğumuza katıl",
-    "en": "Join our Reddit community: r/ReBirthSocial",
-    "es": "Únete a nuestra comunidad de Reddit: r/ReBirthSocial",
-    "pt_BR": "Participe da nossa comunidade no Reddit: r/ReBirthSocial",
-    "de": "Werde Teil unserer Reddit-Community: r/ReBirthSocial",
-    "fr": "Rejoignez notre communauté Reddit : r/ReBirthSocial",
-    "id": "Gabung komunitas Reddit kami: r/ReBirthSocial",
-    "ja": "Redditコミュニティに参加しよう：r/ReBirthSocial",
-    "ko": "Reddit 커뮤니티에 참여하세요: r/ReBirthSocial",
-    "zh_CN": "加入我们的 Reddit 社区：r/ReBirthSocial",
-    "zh_TW": "加入我們的 Reddit 社群：r/ReBirthSocial"
-   },
-   "ozet": {
-    "tr": "ReBirth'ün resmî Reddit topluluğu açık. Harekâtlarını ve taktiklerini paylaş, öneri ve hata bildir, güncelleme duyurularını ve anketleri ilk sen gör.",
-    "en": "ReBirth's official Reddit community is open. Share your campaigns and tactics, post ideas and bug reports, and be the first to see update news and polls.",
-    "es": "La comunidad oficial de ReBirth en Reddit ya está abierta. Comparte tus campañas y tácticas, publica ideas y errores, y sé el primero en ver novedades y encuestas.",
-    "pt_BR": "A comunidade oficial do ReBirth no Reddit está aberta. Compartilhe suas campanhas e táticas, envie ideias e bugs e veja primeiro as novidades e enquetes.",
-    "de": "Die offizielle ReBirth-Community auf Reddit ist eröffnet. Teile deine Feldzüge und Taktiken, poste Ideen und Fehlerberichte und erfahre als Erstes von Updates und Umfragen.",
-    "fr": "La communauté Reddit officielle de ReBirth est ouverte. Partagez vos campagnes et tactiques, proposez des idées, signalez des bugs et découvrez en premier les nouveautés et sondages.",
-    "id": "Komunitas Reddit resmi ReBirth sudah dibuka. Bagikan kampanye dan taktikmu, kirim ide dan laporan bug, dan jadilah yang pertama melihat kabar pembaruan dan polling.",
-    "ja": "ReBirth公式Redditコミュニティがオープン！作戦や戦術を共有したり、アイデアや不具合を投稿したり、アップデート情報やアンケートをいち早くチェックしよう。",
-    "ko": "ReBirth 공식 Reddit 커뮤니티가 열렸습니다. 작전과 전술을 공유하고, 아이디어와 버그를 제보하고, 업데이트 소식과 투표를 가장 먼저 확인하세요.",
-    "zh_CN": "ReBirth 官方 Reddit 社区现已开放。分享你的战役和战术，提出建议、反馈错误，第一时间了解更新消息和投票。",
-    "zh_TW": "ReBirth 官方 Reddit 社群現已開放。分享你的戰役和戰術，提出建議、回報錯誤，第一時間掌握更新消息和投票。"
-   },
-   "metin": {
-    "tr": [
-     "ReBirth oyuncuları artık Reddit'te bir arada: r/ReBirthSocial, oyunun resmî topluluğu.",
-     "• Harekâtlarından ekran görüntülerini, zor kazanılmış zaferlerini ve en çetin krizlerini paylaş",
-     "• Strateji ipuçları, harita taktikleri ve Kriz Masası çözümleri üzerine konuş",
-     "• Öneri ve hata bildirimlerini yaz; hata bildiriminde platformu, oyun sürümünü (ana menünün sağ üst köşesinde), cihazı, haritayı ve oyun gününü eklemeyi unutma",
-     "• Güncelleme notlarını, etkinlik duyurularını ve sıradaki içerik anketlerini orada da takip et",
-     "Türkçe ve İngilizce gönderilerin hepsi hoş karşılanır. Lütfen topluluk kurallarına uy ve birbirimize saygılı olalım.",
-     "Katılmak için bağlantıya dokun ya da Reddit'te r/ReBirthSocial'ı ara. Orada görüşmek üzere!"
-    ],
-    "en": [
-     "ReBirth players now have a home on Reddit: r/ReBirthSocial, the game's official community.",
-     "• Share screenshots of your campaigns, hard-won victories and toughest crises",
-     "• Talk strategy tips, map tactics and Crisis Desk solutions",
-     "• Post ideas and bug reports; for bugs, please include your platform, game version (top-right corner of the main menu), device, map and in-game day",
-     "• Follow update notes, event announcements and polls about upcoming content there too",
-     "Posts in English and Turkish are all welcome. Please follow the community rules and be respectful to each other.",
-     "Tap the link to join, or search for r/ReBirthSocial on Reddit. See you there!"
-    ]
-   },
-   "baglanti": "https://www.reddit.com/r/ReBirthSocial/",
-   "gorsel": "assets/img/haber/2026-10-20-reddit-rebirthsocial-d97970.jpg",
-   "eklendi": "2026-10-20T17:06:38.732797Z"
   },
   {
    "id": "2026-10-15-kara-kolera",
