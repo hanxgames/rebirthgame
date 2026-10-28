@@ -23,6 +23,78 @@
       ipucuMasa: "Download the image and share it as a story or post on Instagram, TikTok or YouTube. You can add the link too.",
       baglanti: "Share the link", diger: "More apps", tamami: "Read more at", ucretsiz: "Free on Google Play",
       dosya: { hikaye: "story", gonderi: "post" }
+    },
+    es: {
+      paylas: "Compartir", baslik: "Compartir noticia", hikaye: "Historia", gonderi: "Publicación", indir: "Descargar imagen",
+      kopyala: "Copiar enlace", kopyalandi: "Enlace copiado", kapat: "Cerrar", hazir: "Preparando la imagen…",
+      ipucuMobil: "Toca Compartir y elige Instagram, TikTok, YouTube u otra app. La imagen está lista para historias y publicaciones.",
+      ipucuMasa: "Descarga la imagen y compártela como historia o publicación en Instagram, TikTok o YouTube. También puedes añadir el enlace.",
+      baglanti: "Compartir enlace", diger: "Más apps", tamami: "Más en", ucretsiz: "Gratis en Google Play",
+      dosya: { hikaye: "historia", gonderi: "publicacion" }
+    },
+    pt_BR: {
+      paylas: "Compartilhar", baslik: "Compartilhar notícia", hikaye: "Story", gonderi: "Post", indir: "Baixar imagem",
+      kopyala: "Copiar link", kopyalandi: "Link copiado", kapat: "Fechar", hazir: "Preparando a imagem…",
+      ipucuMobil: "Toque em Compartilhar e escolha Instagram, TikTok, YouTube ou outro app. A imagem está pronta para stories e posts.",
+      ipucuMasa: "Baixe a imagem e compartilhe como story ou post no Instagram, TikTok ou YouTube. Você também pode adicionar o link.",
+      baglanti: "Compartilhar link", diger: "Mais apps", tamami: "Leia mais em", ucretsiz: "Grátis no Google Play",
+      dosya: { hikaye: "story", gonderi: "post" }
+    },
+    de: {
+      paylas: "Teilen", baslik: "Beitrag teilen", hikaye: "Story", gonderi: "Post", indir: "Bild herunterladen",
+      kopyala: "Link kopieren", kopyalandi: "Link kopiert", kapat: "Schließen", hazir: "Bild wird vorbereitet…",
+      ipucuMobil: "Tippe auf Teilen und wähle Instagram, TikTok, YouTube oder eine andere App. Das Bild passt für Storys und Posts.",
+      ipucuMasa: "Lade das Bild herunter und teile es als Story oder Post auf Instagram, TikTok oder YouTube. Den Link kannst du dazuschreiben.",
+      baglanti: "Link teilen", diger: "Weitere Apps", tamami: "Mehr unter", ucretsiz: "Kostenlos bei Google Play",
+      dosya: { hikaye: "story", gonderi: "post" }
+    },
+    fr: {
+      paylas: "Partager", baslik: "Partager l'actu", hikaye: "Story", gonderi: "Publication", indir: "Télécharger l'image",
+      kopyala: "Copier le lien", kopyalandi: "Lien copié", kapat: "Fermer", hazir: "Préparation de l'image…",
+      ipucuMobil: "Touchez Partager et choisissez Instagram, TikTok, YouTube ou une autre app. L'image est prête pour les stories et les publications.",
+      ipucuMasa: "Téléchargez l'image et partagez-la en story ou en publication sur Instagram, TikTok ou YouTube. Vous pouvez aussi ajouter le lien.",
+      baglanti: "Partager le lien", diger: "Autres apps", tamami: "À lire sur", ucretsiz: "Gratuit sur Google Play",
+      dosya: { hikaye: "story", gonderi: "publication" }
+    },
+    id: {
+      paylas: "Bagikan", baslik: "Bagikan berita", hikaye: "Story", gonderi: "Postingan", indir: "Unduh gambar",
+      kopyala: "Salin tautan", kopyalandi: "Tautan disalin", kapat: "Tutup", hazir: "Menyiapkan gambar…",
+      ipucuMobil: "Ketuk Bagikan lalu pilih Instagram, TikTok, YouTube, atau aplikasi lain. Gambar siap untuk story dan postingan.",
+      ipucuMasa: "Unduh gambarnya lalu bagikan sebagai story atau postingan di Instagram, TikTok, atau YouTube. Kamu juga bisa menambahkan tautannya.",
+      baglanti: "Bagikan tautan", diger: "Aplikasi lain", tamami: "Selengkapnya di", ucretsiz: "Gratis di Google Play",
+      dosya: { hikaye: "story", gonderi: "postingan" }
+    },
+    ja: {
+      paylas: "シェア", baslik: "ニュースをシェア", hikaye: "ストーリー", gonderi: "投稿", indir: "画像をダウンロード",
+      kopyala: "リンクをコピー", kopyalandi: "リンクをコピーしました", kapat: "閉じる", hazir: "画像を準備中…",
+      ipucuMobil: "「シェア」をタップして、Instagram、TikTok、YouTubeなどのアプリを選んでください。画像はストーリーにも投稿にも使えます。",
+      ipucuMasa: "画像をダウンロードして、Instagram、TikTok、YouTubeでストーリーや投稿としてシェアしましょう。リンクも添えられます。",
+      baglanti: "リンクでシェア", diger: "その他のアプリ", tamami: "続きはこちら", ucretsiz: "Google Playで無料配信中",
+      dosya: { hikaye: "story", gonderi: "post" }
+    },
+    ko: {
+      paylas: "공유", baslik: "소식 공유", hikaye: "스토리", gonderi: "게시물", indir: "이미지 다운로드",
+      kopyala: "링크 복사", kopyalandi: "링크가 복사되었습니다", kapat: "닫기", hazir: "이미지 준비 중…",
+      ipucuMobil: "공유를 누르고 Instagram, TikTok, YouTube 등 원하는 앱을 선택하세요. 이미지는 스토리와 게시물에 맞게 준비되어 있습니다.",
+      ipucuMasa: "이미지를 다운로드해 Instagram, TikTok, YouTube에 스토리나 게시물로 공유하세요. 링크도 함께 넣을 수 있습니다.",
+      baglanti: "링크로 공유", diger: "다른 앱", tamami: "자세히 보기", ucretsiz: "Google Play에서 무료",
+      dosya: { hikaye: "story", gonderi: "post" }
+    },
+    zh_CN: {
+      paylas: "分享", baslik: "分享这条新闻", hikaye: "竖版故事", gonderi: "帖子", indir: "下载图片",
+      kopyala: "复制链接", kopyalandi: "链接已复制", kapat: "关闭", hazir: "正在生成图片…",
+      ipucuMobil: "点击“分享”，选择 Instagram、TikTok、YouTube 或其他应用。图片已适配故事和帖子。",
+      ipucuMasa: "下载图片，在 Instagram、TikTok 或 YouTube 上以故事或帖子形式分享，也可以附上链接。",
+      baglanti: "分享链接", diger: "更多应用", tamami: "完整内容", ucretsiz: "Google Play 免费下载",
+      dosya: { hikaye: "story", gonderi: "post" }
+    },
+    zh_TW: {
+      paylas: "分享", baslik: "分享這則新聞", hikaye: "限時動態", gonderi: "貼文", indir: "下載圖片",
+      kopyala: "複製連結", kopyalandi: "已複製連結", kapat: "關閉", hazir: "正在產生圖片…",
+      ipucuMobil: "點選「分享」，選擇 Instagram、TikTok、YouTube 或其他 App。圖片已適用於限時動態與貼文。",
+      ipucuMasa: "下載圖片，在 Instagram、TikTok 或 YouTube 以限時動態或貼文分享，也可以附上連結。",
+      baglanti: "分享連結", diger: "更多 App", tamami: "完整內容", ucretsiz: "Google Play 免費下載",
+      dosya: { hikaye: "story", gonderi: "post" }
     }
   };
   var BOY = { hikaye: [1080, 1920], gonderi: [1080, 1350] };
@@ -72,10 +144,15 @@
     c.moveTo(x + r, yy); c.arcTo(x + w, yy, x + w, yy + h, r); c.arcTo(x + w, yy + h, x, yy + h, r);
     c.arcTo(x, yy + h, x, yy, r); c.arcTo(x, yy, x + w, yy, r); c.closePath();
   }
+  // sözcük sözcük sarar; Çince/Japonca harfler tek tek parça (noktalama öncekine yapışık), aralarına boşluk konmaz
+  var PARCA = /[぀-ヿ㐀-鿿豈-﫿][、。，．！？：；」』）”・ー]*|[^\s぀-ヿ㐀-鿿豈-﫿]+|\s+/g;
   function satirlar(c, s, genislik) {
-    var out = [], satir = "";
-    String(s).split(/\s+/).forEach(function (w) {
-      var dene = satir ? satir + " " + w : w;
+    var out = [], satir = "", bosluk = false;
+    (String(s).match(PARCA) || []).forEach(function (w) {
+      if (/^\s+$/.test(w)) { bosluk = true; return; }
+      var ara = satir && bosluk ? " " : "";
+      bosluk = false;
+      var dene = satir + ara + w;
       if (c.measureText(dene).width <= genislik || !satir) satir = dene;
       else { out.push(satir); satir = w; }
     });
@@ -103,7 +180,7 @@
     var p = String(s || "").split("-");
     if (p.length !== 3) return s || "";
     try {
-      return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).toLocaleDateString(dil === "tr" ? "tr-TR" : "en-GB",
+      return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).toLocaleDateString(dil === "en" ? "en-GB" : window.RBDil ? RBDil.html(dil) : dil,
         { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
     } catch (e) { return s; }
   }

@@ -3,11 +3,9 @@
    Kayıtta "form" varsa altına Google Formlar'daki başvuru formunu açan düğme konur (js/basvuru.js). */
 (function () {
   "use strict";
-  var AYLAR = {
-    tr: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
-    en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-  };
-  var DETAY = { tr: "Bağlantıyı aç", en: "Open link" };
+  // kısa metinler 11 dilde (js/dil.js); eksik dil İngilizceye düşer (y())
+  var DETAY = { tr: "Bağlantıyı aç", en: "Open link", es: "Abrir enlace", pt_BR: "Abrir link", de: "Link öffnen", fr: "Ouvrir le lien",
+    id: "Buka tautan", ja: "リンクを開く", ko: "링크 열기", zh_CN: "打开链接", zh_TW: "開啟連結" };
   var akis = null;
   var tur = "haberler";
   var liste = document.getElementById("newsList");
@@ -23,13 +21,17 @@
     document.head.appendChild(s);
   }
 
-  function dil() { return document.documentElement.lang === "tr" ? "tr" : "en"; }
+  // kayıtlardaki başlık/özet/etiket 11 dilde, gövde metni (metin) tr/en: eksik dil İngilizceye düşer
+  function dil() { return document.documentElement.getAttribute("data-dil") || "en"; }
+  function y(t) { return t[dil()] || t.en; }
   function metin(d) { if (!d) return ""; return d[dil()] || d.en || d.tr || ""; }
   function tarih(s) {
     var p = String(s || "").split("-");
     if (p.length !== 3) return s || "";
-    var ay = AYLAR[dil()][parseInt(p[1], 10) - 1] || "";
-    return dil() === "tr" ? parseInt(p[2], 10) + " " + ay + " " + p[0] : ay + " " + parseInt(p[2], 10) + ", " + p[0];
+    try {
+      return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).toLocaleDateString(document.documentElement.lang || "en",
+        { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+    } catch (e) { return s; }
   }
   function el(ad, sinif, icerik) {
     var e = document.createElement(ad);
@@ -50,8 +52,11 @@
 
   // Video (kayıtta "video": {tr, en}): Türkçe sayfa tr'yi, İngilizce sayfa (oyunun diğer bütün dilleri) en'i oynatır. YouTube
   // oynatıcısı yalnız tıklayınca youtube-nocookie'den yüklenir; o zamana dek kapak sitenin kendi görselidir (privacy.html §5).
-  var OYNAT = { tr: "Videoyu oynat", en: "Play video" };
-  var YOUTUBE = { tr: "YouTube'da izle", en: "Watch on YouTube" };
+  var OYNAT = { tr: "Videoyu oynat", en: "Play video", es: "Reproducir vídeo", pt_BR: "Reproduzir vídeo", de: "Video abspielen",
+    fr: "Lire la vidéo", id: "Putar video", ja: "動画を再生", ko: "동영상 재생", zh_CN: "播放视频", zh_TW: "播放影片" };
+  var YOUTUBE = { tr: "YouTube'da izle", en: "Watch on YouTube", es: "Ver en YouTube", pt_BR: "Assistir no YouTube",
+    de: "Auf YouTube ansehen", fr: "Regarder sur YouTube", id: "Tonton di YouTube", ja: "YouTubeで見る", ko: "YouTube에서 보기",
+    zh_CN: "在 YouTube 观看", zh_TW: "在 YouTube 觀看" };
   function videoKaynak(u) {
     var m = /(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:\S*&)?v=|shorts\/|embed\/|live\/))([A-Za-z0-9_-]{11})/.exec(u || "");
     if (m) return { yt: m[1] };
@@ -59,11 +64,11 @@
   }
   function videoKutusu(k) {
     var v = k.video || {};
-    var kaynak = videoKaynak(dil() === "tr" ? (v.tr || v.en) : (v.en || v.tr));
+    var kaynak = videoKaynak(dil() === "tr" ? (v.tr || v.en) : (v.en || v.tr));   // video yalnız tr/en
     if (!kaynak) return null;
     var kutu = el("button", "news-video");
     kutu.type = "button";
-    kutu.setAttribute("aria-label", OYNAT[dil()] + ": " + metin(k.baslik));
+    kutu.setAttribute("aria-label", y(OYNAT) + ": " + metin(k.baslik));
     var poster = v.kapak || k.gorsel;   // kapak: videonun 1280x720 karesi (yoksa haberin 640x360 görseli)
     var kapak = el("img");
     kapak.src = poster;
@@ -72,12 +77,12 @@
     kapak.height = v.kapak ? 720 : 360;
     kutu.appendChild(kapak);
     kutu.appendChild(el("span", "news-play"));
-    kutu.appendChild(el("span", "news-video__etiket", OYNAT[dil()]));
+    kutu.appendChild(el("span", "news-video__etiket", y(OYNAT)));
     kutu.addEventListener("click", function () {
       var oyn;
       if (kaynak.yt) {
         oyn = el("iframe");
-        oyn.src = "https://www.youtube-nocookie.com/embed/" + kaynak.yt + "?autoplay=1&rel=0&playsinline=1&hl=" + dil();
+        oyn.src = "https://www.youtube-nocookie.com/embed/" + kaynak.yt + "?autoplay=1&rel=0&playsinline=1&hl=" + document.documentElement.lang;
         oyn.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
         oyn.referrerPolicy = "strict-origin-when-cross-origin";
       } else {
@@ -103,7 +108,7 @@
     en: { oy: "Vote in the game: tap an option on the News card in the main menu (Android, version 2.0.8 or later).", toplam: " votes", bitti: "This poll has closed.", yok: "No votes yet." }
   };
   function anketKutusu(an) {
-    var y = ANKET_YAZI[dil()];
+    var ay = y(ANKET_YAZI);
     var kutu = el("div", "poll");
     kutu.appendChild(el("h3", "poll-q", metin(an.soru)));
     var satirlar = {};
@@ -123,7 +128,7 @@
       satirlar[x.id] = { yuzde: yuzde, dolgu: dolgu };
     });
     var bitti = an.bitis && new Date().toISOString().slice(0, 10) > an.bitis;
-    var alt = el("p", "poll-note", bitti ? y.bitti : y.oy);
+    var alt = el("p", "poll-note", bitti ? ay.bitti : ay.oy);
     kutu.appendChild(alt);
     fetch(DB + "/anket/" + an.id + "/sayi.json").then(function (r) { return r.json(); }).then(function (d) {
       d = d || {};
@@ -134,7 +139,7 @@
         satirlar[x.id].yuzde.textContent = top ? p + "%" : "";
         satirlar[x.id].dolgu.style.width = p + "%";
       });
-      alt.textContent = (bitti ? y.bitti + " " : y.oy + " ") + (top ? "(" + top + y.toplam + ")" : y.yok);
+      alt.textContent = (bitti ? ay.bitti + " " : ay.oy + " ") + (top ? "(" + top + ay.toplam + ")" : ay.yok);
     }).catch(function () {});
     return kutu;
   }
@@ -181,19 +186,20 @@
         }
       });
       if (k.baglanti) {
-        var a = el("a", "doc-btn news-btn", DETAY[dil()]);
+        var a = el("a", "doc-btn news-btn", y(DETAY));
         a.href = k.baglanti;
         a.target = "_blank";
         a.rel = "noopener";
         govde.appendChild(a);
       }
       var yt = vid && k.video.youtube;   // sitede barınan videonun YouTube kopyası (kanala izlenme): dile göre bağlantı
-      if (yt && (yt[dil()] || yt.en)) {
-        var y = el("a", "doc-btn news-btn", YOUTUBE[dil()]);
-        y.href = yt[dil()] || yt.en;
-        y.target = "_blank";
-        y.rel = "noopener";
-        govde.appendChild(y);
+      var ytDil = dil() === "tr" ? "tr" : "en";
+      if (yt && (yt[ytDil] || yt.en)) {
+        var ya = el("a", "doc-btn news-btn", y(YOUTUBE));
+        ya.href = yt[ytDil] || yt.en;
+        ya.target = "_blank";
+        ya.rel = "noopener";
+        govde.appendChild(ya);
       }
       if (k.anket && k.anket.secenekler) govde.appendChild(anketKutusu(k.anket));
       if (window.RBPaylas) govde.appendChild(window.RBPaylas.dugme(k, dil()));   // hikâye/gönderi görseli + bağlantı (js/paylas.js)

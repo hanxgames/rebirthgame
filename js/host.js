@@ -25,7 +25,7 @@
   var voiceAudio = null;
   window.RBHost = {
     root: (document.currentScript && document.currentScript.dataset.root) || "",
-    lang: function () { return document.documentElement.lang === "en" ? "en" : "tr"; },
+    lang: function () { return document.documentElement.lang === "tr" ? "tr" : "en"; },   // mini oyunlar yalnız tr/en: diğer diller İngilizce
     isMuted: function () { return muted; },
     setMuted: function (m) {
       muted = !!m;

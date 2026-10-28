@@ -8,6 +8,11 @@ galeri ve tarayıcıda oynanan dört mini görev (Hava Harekâtı, Gölge Avı, 
 
 - Derleme adımı yok: düz HTML + CSS + JS. GSAP 3.12.5 (cdnjs) yalnız süs animasyonları için; yoksa da site çalışır.
 - `index.html` · `css/tokens.css` (renkler, yazı tipleri) · `css/site.css` · `js/i18n.js` (TR/EN metinler) · `js/main.js` · `js/map.js`
+- Diller (2026-10-28): oyunun 11 dili (tr, en, es, pt_BR, de, fr, id, ja, ko, zh_CN, zh_TW). Seçim ve dil düğmesi `js/dil.js` +
+  `css/dil.css` (`?lang=` → kayıtlı seçim → tarayıcı dili). Ana sayfa metni tr/en `js/i18n.js`'te, diğerleri `js/i18n/<kod>.js`
+  (aynı anahtarlar; i18n.js'e anahtar ekleyince dokuz dosyaya da ekle). Haberler/destek/gizlilik kısa metinleri `js/doc.js` sözlüğünde;
+  destek ve gizlilik metni, mini oyunlar, ses, fragman ve ekran görüntüleri yalnız tr/en (diğer diller İngilizcesini görür).
+  Dil sürümleri `?lang=<kod>` adresleri: hreflang `index.html`/`haberler.html` başında ve `sitemap.xml`'de.
 - Mini oyunlar `js/games/<id>.js`, sözleşme `js/games/CONTRACT.md`, tek tek deneme `oyun.html?g=<id>&lang=tr|en`.
 - Görseller, videolar, sesler ve harita verisi oyunun kendisinden: `python tools/build_assets.py <oyun_deposu> [--font] [--img] [--map] [--audio] [--video]`
   (oyun deposu ve tanıtım çekimleri gerekir; ayrıntı betiğin başında).

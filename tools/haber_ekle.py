@@ -90,8 +90,12 @@ def yaz(akis: dict) -> None:
 
 
 PAYLAS_KLASOR = "paylas"   # paylas/<dil>/<kimlik>.html: sosyal medya önizlemesi (Open Graph) + haberler.html#<kimlik>'e yönlendirme
+# sitenin 11 dili (js/dil.js): klasör kodu, html lang, og:locale. Başlık/özet o dilde yoksa İngilizcesi yazılır.
+PAYLAS_DILLER = (("tr", "tr", "tr_TR"), ("en", "en", "en_US"), ("es", "es", "es_ES"), ("pt_BR", "pt-BR", "pt_BR"), ("de", "de", "de_DE"),
+                 ("fr", "fr", "fr_FR"), ("id", "id", "id_ID"), ("ja", "ja", "ja_JP"), ("ko", "ko", "ko_KR"), ("zh_CN", "zh-CN", "zh_CN"),
+                 ("zh_TW", "zh-TW", "zh_TW"))
 PAYLAS_SABLON = """<!doctype html>
-<html lang="{dil}">
+<html lang="{html}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -120,7 +124,7 @@ PAYLAS_SABLON = """<!doctype html>
 
 
 def paylas_sayfalari(akis: dict) -> None:
-    """Akıştaki her kayıt için tr ve en paylaşım sayfası yazar, akışta olmayanlarınkini siler (yönlendirme JS ile:
+    """Akıştaki her kayıt için 11 dilde paylaşım sayfası yazar, akışta olmayanlarınkini siler (yönlendirme JS ile:
     tarayıcılar haberin kendisine gider, önizleme robotları bu sayfanın Open Graph etiketlerini okur)."""
     import html
     from PIL import Image
@@ -133,18 +137,18 @@ def paylas_sayfalari(akis: dict) -> None:
                 gw, gh = Image.open(os.path.join(KOK, gorsel)).size
             except OSError:
                 gw, gh = BOY
-            for dil, yerel in (("tr", "tr_TR"), ("en", "en_US")):
+            for dil, kod, yerel in PAYLAS_DILLER:
                 d = lambda alan: html.escape(str(k.get(alan, {}).get(dil) or k.get(alan, {}).get("en", "")), quote=True)
                 yol = os.path.join(KOK, PAYLAS_KLASOR, dil, k["id"] + ".html")
                 istenen.add(os.path.normpath(yol))
                 os.makedirs(os.path.dirname(yol), exist_ok=True)
-                icerik = PAYLAS_SABLON.format(dil=dil, yerel=yerel, kimlik=k["id"], baslik=d("baslik"), ozet=d("ozet"),
+                icerik = PAYLAS_SABLON.format(dil=dil, html=kod, yerel=yerel, kimlik=k["id"], baslik=d("baslik"), ozet=d("ozet"),
                                               gorsel=gorsel, gw=gw, gh=gh)
                 eski = open(yol, encoding="utf-8").read() if os.path.exists(yol) else None
                 if eski != icerik:
                     with open(yol, "w", encoding="utf-8", newline="\n") as f:
                         f.write(icerik)
-    for dil in ("tr", "en"):
+    for dil, _, _ in PAYLAS_DILLER:
         klasor = os.path.join(KOK, PAYLAS_KLASOR, dil)
         if os.path.isdir(klasor):
             for ad in os.listdir(klasor):

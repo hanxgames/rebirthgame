@@ -1,0 +1,19 @@
+/* ReBirth — dil düğmesi ve 11 dilin listesi (js/dil.js; index ve doc sayfaları) */
+.dil-btn { display: inline-flex; align-items: center; gap: 6px; background: none; border: 1px solid var(--line2); border-radius: 99px;
+  padding: 6px 10px 6px 8px; color: var(--cream2); font-family: var(--f-caps); font-weight: 700; font-size: 14px; letter-spacing: .08em;
+  cursor: pointer; line-height: 1; transition: border-color .2s, color .2s; }
+.dil-btn:hover, .dil-btn[aria-expanded="true"] { border-color: var(--accent); color: var(--text, #f2ebd9); }
+.dil-btn svg { width: 16px; height: 16px; fill: currentColor; opacity: .8; flex: none; }
+.dil-ok { width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor;
+  opacity: .6; transition: transform .2s; }
+.dil-btn[aria-expanded="true"] .dil-ok { transform: rotate(180deg); }
+.dil-menu { position: fixed; z-index: 200; min-width: 200px; padding: 6px; overflow-y: auto; overscroll-behavior: contain;
+  background: rgba(24, 23, 21, .97); border: 1px solid var(--line2); border-radius: 12px; box-shadow: 0 18px 50px rgba(0, 0, 0, .55);
+  backdrop-filter: blur(14px); animation: dil-ac .16s ease-out; }
+.dil-menu button { display: block; width: 100%; text-align: left; background: none; border: 0; border-radius: 8px; padding: 9px 12px;
+  color: var(--cream2); font: 500 15px/1.25 var(--f-body); cursor: pointer; }
+.dil-menu button:hover, .dil-menu button:focus-visible { background: rgba(241, 173, 42, .12); color: var(--text, #f2ebd9); outline: none; }
+.dil-menu button.is-on { color: var(--accent); font-weight: 600; }
+.dil-menu button.is-on::after { content: "✓"; float: right; margin-left: 12px; }
+@keyframes dil-ac { from { opacity: 0; transform: translateY(-4px); } }
+@media (prefers-reduced-motion: reduce) { .dil-menu { animation: none; } }

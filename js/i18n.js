@@ -14,9 +14,9 @@ window.RB_I18N = {
     "hero.play": "Google Play'den indir",
     "hero.trailer": "Fragmanı izle",
     "hero.ios": "Ayrıca App Store'da", "hero.pc": "Bilgisayarda oyna", "hero.sale": "%60 indirim", "cta.reddit": "<span lang=\"en\">Reddit</span> topluluğu",
-    "hero.free": "Ücretsiz başla · İnternetsiz oyna · 6 dil",
+    "hero.free": "Ücretsiz başla · İnternetsiz oyna · 11 dil",
     "hero.scroll": "Hikâyeye in",
-    "ticker": ["3 harita", "3 felaket", "14 bölge", "40 girişim", "30 politika", "~80 dinamik olay", "7 görev, 7 mini oyun", "Hava kuvvetleri", "Gece-gündüz döngüsü", "TR / EN seslendirme", "6 dil", "İnternetsiz"],
+    "ticker": ["3 harita", "3 felaket", "14 bölge", "40 girişim", "30 politika", "~80 dinamik olay", "7 görev, 7 mini oyun", "Hava kuvvetleri", "Gece-gündüz döngüsü", "TR / EN seslendirme", "11 dil", "İnternetsiz"],
 
     "story.kicker": "Giriş filmi",
     "story.title": "Bir gece her şey değişti",
@@ -133,7 +133,7 @@ window.RB_I18N = {
     "faq.q1": "Hangi cihazlarda oynanır?", "faq.a1": "Android telefon ve tabletlerde (Google Play), iPhone ve iPad'de (App Store) ve bilgisayarda: Windows ve Linux sürümü ile tarayıcıda oynanan ücretsiz demo itch.io'da.",
     "faq.q2": "İnternet gerekiyor mu?", "faq.a2": "Hayır. ReBirth tamamen internetsiz oynanır.",
     "faq.q3": "Ücretli mi?", "faq.a3": "Tarsel harekâtının tamamı ücretsiz. Premium tek seferlik bir satın alımdır, abonelik yoktur ve reklamları da kaldırır.",
-    "faq.q4": "Hangi dilleri destekliyor?", "faq.a4": "Türkçe, İngilizce, İspanyolca, Portekizce, Almanca ve Fransızca. Seslendirme Türkçe ve İngilizce.",
+    "faq.q4": "Hangi dilleri destekliyor?", "faq.a4": "Türkçe, İngilizce, İspanyolca, Portekizce (Brezilya), Almanca, Fransızca, Endonezce, Japonca, Korece, Basitleştirilmiş Çince ve Geleneksel Çince. Seslendirme Türkçe ve İngilizce.",
     "faq.q5": "Bir harekât ne kadar sürer?", "faq.a5": "Tam bir harekât birkaç saat sürer ve kaldığınız yerden devam eder. Kriz Masası görevleri tek bir oturuma sığar.",
     "faq.q6": "Rebel Inc. benzeri mi?", "faq.a6": "Aynı türden: yeniden inşa ile isyanla mücadeleyi birleştirir. ReBirth bunu üç felaket haritası, 3D bir dünya, hava kuvvetleri ve kriz görevleriyle genişletir.",
 
@@ -159,9 +159,9 @@ window.RB_I18N = {
     "hero.play": "Get it on Google Play",
     "hero.trailer": "Watch the trailer",
     "hero.ios": "Also on the App Store", "hero.pc": "Play on PC", "hero.sale": "60% off", "cta.reddit": "Reddit community",
-    "hero.free": "Free to start · Plays offline · 6 languages",
+    "hero.free": "Free to start · Plays offline · 11 languages",
     "hero.scroll": "Enter the story",
-    "ticker": ["3 maps", "3 disasters", "14 districts", "40 initiatives", "30 policies", "~80 dynamic events", "7 missions, 7 mini-games", "Air force", "Day-night cycle", "TR / EN voice acting", "6 languages", "Plays offline"],
+    "ticker": ["3 maps", "3 disasters", "14 districts", "40 initiatives", "30 policies", "~80 dynamic events", "7 missions, 7 mini-games", "Air force", "Day-night cycle", "TR / EN voice acting", "11 languages", "Plays offline"],
 
     "story.kicker": "Opening film",
     "story.title": "One night, everything changed",
@@ -278,7 +278,7 @@ window.RB_I18N = {
     "faq.q1": "Which devices can I play on?", "faq.a1": "Android phones and tablets (Google Play), iPhone and iPad (App Store) and PC: the Windows and Linux version and a free browser demo are on itch.io.",
     "faq.q2": "Do I need an internet connection?", "faq.a2": "No. ReBirth plays fully offline.",
     "faq.q3": "Is it paid?", "faq.a3": "The full Tarsel campaign is free. Premium is a one-time purchase with no subscription, and it also removes ads.",
-    "faq.q4": "Which languages are supported?", "faq.a4": "English, Turkish, Spanish, Portuguese, German and French. Voice acting in English and Turkish.",
+    "faq.q4": "Which languages are supported?", "faq.a4": "English, Turkish, Spanish, Brazilian Portuguese, German, French, Indonesian, Japanese, Korean, Simplified Chinese and Traditional Chinese. Voice acting in English and Turkish.",
     "faq.q5": "How long is a campaign?", "faq.a5": "A full campaign takes a few hours and picks up where you left off. Crisis Desk missions fit in a single session.",
     "faq.q6": "Is it like Rebel Inc.?", "faq.a6": "Same family: it blends rebuilding with counter-insurgency. ReBirth expands it with three disaster maps, a 3D world, an air force and crisis missions.",
 

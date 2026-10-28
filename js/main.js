@@ -20,24 +20,23 @@
   if (G && window.ScrollTrigger) { G.registerPlugin(window.ScrollTrigger); window.ScrollTrigger.clearScrollMemory("manual"); }
 
   /* ------------------------------------------------------------------ dil */
-  var lang = (function () {
-    var q = new URLSearchParams(location.search).get("lang");
-    if (q === "tr" || q === "en") return q;
-    try { var s = localStorage.getItem("rb_lang"); if (s === "tr" || s === "en") return s; } catch (e) {}
-    var n = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
-    return /^tr/i.test(n) ? "tr" : "en";
-  })();
+  /* 11 dil (js/dil.js); tr/en sözlüğü i18n.js'te, diğerleri js/i18n/<kod>.js (başlarken yüklenir). Eksik anahtar en → tr'ye düşer. */
+  var D = window.RBDil;
+  var lang = D.sec();
+  var CJK = /^(ja|zh_CN|zh_TW)$/;   // sözcük arası boşluk yok: başlık animasyonu harf harf bölünür
   function t(k) {
     var v = (I[lang] || {})[k];
+    if (v == null && lang !== "tr") v = (I.en || {})[k];
     if (v == null) v = (I.tr || {})[k];
     return v == null ? k : v;
   }
   window.RBSite = { t: t, lang: function () { return lang; } };
+  function ml() { return D.ana(lang); }   // ses, fragman ve ekran görüntüleri yalnız tr/en
 
-  function shot(name, small) { return "assets/img/shots/" + name + "_" + lang + (small ? "_k" : "") + ".webp"; }
+  function shot(name, small) { return "assets/img/shots/" + name + "_" + ml() + (small ? "_k" : "") + ".webp"; }
 
   function applyLang(first) {
-    doc.lang = lang;
+    D.uygula(lang);
     document.title = t("meta.title");
     var md = $('meta[name="description"]');
     if (md) md.setAttribute("content", t("meta.desc"));
@@ -52,7 +51,6 @@
     });
     $("#soundBtn").setAttribute("aria-label", t("nav.sound"));
     $("#burger").setAttribute("aria-label", t("nav.menu"));
-    $$("#langBtn [data-l]").forEach(function (s) { s.classList.toggle("is-on", s.getAttribute("data-l") === lang); });
     $$("a[data-keep-lang]").forEach(function (a) { a.href = a.getAttribute("data-keep-lang") + "?lang=" + lang; });
     buildTicker();
     buildCrisis(first);
@@ -64,11 +62,8 @@
       if (arc.started) mountGame(arc.id);
     }
   }
-  $("#langBtn").addEventListener("click", function () {
-    lang = lang === "tr" ? "en" : "tr";
-    try { localStorage.setItem("rb_lang", lang); } catch (e) {}
-    applyLang(false);
-    sfx("ui_tik", 0.5);
+  D.menu($("#langBtn"), lang, function (k) {
+    D.yukle(k, function () { lang = k; applyLang(false); sfx("ui_tik", 0.5); });
   });
 
   function sfx(n, v) { if (window.RBHost) RBHost.sfx(n, v); }
@@ -86,9 +81,11 @@
     if (reduce || !titleIO) { doc.classList.add("no-split"); return; }
     $$(".title").forEach(function (h) {
       var txt = h.textContent.trim();
-      h.innerHTML = txt.split(/\s+/).map(function (w, i) {
-        return '<span class="w"><span style="--i:' + i + '">' + w + "</span></span>";
-      }).join(" ");
+      // CJK: her harf ayrı parça (noktalama öncekine yapışık), gecikme iki harfte bir artar
+      var cjk = CJK.test(lang), par = cjk ? (txt.match(/.[、。，．！？：；」』）”・ー]*/g) || []) : txt.split(/\s+/);
+      h.innerHTML = par.map(function (w, i) {
+        return '<span class="w"><span style="--i:' + (cjk ? i >> 1 : i) + '">' + w + "</span></span>";
+      }).join(cjk ? "" : " ");
       h.setAttribute("aria-label", txt);
       if (!h.getAttribute("data-seen")) titleIO.observe(h);
     });
@@ -326,7 +323,7 @@
     }
     if (radio.actx && radio.actx.state === "suspended") radio.actx.resume();
     if (radio.audio) { radio.audio.pause(); radioStop(); }
-    var a = new Audio("assets/audio/ses/" + lang + "/" + b.getAttribute("data-voice") + ".mp3");
+    var a = new Audio("assets/audio/ses/" + ml() + "/" + b.getAttribute("data-voice") + ".mp3");
     radio.audio = a;
     if (radio.actx) { try { radio.actx.createMediaElementSource(a).connect(radio.an); } catch (err) {} }
     a.addEventListener("ended", function () { if (radio.audio === a) radioStop(); });
@@ -685,8 +682,8 @@
   /* ------------------------------------------------------------------ fragman */
   var modal = $("#trailerModal"), tv = $("#trailerVideo"), musicWas = false;
   function openTrailer() {
-    tv.poster = "assets/video/fragman_" + lang + ".jpg";
-    tv.src = "assets/video/fragman_" + lang + ".mp4";
+    tv.poster = "assets/video/fragman_" + ml() + ".jpg";
+    tv.src = "assets/video/fragman_" + ml() + ".mp4";
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
     body.style.overflow = "hidden";
@@ -743,12 +740,15 @@
   /* ------------------------------------------------------------------ başlat */
   // süreli kampanya rozetleri (ör. PC çıkış indirimi) bitiş tarihinden sonra kendiliğinden kalkar
   $$("[data-sale-until]").forEach(function (e) { if (Date.now() > Date.parse(e.getAttribute("data-sale-until"))) e.remove(); });
-  applyLang(true);
-  observeReveals();
-  navSolid();
-  radioSize();
-  storyUpdate();
-  new IntersectionObserver(function (ents) {
-    ents.forEach(function (en) { radio.visible = en.isIntersecting; if (radio.visible) radioLoop(); });
-  }).observe(radio.el);
+  D.kanonik("https://rebirthgame.tr/");
+  D.yukle(lang, function () {   // tr/en dışındaki dilin sözlüğü gelince (yükleme perdesi bu arada açık)
+    applyLang(true);
+    observeReveals();
+    navSolid();
+    radioSize();
+    storyUpdate();
+    new IntersectionObserver(function (ents) {
+      ents.forEach(function (en) { radio.visible = en.isIntersecting; if (radio.visible) radioLoop(); });
+    }).observe(radio.el);
+  });
 })();
