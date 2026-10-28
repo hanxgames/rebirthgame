@@ -13,6 +13,8 @@ görselleri kendi önbelleğinden siler). Her yazımda paylas/<tr|en>/<kimlik>.h
                                                                       #   kopyalanır, kayıt düşünce silinir); kapak 1280x720'e kırpılır
   python tools/haber_ekle.py youtube <id> <tr_adres> <en_adres>       # sitede barınan videonun YouTube kopyası: altında
                                                                       #   dile göre "YouTube'da izle" düğmesi ("-" "-": kaldır)
+  python tools/haber_ekle.py gorunum <id> '<json>'                    # var olan kaydın görünüm alanlarını değiştir (null: kaldır),
+                                                                      #   ör. '{"tepki": "kalp", "renk": {"vurgu": "#E30A17"}}'
   python tools/haber_ekle.py liste
   python tools/haber_ekle.py denetle                                  # şema, görseller, yetim dosyalar (siler)
 
@@ -38,6 +40,19 @@ id, ja, ko, zh_CN, zh_TW — oyun kendi dilindeki anahtarı gösterir, yoksa İn
                                                  #   başka mağazaya satış bağlantısı veren haberi iOS'a koyma (App Store 3.1.1)
     "form": "moderator",                         # isteğe bağlı: haberler.html'de haberin altına başvuru düğmesi (js/basvuru.js
                                                  #   FORMLAR: kimlik → Google Formlar bağlantısı; site bir şey saklamaz)
+    # --- kartın uzaktan görünümü (oyun 2.1.3+, eski sürümler yok sayar; site aynısını uygular; YenidenDogus
+    #     docs/claude/arayuz.md "Haber kartının uzaktan görünümü"). Hepsi isteğe bağlı, geçersiz alan oyunda düşer:
+    "tepki": "kalp",                             # "ikili" (👍/👎, varsayılan) | "kalp" (tek kalp → begen sayacı) | "yok" (yalnız oyunda)
+    "renk": {"vurgu": "#E30A17", "zemin": "#1A1210", "kenar": "#E30A17", "etiket": "#FFFFFF", "baslik": "#FFFFFF", "ozet": "#EADFCB"},
+                                                 #   "#RRGGBB" ya da "#RRGGBBAA"; zemin/kenar verilince kart kendi kutusunda; etiket yoksa vurgu
+    "dugmeler": [{"metin": {"tr": "...", "en": "..."}, "baglanti": "https://...", "simge": "play", "stil": "ana"}],
+                                                 #   en çok 3; "Detayları gör"ün yerine geçer, [] = düğmesiz. baglanti "detay" (ya da boş) =
+                                                 #   haberler.html#<id>; https yalnız rebirthgame.tr, hanxgames.net, play.google.com, itch.io,
+                                                 #   youtube.com, youtu.be (iOS'ta yalnız ilk ikisi). simge: IconAtlas adı; stil "ana" | "ikincil"
+    "sabitle": true,                             #   türünde en üstte
+    "vurgu": "parilti",                          #   kenar yavaşça parlar
+    "duzen": "genis",                            #   görsel üstte, tam genişlik
+    "baslangic": "2026-10-29", "bitis": "2026-10-30 21:00",   # UTC; bitiş günü dahil; aralık dışında kart görünmez
     "anket": {                                   # isteğe bağlı (oyun 2.0.8+): şıklar oyundaki kartta, tek dokunuşla oy (Android);
       "id": "sonraki_mod",                       #   oylar Firebase Realtime Database anket/<id>/ (oyuncu başına tek oy, kurallar
       "soru": {"tr": "...", "en": "..."},        #   ReBirth deposunda panel/database.rules.json); sayılar herkese açık, haberler.html
@@ -64,6 +79,12 @@ GORSEL_KLASOR = "assets/img/haber"
 VIDEO_KLASOR = "assets/video/haber"   # habere kopyalanan videolar ve kapakları (kayıt düşünce silinir)
 KAPAK_BOY = (1280, 720)
 TURLER = {"haber": "haberler", "guncelleme": "guncellemeler"}
+# kartın uzaktan görünümü (oyunun haber_paneli.gd'si ile aynı şema ve sınırlar)
+GORUNUM = ("tepki", "renk", "dugmeler", "sabitle", "vurgu", "duzen", "baslangic", "bitis")
+RENK_ANAHTAR = ("vurgu", "zemin", "kenar", "etiket", "baslik", "ozet")
+HEX = re.compile(r"#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?")
+ZAMAN = re.compile(r"(\d{4})-(\d{2})-(\d{2})( (\d{2}):(\d{2}))?")
+IZINLI = re.compile(r"https://([a-z0-9-]+\.)*(rebirthgame\.tr|hanxgames\.net|play\.google\.com|itch\.io|youtube\.com|youtu\.be)([/?#].*)?", re.I)
 EN_COK = 5
 BOY = (640, 360)
 DILLER = ("tr", "en")
@@ -262,6 +283,48 @@ def denetle_kayit(k: dict) -> list:
     pl = k.get("platform")
     if pl is not None and (not isinstance(pl, list) or not pl or any(x not in ("android", "ios", "pc", "web") for x in pl)):
         hata.append("platform: android | ios | pc | web listesi")
+    return hata + denetle_gorunum(k)
+
+
+def denetle_gorunum(k: dict) -> list:
+    """kartın uzaktan görünümü: oyunun kabul ettiği değerler (oyun geçersizi sessizce düşürür; burada yazmadan önce yakala)"""
+    hata = []
+    if "tepki" in k and k["tepki"] not in ("ikili", "kalp", "yok"):
+        hata.append("tepki: ikili | kalp | yok")
+    r = k.get("renk")
+    if r is not None and (not isinstance(r, dict) or any(a not in RENK_ANAHTAR or not HEX.fullmatch(str(v)) for a, v in r.items())):
+        hata.append("renk: {%s} → #RRGGBB[AA]" % ", ".join(RENK_ANAHTAR))
+    dg = k.get("dugmeler")
+    if dg is not None:
+        if not isinstance(dg, list) or len(dg) > 3:
+            hata.append("dugmeler: en çok 3 düğmelik liste")
+        else:
+            for d in dg:
+                b = str(d.get("baglanti", "")) if isinstance(d, dict) else ""
+                m = d.get("metin") if isinstance(d, dict) else None
+                if not isinstance(d, dict) or not (isinstance(m, str) and m.strip() or isinstance(m, dict) and str(m.get("en", "")).strip()):
+                    hata.append("dugme: metin (düz metin ya da en'li dil sözlüğü)")
+                elif b not in ("", "detay") and not IZINLI.fullmatch(b):
+                    hata.append("dugme baglanti: detay | https (rebirthgame.tr, hanxgames.net, play.google.com, itch.io, youtube): " + b)
+                elif d.get("stil") not in (None, "ana", "ikincil"):
+                    hata.append("dugme stil: ana | ikincil")
+                elif d.get("simge") is not None and not re.fullmatch(r"[a-z_]{2,20}", str(d["simge"])):
+                    hata.append("dugme simge: IconAtlas adı")
+    if "sabitle" in k and not isinstance(k["sabitle"], bool):
+        hata.append("sabitle: true | false")
+    if "vurgu" in k and k["vurgu"] != "parilti":
+        hata.append("vurgu: parilti")
+    if "duzen" in k and k["duzen"] not in ("normal", "genis"):
+        hata.append("duzen: normal | genis")
+    for alan in ("baslangic", "bitis"):
+        if alan in k:
+            m = ZAMAN.fullmatch(str(k[alan]))
+            try:
+                if not m:
+                    raise ValueError
+                datetime.datetime(int(m[1]), int(m[2]), int(m[3]), int(m[5] or 0), int(m[6] or 0))
+            except ValueError:
+                hata.append(alan + ": YYYY-AA-GG ya da YYYY-AA-GG SS:DD (UTC)")
     return hata
 
 
@@ -271,7 +334,8 @@ def sirala_kirp(akis: dict) -> list:
     dusen = []
     for liste in TURLER.values():
         kayitlar = akis.get(liste, [])
-        kayitlar.sort(key=lambda k: (k.get("tarih", ""), k.get("eklendi", "")), reverse=True)
+        # sabitlenen önce (oyun da öyle gösterir; en çok kuralında da korunur), sonra yeniden eskiye
+        kayitlar.sort(key=lambda k: (k.get("sabitle") is True, k.get("tarih", ""), k.get("eklendi", "")), reverse=True)
         dusen += [k["id"] for k in kayitlar[sinir:]]
         akis[liste] = kayitlar[:sinir]
     yetim_sil(akis)
@@ -308,6 +372,9 @@ def ekle(tur: str, taslak_yol: str, gorsel_yol: str) -> None:
     kayit = {"id": kimlik, "tarih": tarih}
     for alan in ("etiket", "surum", "baslik", "ozet", "metin", "baglanti", "video", "platform", "form", "anket"):
         if t.get(alan):
+            kayit[alan] = t[alan]
+    for alan in GORUNUM:   # boş liste ([] = düğmesiz kart) ve false da anlamlı
+        if alan in t:
             kayit[alan] = t[alan]
     kayit["gorsel"] = gorsel_hazirla(gorsel_yol, kimlik)
     kayit["eklendi"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%fZ")   # aynı gün eklenenlerin sırası
@@ -384,6 +451,31 @@ def youtube(kimlik: str, tr: str, en: str) -> None:
     sys.exit("bulunamadı: " + kimlik)
 
 
+def gorunum(kimlik: str, veri: str) -> None:
+    """var olan kaydın görünüm alanlarını değiştirir: '<json>' ya da json dosyası; değeri null olan alan kaldırılır"""
+    d = json.load(open(veri, encoding="utf-8")) if os.path.exists(veri) else json.loads(veri)
+    if not isinstance(d, dict) or any(a not in GORUNUM for a in d):
+        sys.exit("yalnız şu alanlar: " + ", ".join(GORUNUM))
+    akis = oku()
+    for liste in TURLER.values():
+        for k in akis.get(liste, []):
+            if k["id"] != kimlik:
+                continue
+            for a, v in d.items():
+                if v is None:
+                    k.pop(a, None)
+                else:
+                    k[a] = v
+            hata = denetle_gorunum(k)
+            if hata:
+                sys.exit("geçersiz: " + ", ".join(hata))
+            sirala_kirp(akis)
+            yaz(akis)
+            print("görünüm güncellendi:", kimlik, {a: k.get(a) for a in GORUNUM if a in k})
+            return
+    sys.exit("bulunamadı: " + kimlik)
+
+
 def liste() -> None:
     akis = oku()
     for tur, l in TURLER.items():
@@ -421,6 +513,8 @@ if __name__ == "__main__":
         video(*a[1:])
     elif len(a) == 4 and a[0] == "youtube":
         youtube(a[1], a[2], a[3])
+    elif len(a) == 3 and a[0] == "gorunum":
+        gorunum(a[1], a[2])
     elif len(a) == 2 and a[0] == "sil":
         sil(a[1])
     elif a == ["liste"]:

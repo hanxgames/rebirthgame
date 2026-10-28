@@ -184,11 +184,17 @@
         { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
     } catch (e) { return s; }
   }
-  function cip(c, x, yy, yazi) {   // hardal etiket; genişliği döner
+  function cipRengi(k) {   // haberin uzaktan rengi (renk.etiket ya da renk.vurgu, #RRGGBB[AA]); yoksa hardal
+    var r = k.renk && typeof k.renk === "object" ? k.renk : {}, h = /^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/;
+    return h.test(r.etiket || "") ? r.etiket.slice(0, 7) : h.test(r.vurgu || "") ? r.vurgu.slice(0, 7) : "#f1ad2a";
+  }
+  function cip(c, x, yy, yazi, renk) {   // etiket çipi; genişliği döner (yazı rengi zemine göre koyu/açık)
+    renk = renk || "#f1ad2a";
     c.font = "700 32px 'Barlow Condensed'";
     var t = yazi.toUpperCase(), w = c.measureText(t).width + 36;
-    c.fillStyle = "#f1ad2a"; yuvarlak(c, x, yy, w, 50, 8); c.fill();
-    c.fillStyle = "#201d1b"; c.textBaseline = "middle"; c.fillText(t, x + 18, yy + 26);
+    var n = parseInt(renk.slice(1, 7), 16), parlak = (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) > 140;
+    c.fillStyle = renk; yuvarlak(c, x, yy, w, 50, 8); c.fill();
+    c.fillStyle = parlak ? "#201d1b" : "#fff8ec"; c.textBaseline = "middle"; c.fillText(t, x + 18, yy + 26);
     return w;
   }
 
@@ -221,7 +227,7 @@
     }
     // etiket + tarih
     var x = 60, cx = x;
-    if (k.etiket) cx += cip(c, x, gy, metin(k.etiket, dil)) + 18;
+    if (k.etiket) cx += cip(c, x, gy, metin(k.etiket, dil), cipRengi(k)) + 18;
     c.font = "700 32px 'Barlow Condensed'"; c.fillStyle = "#c7bba3"; c.textBaseline = "middle";
     c.fillText(tarih(k.tarih, dil).toUpperCase() + (k.surum ? "  ·  V" + k.surum : ""), cx, gy + 26);
     // başlık

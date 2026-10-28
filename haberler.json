@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-28T20:52:07Z",
+ "guncelleme": "2026-10-28T21:11:06Z",
  "haberler": [
   {
    "id": "2026-10-29-cumhuriyet-bayrami",
@@ -60,7 +60,8 @@
     ]
    },
    "gorsel": "assets/img/haber/2026-10-29-cumhuriyet-bayrami-9a8fcb.jpg",
-   "eklendi": "2026-10-28T20:52:07.290677Z"
+   "eklendi": "2026-10-28T20:52:07.290677Z",
+   "tepki": "kalp"
   },
   {
    "id": "2026-10-28-halvarya-saranis",

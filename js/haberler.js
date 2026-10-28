@@ -50,6 +50,60 @@
     return h;
   }
 
+  // Kartın uzaktan görünümü (oyunla aynı şema, oyun 2.1.3+; YenidenDogus docs/claude/arayuz.md "Haber kartının uzaktan görünümü"):
+  // renk, dugmeler, sabitle, vurgu, duzen, baslangic/bitis. "tepki" yalnız oyunda (sitede tepki düğmesi yok). Geçersiz alan yok sayılır.
+  var HEX = /^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/;
+  var RENKLER = ["vurgu", "zemin", "kenar", "etiket", "baslik", "ozet"];
+  var IZINLI = /^https:\/\/([a-z0-9-]+\.)*(rebirthgame\.tr|hanxgames\.net|play\.google\.com|itch\.io|youtube\.com|youtu\.be)([\/?#]|$)/i;
+  var SIMGE = {   // oyundaki IconAtlas adlarından sitede çizilebilenler; diğerleri simgesiz
+    play: '<path d="M8 5.5v13c0 .6.7 1 1.2.6l10-6.5c.5-.3.5-1 0-1.3l-10-6.5C8.7 4.5 8 4.9 8 5.5z"/>',
+    heart: '<path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.6.7-1.4 2.2-2.6 4.3-2.6 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/>',
+    star: '<path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/>',
+    info: '<path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>',
+    globe: '<path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 6h-2.9a15.6 15.6 0 00-1.4-3.6A8 8 0 0118.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a8.2 8.2 0 010-4h3.4a16.5 16.5 0 000 4H4.3zm8 6c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14.7 14.7 0 010-4h4.6a14.7 14.7 0 010 4z"/>',
+    news: '<path d="M4 4h13v14a2 2 0 002 2H6a2 2 0 01-2-2V4zm2 3v2h9V7H6zm0 4v2h9v-2H6zm0 4v2h6v-2H6zm13-7h2v10a2 2 0 01-2 2V8z"/>',
+    flag: '<path d="M5 2h2v20H5V2zm3 1h11l-2.5 4L19 11H8V3z"/>'
+  };
+  function zaman(s, son) {   // "YYYY-AA-GG" ya da "YYYY-AA-GG SS:DD" (UTC); bitiş günü dahil
+    var m = /^(\d{4})-(\d{2})-(\d{2})(?: (\d{2}):(\d{2}))?$/.exec(String(s || ""));
+    if (!m) return null;
+    var t = Date.UTC(+m[1], +m[2] - 1, +m[3], +(m[4] || 0), +(m[5] || 0));
+    return son && !m[4] ? t + 86400000 : t;
+  }
+  function gorunur(k) {
+    var simdi = Date.now(), b = zaman(k.baslangic, false), s = zaman(k.bitis, true);
+    return !(b != null && simdi < b) && !(s != null && simdi >= s);
+  }
+  function gorunumUygula(art, k) {
+    var renk = k.renk && typeof k.renk === "object" ? k.renk : {};
+    RENKLER.forEach(function (r) { if (HEX.test(String(renk[r] || ""))) art.style.setProperty("--nk-" + r, renk[r]); });
+    if (k.vurgu === "parilti") art.classList.add("news-item--parilti");
+    if (k.duzen === "genis") art.classList.add("news-item--genis");
+  }
+  // "dugmeler": "Bağlantıyı aç"ın yerine en çok 3 düğme. "detay" (ya da boş) bu sayfanın kendisi olduğu için sitede çizilmez;
+  // bağlantı yalnız https ve izinli alanlar. Döner: düğmeler (boş olabilir) ya da null (alan yok / hepsi geçersiz → eski düğme)
+  function dugmeler(k) {
+    if (!Array.isArray(k.dugmeler)) return null;
+    if (!k.dugmeler.length) return [];
+    var out = [], detay = false;
+    k.dugmeler.slice(0, 3).forEach(function (d) {
+      if (!d || typeof d !== "object") return;
+      var adres = String(d.baglanti || "");
+      if (adres === "" || adres === "detay") { detay = true; return; }
+      if (!IZINLI.test(adres)) return;
+      var yazi = typeof d.metin === "string" ? d.metin : metin(d.metin);
+      if (!yazi) return;
+      var a = el("a", "doc-btn news-btn" + (d.stil === "ana" ? "" : " doc-btn--ghost"));
+      if (SIMGE[d.simge]) a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + SIMGE[d.simge] + "</svg>";
+      a.appendChild(document.createTextNode(yazi));
+      a.href = adres;
+      a.target = "_blank";
+      a.rel = "noopener";
+      out.push(a);
+    });
+    return out.length || detay ? out : null;
+  }
+
   // Video (kayıtta "video": {tr, en}): Türkçe sayfa tr'yi, İngilizce sayfa (oyunun diğer bütün dilleri) en'i oynatır. YouTube
   // oynatıcısı yalnız tıklayınca youtube-nocookie'den yüklenir; o zamana dek kapak sitenin kendi görselidir (privacy.html §5).
   var OYNAT = { tr: "Videoyu oynat", en: "Play video", es: "Reproducir vídeo", pt_BR: "Reproduzir vídeo", de: "Video abspielen",
@@ -151,9 +205,14 @@
       b.setAttribute("aria-selected", b.getAttribute("data-tur") === tur ? "true" : "false");
     });
     liste.textContent = "";
-    (akis[tur] || []).forEach(function (k) {
+    // aralık dışındakiler gizli; "sabitle" önce, sonra akıştaki sıra (yeniden eskiye)
+    (akis[tur] || []).filter(gorunur).map(function (k, i) { return [k, i]; }).sort(function (a, b) {
+      return (b[0].sabitle === true) - (a[0].sabitle === true) || a[1] - b[1];
+    }).forEach(function (x) {
+      var k = x[0];
       var art = el("article", "news-item");
       art.id = k.id;
+      gorunumUygula(art, k);
       var vid = k.video ? videoKutusu(k) : null;
       if (vid) {   // videolu kayıt tek sütun: oynatıcı kapağı üstte, tam genişlikte
         art.classList.add("has-video");
@@ -185,7 +244,9 @@
           govde.appendChild(el("p", null, s));
         }
       });
-      if (k.baglanti) {
+      var dg = dugmeler(k);
+      if (dg) dg.forEach(function (a) { govde.appendChild(a); });
+      else if (k.baglanti) {
         var a = el("a", "doc-btn news-btn", y(DETAY));
         a.href = k.baglanti;
         a.target = "_blank";
