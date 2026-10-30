@@ -1,8 +1,72 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-28T21:11:06Z",
+ "guncelleme": "2026-10-30T09:06:20Z",
  "haberler": [
+  {
+   "id": "2026-10-30-reddit-premium-hediye",
+   "tarih": "2026-10-30",
+   "etiket": {
+    "tr": "Çekiliş",
+    "en": "Giveaway",
+    "es": "Sorteo",
+    "pt_BR": "Sorteio",
+    "de": "Gewinnspiel",
+    "fr": "Concours",
+    "id": "Giveaway",
+    "ja": "プレゼント",
+    "ko": "이벤트",
+    "zh_CN": "抽奖",
+    "zh_TW": "抽獎"
+   },
+   "baslik": {
+    "tr": "Reddit topluluğumuza katıl, 10 kişiye Premium hediye!",
+    "en": "Join our Reddit community: 10 players win Premium!",
+    "es": "Únete a nuestra comunidad de Reddit: ¡regalamos Premium a 10 jugadores!",
+    "pt_BR": "Entre na nossa comunidade do Reddit: 10 jogadores ganham Premium!",
+    "de": "Tritt unserer Reddit-Community bei: 10 Spieler gewinnen Premium!",
+    "fr": "Rejoignez notre communauté Reddit : 10 joueurs gagnent Premium !",
+    "id": "Gabung komunitas Reddit kami: 10 pemain dapat Premium gratis!",
+    "ja": "Redditコミュニティに参加しよう：10名にプレミアムをプレゼント！",
+    "ko": "Reddit 커뮤니티에 참여하세요: 10명에게 프리미엄 증정!",
+    "zh_CN": "加入我们的 Reddit 社区：送出 10 份高级版！",
+    "zh_TW": "加入我們的 Reddit 社群：送出 10 份進階版！"
+   },
+   "ozet": {
+    "tr": "r/ReBirthSocial topluluğumuza katılanlar arasından 10 kişiye ömür boyu Premium hediye ediyoruz. Kazananlar kurayla belirlenip 10 Kasım 2026'da açıklanacak.",
+    "en": "We're giving lifetime Premium to 10 members of r/ReBirthSocial. Winners will be drawn at random and announced on 10 November 2026.",
+    "es": "Regalamos Premium de por vida a 10 miembros de r/ReBirthSocial. Los ganadores se elegirán por sorteo y se anunciarán el 10 de noviembre de 2026.",
+    "pt_BR": "Vamos dar Premium vitalício a 10 membros do r/ReBirthSocial. Os vencedores serão sorteados e anunciados em 10 de novembro de 2026.",
+    "de": "Wir verschenken Premium auf Lebenszeit an 10 Mitglieder von r/ReBirthSocial. Die Gewinner werden ausgelost und am 10. November 2026 bekanntgegeben.",
+    "fr": "Nous offrons Premium à vie à 10 membres de r/ReBirthSocial. Les gagnants seront tirés au sort et annoncés le 10 novembre 2026.",
+    "id": "Kami memberikan Premium seumur hidup untuk 10 anggota r/ReBirthSocial. Pemenang diundi dan diumumkan pada 10 November 2026.",
+    "ja": "r/ReBirthSocialのメンバーから抽選で10名に永久プレミアムをプレゼント。当選者は2026年11月10日に発表します。",
+    "ko": "r/ReBirthSocial 회원 중 추첨으로 10명에게 평생 프리미엄을 드립니다. 당첨자는 2026년 11월 10일에 발표합니다.",
+    "zh_CN": "我们将从 r/ReBirthSocial 成员中抽出 10 位送出永久高级版。获奖者将于 2026 年 11 月 10 日公布。",
+    "zh_TW": "我們將從 r/ReBirthSocial 成員中抽出 10 位送出永久進階版。得獎者將於 2026 年 11 月 10 日公布。"
+   },
+   "metin": {
+    "tr": [
+     "ReBirth oyuncularının buluşma noktası r/ReBirthSocial'ı büyütüyoruz ve topluluğumuza katılanlara teşekkür etmek istiyoruz: 10 kişiye ömür boyu Premium hediye!",
+     "• Katılmak için r/ReBirthSocial topluluğuna katılman yeterli.",
+     "• Kazananlar tamamen kurayla seçilecek: 10 asil ve 10 yedek.",
+     "• Asillerden biri zaten Premium sahibiyse hediyesi sırayla yedeklere geçer (1. yedekten başlayarak).",
+     "• Kazananlar 10 Kasım 2026'da açıklanacak.",
+     "Duyuru ve abone sayacının olduğu gönderi için aşağıdaki bağlantıyı aç. Herkese bol şans!"
+    ],
+    "en": [
+     "We're growing r/ReBirthSocial, the home of ReBirth players, and we want to thank everyone who joins: 10 members will win lifetime Premium!",
+     "• To enter, simply join the r/ReBirthSocial community.",
+     "• Winners are drawn completely at random: 10 winners and 10 reserves.",
+     "• If a winner already owns Premium, the prize passes to the reserves in order, starting with reserve 1.",
+     "• Winners will be announced on 10 November 2026.",
+     "Open the link below for the announcement post and the member counter. Good luck, everyone!"
+    ]
+   },
+   "baglanti": "https://www.reddit.com/r/ReBirthSocial/s/rAiksQ69e9",
+   "gorsel": "assets/img/haber/2026-10-30-reddit-premium-hediye-b6bee5.jpg",
+   "eklendi": "2026-10-30T09:06:20.330025Z"
+  },
   {
    "id": "2026-10-29-cumhuriyet-bayrami",
    "tarih": "2026-10-29",
@@ -202,84 +266,6 @@
     "tr": "assets/video/haber/2026-10-26-sefer-yakinda-tr-2f9da7.mp4",
     "en": "assets/video/haber/2026-10-26-sefer-yakinda-en-76a631.mp4",
     "kapak": "assets/video/haber/2026-10-26-sefer-yakinda-kapak-af30f3.jpg"
-   }
-  },
-  {
-   "id": "2026-10-22-golge-cephesi",
-   "tarih": "2026-10-22",
-   "etiket": {
-    "tr": "Yeni mod",
-    "en": "New mode",
-    "es": "Nuevo modo",
-    "pt_BR": "Novo modo",
-    "de": "Neuer Modus",
-    "fr": "Nouveau mode",
-    "id": "Mode baru",
-    "ja": "新モード",
-    "ko": "새 모드",
-    "zh_CN": "新模式",
-    "zh_TW": "新模式"
-   },
-   "baslik": {
-    "tr": "Hikâyeye bir de Gölge Cephesi'nden bakın!",
-    "en": "See the story through the Shadow Front's eyes!",
-    "es": "¡Mira la historia desde el lado del Frente Sombra!",
-    "pt_BR": "Veja a história pelo lado da Frente Sombria!",
-    "de": "Erlebe die Geschichte aus Sicht der Schattenfront!",
-    "fr": "Vivez l'histoire du côté du Front de l'Ombre !",
-    "id": "Lihat kisahnya dari sisi Front Bayangan!",
-    "ja": "影の戦線の視点で物語を見よう！",
-    "ko": "그림자 전선의 시선으로 이야기를 보세요!",
-    "zh_CN": "从暗影阵线的视角重看这段故事！",
-    "zh_TW": "從暗影陣線的視角重看這段故事！"
-   },
-   "ozet": {
-    "tr": "Bu sefer isyan sensin. Yeni mod Gölge Cephesi 2.1.1 ile yayında: Konsey'i yönet, halkın güvenini kazan, misyonu barış masasına oturt.",
-    "en": "This time, you are the uprising. The new Shadow Front mode is out now in 2.1.1: lead the Council, win the people's trust and bring the mission to the peace table.",
-    "es": "Esta vez, la rebelión eres tú. El nuevo modo Frente Sombra ya está disponible en la 2.1.1: dirige el Consejo, gánate la confianza del pueblo y lleva a la misión a la mesa de paz.",
-    "pt_BR": "Desta vez, a revolta é você. O novo modo Frente Sombria já está disponível na 2.1.1: comande o Conselho, conquiste a confiança do povo e leve a missão à mesa de paz.",
-    "de": "Diesmal bist du der Aufstand. Der neue Modus Schattenfront ist jetzt mit 2.1.1 verfügbar: Führe den Rat, gewinne das Vertrauen der Bevölkerung und bring die Mission an den Verhandlungstisch.",
-    "fr": "Cette fois, la révolte, c'est vous. Le nouveau mode Front de l'Ombre est disponible avec la 2.1.1 : dirigez le Conseil, gagnez la confiance du peuple et amenez la mission à la table des négociations.",
-    "id": "Kali ini, kamulah perlawanannya. Mode baru Front Bayangan kini hadir di 2.1.1: pimpin Dewan, raih kepercayaan rakyat, dan bawa misi ke meja perdamaian.",
-    "ja": "今度は、あなたが蜂起する側だ。新モード「影の戦線」がアップデート2.1.1で登場。評議会を率い、民衆の信頼を勝ち取り、ミッションを和平交渉の席に着かせよう。",
-    "ko": "이번에는 당신이 봉기의 주인공입니다. 새 모드 '그림자 전선'이 2.1.1 업데이트로 출시되었습니다. 평의회를 이끌고, 민심을 얻고, 임무단을 평화 협상 테이블로 불러내세요.",
-    "zh_CN": "这一次，你就是起义者。新模式“暗影阵线”已随 2.1.1 更新上线：领导议会，赢得民众信任，迫使任务团坐上和平谈判桌。",
-    "zh_TW": "這一次，你就是起義者。新模式「暗影陣線」已隨 2.1.1 更新上線：領導議會，贏得民眾信任，迫使任務團坐上和平談判桌。"
-   },
-   "metin": {
-    "tr": [
-     "Gölge Cephesi'nin giriş sinematiğini yukarıda izleyebilirsin: oyunun kendi sahneleri ve seslendirmesiyle.",
-     "Depremden sonra devlet dağıldı; vilayetin kaderini artık yabancı bir misyon yazıyor. Gölge Cephesi, kendi topraklarını kendisi yönetmek isteyen insanların hareketi: çiftçiler, öğretmenler, madenciler. ReBirth'te ilk kez öteki taraftasın.",
-     "• Konsey'i yönet: hücreleri örgütle, her kararın bedelini tart",
-     "• Halkın güvenini kazan: gücün halktan gelir, siviller asla hedef değil",
-     "• Yolda jandarma kontrol noktalarından geç: sorulara vereceğin cevaplar hücrenin kaderini belirler",
-     "• Misyonu barış masasına oturt",
-     "• Karşında oyunu bilen bir misyon: Kolay, Orta ve Zor; üç vilayette oynanır",
-     "• Moda özel arayüz ve seslendirme",
-     "Gölge Cephesi 2.1.1 ile yayında; güncellemeyi Google Play'den indirebilirsin."
-    ],
-    "en": [
-     "Watch the Shadow Front's opening cinematic above, made from the game's own scenes and voice acting.",
-     "After the earthquake the state fell apart, and a foreign mission now decides the province's fate. The Shadow Front is a movement of people who want to govern their own land: farmers, teachers, miners. For the first time in ReBirth, you are on the other side.",
-     "• Lead the Council: organize your cells and weigh the cost of every decision",
-     "• Win the people's trust: your strength comes from the people, and civilians are never a target",
-     "• Get past gendarmerie checkpoints on the road: your answers decide the fate of your cell",
-     "• Bring the mission to the peace table",
-     "• Face a mission that knows the game: Easy, Medium and Hard, across three provinces",
-     "• A dedicated interface and voice acting for the mode",
-     "The Shadow Front is out now in 2.1.1; get the update on Google Play."
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-22-golge-cephesi-f5079f.jpg",
-   "eklendi": "2026-10-22T15:51:04.629596Z",
-   "video": {
-    "tr": "assets/video/haber/2026-10-22-golge-cephesi-tr-4e110d.mp4",
-    "en": "assets/video/haber/2026-10-22-golge-cephesi-en-57212c.mp4",
-    "kapak": "assets/video/haber/2026-10-22-golge-cephesi-kapak-7334cc.jpg",
-    "youtube": {
-     "tr": "https://youtu.be/w7h9feavdhY",
-     "en": "https://youtu.be/1NdLnErHS3U"
-    }
    }
   },
   {
