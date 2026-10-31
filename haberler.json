@@ -1,8 +1,71 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-30T15:34:44Z",
+ "guncelleme": "2026-10-31T12:50:49Z",
  "haberler": [
+  {
+   "id": "2026-10-31-kara-kolera-basladi",
+   "tarih": "2026-10-31",
+   "etiket": {
+    "tr": "Etkinlik",
+    "en": "Event",
+    "es": "Evento",
+    "pt_BR": "Evento",
+    "de": "Event",
+    "fr": "Événement",
+    "id": "Acara",
+    "ja": "イベント",
+    "ko": "이벤트",
+    "zh_CN": "活动",
+    "zh_TW": "活動"
+   },
+   "baslik": {
+    "tr": "Kara Kolera başladı: Arden'i savun, tedaviyi bul!",
+    "en": "Black Cholera is live: defend Arden, find the cure!",
+    "es": "¡Cólera Negro ya está aquí: defiende Arden y encuentra la cura!",
+    "pt_BR": "Cólera Negra começou: defenda Arden e encontre a cura!",
+    "de": "Schwarze Cholera ist gestartet: Verteidige Arden, finde das Heilmittel!",
+    "fr": "Choléra noir a commencé : défendez Arden, trouvez le remède !",
+    "id": "Kolera Hitam dimulai: pertahankan Arden, temukan obatnya!",
+    "ja": "黒コレラ開幕：Ardenを守り、治療法を見つけ出せ！",
+    "ko": "흑콜레라 시작: Arden을 지키고 치료제를 찾아라!",
+    "zh_CN": "黑霍乱活动开启：守住Arden，找到解药！",
+    "zh_TW": "黑霍亂活動開啟：守住Arden，找到解藥！"
+   },
+   "ozet": {
+    "tr": "Salgın Morvan Havzası'nı sardı: Arden kampını sürüye karşı savun, tedaviyi bul. Etkinlik 30 Kasım'a kadar açık; ana menüdeki Kara Kolera kartına dokun!",
+    "en": "The plague has swept the Morvan Basin: defend the Arden camp from the horde and find the cure. Open until November 30; tap the Black Cholera card on the main menu!",
+    "es": "La plaga arrasa la Cuenca de Morvan: defiende el campamento Arden de la horda y encuentra la cura. Abierto hasta el 30 de noviembre: ¡toca la tarjeta Cólera Negro en el menú principal!",
+    "pt_BR": "A praga tomou a Bacia de Morvan: defenda o campo Arden da horda e encontre a cura. Aberto até 30 de novembro: toque no cartão Cólera Negra no menu principal!",
+    "de": "Die Seuche hat das Morvan-Becken erfasst: Verteidige das Lager Arden gegen die Horde und finde das Heilmittel. Bis 30. November: Tippe im Hauptmenü auf Schwarze Cholera!",
+    "fr": "L'épidémie ravage le Bassin de Morvan : défendez le camp d'Arden contre la horde et trouvez le remède. Jusqu'au 30 novembre : touchez Choléra noir dans le menu principal !",
+    "id": "Wabah melanda Cekungan Morvan: pertahankan kamp Arden dari gerombolan dan temukan obatnya. Buka hingga 30 November: ketuk kartu Kolera Hitam di menu utama!",
+    "ja": "疫病がMorvan盆地を覆い尽くした。群れからArdenのキャンプを守り、治療法を見つけ出せ。11月30日まで開催中：メインメニューの「黒コレラ」をタップ！",
+    "ko": "역병이 Morvan 분지를 덮쳤습니다. 무리로부터 Arden 캠프를 지키고 치료제를 찾으세요. 11월 30일까지: 메인 메뉴의 흑콜레라 카드를 누르세요!",
+    "zh_CN": "疫情席卷了Morvan盆地：抵御尸群、守住Arden营地，找到解药。活动持续到11月30日，点击主菜单中的“黑霍乱”卡片！",
+    "zh_TW": "瘟疫席捲了Morvan盆地：抵禦屍群、守住Arden營地，找到解藥。活動持續到11月30日，點擊主選單中的「黑霍亂」卡片！"
+   },
+   "metin": {
+    "tr": [
+     "Kara Kolera etkinliği başladı! Salgın Morvan Havzası'nı yuttu; elinizde yalnız Arden'deki duvarlı karantina kampı var.",
+     "• Her ay sürü kampın kapısına dayanır: savunmayı bizzat yönetin ya da ekiplerinize bırakın",
+     "• Laboratuvarda on iki maddeden doğru dördünü doğru sırayla bulun",
+     "• Erzak helikopterinin getirdiği sandıklardan ipucu ve erzak toplayın",
+     "• Tedavi bulununca dozları eskortlu konvoylarla şehirlere taşıyın",
+     "Katılmak için oyunu en son sürüme güncelleyin ve ana menüdeki Kara Kolera kartına dokunun. Etkinlik 30 Kasım 2026'ya kadar açık."
+    ],
+    "en": [
+     "The Black Cholera event has begun! The plague has swallowed the Morvan Basin; all you hold is the walled quarantine camp at Arden.",
+     "• Every month the horde reaches the camp gates: command the defense yourself or leave it to your teams",
+     "• In the lab, find the right four of twelve ingredients in the right order",
+     "• Collect clues and supplies from the crates the helicopter drops",
+     "• Once the cure is found, carry the doses to the cities in escorted convoys",
+     "To take part, update the game to the latest version and tap the Black Cholera card on the main menu. The event runs until November 30, 2026."
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-10-31-kara-kolera-basladi-77a020.jpg",
+   "eklendi": "2026-10-31T12:49:34.672403Z"
+  },
   {
    "id": "2026-10-30-reddit-premium-hediye",
    "tarih": "2026-10-30",
@@ -269,42 +332,6 @@
     "en": "assets/video/haber/2026-10-26-sefer-yakinda-en-76a631.mp4",
     "kapak": "assets/video/haber/2026-10-26-sefer-yakinda-kapak-af30f3.jpg"
    }
-  },
-  {
-   "id": "2026-10-15-kara-kolera",
-   "tarih": "2026-10-15",
-   "etiket": {
-    "tr": "Etkinlik",
-    "en": "Event"
-   },
-   "baslik": {
-    "tr": "Kara Kolera 31 Ekim'de başlıyor",
-    "en": "Black Cholera begins October 31"
-   },
-   "ozet": {
-    "tr": "Sınırlı süreli yeni etkinlik: karantina kampını savunun, laboratuvarda tedaviyi bulun, dozları dört şehre ulaştırın. Premium üyelere özel.",
-    "en": "A new limited-time event: defend the quarantine camp, find the cure in the lab and get the doses to four cities. Exclusive to Premium members."
-   },
-   "metin": {
-    "tr": [
-     "Salgın Morvan Havzası'nı yuttu. Elinizde yalnız Arden'deki duvarlı karantina kampı var; dört şehir sürülerle dolu.",
-     "• Her ay kampın kapısına dayanan sürüye karşı savunmayı bizzat yönetin ya da ekiplerinize bırakın",
-     "• Laboratuvarda on iki maddeden doğru dördünü doğru sırayla bulun",
-     "• Erzak helikopterinin getirdiği sandıklardaki notlardan ipucu toplayın",
-     "• Tedavi bulununca dozları eskortlu konvoylarla şehirlere taşıyın",
-     "Etkinlik 31 Ekim – 30 Kasım 2026 arasında açık. Katılmak için oyunun en son sürümünü yükleyin."
-    ],
-    "en": [
-     "The plague has swallowed the Morvan Basin. All you hold is the walled quarantine camp at Arden; four cities are overrun.",
-     "• Every month the horde reaches the camp gates: command the defense yourself or leave it to your teams",
-     "• In the lab, find the right four of twelve ingredients in the right order",
-     "• Collect clues from the notes in the supply crates the helicopter drops",
-     "• Once the cure is found, carry the doses to the cities in escorted convoys",
-     "The event runs from October 31 to November 30, 2026. Update to the latest version to take part."
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-15-kara-kolera-6717aa.jpg",
-   "eklendi": "2026-10-15T16:43:56.000000Z"
   }
  ],
  "guncellemeler": [
