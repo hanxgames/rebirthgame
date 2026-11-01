@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-10-31T12:50:49Z",
+ "guncelleme": "2026-11-01T15:34:10Z",
  "haberler": [
   {
    "id": "2026-10-31-kara-kolera-basladi",
@@ -336,6 +336,80 @@
  ],
  "guncellemeler": [
   {
+   "id": "2026-11-01-surum-2-1-3",
+   "tarih": "2026-11-01",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update",
+    "es": "Actualización",
+    "pt_BR": "Atualização",
+    "de": "Update",
+    "fr": "Mise à jour",
+    "id": "Pembaruan",
+    "ja": "アップデート",
+    "ko": "업데이트",
+    "zh_CN": "更新",
+    "zh_TW": "更新"
+   },
+   "surum": "2.1.3",
+   "baslik": {
+    "tr": "Sürüm 2.1.3: Yeni ana menü ve yeni sesler",
+    "en": "Version 2.1.3: A new main menu and new voice lines",
+    "es": "Versión 2.1.3: Nuevo menú principal y nuevas voces",
+    "pt_BR": "Versão 2.1.3: Novo menu principal e novas vozes",
+    "de": "Version 2.1.3: Neues Hauptmenü und neue Sprachausgabe",
+    "fr": "Version 2.1.3 : nouveau menu principal et nouvelles voix",
+    "id": "Versi 2.1.3: Menu utama baru dan suara baru",
+    "ja": "バージョン2.1.3：新しいメインメニューと新ボイス",
+    "ko": "버전 2.1.3: 새 메인 메뉴와 새 음성",
+    "zh_CN": "版本 2.1.3：全新主菜单与新配音",
+    "zh_TW": "版本 2.1.3：全新主選單與新配音"
+   },
+   "ozet": {
+    "tr": "Yeni ana menü: Yeni oyun, Kayıtlı oyun ve Özel oyun yanda açılıyor, her modun son kaydına tek dokunuşla dönülüyor. 30 yeni ses ve oyuncu önerileri de geldi.",
+    "en": "New main menu: New game, Saved games and Special modes open at the side; every mode's latest save is one tap away. Plus 30 new voice lines and player ideas.",
+    "es": "Nuevo menú: Nueva partida, Partidas guardadas y Modos especiales se abren a un lado; la última partida de cada modo, a un toque. Y 30 voces nuevas.",
+    "pt_BR": "Novo menu: Novo jogo, Jogos salvos e Modos especiais abrem ao lado; o último save de cada modo fica a um toque. E mais 30 novas falas.",
+    "de": "Neues Hauptmenü: Neues Spiel, Spielstände und Spezialmodi öffnen sich seitlich; jeden Modus setzt du mit einem Tipp fort. Dazu 30 neue Sprachzeilen.",
+    "fr": "Nouveau menu : Nouvelle partie, Parties sauvegardées et Modes spéciaux s'ouvrent sur le côté ; reprenez chaque mode en un geste. Et 30 nouvelles voix.",
+    "id": "Menu utama baru: Permainan baru, Permainan tersimpan, dan Mode khusus terbuka di samping; lanjutkan tiap mode dengan sekali ketuk. Plus 30 suara baru.",
+    "ja": "新しいメインメニュー：ニューゲーム、セーブデータ、特別モードが横に開き、各モードの最新セーブへワンタップで戻れます。さらに新ボイス30種とプレイヤーの提案も。",
+    "ko": "새 메인 메뉴: 새 게임, 저장된 게임, 특별 모드가 옆으로 열리고, 각 모드의 최근 저장으로 한 번에 돌아갈 수 있습니다. 새 음성 30개와 플레이어 제안도 담았습니다.",
+    "zh_CN": "全新主菜单：新游戏、存档和特别模式在侧边展开，一键即可回到各模式的最新存档。另有30条新配音和玩家建议。",
+    "zh_TW": "全新主選單：新遊戲、存檔和特別模式於側邊展開，一鍵即可回到各模式的最新存檔。另有30條新配音和玩家建議。"
+   },
+   "metin": {
+    "tr": [
+     "2.1.3 Google Play'de yayında! Bu sürümde ana menüyü baştan düzenledik, oyuna yeni sesler kattık ve oyuncularımızın önerilerini hayata geçirdik.",
+     "• Yeni ana menü: Ana sütunda artık Yeni oyun, Kayıtlı oyun ve Özel oyun var; dokununca seçenekler yanda açılıyor. Yeni oyun'da Yeni harekât, Kara Kolera ve Gölge Cephesi, Özel oyun'da Özel harekât, Kriz Masası ve Eğitim harekâtı seni bekliyor.",
+     "• Kayıtlı oyun: Her modun son kaydı, ne zaman kaydettiğin ve nerede kaldığınla birlikte listeleniyor; en yenisi en üstte. Devam et'e dokun, kaldığın yerden sürdür.",
+     "• 30 yeni Türkçe ve İngilizce seslendirme: artçı sarsıntı, taşkın, pusu, bütçe açığı, barış teklifi, ilk kar ve tipi gibi anlar artık seslendiriliyor. Kara Kolera'da da brifing, kuşatma, gece baskını ve konvoy dönüşü seslendirildi.",
+     "• Kara Kolera: Hazırlıktaki tur kutusu artık Katman çubuğunu ve bölge panelindeki Başlat düğmelerini örtmüyor. Laboratuvarda daha önce denenmiş bir formül yeniden mühürlenemiyor, böylece bir ayın konvoyu boşa gitmiyor. Yeni ayın hazırlığında eski \"Akın püskürtüldü\" manşeti de artık çıkmıyor.",
+     "• Bağışçı konferansı yalnız şu an başlatabileceğin projeleri öneriyor. Verdiğin sözün durumu hedef kartında kalan projeler ve günlerle görünüyor; süre bitmeden 45 gün önce bir kez hatırlatılıyor.",
+     "• Bölge dosyasında istihbarat dökümü: hücrelerin nasıl tespit edildiği, hangi birliğin iz sürdüğü ve Koruma modundaki birliklerin arama yapmadığı artık açıkça görünüyor.",
+     "• Ayarlar'da kalıcı Değerlendir düğmesi: oyunu dilediğin an Google Play'de değerlendirebilirsin.",
+     "• Haberler panelindeki kartlar yenilendi; çeşitli hatalar düzeltildi.",
+     "Teşekkürler Prempiti! Bağışçı konferansı, söz takibi ve hücre tespiti dökümü, oyuncumuz Prempiti'nin önerilerinden doğdu.",
+     "Güncellemeyi Google Play'den indirebilirsin. İyi oyunlar!"
+    ],
+    "en": [
+     "2.1.3 is out now on Google Play! This update rebuilds the main menu, adds new voice lines and brings in more of our players' ideas.",
+     "• New main menu: the main column now has New game, Saved games and Special modes, and tapping one opens its options at the side. New game holds New campaign, Black Cholera and Shadow Front; Special modes holds Custom campaign, Crisis Desk and Training campaign.",
+     "• Saved games: the latest save of every mode is listed with when you saved it and how far you got, newest on top. Tap Continue and pick up right where you left off.",
+     "• 30 new English and Turkish voice lines: aftershocks, floods, ambushes, budget deficits, peace offers, the first snow and blizzards are now voiced. In Black Cholera, the briefing, sieges, night raids and returning convoys are voiced too.",
+     "• Black Cholera: during preparation the turn box no longer covers the Layers bar or the Start buttons in the district panel. A formula you've already tried can't be sealed again in the lab, so a month's convoy is never wasted. The stale \"Horde repelled\" headline no longer shows up while you prepare for a new month.",
+     "• The donor conference now only offers projects you can start right away. The status of your promise appears on the goal card with the projects and days left, and you get one reminder 45 days before it runs out.",
+     "• Intelligence breakdown in the district file: see how cells get detected, which unit is tracking it, and that units in Guard mode don't search.",
+     "• A permanent Rate now button in Settings: rate the game on Google Play whenever you like.",
+     "• Refreshed cards in the News panel, plus various bug fixes.",
+     "Thank you, Prempiti! The donor conference, promise tracking and cell detection breakdown all came from suggestions by our player Prempiti.",
+     "Get the update on Google Play. Have fun!"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-11-01-surum-2-1-3-374933.jpg",
+   "eklendi": "2026-11-01T15:28:03.346120Z"
+  },
+  {
    "id": "2026-10-28-surum-2-1-2",
    "tarih": "2026-10-28",
    "etiket": {
@@ -638,47 +712,6 @@
    },
    "gorsel": "assets/img/haber/2026-10-20-surum-2-0-9-2d83ea.jpg",
    "eklendi": "2026-10-20T17:06:25.641180Z"
-  },
-  {
-   "id": "2026-10-17-surum-2-0-7",
-   "tarih": "2026-10-17",
-   "etiket": {
-    "tr": "Güncelleme",
-    "en": "Update"
-   },
-   "surum": "2.0.7",
-   "baslik": {
-    "tr": "Sürüm 2.0.7: Kriz Masası 2.0",
-    "en": "Version 2.0.7: Crisis Desk 2.0"
-   },
-   "ozet": {
-    "tr": "Kriz Masası'nın yedi görevi artık yedi ayrı oyun. Binalara göre gerçekçi birim boyları, temizlenen haritalar ve yangınların altında doğal is izleri.",
-    "en": "The seven Crisis Desk missions are now seven separate games. Units sized to buildings, cleaner maps and natural scorch marks under fires."
-   },
-   "metin": {
-    "tr": [
-     "• Kriz Masası yeniden tasarlandı: her görevin kendi masası (mini oyunu), kendi kuralları, kararları ve haritada kendi 3B sahnesi var. Görevle ilgisi olmayan sistemler kapalı, her görev danışmanın kısa öğreticisiyle başlıyor (Premium)",
-     "• Barajın çatlaklarına harç bas, kirli pompayı bul, başkentin dört kapısını tut, seçim kampanyası yönet, konvoy rotası çiz, isyancı karargâhını ipuçlarından bul, ilk kardan önce herkesi barındır",
-     "• Araçlar, askerler ve zombiler binalara göre gerçekçi boyda; zombi artık kamp duvarından uzun değil",
-     "• Haritalar temizlendi: havada kalan ya da araziye gömülen yol uçları, iç içe geçmiş köprüler, evlerin üstüne düşen liman vinci ve yeni yapıların içinden çıkan ağaçlar düzeltildi",
-     "• Yangınların altındaki siyah daireler yerine doğal is izleri",
-     "• 2.300'den fazla yeni metin İngilizce, İspanyolca, Portekizce, Almanca ve Fransızcaya çevrildi",
-     "• Kara Kolera etkinliği 31 Ekim'de başlıyor (Premium)",
-     "• Performans ve kararlılık iyileştirmeleri"
-    ],
-    "en": [
-     "• The Crisis Desk has been redesigned: every mission has its own desk (a mini-game), its own rules and decisions, and its own 3D set pieces on the map. Systems that have nothing to do with the mission are switched off, and every mission opens with a short tutorial from your advisor (Premium)",
-     "• Grout a cracking dam, find the contaminated pump, hold the capital's four gates, run an election campaign, plan convoy routes, track down the rebel hideout from clues and shelter every family before the first snow",
-     "• Vehicles, soldiers and zombies are now realistically sized next to buildings; a zombie is no longer taller than the camp wall",
-     "• Cleaner maps: no more floating or buried road ends, overlapping bridges, a port crane sitting on top of houses or trees growing through new buildings",
-     "• Natural scorch marks instead of dark circles under fires",
-     "• More than 2,300 new lines translated into English, Spanish, Portuguese, German and French",
-     "• The Black Cholera event begins October 31 (Premium)",
-     "• Performance and stability improvements"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-17-surum-2-0-7-e5d919.jpg",
-   "eklendi": "2026-10-17T21:24:50.879848Z"
   }
  ]
 }
