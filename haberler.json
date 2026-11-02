@@ -1,8 +1,75 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-02T17:48:53Z",
+ "guncelleme": "2026-11-02T17:51:13Z",
  "haberler": [
+  {
+   "id": "2026-11-02-karargah-secimi",
+   "tarih": "2026-11-02",
+   "etiket": {
+    "tr": "Yenilik",
+    "en": "New feature",
+    "es": "Novedad",
+    "pt_BR": "Novidade",
+    "de": "Neuerung",
+    "fr": "Nouveauté",
+    "id": "Fitur baru",
+    "ja": "新機能",
+    "ko": "새 기능",
+    "zh_CN": "新功能",
+    "zh_TW": "新功能"
+   },
+   "baslik": {
+    "tr": "Harekât artık karargâh seçimiyle başlıyor",
+    "en": "The campaign now starts with choosing your HQ",
+    "es": "La campaña ahora empieza eligiendo tu cuartel general",
+    "pt_BR": "A campanha agora começa com a escolha do seu quartel-general",
+    "de": "Der Einsatz beginnt jetzt mit der Wahl deines Hauptquartiers",
+    "fr": "La campagne commence désormais par le choix de votre QG",
+    "id": "Operasi kini dimulai dengan memilih markasmu",
+    "ja": "作戦は司令部の選択から始まる",
+    "ko": "이제 작전은 본부 선택으로 시작됩니다",
+    "zh_CN": "战役现在从选择总部开始",
+    "zh_TW": "戰役現在從選擇總部開始"
+   },
+   "ozet": {
+    "tr": "Misyon karargâhını haritadan sen seç: karargâh ve komşuları istikrar bonusuyla başlar. Gölge Cephesi ise her oyunda farklı ve gizli bir ilde doğar.",
+    "en": "Pick your mission HQ on the map: it and its neighbors start with extra stability. The Shadow Front now rises in a different, hidden district every game.",
+    "es": "Elige en el mapa el cuartel general de la misión: él y sus vecinos empiezan más estables. El Frente Sombra nace cada partida en una provincia oculta.",
+    "pt_BR": "Escolha no mapa o QG da missão: ele e os vizinhos começam mais estáveis. A Frente Sombria surge a cada partida em uma província diferente e oculta.",
+    "de": "Wähle dein Hauptquartier auf der Karte: Es und seine Nachbarn starten stabiler. Die Schattenfront entsteht jedes Spiel in einer anderen, verborgenen Provinz.",
+    "fr": "Choisissez le QG de la mission sur la carte : lui et ses voisins démarrent plus stables. Le Front de l'Ombre naît à chaque partie dans une province cachée.",
+    "id": "Pilih markas misi di peta: markas dan tetangganya mulai lebih stabil. Front Bayangan kini muncul di provinsi berbeda yang tersembunyi tiap permainan.",
+    "ja": "ミッション司令部をマップ上で選ぼう。司令部とその周辺は安定度ボーナス付きで開始。影の戦線は毎回別の隠れた州で発生します。",
+    "ko": "임무단 본부를 지도에서 직접 고르세요. 본부와 인접 지역은 안정도 보너스로 시작합니다. 그림자 전선은 매 게임 다른 숨겨진 주에서 나타납니다.",
+    "zh_CN": "在地图上自选特派团总部：总部及相邻地区开局稳定度更高。暗影阵线每局都会在不同的隐藏省份崛起。",
+    "zh_TW": "在地圖上自選特派團總部：總部及相鄰地區開局穩定度更高。暗影陣線每局都會在不同的隱藏省份崛起。"
+   },
+   "metin": {
+    "tr": [
+     "Her harekât artık farklı başlıyor! 2.1.4'le birlikte yeni harekâtta misyon karargâhının yerini sen belirliyorsun; Gölge Cephesi'nin nerede doğduğunu ise bilmiyorsun.",
+     "• Karargâhını seç: Harita açılınca bir ile dokun; kartta o ilin arazisi, başkente uzaklığı ve başlangıç bonusu görünür. Başkent önerilen seçenek olarak gelir; istersen Rastgele'ye de basabilirsin.",
+     "• Karargâh ili istikrar +10 ve destek +8, komşu iller istikrar +5 ve destek +4 ile başlar. Başlangıç birliklerin karargâhta konuşlanır; il elinde kaldıkça orada yeni birlik eğitebilirsin.",
+     "• Gizli isyan: Gölge Cephesi her oyunda farklı ve gizli bir ilde doğar. Yeri haritada görünmez; istihbarat toplayarak, ortaya çıkan hücrelerin izini sürerek onu bulursun. İlk muhbir ipucu bile belirsizdir.",
+     "• Gölge Cephesi modunda roller değişir: Önce hükümet karargâhını kurar ve yeri sana gösterilir. Sonra sen kendi karargâhını seçersin; saklanmaya elverişli arazi ve hükümet karargâhına uzaklık önemlidir. Hükümet senin yerini bilmez.",
+     "• Eski kayıtların olduğu gibi açılır. Rehberli tur ve Kriz Masası değişmedi.",
+     "Bu özellik bir oyuncumuzun önerisinden doğdu: her harekât farklı başlasın. Önerin için çok teşekkürler!",
+     "2.1.4 Google Play'de ve PC'de (itch.io) yayında. Yeni bir harekât başlat ve karargâhını kur!"
+    ],
+    "en": [
+     "Every campaign now starts differently! With 2.1.4 you decide where your mission sets up its headquarters in a new campaign, and you no longer know where the Shadow Front is born.",
+     "• Choose your HQ: when the map opens, tap a district; the card shows its terrain, distance to the capital and starting bonus. The capital comes as the recommended choice, or you can press Random.",
+     "• Your HQ district starts with stability +10 and support +8, its neighbors with stability +5 and support +4. Your starting units deploy at the HQ, and you can train new units there as long as the district holds.",
+     "• A hidden insurgency: the Shadow Front rises in a different, hidden district every game. Its location isn't shown on the map; gather intelligence and follow the trail of exposed cells to find it. Even the first informant tip is vague.",
+     "• In Shadow Front mode the roles switch: the government sets up its HQ first and shows you where it is. Then you choose your own base; terrain that favors hiding and the distance to the government HQ both matter. The government doesn't know where you are.",
+     "• Your old saves open exactly as before. The guided tour and the Crisis Desk are unchanged.",
+     "This feature came from one of our players' suggestions: every campaign should start differently. Thank you for the idea!",
+     "2.1.4 is out now on Google Play and on PC (itch.io). Start a new campaign and set up your HQ!"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-11-02-karargah-secimi-4a87c1.jpg",
+   "eklendi": "2026-11-02T17:50:03.441111Z"
+  },
   {
    "id": "2026-11-02-halvarya-saranis-harekatta",
    "tarih": "2026-11-02",
@@ -270,77 +337,6 @@
    "gorsel": "assets/img/haber/2026-10-29-cumhuriyet-bayrami-9a8fcb.jpg",
    "eklendi": "2026-10-28T20:52:07.290677Z",
    "tepki": "kalp"
-  },
-  {
-   "id": "2026-10-28-halvarya-saranis",
-   "tarih": "2026-10-28",
-   "etiket": {
-    "tr": "Yakında",
-    "en": "Coming soon",
-    "es": "Próximamente",
-    "pt_BR": "Em breve",
-    "de": "Demnächst",
-    "fr": "Bientôt",
-    "id": "Segera hadir",
-    "ja": "近日登場",
-    "ko": "출시 예정",
-    "zh_CN": "即将推出",
-    "zh_TW": "即將推出"
-   },
-   "baslik": {
-    "tr": "2 yeni harita ve senaryo geliyor: Halvarya ve Saranis!",
-    "en": "Two new maps and scenarios are coming: Halvarya and Saranis!",
-    "es": "Llegan dos nuevos mapas y escenarios: ¡Halvarya y Saranis!",
-    "pt_BR": "Dois novos mapas e cenários estão chegando: Halvarya e Saranis!",
-    "de": "Zwei neue Karten und Szenarien kommen: Halvarya und Saranis!",
-    "fr": "Deux nouvelles cartes et scénarios arrivent : Halvarya et Saranis !",
-    "id": "Dua peta dan skenario baru segera hadir: Halvarya dan Saranis!",
-    "ja": "新マップ＆シナリオ2本が登場予定：HalvaryaとSaranis！",
-    "ko": "새 맵과 시나리오 2종 출시 예정: Halvarya와 Saranis!",
-    "zh_CN": "两张新地图与剧本即将推出：Halvarya与Saranis！",
-    "zh_TW": "兩張新地圖與劇本即將推出：Halvarya與Saranis！"
-   },
-   "ozet": {
-    "tr": "Aldorya kıtasının iki yeni ülkesi yolda: kuzeyin karlı krallığı Halvarya ve güneyin tüccar cumhuriyeti Saranis. İkisi de kendi haritası, hikâyesi ve zorluklarıyla harekâta katılıyor.",
-    "en": "Two new countries of Aldorya are on their way: the snowy northern kingdom of Halvarya and the southern merchant republic of Saranis. Each joins the campaign with its own map, story and challenges.",
-    "es": "Dos nuevos países de Aldorya están en camino: Halvarya, el reino nevado del norte, y Saranis, la república mercantil del sur. Cada uno se suma a la campaña con su propio mapa, historia y desafíos.",
-    "pt_BR": "Dois novos países de Aldorya estão a caminho: Halvarya, o reino nevado do norte, e Saranis, a república mercantil do sul. Cada um chega à campanha com seu próprio mapa, história e desafios.",
-    "de": "Zwei neue Länder Aldoryas sind unterwegs: Halvarya, das verschneite Königreich im Norden, und Saranis, die Handelsrepublik im Süden. Beide kommen mit eigener Karte, Geschichte und eigenen Herausforderungen in den Einsatz.",
-    "fr": "Deux nouveaux pays d'Aldorya arrivent : Halvarya, le royaume enneigé du nord, et Saranis, la république marchande du sud. Chacun rejoint la campagne avec sa propre carte, son histoire et ses défis.",
-    "id": "Dua negara baru dari Aldorya segera hadir: Halvarya, kerajaan bersalju di utara, dan Saranis, republik dagang di selatan. Masing-masing bergabung ke operasi dengan peta, kisah, dan tantangannya sendiri.",
-    "ja": "Aldorya大陸の新たな2か国が登場予定。雪に覆われた北の王国Halvaryaと、南の商人共和国Saranis。それぞれ専用のマップ、ストーリー、試練とともに作戦に加わります。",
-    "ko": "Aldorya 대륙의 새로운 두 나라가 찾아옵니다. 눈 덮인 북쪽 왕국 Halvarya와 남쪽 상인 공화국 Saranis가 고유한 맵, 이야기, 도전과 함께 작전에 합류합니다.",
-    "zh_CN": "Aldorya大陆的两个新国家即将登场：白雪覆盖的北方王国Halvarya与南方的商人共和国Saranis。两国都将带着专属地图、故事与挑战加入战役。",
-    "zh_TW": "Aldorya大陸的兩個新國家即將登場：白雪覆蓋的北方王國Halvarya與南方的商人共和國Saranis。兩國都將帶著專屬地圖、故事與挑戰加入戰役。"
-   },
-   "metin": {
-    "tr": [
-     "Aldorya kıtasında iki yeni ülke yolda: kuzeyin Halvarya Krallığı ve güneyin Saranis Tüccar Cumhuriyeti. İkisi de kendi 3B haritası ve senaryosuyla harekâta katılıyor.",
-     "Halvarya Krallığı: Buzkırı'nın tacı",
-     "• Fiyortlu kıyılar, çam ormanları ve karlı Buzkırı Dağları; Isen Nehri ve buzul gölü",
-     "• Demir madenleri, kereste hızarları, Vesker tersanesi ve tepedeki sivri kuleli kraliyet kalesi",
-     "• Uzun ve sert kışların, çığların ve bahar taşkınlarının ülkesi; kıtanın en güçlü ordusu da burada",
-     "Saranis Tüccar Cumhuriyeti: Dümen ve terazi",
-     "• Bir yarımada ve köprülerle bağlı üç ada; lagün, teraslı bağlar, zeytinlikler ve bir volkan",
-     "• Beyaz evler, mavi kubbeli Dümen Sarayı, yel değirmenleri, fenerler ve Delmara konteyner limanı",
-     "• 1944'ten beri ordusu olmayan tarafsız bir ülke; kıtanın parası bankalarından döner, fırtınalar kıyısını döver",
-     "Yeni haritalar yakında geliyor. Sen hangisinde görev almak istersin?"
-    ],
-    "en": [
-     "Two new countries are on their way on the continent of Aldorya: the northern Kingdom of Halvarya and the southern Merchant Republic of Saranis. Each joins the campaign with its own 3D map and scenario.",
-     "Kingdom of Halvarya: The Crown of Buzkırı",
-     "• Fjord coasts, pine forests and the snowy Buzkırı Mountains; the Isen River and a glacial lake",
-     "• Iron mines, sawmills, the Vesker shipyard and a royal castle with soaring spires on the hilltop",
-     "• A land of long, harsh winters, avalanches and spring floods, and home to the strongest army on the continent",
-     "Merchant Republic of Saranis: The helm and the scales",
-     "• A peninsula and three islands linked by bridges; a lagoon, terraced vineyards, olive groves and a volcano",
-     "• White houses, the blue-domed Helm Palace, windmills, lighthouses and the Delmara container port",
-     "• A neutral country with no army since 1944; the continent's money flows through its banks, and storms batter its coast",
-     "The new maps are coming soon. Where would you like to serve?"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-28-halvarya-saranis-17f1fd.jpg",
-   "eklendi": "2026-10-28T16:25:15.284496Z"
   }
  ],
  "guncellemeler": [
