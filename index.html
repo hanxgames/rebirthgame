@@ -41,7 +41,7 @@
  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://play.google.com/store/apps/details?id=com.hantro.business"}}
 </script>
 <link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/site.css?v=3">
+<link rel="stylesheet" href="css/site.css?v=4">
 <link rel="stylesheet" href="css/dil.css?v=1">
 <link rel="preload" as="image" href="assets/video/hero.jpg">
 </head>
@@ -263,7 +263,7 @@
 <section class="section disasters" id="felaketler">
   <div class="container">
     <header class="sec-head reveal">
-      <div class="kicker" data-i18n="dis.kicker">Üç harita, üç felaket</div>
+      <div class="kicker" data-i18n="dis.kicker">Beş harita, beş felaket</div>
       <h2 class="title" data-i18n="dis.title">Her vilayetin kendi yarası var</h2>
     </header>
     <div class="dis__grid">
@@ -293,11 +293,29 @@
           <p data-i18n="dis.v.d">Her bölgenin kendi su stresi var.</p>
         </div>
       </article>
+      <article class="dis dis--genis reveal" data-fx="snow">
+        <div class="dis__media"><img src="assets/img/map/halvarya_kart.webp" alt="Halvarya" loading="lazy"><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--ice"></i><span data-i18n="dis.h.tag">Çığ · Fiyortlar</span><em class="pill pill--accent" data-i18n="dis.premium">Premium</em></div>
+          <h3 data-i18n="dis.h.name">Halvarya Fiyortları</h3>
+          <p data-i18n="dis.h.d">Uzun kış boyunca her bölgede kar birikir.</p>
+        </div>
+      </article>
+      <article class="dis dis--genis reveal" data-fx="ash">
+        <div class="dis__media"><img src="assets/img/map/saranis_kart.webp" alt="Saranis" loading="lazy"><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--lava"></i><span data-i18n="dis.s.tag">Volkan · Adalar</span><em class="pill pill--accent" data-i18n="dis.premium">Premium</em></div>
+          <h3 data-i18n="dis.s.name">Saranis Adaları</h3>
+          <p data-i18n="dis.s.d">Morasca volkanının basıncı durmadan yükselir.</p>
+        </div>
+      </article>
     </div>
     <div class="dis__maps reveal">
-      <figure><img src="assets/img/map/tarsel_gun_k.webp" alt="Tarsel" loading="lazy"><figcaption>Tarsel</figcaption></figure>
-      <figure><img src="assets/img/map/kesra_gun_k.webp" alt="Kesra" loading="lazy"><figcaption>Kesra</figcaption></figure>
-      <figure><img src="assets/img/map/varzan_gun_k.webp" alt="Varzan" loading="lazy"><figcaption>Varzan</figcaption></figure>
+      <figure><img src="assets/img/map/tarsel_maket.webp" alt="Tarsel" loading="lazy"><figcaption>Tarsel</figcaption></figure>
+      <figure><img src="assets/img/map/kesra_maket.webp" alt="Kesra" loading="lazy"><figcaption>Kesra</figcaption></figure>
+      <figure><img src="assets/img/map/varzan_maket.webp" alt="Varzan" loading="lazy"><figcaption>Varzan</figcaption></figure>
+      <figure><img src="assets/img/map/halvarya_maket.webp" alt="Halvarya" loading="lazy"><figcaption>Halvarya</figcaption></figure>
+      <figure><img src="assets/img/map/saranis_maket.webp" alt="Saranis" loading="lazy"><figcaption>Saranis</figcaption></figure>
     </div>
   </div>
 </section>
@@ -551,11 +569,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="js/i18n.js?v=3"></script>
+<script src="js/i18n.js?v=4"></script>
 <script src="js/dil.js?v=2"></script>
 <script src="js/host.js?v=2" data-root=""></script>
 <script src="js/map.js"></script>
-<script src="js/main.js?v=3"></script>
+<script src="js/main.js?v=4"></script>
 <script src="js/sayac.js?v=1" defer></script>
 </body>
 </html>

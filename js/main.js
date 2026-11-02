@@ -358,6 +358,16 @@
       f.haze.addColorStop(0, "rgba(216,176,113,0)");
       f.haze.addColorStop(0.5, "rgba(216,176,113,.16)");
       f.haze.addColorStop(1, "rgba(216,176,113,0)");
+    } else if (f.type === "snow" || f.type === "ash") {
+      // Halvarya: yavaş, salınan kar; Saranis: rüzgârla yatık düşen kül + volkan tarafında nabız gibi kızıl parıltı
+      var kar = f.type === "snow";
+      n = kar ? 140 : 120;
+      for (i = 0; i < n; i++) f.p.push({ x: Math.random() * f.w, y: Math.random() * f.h, r: (kar ? 0.8 + Math.random() * 2.2 : 0.7 + Math.random() * 2) * dpr, s: (kar ? 0.35 + Math.random() * 1.1 : 0.5 + Math.random() * 1.3) * dpr, a: kar ? 0.45 + Math.random() * 0.5 : 0.25 + Math.random() * 0.5, o: Math.random() * 6 });
+      if (!kar) {
+        f.haze = f.cx.createRadialGradient(f.w * 0.22, f.h * 0.85, 0, f.w * 0.22, f.h * 0.85, f.w * 0.55);
+        f.haze.addColorStop(0, "rgba(255,120,50,.32)");
+        f.haze.addColorStop(1, "rgba(255,120,50,0)");
+      }
     } else {
       for (i = 0; i < 70; i++) f.p.push({ live: 0, x: 0, y: 0, vx: 0, vy: 0, r: 0, a: 0, dust: false });
     }
@@ -416,6 +426,27 @@
           c.globalAlpha = d.a;
           c.fillStyle = "#e0bd84";
           c.fillRect(d.x, d.y, d.r * 2, d.r);
+        });
+        c.globalAlpha = 1;
+      } else if (f.type === "snow") {
+        c.fillStyle = "#f4f8ff";
+        f.p.forEach(function (d) {
+          d.y += d.s * dt; d.x += Math.sin(ts * 0.0011 + d.o) * 0.35 * dt;
+          if (d.y > h + 4) { d.y = -4; d.x = Math.random() * w; }
+          c.globalAlpha = d.a;
+          c.beginPath(); c.arc(d.x, d.y, d.r, 0, 6.283); c.fill();
+        });
+        c.globalAlpha = 1;
+      } else if (f.type === "ash") {
+        c.globalAlpha = 0.65 + Math.sin(ts * 0.0021) * 0.35;
+        c.fillStyle = f.haze;
+        c.fillRect(0, 0, w, h);
+        c.fillStyle = "#a59d94";
+        f.p.forEach(function (d) {
+          d.y += d.s * dt; d.x += (d.s * 0.7 + Math.sin(ts * 0.0009 + d.o) * 0.2) * dt;
+          if (d.y > h + 4 || d.x > w + 4) { if (Math.random() < 0.5) { d.x = -4; d.y = Math.random() * h; } else { d.x = Math.random() * w; d.y = -4; } }
+          c.globalAlpha = d.a;
+          c.fillRect(d.x, d.y, d.r, d.r);
         });
         c.globalAlpha = 1;
       } else {

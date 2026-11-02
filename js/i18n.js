@@ -1,4 +1,5 @@
 /* ReBirth tanıtım sitesi — metinler (TR / EN). Anahtarlar index.html'de data-i18n, data-i18n-html, data-i18n-attr ile kullanılır. */
+window.RB_I18N_SURUM = 2; // js/i18n/<dil>.js önbellek sürümü (dil.js); dil dosyaları değişince artır
 window.RB_I18N = {
   tr: {
     "meta.title": "ReBirth — 3D Mobil Strateji Oyunu · Yeniden İnşa ve İsyanla Mücadele",
@@ -16,7 +17,7 @@ window.RB_I18N = {
     "hero.ios": "Ayrıca App Store'da", "hero.pc": "Bilgisayarda oyna", "hero.sale": "%50 indirim", "cta.reddit": "<span lang=\"en\">Reddit</span> topluluğu",
     "hero.free": "Ücretsiz başla · İnternetsiz oyna · 11 dil",
     "hero.scroll": "Hikâyeye in",
-    "ticker": ["3 harita", "3 felaket", "14 bölge", "40 girişim", "30 politika", "~80 dinamik olay", "7 görev, 7 mini oyun", "Hava kuvvetleri", "Gece-gündüz döngüsü", "TR / EN seslendirme", "11 dil", "İnternetsiz"],
+    "ticker": ["5 harita", "5 felaket", "14 bölge", "60+ girişim", "40+ politika", "100+ dinamik olay", "7 görev, 7 mini oyun", "Hava kuvvetleri", "Gece-gündüz döngüsü", "TR / EN seslendirme", "11 dil", "İnternetsiz"],
 
     "story.kicker": "Giriş filmi",
     "story.title": "Bir gece her şey değişti",
@@ -51,7 +52,7 @@ window.RB_I18N = {
     "terrain.tepe": "Tepe", "terrain.boğaz": "Boğaz", "terrain.dağ": "Dağ", "terrain.plato": "Plato", "terrain.orman": "Orman", "terrain.sınır": "Sınır",
     "terrain.delta": "Delta", "terrain.bataklık": "Bataklık",
 
-    "dis.kicker": "Üç harita, üç felaket",
+    "dis.kicker": "Beş harita, beş felaket",
     "dis.title": "Her vilayetin kendi yarası var",
     "dis.t.name": "Tarsel Vilayeti", "dis.t.tag": "Deprem · Dağlar",
     "dis.t.d": "Artçılar güçlendirilmemiş binaları yıkar. Sismik ağı izle, çadır kent ve arama-kurtarma kur, evleri depreme karşı güçlendir.",
@@ -59,6 +60,10 @@ window.RB_I18N = {
     "dis.k.d": "Nehir her bahar kabarır. Taşkın seti, pompa istasyonu ve kazıklı konutlar yap; sel çekilince bereketli alüvyonu ek.",
     "dis.v.name": "Varzan Yaylası", "dis.v.tag": "Kuraklık · Yayla",
     "dis.v.d": "Her bölgenin kendi su stresi var; susuz gençler Gölge Cephesi'ne daha kolay katılır. Kuyu aç, sarnıç kur, tanker işlet, yeşil kuşak dik.",
+    "dis.h.name": "Halvarya Fiyortları", "dis.h.tag": "Çığ · Fiyortlar",
+    "dis.h.d": "Uzun kış boyunca her bölgede kar birikir; çığlar evleri yıkar, dağ yollarını kapatır. Çığ bariyeri ve gözlem ağı kur, kar küreme istasyonlarıyla yolları aç, ısınma merkezleriyle soğuğa karşı koy.",
+    "dis.s.name": "Saranis Adaları", "dis.s.tag": "Volkan · Adalar",
+    "dis.s.d": "Morasca volkanının basıncı durmadan yükselir. Kül tarlaları gömer, bir patlama dev dalgayı kıyıya salabilir. Dalgakıran ve gözlemevi kur, adalara feribot işlet, bereketli volkanik toprağa bağ dik.",
     "dis.free": "Ücretsiz", "dis.premium": "Premium",
 
     "air.kicker": "Hava Kuvvetleri",
@@ -126,7 +131,7 @@ window.RB_I18N = {
     "prem.free": "Ücretsiz", "prem.freeD": "Tarsel harekâtının tamamı",
     "prem.f1": "Tarsel Vilayeti, standart senaryo", "prem.f2": "Kalkınma doktrini", "prem.f3": "Tüm girişimler ve birlikler", "prem.f4": "Reklamlı",
     "prem.prem": "Premium", "prem.premD": "Tek seferlik · Abonelik yok",
-    "prem.p1": "Kesra Deltası ve Varzan Yaylası", "prem.p2": "Tüm senaryolar ve doktrinler", "prem.p3": "Kriz Masası ve Hava Kuvvetleri",
+    "prem.p1": "Kesra, Varzan, Halvarya ve Saranis haritaları", "prem.p2": "Tüm senaryolar ve doktrinler", "prem.p3": "Kriz Masası ve Hava Kuvvetleri",
     "prem.p4": "Gelecek tüm haritalar ve etkinlikler", "prem.p5": "Reklamsız",
     "prem.freeBtn": "Ücretsiz indir", "prem.note": "Premium oyunun içinden satın alınır.", "prem.pc": "Tam sürüm", "prem.pcD": "Windows · Linux · itch.io", "prem.c1": "Windows ve Linux için indirin", "prem.c2": "Kayıtlarınız bilgisayarınızda kalır", "prem.c3": "Tarayıcıda ücretsiz demo", "prem.pcBtn": "Tam sürümü indir",
 
@@ -136,7 +141,7 @@ window.RB_I18N = {
     "faq.q3": "Ücretli mi?", "faq.a3": "Tarsel harekâtının tamamı ücretsiz. Premium tek seferlik bir satın alımdır, abonelik yoktur ve reklamları da kaldırır.",
     "faq.q4": "Hangi dilleri destekliyor?", "faq.a4": "Türkçe, İngilizce, İspanyolca, Portekizce (Brezilya), Almanca, Fransızca, Endonezce, Japonca, Korece, Basitleştirilmiş Çince ve Geleneksel Çince. Seslendirme Türkçe ve İngilizce.",
     "faq.q5": "Bir harekât ne kadar sürer?", "faq.a5": "Tam bir harekât birkaç saat sürer ve kaldığınız yerden devam eder. Kriz Masası görevleri tek bir oturuma sığar.",
-    "faq.q6": "Rebel Inc. benzeri mi?", "faq.a6": "Aynı türden: yeniden inşa ile isyanla mücadeleyi birleştirir. ReBirth bunu üç felaket haritası, 3D bir dünya, hava kuvvetleri ve kriz görevleriyle genişletir.",
+    "faq.q6": "Rebel Inc. benzeri mi?", "faq.a6": "Aynı türden: yeniden inşa ile isyanla mücadeleyi birleştirir. ReBirth bunu beş felaket haritası, 3D bir dünya, hava kuvvetleri ve kriz görevleriyle genişletir.",
 
     "cta.title": "Vilayet sizi bekliyor",
     "cta.lead": "İndirin, ilk girişimi başlatın ve Tarsel'in yeniden doğuşunu izleyin.",
@@ -162,7 +167,7 @@ window.RB_I18N = {
     "hero.ios": "Also on the App Store", "hero.pc": "Play on PC", "hero.sale": "50% off", "cta.reddit": "Reddit community",
     "hero.free": "Free to start · Plays offline · 11 languages",
     "hero.scroll": "Enter the story",
-    "ticker": ["3 maps", "3 disasters", "14 districts", "40 initiatives", "30 policies", "~80 dynamic events", "7 missions, 7 mini-games", "Air force", "Day-night cycle", "TR / EN voice acting", "11 languages", "Plays offline"],
+    "ticker": ["5 maps", "5 disasters", "14 districts", "60+ initiatives", "40+ policies", "100+ dynamic events", "7 missions, 7 mini-games", "Air force", "Day-night cycle", "TR / EN voice acting", "11 languages", "Plays offline"],
 
     "story.kicker": "Opening film",
     "story.title": "One night, everything changed",
@@ -197,7 +202,7 @@ window.RB_I18N = {
     "terrain.tepe": "Hills", "terrain.boğaz": "Gorge", "terrain.dağ": "Mountain", "terrain.plato": "Plateau", "terrain.orman": "Forest", "terrain.sınır": "Border",
     "terrain.delta": "Delta", "terrain.bataklık": "Marsh",
 
-    "dis.kicker": "Three maps, three disasters",
+    "dis.kicker": "Five maps, five disasters",
     "dis.title": "Every province has its own wound",
     "dis.t.name": "Tarsel Province", "dis.t.tag": "Earthquake · Mountains",
     "dis.t.d": "Aftershocks bring down unreinforced buildings. Watch the seismic network, set up tent cities and search and rescue, retrofit homes against the next quake.",
@@ -205,6 +210,10 @@ window.RB_I18N = {
     "dis.k.d": "The river rises every spring. Build levees, pumping stations and stilt houses, then farm the fertile silt the water leaves behind.",
     "dis.v.name": "Varzan Plateau", "dis.v.tag": "Drought · Plateau",
     "dis.v.d": "Every district has its own water stress, and thirsty young men join the Shadow Front more easily. Drill wells, build cisterns, run tankers, plant a green belt.",
+    "dis.h.name": "Halvarya Fjords", "dis.h.tag": "Avalanche · Fjords",
+    "dis.h.d": "Snow piles up in every district through the long winter; avalanches bring down homes and close mountain roads. Build avalanche barriers and a monitoring network, clear the roads, and hold off the cold with warming centers.",
+    "dis.s.name": "Saranis Islands", "dis.s.tag": "Volcano · Islands",
+    "dis.s.d": "Pressure inside Morasca volcano never stops rising. Ash buries the fields, and an eruption can send a giant wave into the coast. Build breakwaters and an observatory, run ferries to the islands, plant vineyards in the fertile volcanic soil.",
     "dis.free": "Free", "dis.premium": "Premium",
 
     "air.kicker": "Air Force",
@@ -272,7 +281,7 @@ window.RB_I18N = {
     "prem.free": "Free", "prem.freeD": "The full Tarsel campaign",
     "prem.f1": "Tarsel Province, standard scenario", "prem.f2": "Development doctrine", "prem.f3": "Every initiative and unit", "prem.f4": "Ad-supported",
     "prem.prem": "Premium", "prem.premD": "One-time · No subscription",
-    "prem.p1": "Kesra Delta and Varzan Plateau", "prem.p2": "Every scenario and doctrine", "prem.p3": "Crisis Desk and Air Force",
+    "prem.p1": "Kesra, Varzan, Halvarya and Saranis maps", "prem.p2": "Every scenario and doctrine", "prem.p3": "Crisis Desk and Air Force",
     "prem.p4": "All future maps and events", "prem.p5": "No ads",
     "prem.freeBtn": "Download free", "prem.note": "Premium is bought inside the game.", "prem.pc": "Full version", "prem.pcD": "Windows · Linux · itch.io", "prem.c1": "Download for Windows and Linux", "prem.c2": "Your saves stay on your computer", "prem.c3": "Free demo in your browser", "prem.pcBtn": "Get the full version",
 
@@ -282,7 +291,7 @@ window.RB_I18N = {
     "faq.q3": "Is it paid?", "faq.a3": "The full Tarsel campaign is free. Premium is a one-time purchase with no subscription, and it also removes ads.",
     "faq.q4": "Which languages are supported?", "faq.a4": "English, Turkish, Spanish, Brazilian Portuguese, German, French, Indonesian, Japanese, Korean, Simplified Chinese and Traditional Chinese. Voice acting in English and Turkish.",
     "faq.q5": "How long is a campaign?", "faq.a5": "A full campaign takes a few hours and picks up where you left off. Crisis Desk missions fit in a single session.",
-    "faq.q6": "Is it like Rebel Inc.?", "faq.a6": "Same family: it blends rebuilding with counter-insurgency. ReBirth expands it with three disaster maps, a 3D world, an air force and crisis missions.",
+    "faq.q6": "Is it like Rebel Inc.?", "faq.a6": "Same family: it blends rebuilding with counter-insurgency. ReBirth expands it with five disaster maps, a 3D world, an air force and crisis missions.",
 
     "cta.title": "The province is waiting",
     "cta.lead": "Download, start your first initiative and watch Tarsel rise again.",

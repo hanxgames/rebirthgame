@@ -55,6 +55,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .pill--accent { background: rgba(241,173,42,.16); color: var(--accent-h); }
 .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
 .dot--accent { background: var(--accent); } .dot--blue { background: var(--blue); } .dot--sand { background: #d8b071; }
+.dot--ice { background: #bfe0f0; } .dot--lava { background: #e2683a; }
 
 /* ------------------------------------------------------------ yükleme perdesi */
 .loader { position: fixed; inset: 0; z-index: 100; background: #121110; display: grid; place-items: center; align-content: center; gap: 26px; transition: opacity .8s var(--ease), visibility .8s; }
@@ -237,12 +238,17 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
 
 /* ------------------------------------------------------------ felaketler */
-.dis__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-@media (max-width: 960px) { .dis__grid { grid-template-columns: 1fr; } }
+/* beş harita: üstte üç kart, altta iki geniş kart (geniş kartın görseli aynı yükseklikte kalsın diye daha yatık) */
+.dis__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; }
+.dis__grid > .dis { grid-column: span 2; }
+.dis__grid > .dis--genis { grid-column: span 3; }
+.dis--genis .dis__media { aspect-ratio: 2.45 / 1; }
+@media (max-width: 960px) { .dis__grid { grid-template-columns: 1fr; } .dis__grid > .dis, .dis__grid > .dis--genis { grid-column: auto; } .dis--genis .dis__media { aspect-ratio: 16 / 10; } }
 .dis { border-radius: 10px; overflow: hidden; background: var(--bg2); border: 1px solid var(--line); transition: border-color .4s, transform .5s var(--ease); }
 .dis:hover { border-color: rgba(241,173,42,.4); transform: translateY(-4px); }
 .dis__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
-.dis__media video { width: 100%; height: 100%; object-fit: cover; }
+.dis__media video, .dis__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.dis[data-fx="ash"] .dis__media img { object-position: center 78%; }
 .dis__fx { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .dis__cracks { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .dis__cracks path { fill: none; stroke: rgba(20,12,8,.85); stroke-width: 3; stroke-dasharray: 600; stroke-dashoffset: 600; transition: stroke-dashoffset 1.2s var(--ease); filter: drop-shadow(0 0 6px rgba(255,140,60,.6)); }
@@ -254,12 +260,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .dis__tag em { margin-left: auto; }
 .dis h3 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: 34px; margin: 10px 0 8px; }
 .dis p { margin: 0; color: var(--cream2); font-size: 16px; }
-.dis__maps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 22px; }
+.dis__maps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-top: 22px; }
 .dis__maps figure { margin: 0; position: relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); aspect-ratio: 3 / 2; }
 .dis__maps img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.5s var(--ease); }
 .dis__maps figure:hover img { transform: scale(1.1); }
 .dis__maps figcaption { position: absolute; left: 12px; bottom: 10px; font-family: var(--f-display); font-size: 26px; text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,.8); }
-@media (max-width: 700px) { .dis__maps { grid-template-columns: 1fr 1fr 1fr; gap: 8px; } .dis__maps figcaption { font-size: 16px; } }
+@media (max-width: 960px) { .dis__maps figcaption { font-size: 20px; } }
+@media (max-width: 700px) { .dis__maps { grid-template-columns: repeat(6, 1fr); gap: 8px; } .dis__maps figure { grid-column: span 2; } .dis__maps figure:nth-child(n+4) { grid-column: span 3; } .dis__maps figcaption { font-size: 16px; } }
 
 /* ------------------------------------------------------------ hava gücü */
 .air { background: radial-gradient(ellipse at 80% 20%, rgba(82,161,224,.08), transparent 50%), #121110; overflow: hidden; }
