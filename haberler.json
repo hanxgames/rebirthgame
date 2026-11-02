@@ -1,8 +1,87 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-01T15:34:10Z",
+ "guncelleme": "2026-11-02T17:48:53Z",
  "haberler": [
+  {
+   "id": "2026-11-02-halvarya-saranis-harekatta",
+   "tarih": "2026-11-02",
+   "etiket": {
+    "tr": "Yeni haritalar",
+    "en": "New maps",
+    "es": "Nuevos mapas",
+    "pt_BR": "Novos mapas",
+    "de": "Neue Karten",
+    "fr": "Nouvelles cartes",
+    "id": "Peta baru",
+    "ja": "新マップ",
+    "ko": "새 지도",
+    "zh_CN": "新地图",
+    "zh_TW": "新地圖"
+   },
+   "baslik": {
+    "tr": "İki yeni harita harekâtta: Halvarya Fiyortları ve Saranis Adaları",
+    "en": "Two new maps in the campaign: Halvarya Fjords and Saranis Islands",
+    "es": "Dos mapas nuevos: Fiordos de Halvarya e Islas Saranis",
+    "pt_BR": "Dois novos mapas: Fiordes de Halvarya e Ilhas Saranis",
+    "de": "Zwei neue Karten: Halvarya-Fjorde und Saranis-Inseln",
+    "fr": "Deux nouvelles cartes : Fjords de Halvarya et Îles Saranis",
+    "id": "Dua peta baru: Fjord Halvarya dan Kepulauan Saranis",
+    "ja": "作戦に新マップ2つ：Halvaryaフィヨルドと Saranis諸島",
+    "ko": "작전에 새 지도 2개: Halvarya 피오르와 Saranis 제도",
+    "zh_CN": "战役新增两张地图：Halvarya峡湾与Saranis群岛",
+    "zh_TW": "戰役新增兩張地圖：Halvarya峽灣與Saranis群島"
+   },
+   "ozet": {
+    "tr": "Halvarya'da çığlar ve kar yükü dağ yollarını kapatıyor, Saranis'te volkan kül bulutları ve dev dalga getiriyor. Artık 5 harita, 5 felaket!",
+    "en": "In Halvarya, avalanches and snow load close the mountain roads; on Saranis, the volcano brings ash clouds and a giant wave. Now 5 maps, 5 disasters!",
+    "es": "En Halvarya, aludes y nieve cierran los pasos de montaña; en Saranis, el volcán trae ceniza y una ola gigante. ¡Ya son 5 mapas y 5 desastres!",
+    "pt_BR": "Em Halvarya, avalanches e neve fecham as estradas de montanha; em Saranis, o vulcão traz cinzas e uma onda gigante. Agora são 5 mapas e 5 desastres!",
+    "de": "In Halvarya sperren Lawinen und Schnee die Bergstraßen, auf Saranis bringt der Vulkan Asche und eine Riesenwelle. Jetzt 5 Karten, 5 Katastrophen!",
+    "fr": "À Halvarya, avalanches et neige coupent les routes de montagne ; à Saranis, le volcan amène cendres et vague géante. Désormais 5 cartes, 5 catastrophes !",
+    "id": "Di Halvarya, longsoran dan beban salju menutup jalan gunung; di Saranis, gunung api membawa awan abu dan gelombang raksasa. Kini 5 peta, 5 bencana!",
+    "ja": "Halvaryaでは雪崩と積雪が山道を閉ざし、Saranisでは火山が火山灰と巨大な波をもたらす。これで5マップ、5つの災害！",
+    "ko": "Halvarya에서는 눈사태와 적설이 산길을 막고, Saranis에서는 화산이 화산재 구름과 거대한 해일을 몰고 옵니다. 이제 지도 5개, 재난 5가지!",
+    "zh_CN": "Halvarya的雪崩与积雪封锁山路，Saranis的火山带来火山灰云与巨浪。现在共有5张地图、5种灾难！",
+    "zh_TW": "Halvarya的雪崩與積雪封鎖山路，Saranis的火山帶來火山灰雲與巨浪。現在共有5張地圖、5種災難！"
+   },
+   "metin": {
+    "tr": [
+     "ReBirth harekâtına iki yeni harita geldi! 2.1.4 güncellemesiyle Halvarya Fiyortları ve Saranis Adaları, Yeni harekât ekranında seni bekliyor. Artık 5 harita, 5 felaket var.",
+     "Halvarya Fiyortları: Fiyortların oyduğu bir kuzey kıyısı, çam ormanları ve buzullu Buzkırı Dağları. Yüzyılın en sert kışının ardından çığlar dağ kasabalarını gömdü.",
+     "• Uzun kış boyunca her bölgede kar birikir; kar yükü sınırı aşınca çığ iner, evler yıkılır ve dağ yolları günlerce kapanır.",
+     "• Soğuk da bir düşman: ısınması olmayan illerde hizmetler aksar, halkın desteği erir.",
+     "• Yeni girişimler: Çığ Bariyeri, Kar Küreme İstasyonu, Isınma Merkezi, Çığ Gözlem Ağı (erken uyarı), Jeotermal Isıtma Ağı ve dahası; yeni politika: Kış Seferberliği Yasası.",
+     "• Yeni Kar katmanı: hangi bölgenin çığ vermeye hazır olduğunu haritada gör.",
+     "Saranis Adaları: Bağlarla örtülü bir yarımada, lagün ve volkanik adalar. Morasca volkanı uyandı.",
+     "• Volkan basıncı sürekli yükselir; kül bulutları rüzgârla sürüklenip tarlaları ve bağları örter, ekonomiyi yavaşlatır.",
+     "• Bir patlama dev dalga tetikleyebilir: dalgakıranı olmayan kıyı illeri ağır hasar alır.",
+     "• Feribotu olmayan adalarda hizmetler ve ekonomi aksar. Kül çekilince volkanik toprak bereketlenir; Teraslı Bağ Kooperatifi bu bereketten iki kat yararlanır.",
+     "• Yeni girişimler: Dalgakıran ve Kıyı Seddi, Kül Temizleme Ekibi, Volkan Gözlemevi (tahliye uyarısı), Feribot Hattı, Teraslı Bağ Kooperatifi ve dahası; yeni politika: Kıyı Planlama Yasası. Yeni Kül katmanı kül örtüsünü ve korumasız kıyıları gösterir.",
+     "Her haritanın kendi senaryosu, hikâyesi, girişimleri, politikaları ve olayları var; iki haritada toplam 21 yeni olay seni bekliyor.",
+     "İki yeni Play Games başarımı: Kuzeyin Kalkanı (Halvarya'da çığ riski en yüksek beş bölgeyi Çığ Bariyeri ile koru) ve Külden Doğan (Saranis'te bir patlamayı Volkan Gözlemevi'nin uyarısıyla tahliye ederek atlat).",
+     "2.1.4 Google Play'de ve PC'de (itch.io) yayında. Oyunu güncelle, Yeni harekât ekranından haritanı seç!"
+    ],
+    "en": [
+     "Two new maps have joined the ReBirth campaign! With update 2.1.4, Halvarya Fjords and Saranis Islands are waiting for you on the New campaign screen. That makes 5 maps and 5 disasters.",
+     "Halvarya Fjords: A northern coast carved by fjords, with pine forests and the glaciated Buzkırı Mountains. After the harshest winter in a century, avalanches buried the mountain towns.",
+     "• Snow piles up in every district through the long winter; once the snow load passes its limit, avalanches come down, houses collapse and mountain roads stay closed for days.",
+     "• The cold is an enemy too: in districts without heating, services falter and public support melts away.",
+     "• New projects: Avalanche Barrier, Snow Clearing Station, Warming Center, Avalanche Monitoring Network (early warning), Geothermal Heating Network and more; new policy: Winter Mobilization Act.",
+     "• New Snow map layer: see which districts are about to let go.",
+     "Saranis Islands: A peninsula of vineyards, a lagoon and volcanic islands. Morasca volcano is awake.",
+     "• Volcanic pressure keeps rising; ash clouds drift on the wind, bury fields and vineyards and slow the economy.",
+     "• An eruption can trigger a giant wave: coastal districts without a sea wall take heavy damage.",
+     "• Islands without a ferry suffer weaker services and economy. Once the ash clears, the volcanic soil turns fertile, and the Terraced Vineyard Cooperative gets twice the benefit.",
+     "• New projects: Breakwater and Sea Wall, Ash Clearing Crew, Volcano Observatory (evacuation warning), Ferry Line, Terraced Vineyard Cooperative and more; new policy: Coastal Planning Act. The new Ash map layer marks ash cover and unprotected coasts.",
+     "Each map has its own scenario, story, projects, policies and events, with 21 new events across the two maps.",
+     "Two new Play Games achievements: Shield of the North (protect Halvarya's five most avalanche-prone districts with an Avalanche Barrier) and Born from the Ashes (survive an eruption on Saranis by evacuating on the Volcano Observatory's warning).",
+     "2.1.4 is out now on Google Play and on PC (itch.io). Update the game and pick your map on the New campaign screen!"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-11-02-halvarya-saranis-harekatta-c1bea8.jpg",
+   "eklendi": "2026-11-02T17:47:39.143845Z"
+  },
   {
    "id": "2026-10-31-kara-kolera-basladi",
    "tarih": "2026-10-31",
@@ -262,76 +341,6 @@
    },
    "gorsel": "assets/img/haber/2026-10-28-halvarya-saranis-17f1fd.jpg",
    "eklendi": "2026-10-28T16:25:15.284496Z"
-  },
-  {
-   "id": "2026-10-26-sefer-yakinda",
-   "tarih": "2026-10-26",
-   "etiket": {
-    "tr": "Yakında",
-    "en": "Coming soon",
-    "es": "Próximamente",
-    "pt_BR": "Em breve",
-    "de": "Demnächst",
-    "fr": "Bientôt",
-    "id": "Segera hadir",
-    "ja": "近日登場",
-    "ko": "출시 예정",
-    "zh_CN": "即将推出",
-    "zh_TW": "即將推出"
-   },
-   "baslik": {
-    "tr": "Ülkeni sen yöneteceksin: Sefer modu yakında geliyor!",
-    "en": "Run your own country: Statecraft mode is coming soon!",
-    "es": "Dirige tu propio país: ¡el modo Estadista llega pronto!",
-    "pt_BR": "Governe seu próprio país: o modo Estadista chega em breve!",
-    "de": "Regiere dein eigenes Land: Der Modus Staatskunst kommt bald!",
-    "fr": "Dirigez votre propre pays : le mode Gouverner arrive bientôt !",
-    "id": "Pimpin negaramu sendiri: mode Negarawan segera hadir!",
-    "ja": "自分の国を動かせ：新モード「国家経営」近日登場！",
-    "ko": "나라를 직접 이끌어라: '국가 경영' 모드 곧 출시!",
-    "zh_CN": "亲手治理你的国家：“治国”模式即将推出！",
-    "zh_TW": "親手治理你的國家：「治國」模式即將推出！"
-   },
-   "ozet": {
-    "tr": "Harekât bitti, Misyon çekildi: artık başbakan sensin. Meclisten kanun geçir, ekonomiyi büyüt, komşularla diplomasi yürüt ve ülkeni Aldorya'nın lideri yap. Fragmanı izle!",
-    "en": "The campaign is over and the Mission has left: now you are the prime minister. Pass laws, grow the economy, deal with your neighbours and make your country the leader of Aldorya. Watch the trailer!",
-    "es": "La campaña terminó y la Misión se fue: ahora tú eres el primer ministro. Aprueba leyes, haz crecer la economía, negocia con tus vecinos y convierte a tu país en el líder de Aldorya. ¡Mira el tráiler!",
-    "pt_BR": "A campanha acabou e a Missão partiu: agora você é o primeiro-ministro. Aprove leis, faça a economia crescer, negocie com os vizinhos e torne seu país o líder de Aldorya. Assista ao trailer!",
-    "de": "Der Einsatz ist vorbei, die Mission ist abgezogen: Jetzt bist du Regierungschef. Bring Gesetze durch, lass die Wirtschaft wachsen, verhandle mit deinen Nachbarn und mach dein Land zur Führungsmacht Aldoryas. Sieh dir den Trailer an!",
-    "fr": "La campagne est terminée et la Mission est partie : c'est vous le Premier ministre. Faites voter des lois, développez l'économie, négociez avec vos voisins et faites de votre pays le leader d'Aldorya. Regardez la bande-annonce !",
-    "id": "Kampanye usai dan Misi telah pergi: kini kamulah perdana menterinya. Sahkan undang-undang, kembangkan ekonomi, berdiplomasi dengan tetangga, dan jadikan negaramu pemimpin Aldorya. Tonton trailernya!",
-    "ja": "作戦は終わり、ミッションは撤収した。今度はあなたが首相だ。法律を通し、経済を育て、隣国と外交を重ね、自国をAldorya大陸の盟主へ。トレーラーをチェック！",
-    "ko": "작전은 끝났고 임무단은 떠났습니다. 이제 당신이 총리입니다. 법안을 통과시키고, 경제를 키우고, 이웃 나라와 외교를 펼쳐 조국을 Aldorya의 리더로 만드세요. 트레일러를 확인하세요!",
-    "zh_CN": "行动结束，特派团已撤离：现在你就是总理。通过法案、发展经济、与邻国周旋，让你的国家成为Aldorya的领袖。快来看预告片！",
-    "zh_TW": "行動結束，特派團已撤離：現在你就是總理。通過法案、發展經濟、與鄰國周旋，讓你的國家成為Aldorya的領袖。快來看預告片！"
-   },
-   "metin": {
-    "tr": [
-     "ReBirth'te yeni bir dönem başlıyor. Sefer, oyunun büyük strateji modu: harekât bitmiş, Misyon çekilmiştir; felaketten yeni çıkmış ülkenin yönetimi artık sende. Yukarıdaki fragmanda ilk bakışı izleyebilirsin.",
-     "• Aldorya kıtasında Tarsel, Kesra ya da Varzan'ı yönet; komşu ülkeleri Kolay, Orta ya da Zor zorlukta rakip yönetimler oynar",
-     "• Meclisten kanun geçir, bakanlarını seç, seçimleri kazan",
-     "• Araştırma yap, ekonomiyi büyüt; komşularla ve okyanus ötesi güçlerle diplomasi ve ticaret yürüt",
-     "• Birliklerini yollar boyunca konuşlandır, SİHA'larla devriye kur; Gölge Cephesi'nden kopan örgütleri tespit et ve operasyonla etkisiz hâle getir",
-     "• Her kararın zincirleme etkisi var: attığın her adıma ülken ve komşuların tepki verir",
-     "Sefer modu yakında geliyor. Kıtanın lideri olmaya hazır mısın?"
-    ],
-    "en": [
-     "A new era begins in ReBirth. Statecraft is the game's grand strategy mode: the campaign is over, the Mission has left, and your country, just out of the disaster, is now yours to run. Watch the first look in the trailer above.",
-     "• Lead Tarsel, Kesra or Varzan on the continent of Aldorya, while rival governments run your neighbours on Easy, Medium or Hard",
-     "• Pass laws in parliament, pick your ministers and win elections",
-     "• Research, grow the economy, and handle diplomacy and trade with your neighbours and with powers beyond the ocean",
-     "• Deploy your units along the roads and set up drone patrols; track down the groups that split off from the Shadow Front and take them out in planned operations",
-     "• Every decision sets off a chain reaction: your country and your neighbours respond to every move you make",
-     "Statecraft mode is coming soon. Are you ready to lead the continent?"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-26-sefer-yakinda-0a76e8.jpg",
-   "eklendi": "2026-10-26T17:02:11.369872Z",
-   "video": {
-    "tr": "assets/video/haber/2026-10-26-sefer-yakinda-tr-2f9da7.mp4",
-    "en": "assets/video/haber/2026-10-26-sefer-yakinda-en-76a631.mp4",
-    "kapak": "assets/video/haber/2026-10-26-sefer-yakinda-kapak-af30f3.jpg"
-   }
   }
  ],
  "guncellemeler": [
