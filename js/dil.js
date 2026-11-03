@@ -85,7 +85,18 @@
     d.lang = html(k);
     d.setAttribute("data-dil", k);
     Array.prototype.forEach.call(document.querySelectorAll("[data-dil-kisa]"), function (e) { e.textContent = BUL[k].kisa; });
+    // Apple'ın resmî "Download on the App Store" rozeti: seçili dilin yerel sürümü (assets/img/badge/app-store-<dil>.svg)
+    Array.prototype.forEach.call(document.querySelectorAll("img[data-appstore]"), function (e) { rozet(e, k); });
   }
+  function rozet(e, k) {
+    e.src = (e.getAttribute("data-appstore") || "") + "assets/img/badge/app-store-" + (APPSTORE_ALT[k] ? k : "en") + ".svg";
+    e.alt = APPSTORE_ALT[k] || APPSTORE_ALT.en;
+  }
+  var APPSTORE_ALT = {
+    tr: "App Store'dan İndirin", en: "Download on the App Store", es: "Descárgalo en el App Store", pt_BR: "Baixar na App Store",
+    de: "Laden im App Store", fr: "Télécharger dans l'App Store", id: "Unduh di App Store", ja: "App Storeからダウンロード",
+    ko: "App Store에서 다운로드하기", zh_CN: "在 App Store 下载", zh_TW: "在 App Store 下載"
+  };
 
   // hreflang ile gelen ?lang= sayfasının kanonik adresi kendisi olsun (yoksa Google dil sürümlerini kopya sayar)
   function kanonik(taban) {
@@ -159,6 +170,6 @@
     dugme.addEventListener("click", function () { if (liste) kapat(); else ac(); });
   }
 
-  window.RBDil = { DILLER: DILLER, coz: coz, sec: sec, kaydet: kaydet, ana: ana, html: html, yukle: yukle, uygula: uygula,
+  window.RBDil = { DILLER: DILLER, coz: coz, sec: sec, kaydet: kaydet, ana: ana, html: html, yukle: yukle, uygula: uygula, rozet: rozet,
     kanonik: kanonik, menu: menu };
 })();

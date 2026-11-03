@@ -182,6 +182,10 @@ a:hover { color: var(--accent-h); }
 .news-cta__txt span { font-family: var(--f-caps); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; color: var(--muted); }
 .news-cta__btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
 .doc-btn--ghost { background: transparent; color: var(--cream2, #dbd1ba); border: 1px solid var(--line2); }
+.appstore { display: inline-flex; align-items: center; flex: none; text-decoration: none; transition: transform .25s; }
+.appstore:hover { transform: translateY(-2px); }
+.appstore img { display: block; width: auto; height: 48px; }
+.news-item .appstore { margin: 18px 12px 0 0; vertical-align: middle; }
 .doc-btn--ghost:hover { background: rgba(241,173,42,.1); color: var(--accent-h); border-color: var(--accent); }
 .news-cta__sale { font-size: 11px; letter-spacing: .06em; padding: 3px 8px; border-radius: 99px; background: var(--bad, #d8483b); color: #fff; }
 @media (max-width: 860px) { .news-cta { grid-template-columns: 1fr; text-align: center; justify-items: center; } .news-cta__btns { justify-content: center; } }

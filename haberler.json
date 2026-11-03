@@ -1,8 +1,70 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-02T17:51:30Z",
+ "guncelleme": "2026-11-03T18:22:24Z",
  "haberler": [
+  {
+   "id": "2026-11-03-ios-app-store",
+   "tarih": "2026-11-03",
+   "etiket": {
+    "tr": "Duyuru",
+    "en": "Announcement",
+    "es": "Anuncio",
+    "pt_BR": "Anúncio",
+    "de": "Ankündigung",
+    "fr": "Annonce",
+    "id": "Pengumuman",
+    "ja": "お知らせ",
+    "ko": "공지",
+    "zh_CN": "公告",
+    "zh_TW": "公告"
+   },
+   "baslik": {
+    "tr": "ReBirth artık App Store'da!",
+    "en": "ReBirth is now on the App Store!",
+    "es": "¡ReBirth ya está en el App Store!",
+    "pt_BR": "ReBirth chegou à App Store!",
+    "de": "ReBirth ist jetzt im App Store!",
+    "fr": "ReBirth est maintenant sur l'App Store !",
+    "id": "ReBirth kini hadir di App Store!",
+    "ja": "ReBirthがApp Storeに登場！",
+    "ko": "ReBirth가 App Store에 출시되었습니다!",
+    "zh_CN": "ReBirth现已登陆App Store！",
+    "zh_TW": "ReBirth現已登陸App Store！"
+   },
+   "ozet": {
+    "tr": "ReBirth: Rebuild & Resist artık iPhone ve iPad'de! Ücretsiz başla, internetsiz oyna. iOS kullanan arkadaşlarına da haber ver.",
+    "en": "ReBirth: Rebuild & Resist is now on iPhone and iPad! Free to start, plays offline. Tell your friends on iOS too.",
+    "es": "¡ReBirth: Rebuild & Resist ya está en iPhone y iPad! Gratis para empezar y sin conexión. Avisa también a tus amigos con iOS.",
+    "pt_BR": "ReBirth: Rebuild & Resist chegou ao iPhone e ao iPad! Grátis para começar e dá para jogar offline. Conte para seus amigos no iOS.",
+    "de": "ReBirth: Rebuild & Resist gibt es jetzt für iPhone und iPad! Kostenlos starten, offline spielen. Sag es auch deinen Freunden mit iOS.",
+    "fr": "ReBirth : Rebuild & Resist est disponible sur iPhone et iPad ! Gratuit pour commencer, jouable hors ligne. Prévenez vos amis sur iOS.",
+    "id": "ReBirth: Rebuild & Resist kini ada di iPhone dan iPad! Gratis untuk mulai, bisa dimainkan offline. Kabari juga temanmu pengguna iOS.",
+    "ja": "ReBirth: Rebuild & ResistがiPhoneとiPadに登場！無料で始められ、オフラインでも遊べます。iOSの友だちにも教えてあげよう。",
+    "ko": "ReBirth: Rebuild & Resist가 이제 iPhone과 iPad에서! 무료로 시작하고 오프라인에서도 플레이할 수 있습니다. iOS를 쓰는 친구에게도 알려 주세요.",
+    "zh_CN": "ReBirth: Rebuild & Resist现已登陆iPhone和iPad！免费开始，支持离线游玩。也告诉用iOS的朋友吧。",
+    "zh_TW": "ReBirth: Rebuild & Resist現已登陸iPhone與iPad！免費開始，支援離線遊玩。也告訴用iOS的朋友吧。"
+   },
+   "metin": {
+    "tr": [
+     "ReBirth artık App Store'da! ReBirth: Rebuild & Resist'i iPhone ve iPad'ine ücretsiz indirebilirsin.",
+     "• Aynı harekât, aynı haritalar: felaketlerin yıktığı vilayeti yeniden kur, halkın güvenini kazan, Gölge Cephesi'ni barış masasına getir.",
+     "• Ücretsiz başla, internetsiz oyna; oyun 11 dilde.",
+     "• Android'de oynuyorsan iPhone ya da iPad kullanan arkadaşlarına da haber ver!",
+     "App Store sayfasını açmak için aşağıdaki düğmeye dokun. İyi oyunlar!"
+    ],
+    "en": [
+     "ReBirth is now on the App Store! You can download ReBirth: Rebuild & Resist for free on your iPhone and iPad.",
+     "• The same campaign and the same maps: rebuild a province torn apart by disaster, win the people's trust and bring the Shadow Front to the peace table.",
+     "• Free to start, plays offline, in 11 languages.",
+     "• If you play on Android, tell your friends with an iPhone or iPad!",
+     "Tap the button below to open the App Store page. Have fun!"
+    ]
+   },
+   "baglanti": "https://apps.apple.com/app/id6821863283",
+   "gorsel": "assets/img/haber/2026-11-03-ios-app-store-d1dbbd.jpg",
+   "eklendi": "2026-11-03T18:20:21.315704Z"
+  },
   {
    "id": "2026-11-02-karargah-secimi",
    "tarih": "2026-11-02",
@@ -277,66 +339,6 @@
    "baglanti": "https://www.reddit.com/r/ReBirthSocial/s/rAiksQ69e9",
    "gorsel": "assets/img/haber/2026-10-30-reddit-premium-hediye-b6bee5.jpg",
    "eklendi": "2026-10-30T09:06:20.330025Z"
-  },
-  {
-   "id": "2026-10-29-cumhuriyet-bayrami",
-   "tarih": "2026-10-29",
-   "etiket": {
-    "tr": "Bayram",
-    "en": "Holiday",
-    "es": "Festividad",
-    "pt_BR": "Feriado",
-    "de": "Feiertag",
-    "fr": "Fête nationale",
-    "id": "Perayaan",
-    "ja": "記念日",
-    "ko": "기념일",
-    "zh_CN": "节日",
-    "zh_TW": "節日"
-   },
-   "baslik": {
-    "tr": "Türkiye Cumhuriyeti 103 Yaşında!",
-    "en": "The Republic of Türkiye Turns 103!",
-    "es": "¡La República de Türkiye cumple 103 años!",
-    "pt_BR": "A República da Türkiye completa 103 anos!",
-    "de": "Die Republik Türkiye wird 103!",
-    "fr": "La République de Türkiye a 103 ans !",
-    "id": "Republik Türkiye Berusia 103 Tahun!",
-    "ja": "トルコ共和国、建国103周年！",
-    "ko": "Türkiye 공화국 수립 103주년!",
-    "zh_CN": "土耳其共和国成立103周年！",
-    "zh_TW": "土耳其共和國成立103週年！"
-   },
-   "ozet": {
-    "tr": "29 Ekim 1923'te ilan edilen Cumhuriyetimizin 103. yılını coşkuyla kutluyor, kurucumuz Gazi Mustafa Kemal Atatürk'ü saygı ve minnetle anıyoruz. Yaşasın Cumhuriyet!",
-    "en": "We proudly celebrate the 103rd anniversary of the Republic of Türkiye, proclaimed on 29 October 1923, and remember its founder Mustafa Kemal Atatürk with respect and gratitude.",
-    "es": "Celebramos con orgullo el 103.º aniversario de la República de Türkiye, proclamada el 29 de octubre de 1923, y recordamos con respeto y gratitud a su fundador, Mustafa Kemal Atatürk.",
-    "pt_BR": "Celebramos com orgulho os 103 anos da República da Türkiye, proclamada em 29 de outubro de 1923, e lembramos com respeito e gratidão seu fundador, Mustafa Kemal Atatürk.",
-    "de": "Wir feiern stolz den 103. Jahrestag der Republik Türkiye, ausgerufen am 29. Oktober 1923, und gedenken ihres Gründers Mustafa Kemal Atatürk mit Respekt und Dankbarkeit.",
-    "fr": "Nous célébrons avec fierté le 103e anniversaire de la République de Türkiye, proclamée le 29 octobre 1923, et rendons hommage avec respect et gratitude à son fondateur, Mustafa Kemal Atatürk.",
-    "id": "Kami merayakan dengan bangga 103 tahun Republik Türkiye yang diproklamasikan pada 29 Oktober 1923, dan mengenang pendirinya, Mustafa Kemal Atatürk, dengan hormat dan rasa terima kasih.",
-    "ja": "1923年10月29日に宣言されたトルコ共和国の建国103周年を心から祝い、建国の父ムスタファ・ケマル・アタテュルクに敬意と感謝を捧げます。",
-    "ko": "1923년 10월 29일 선포된 Türkiye 공화국의 수립 103주년을 기쁜 마음으로 축하하며, 건국의 아버지 Mustafa Kemal Atatürk를 존경과 감사로 기립니다.",
-    "zh_CN": "热烈庆祝1923年10月29日宣告成立的土耳其共和国成立103周年，并以敬意与感激之心怀念国父阿塔图尔克。",
-    "zh_TW": "熱烈慶祝1923年10月29日宣告成立的土耳其共和國成立103週年，並以敬意與感激之心懷念國父阿塔圖克。"
-   },
-   "metin": {
-    "tr": [
-     "29 Ekim 1923'te ilan edilen Türkiye Cumhuriyeti 103 yaşında! Cumhuriyet Bayramımızı büyük bir coşku ve gururla kutluyoruz.",
-     "Cumhuriyetimizin kurucusu Gazi Mustafa Kemal Atatürk'ü, silah arkadaşlarını ve bu toprakları bize emanet eden tüm şehitlerimizi saygı, minnet ve rahmetle anıyoruz.",
-     "“Benim naçiz vücudum elbet bir gün toprak olacaktır, fakat Türkiye Cumhuriyeti ilelebet payidar kalacaktır.” — Mustafa Kemal Atatürk",
-     "HanX Games ailesi olarak tüm oyuncularımızın Cumhuriyet Bayramı'nı kutlarız. Nice mutlu yıllara, yaşasın Cumhuriyet!"
-    ],
-    "en": [
-     "The Republic of Türkiye, proclaimed on 29 October 1923, turns 103! We celebrate Republic Day with great joy and pride.",
-     "We remember with respect and gratitude Mustafa Kemal Atatürk, the founder of the Republic, his comrades in arms and all who gave their lives for this land.",
-     "“My humble body will one day turn to dust, but the Republic of Türkiye will stand forever.” — Mustafa Kemal Atatürk",
-     "From all of us at HanX Games, happy Republic Day to our players in Türkiye and around the world. Long live the Republic!"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-29-cumhuriyet-bayrami-9a8fcb.jpg",
-   "eklendi": "2026-10-28T20:52:07.290677Z",
-   "tepki": "kalp"
   }
  ],
  "guncellemeler": [

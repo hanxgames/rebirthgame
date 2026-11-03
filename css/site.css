@@ -140,6 +140,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .hero__slogan { font-size: clamp(30px, 3.4vw, 46px); line-height: 1.05; color: var(--cream); margin: 6px 0 18px; transform: rotate(-2deg); transform-origin: left; }
 .hero__lead { max-width: 560px; color: var(--cream2); font-size: clamp(16px, 1.4vw, 19px); margin: 0 0 30px; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+/* Apple'ın resmî App Store rozeti: oranı korunur, yalnız yükseklik verilir (Apple kuralı: değiştirilmez, en az 40 px) */
+.appstore { display: inline-flex; align-items: center; flex: none; transition: transform .25s var(--ease); }
+.appstore:hover { transform: translateY(-2px); }
+.appstore img { display: block; width: auto; height: 56px; }
+.appstore--plan { align-self: center; margin-top: auto; }
+.appstore--plan img { height: 48px; }
+.appstore--plan + .plan__btn { margin-top: 12px; }
 .hero__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 22px; font-family: var(--f-caps); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; font-size: 13px; color: var(--muted); }
 .hero__scroll { position: absolute; left: 50%; bottom: 74px; transform: translateX(-50%); display: grid; justify-items: center; gap: 8px; font-family: var(--f-caps); font-weight: 700; font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: var(--muted); }
 .hero__scroll i { width: 1px; height: 44px; background: linear-gradient(var(--accent), transparent); animation: drop 1.8s var(--ease) infinite; transform-origin: top; }

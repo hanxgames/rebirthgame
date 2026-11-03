@@ -246,6 +246,19 @@
       });
       var dg = dugmeler(k);
       if (dg) dg.forEach(function (a) { govde.appendChild(a); });
+      else if (/^https:\/\/apps\.apple\.com\//.test(k.baglanti || "")) {
+        // App Store bağlantısı: Apple'ın resmî yerel rozeti (dil.js'teki gibi, sayfanın diline göre)
+        var r = el("a", "appstore");
+        r.href = k.baglanti;
+        r.target = "_blank";
+        r.rel = "noopener";
+        var ri = document.createElement("img");
+        ri.setAttribute("data-appstore", "");
+        ri.height = 48;
+        r.appendChild(ri);
+        govde.appendChild(r);
+        if (window.RBDil) window.RBDil.rozet(ri, dil());
+      }
       else if (k.baglanti) {
         var a = el("a", "doc-btn news-btn", y(DETAY));
         a.href = k.baglanti;

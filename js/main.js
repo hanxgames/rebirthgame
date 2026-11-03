@@ -772,6 +772,15 @@
   // süreli kampanya rozetleri (ör. PC çıkış indirimi) bitiş tarihinden sonra kendiliğinden kalkar
   $$("[data-sale-until]").forEach(function (e) { if (Date.now() > Date.parse(e.getAttribute("data-sale-until"))) e.remove(); });
   D.kanonik("https://rebirthgame.tr/");
+  // iPhone/iPad'de üst çubuktaki mağaza düğmesi App Store'a gider (iPadOS masaüstü kimliği: MacIntel + dokunmatik)
+  if (/iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) {
+    var navMagaza = $(".nav__play");
+    if (navMagaza) {
+      navMagaza.removeAttribute("data-i18n");
+      navMagaza.textContent = "App Store";
+      navMagaza.href = "https://apps.apple.com/app/id6821863283";
+    }
+  }
   var basladi = false;
   document.addEventListener("rb:sozluk", function (e) { if (basladi && e.detail === lang) applyLang(false); });
   D.yukle(lang, function () {   // tr/en dışındaki dilin sözlüğü gelince (yükleme perdesi bu arada açık)
