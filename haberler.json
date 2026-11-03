@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-03T18:57:25Z",
+ "guncelleme": "2026-11-03T18:58:55Z",
  "haberler": [
   {
    "id": "2026-11-03-haftalik-etkinlik",
@@ -329,6 +329,72 @@
  ],
  "guncellemeler": [
   {
+   "id": "2026-11-03-surum-2-2-0",
+   "tarih": "2026-11-03",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update",
+    "es": "Actualización",
+    "pt_BR": "Atualização",
+    "de": "Update",
+    "fr": "Mise à jour",
+    "id": "Pembaruan",
+    "ja": "アップデート",
+    "ko": "업데이트",
+    "zh_CN": "更新",
+    "zh_TW": "更新"
+   },
+   "surum": "2.2.0",
+   "baslik": {
+    "tr": "Sürüm 2.2.0: Sefer (Beta) ve Haftalık Etkinlik",
+    "en": "Version 2.2.0: Statecraft (Beta) and the Weekly Event",
+    "es": "Versión 2.2.0: Estadista (Beta) y el Evento semanal",
+    "pt_BR": "Versão 2.2.0: Estadista (Beta) e o Evento semanal",
+    "de": "Version 2.2.0: Staatskunst (Beta) und Wochen-Event",
+    "fr": "Version 2.2.0 : Gouverner (bêta) et l'Événement hebdo",
+    "id": "Versi 2.2.0: Negarawan (Beta) dan Acara Mingguan",
+    "ja": "バージョン2.2.0：国家経営（ベータ）とウィークリーイベント",
+    "ko": "버전 2.2.0: 국가 경영(베타)과 주간 이벤트",
+    "zh_CN": "版本 2.2.0：治国（测试版）与每周活动",
+    "zh_TW": "版本 2.2.0：治國（測試版）與每週活動"
+   },
+   "ozet": {
+    "tr": "Yeni Haftalık Etkinlik ve ülke yönetimi modu Sefer (Beta) geldi. Kara Kolera 30 Kasım'a kadar sürüyor; haber paneli her açılışta açık, düzeltmeler.",
+    "en": "The new Weekly Event and the country management mode Statecraft (Beta) are here. Black Cholera runs until November 30; news panel opens on launch, fixes.",
+    "es": "Llegan el Evento semanal y el modo de gestión de país Estadista (Beta). Cólera Negro sigue hasta el 30 de noviembre; noticias al abrir y correcciones.",
+    "pt_BR": "Chegaram o Evento semanal e o modo de gestão de país Estadista (Beta). Cólera Negra segue até 30 de novembro; notícias ao abrir e correções.",
+    "de": "Neu: das Wochen-Event und der Modus Staatskunst (Beta). Schwarze Cholera läuft bis 30. November; Nachrichten beim Start offen, Korrekturen.",
+    "fr": "Nouveaux : l'Événement hebdomadaire et le mode Gouverner (bêta). Choléra noir dure jusqu'au 30 novembre ; actualités au lancement, correctifs.",
+    "id": "Hadir Acara Mingguan baru dan mode pengelolaan negara Negarawan (Beta). Kolera Hitam berlangsung hingga 30 November; panel berita terbuka, perbaikan.",
+    "ja": "新しいウィークリーイベントと国家運営モード「国家経営（ベータ）」が登場。黒コレラは11月30日まで。ニュースパネルは起動時に表示、各種修正も。",
+    "ko": "새로운 주간 이벤트와 국가 운영 모드 '국가 경영(베타)' 추가. 흑콜레라는 11월 30일까지. 뉴스 패널은 실행 시 열림, 각종 수정.",
+    "zh_CN": "全新每周活动与国家治理模式“治国（测试版）”上线。黑霍乱活动持续到11月30日；新闻面板每次启动时打开，并有多项修复。",
+    "zh_TW": "全新每週活動與國家治理模式「治國（測試版）」上線。黑霍亂活動持續到11月30日；新聞面板每次啟動時開啟，並有多項修正。"
+   },
+   "metin": {
+    "tr": [
+     "2.2.0 Google Play'de yayında!",
+     "• YENİ · Haftalık Etkinlik: her hafta yeni bir harita ve yeni kurallar; herkes aynı koşullarla oynar. Haftanın En'leri'nde ilk 3'e gir! İlk etkinlik 9 Kasım'da: Kesra: Durmayan Zaman.",
+     "• YENİ · Sefer (Beta): ülkeni altmış yıl yönet; ekonomi, meclis, diplomasi, Kıtalar Konseyi ve savaş. Ana menüde Yeni oyun → Sefer.",
+     "• Kara Kolera etkinliği 30 Kasım'a kadar sürüyor.",
+     "• Haber paneli artık her açılışta açık.",
+     "• Çeviri ve arayüz düzeltmeleri.",
+     "Sefer ve Haftalık Etkinlik'in ayrıntıları Haberler'de. İyi oyunlar!"
+    ],
+    "en": [
+     "2.2.0 is out now on Google Play!",
+     "• NEW · Weekly Event: a new map and new rules every week, and everyone plays under the same conditions. Reach the top 3 in Best of the Week! The first event starts on November 9: Kesra: No Pause.",
+     "• NEW · Statecraft (Beta): rule your country for sixty years: economy, parliament, diplomacy, the Council of Continents and war. Main menu: New game → Statecraft.",
+     "• The Black Cholera event runs until November 30.",
+     "• The news panel now opens on every launch.",
+     "• Translation and interface fixes.",
+     "Read more about Statecraft and the Weekly Event in News. Have fun!"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-11-03-surum-2-2-0-94b6d7.jpg",
+   "eklendi": "2026-11-03T18:58:55.097946Z"
+  },
+  {
    "id": "2026-11-02-surum-2-1-4",
    "tarih": "2026-11-02",
    "etiket": {
@@ -627,84 +693,6 @@
    },
    "gorsel": "assets/img/haber/2026-10-23-surum-2-1-1-84a86a.jpg",
    "eklendi": "2026-10-23T14:54:07.850207Z"
-  },
-  {
-   "id": "2026-10-23-surum-2-1-0",
-   "tarih": "2026-10-23",
-   "etiket": {
-    "tr": "Güncelleme",
-    "en": "Update",
-    "es": "Actualización",
-    "pt_BR": "Atualização",
-    "de": "Update",
-    "fr": "Mise à jour",
-    "id": "Pembaruan",
-    "ja": "アップデート",
-    "ko": "업데이트",
-    "zh_CN": "更新",
-    "zh_TW": "更新"
-   },
-   "surum": "2.1.0",
-   "baslik": {
-    "tr": "Sürüm 2.1.0: Kara Kolera yenilendi",
-    "en": "Version 2.1.0: Black Cholera reworked",
-    "es": "Versión 2.1.0: Cólera Negro renovado",
-    "pt_BR": "Versão 2.1.0: Cólera Negra renovada",
-    "de": "Version 2.1.0: Schwarze Cholera überarbeitet",
-    "fr": "Version 2.1.0 : Choléra noir repensé",
-    "id": "Versi 2.1.0: Kolera Hitam diperbarui",
-    "ja": "バージョン2.1.0：黒コレラを刷新",
-    "ko": "버전 2.1.0: 흑콜레라 개편",
-    "zh_CN": "版本 2.1.0：黑霍乱全面改版",
-    "zh_TW": "版本 2.1.0：黑霍亂全面改版"
-   },
-   "ozet": {
-    "tr": "Kara Kolera ay ay ilerleyen turlar, yollardan akan sürüler, yeni kamp ve helikopterle takviyeyle yenilendi (31 Ekim). Bütün modeller yeniden çizildi, zayıf telefonlarda oyun daha akıcı.",
-    "en": "Black Cholera returns with month-by-month turns, hordes flowing along the roads, a new camp and helicopter resupply (October 31). All models redrawn, and smoother play on low-end phones.",
-    "es": "Cólera Negro vuelve con turnos mes a mes, hordas por las carreteras, un nuevo campamento y reabastecimiento en helicóptero (31 de octubre). Todos los modelos, rediseñados, y juego más fluido en móviles de gama baja.",
-    "pt_BR": "Cólera Negra volta com turnos mês a mês, hordas pelas estradas, novo acampamento e reabastecimento de helicóptero (31 de outubro). Todos os modelos redesenhados e jogo mais fluido em celulares mais simples.",
-    "de": "Schwarze Cholera kehrt zurück: Runden Monat für Monat, Horden auf den Straßen, ein neues Lager und Nachschub per Hubschrauber (31. Oktober). Alle Modelle neu gestaltet, flüssigeres Spiel auf schwächeren Handys.",
-    "fr": "Choléra noir revient avec des tours mois par mois, des hordes sur les routes, un nouveau camp et un ravitaillement par hélicoptère (31 octobre). Tous les modèles redessinés et un jeu plus fluide sur les téléphones d'entrée de gamme.",
-    "id": "Kolera Hitam kembali dengan giliran bulan demi bulan, gerombolan di sepanjang jalan, kamp baru, dan pasokan lewat helikopter (31 Oktober). Semua model digambar ulang, permainan lebih lancar di ponsel spesifikasi rendah.",
-    "ja": "黒コレラが月ごとに進むターン、道路を押し寄せる群れ、新しいキャンプ、ヘリによる補給で生まれ変わります（10月31日開始）。すべてのモデルを描き直し、低スペック端末でもより滑らかに。",
-    "ko": "흑콜레라가 한 달씩 진행되는 턴, 도로를 따라 몰려오는 무리, 새 캠프, 헬기 보급으로 새로워졌습니다(10월 31일 시작). 모든 모델을 새로 제작했고 저사양 휴대폰에서도 더 부드럽게 플레이할 수 있습니다.",
-    "zh_CN": "黑霍乱全面改版：逐月推进的回合、沿道路涌来的尸群、新营地和直升机补给（10 月 31 日开始）。所有模型全部重绘，低配手机运行更流畅。",
-    "zh_TW": "黑霍亂全面改版：逐月推進的回合、沿著道路湧來的屍群、新營地和直升機補給（10 月 31 日開始）。所有模型全面重繪，低階手機執行更流暢。"
-   },
-   "metin": {
-    "tr": [
-     "2.1.0, 31 Ekim'de başlayacak Kara Kolera etkinliğini baştan kuruyor, oyunun bütün modellerini yeniliyor ve zayıf telefonlarda oyunu daha akıcı hâle getiriyor.",
-     "• Kara Kolera artık ay ay ilerliyor: her ayın başında kampı hazırla, konvoyları yola çıkar, sonra \"Sürüyü karşıla\" de. Sürüler yollardan akarak kampa gelir, boş günler hızla geçer, ay sonunda raporunu alırsın",
-     "• Yeni kamp: duvarlar, gözcü kuleleri, sahra hastanesi ve helikopter pisti baştan tasarlandı",
-     "• Helikopterle takviye: erzak helikopteri geldiğinde kamera ona kilitlenir, \"Takviye geldi\" kartıyla sandığı açarsın",
-     "• Yeni savaş efektleri; zombiler artık yol ve köprü yüzeyinde yürüyor, kule askerleri platformda duruyor, alevler duvarda kesiliyor",
-     "• Bütün birlik, bina ve ağaç modelleri yeniden çizildi",
-     "• Zayıf telefonlarda daha akıcı oyun: otomatik grafik ayarı artık ana menüde başlıyor; kare hızı çok düşükse oyun kendiliğinden Düşük kaliteye geçer. Mali-G52 ekran kartlı test telefonumuzda ana menü bu geçişle 8,5 FPS'ten 25 FPS'e çıktı",
-     "• Daha hafif arazi ve ağaç çizimi: aynı telefonda kare süresi Düşük kalitede %13, Orta'da %8 kısaldı; Düşük kalitede uzaktaki ağaçlar sadeleştirildi",
-     "• Kare hızı 10 FPS'in altına düşerse 3B çözünürlük geçici olarak azaltılır",
-     "• Adreno 610 ekran kartlı bazı telefonlarda yaşanan donmaya önlem: oyun bu cihazlarda Düşük kaliteyle başlar",
-     "• Nehirler artık dört haritada da denize akıyor; Kriz Masası'ndaki titreme ve kayan manşet şeridi düzeltildi",
-     "• Çökme düzeltmeleri ve kararlılık iyileştirmeleri",
-     "Güncellemeyi Google Play'de yayına girer girmez indirebilirsin. Kara Kolera 31 Ekim'de başlıyor; kampta görüşmek üzere!"
-    ],
-    "en": [
-     "2.1.0 rebuilds the Black Cholera event, which starts on October 31, redraws every model in the game and makes play smoother on low-end phones.",
-     "• Black Cholera now advances month by month: at the start of each month prepare the camp, send your convoys out, then press \"Face the horde\". Hordes flow along the roads to the camp, empty days pass quickly, and you get your report at the end of the month",
-     "• A new camp: walls, watchtowers, the field hospital and the helipad have been redesigned",
-     "• Helicopter resupply: when the supply helicopter arrives the camera locks onto it, and you open the crate from the \"Resupply arrived\" card",
-     "• New battle effects; zombies now walk on road and bridge surfaces, tower soldiers stand on their platforms and flames stop at the walls",
-     "• All units, buildings and trees redrawn",
-     "• Smoother play on low-end phones: automatic graphics now start in the main menu, and if the frame rate is very low the game switches to Low quality on its own. On our test phone with a Mali-G52 graphics chip, the main menu went from 8.5 FPS to 25 FPS with this switch",
-     "• Lighter terrain and tree rendering: on the same phone, frame time dropped by 13% on Low and 8% on Medium quality; distant trees are simplified on Low",
-     "• If the frame rate drops below 10 FPS, the 3D resolution is lowered temporarily",
-     "• A safeguard against freezes on some phones with an Adreno 610 graphics chip: the game starts on Low quality on these devices",
-     "• Rivers now flow to the sea on all four maps; fixed the Crisis Desk flicker and the drifting headline banner",
-     "• Crash fixes and stability improvements",
-     "Download the update as soon as it goes live on Google Play. Black Cholera begins on October 31; see you at the camp!"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-23-surum-2-1-0-b2bb49.jpg",
-   "eklendi": "2026-10-22T21:22:09.029698Z"
   }
  ]
 }
