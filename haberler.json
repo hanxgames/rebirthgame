@@ -1,8 +1,69 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-03T18:54:34Z",
+ "guncelleme": "2026-11-03T18:57:25Z",
  "haberler": [
+  {
+   "id": "2026-11-03-haftalik-etkinlik",
+   "tarih": "2026-11-03",
+   "etiket": {
+    "tr": "Etkinlik",
+    "en": "Event",
+    "es": "Evento",
+    "pt_BR": "Evento",
+    "de": "Event",
+    "fr": "Événement",
+    "id": "Acara",
+    "ja": "イベント",
+    "ko": "이벤트",
+    "zh_CN": "活动",
+    "zh_TW": "活動"
+   },
+   "baslik": {
+    "tr": "Haftalık Etkinlik başlıyor: ilk hafta Kesra!",
+    "en": "The Weekly Event begins: first up, Kesra!",
+    "es": "¡Empieza el Evento semanal: primero, Kesra!",
+    "pt_BR": "O Evento semanal começa: primeiro, Kesra!",
+    "de": "Das Wochen-Event startet: zuerst Kesra!",
+    "fr": "L'Événement hebdomadaire commence : d'abord Kesra !",
+    "id": "Acara Mingguan dimulai: pertama, Kesra!",
+    "ja": "ウィークリーイベント開始：最初はKesra！",
+    "ko": "주간 이벤트 시작: 첫 무대는 Kesra!",
+    "zh_CN": "每周活动开启：首站Kesra！",
+    "zh_TW": "每週活動開啟：首站Kesra！"
+   },
+   "ozet": {
+    "tr": "Her hafta yeni harita ve kurallar, herkes aynı koşullarda. İlk etkinlik 9 Kasım'da: Kesra: Durmayan Zaman. Haftanın En'leri'nde ilk 3'e gir!",
+    "en": "A new map and new rules every week, the same conditions for everyone. First up on November 9: Kesra: No Pause. Make the top 3 in Best of the Week!",
+    "es": "Cada semana un mapa y reglas nuevas, las mismas condiciones para todos. El 9 de noviembre: Kesra: Sin pausa. ¡Entra en el top 3 de Lo mejor de la semana!",
+    "pt_BR": "Toda semana um mapa e regras novas, as mesmas condições para todos. Em 9 de novembro: Kesra: Sem pausa. Entre no top 3 dos Destaques da semana!",
+    "de": "Jede Woche eine neue Karte und neue Regeln, für alle gleich. Ab 9. November: Kesra: Keine Pause. Schaff es in die Top 3 von Die Besten der Woche!",
+    "fr": "Chaque semaine une carte et des règles nouvelles, les mêmes pour tous. Dès le 9 novembre : Kesra : Sans pause. Entrez dans le top 3 des Meilleurs de la semaine !",
+    "id": "Setiap minggu peta dan aturan baru, kondisi sama untuk semua. Mulai 9 November: Kesra: Tanpa Jeda. Masuk 3 besar Terbaik Minggu Ini!",
+    "ja": "毎週新しいマップと新ルール、全員が同じ条件でプレイ。11月9日の第1弾は「Kesra：止まらない時間」。今週のベストでトップ3を目指そう！",
+    "ko": "매주 새로운 지도와 규칙, 모두가 같은 조건. 11월 9일 첫 이벤트는 'Kesra: 멈추지 않는 시간'. 이번 주 베스트에서 3위 안에 들어 보세요!",
+    "zh_CN": "每周新地图与新规则，人人同条件。11月9日首期：“Kesra：时间不停”。冲进本周最佳前三吧！",
+    "zh_TW": "每週新地圖與新規則，人人同條件。11月9日首期：「Kesra：時間不停」。衝進本週最佳前三吧！"
+   },
+   "metin": {
+    "tr": [
+     "ReBirth'te artık her hafta yeni bir meydan okuma var! Haftalık Etkinlik her pazartesi yeni bir harita ve yeni kurallarla açılır.",
+     "• Herkes aynı koşullarla oynar: aynı tohum, aynı olaylar, aynı isyan kökenleri. Fark yalnız senin kararların.",
+     "• Haftanın En'leri: her ölçütte ilk 3 oyuncu oyunda görünür. Deneme sınırı yok, en iyi sonucun sayılır.",
+     "• İlk etkinlik 9 Kasım Pazartesi: Kesra: Durmayan Zaman. Zaman hiç durmaz, Gölge Cephesi üç ayrı gizli bölgede birden doğar; 720 gün ayakta kal. Sıralama en yüksek puan, en istikrarlı vilayet ve en az sivil kayıp ölçütleriyle.",
+     "Etkinliğe ana menüdeki Haftalık Etkinlik düğmesinden gir. Bol şans!"
+    ],
+    "en": [
+     "There's a new challenge in ReBirth every week! The Weekly Event opens every Monday with a new map and new rules.",
+     "• Everyone plays under the same conditions: the same seed, the same events, the same insurgent origins. The only difference is your decisions.",
+     "• Best of the Week: the top 3 players in each category show up in the game. Unlimited attempts; your best result counts.",
+     "• The first event starts on Monday, November 9: Kesra: No Pause. Time never stops and the Shadow Front rises in three separate hidden districts at once; hold out for 720 days. The rankings are Highest Score, Most Stable Province and Fewest Civilian Casualties.",
+     "Join from the Weekly Event button on the main menu. Good luck!"
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-11-03-haftalik-etkinlik-715919.jpg",
+   "eklendi": "2026-11-03T18:57:25.290687Z"
+  },
   {
    "id": "2026-11-03-sefer-beta",
    "tarih": "2026-11-03",
