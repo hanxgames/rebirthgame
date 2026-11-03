@@ -1,8 +1,79 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-03T18:22:24Z",
+ "guncelleme": "2026-11-03T18:54:34Z",
  "haberler": [
+  {
+   "id": "2026-11-03-sefer-beta",
+   "tarih": "2026-11-03",
+   "etiket": {
+    "tr": "Yeni mod",
+    "en": "New mode",
+    "es": "Nuevo modo",
+    "pt_BR": "Novo modo",
+    "de": "Neuer Modus",
+    "fr": "Nouveau mode",
+    "id": "Mode baru",
+    "ja": "新モード",
+    "ko": "새 모드",
+    "zh_CN": "新模式",
+    "zh_TW": "新模式"
+   },
+   "baslik": {
+    "tr": "Sefer geldi (Beta): ülkeni altmış yıl yönet!",
+    "en": "Statecraft is here (Beta): rule your country for sixty years!",
+    "es": "Llega Estadista (Beta): ¡gobierna tu país sesenta años!",
+    "pt_BR": "Chegou Estadista (Beta): governe seu país por sessenta anos!",
+    "de": "Staatskunst ist da (Beta): Regiere sechzig Jahre lang!",
+    "fr": "Gouverner arrive (bêta) : dirigez votre pays soixante ans !",
+    "id": "Negarawan hadir (Beta): pimpin negaramu enam puluh tahun!",
+    "ja": "国家経営（ベータ）登場：60年にわたり国を治めよう！",
+    "ko": "국가 경영(베타) 등장: 60년 동안 나라를 이끌어라!",
+    "zh_CN": "治国（测试版）上线：执掌你的国家六十年！",
+    "zh_TW": "治國（測試版）上線：執掌你的國家六十年！"
+   },
+   "ozet": {
+    "tr": "Yeni ülke yönetimi modu: ekonomi, meclis, diplomasi, Kıtalar Konseyi ve savaşla ülkeni altmış yıl yönet. Beta'dayız, geri bildirimini bekliyoruz!",
+    "en": "A new country management mode: economy, parliament, diplomacy, the Council of Continents and war, for sixty years. It's in beta: tell us what you think!",
+    "es": "Nuevo modo de gestión de país: economía, parlamento, diplomacia, Consejo de Continentes y guerra durante sesenta años. En beta: ¡cuéntanos qué te parece!",
+    "pt_BR": "Novo modo de gestão de país: economia, parlamento, diplomacia, Conselho dos Continentes e guerra por sessenta anos. Em beta: conte o que achou!",
+    "de": "Neuer Modus zur Staatsführung: Wirtschaft, Parlament, Diplomatie, Rat der Kontinente und Krieg, sechzig Jahre lang. Noch Beta: Sag uns deine Meinung!",
+    "fr": "Nouveau mode de gestion d'un pays : économie, parlement, diplomatie, Conseil des continents et guerre pendant soixante ans. En bêta : donnez votre avis !",
+    "id": "Mode baru mengelola negara: ekonomi, parlemen, diplomasi, Dewan Benua, dan perang selama enam puluh tahun. Masih beta: beri tahu kami pendapatmu!",
+    "ja": "新しい国家運営モード：経済、議会、外交、大陸評議会、そして戦争。60年にわたり国を導こう。ベータ版です、ご意見をお待ちしています！",
+    "ko": "새로운 국가 운영 모드: 경제, 의회, 외교, 대륙 평의회, 전쟁까지 60년 동안 나라를 이끄세요. 베타 버전이니 의견을 들려주세요!",
+    "zh_CN": "全新国家治理模式：经济、议会、外交、大陆理事会与战争，执掌国家六十年。目前为测试版，欢迎告诉我们你的意见！",
+    "zh_TW": "全新國家治理模式：經濟、議會、外交、大陸理事會與戰爭，執掌國家六十年。目前為測試版，歡迎告訴我們你的意見！"
+   },
+   "metin": {
+    "tr": [
+     "Sefer geldi! ReBirth'ün yeni modunda bir vilayeti değil, bütün bir ülkeyi yönetiyorsun: 2031'den başlayarak altmış yıl boyunca.",
+     "• Ekonomi, Meclis ve kanunlar: bütçeyi dengele, kanunları meclisten geçir, seçimlere hazırlan.",
+     "• Araştırma ve Yükseliş Yolu: ülkenin geleceğini çağlar boyunca şekillendir.",
+     "• Diplomasi ve Kıtalar Konseyi: anlaşmalar yap, önerge ver, oylamalarda tarafını seç.",
+     "• Kıta krizleri ve kıta gerginliği: tırmanan krizleri yönet; gerektiğinde dostlarına silah yardımı ve gönüllü gönder.",
+     "• Savaş: ordularını haritada yönet, Taarruz Harekâtı ekranında saldırını planla ve gerçek zamanlı izle.",
+     "• Ülkene in: ülkeni 3B haritada gör; yatırımları, afetleri ve seçim mitinglerini yerinde izle.",
+     "• 5 ülke: Tarsel, Kesra, Varzan, Halvarya ve Saranis; 30 yeni başarım.",
+     "Sefer şu an Beta'da. Oynarken gördüğün hataları ve önerilerini hanxdestek@gmail.com adresine ya da r/ReBirthSocial'a yaz; her mesajı okuyoruz.",
+     "Başlamak için ana menüde Yeni oyun → Sefer'i seç. 2.2.0 Google Play'de yayında."
+    ],
+    "en": [
+     "Statecraft is here! In ReBirth's new mode you don't run a single province but a whole country, for sixty years starting in 2031.",
+     "• Economy, Parliament and Laws: balance the budget, pass laws through parliament and prepare for elections.",
+     "• Research and the Path of Ascent: shape your country's future across the ages.",
+     "• Diplomacy and the Council of Continents: make agreements, table motions and pick your side in the votes.",
+     "• Continental crises and continental tension: manage escalating crises and send arms aid and volunteers to your friends when needed.",
+     "• War: command your armies on the map, plan your attack on the Offensive Operation screen and watch it unfold in real time.",
+     "• Enter country: see your country on a 3D map and follow investments, disasters and election rallies up close.",
+     "• 5 countries: Tarsel, Kesra, Varzan, Halvarya and Saranis, plus 30 new achievements.",
+     "Statecraft is in beta. Send the bugs you find and your ideas to hanxdestek@gmail.com or r/ReBirthSocial; we read every message.",
+     "To start, pick New game → Statecraft on the main menu. 2.2.0 is out now on Google Play."
+    ]
+   },
+   "gorsel": "assets/img/haber/2026-11-03-sefer-beta-946361.jpg",
+   "eklendi": "2026-11-03T18:54:34.753351Z"
+  },
   {
    "id": "2026-11-03-ios-app-store",
    "tarih": "2026-11-03",
@@ -64,152 +135,6 @@
    "baglanti": "https://apps.apple.com/app/id6821863283",
    "gorsel": "assets/img/haber/2026-11-03-ios-app-store-d1dbbd.jpg",
    "eklendi": "2026-11-03T18:20:21.315704Z"
-  },
-  {
-   "id": "2026-11-02-karargah-secimi",
-   "tarih": "2026-11-02",
-   "etiket": {
-    "tr": "Yenilik",
-    "en": "New feature",
-    "es": "Novedad",
-    "pt_BR": "Novidade",
-    "de": "Neuerung",
-    "fr": "Nouveauté",
-    "id": "Fitur baru",
-    "ja": "新機能",
-    "ko": "새 기능",
-    "zh_CN": "新功能",
-    "zh_TW": "新功能"
-   },
-   "baslik": {
-    "tr": "Harekât artık karargâh seçimiyle başlıyor",
-    "en": "The campaign now starts with choosing your HQ",
-    "es": "La campaña ahora empieza eligiendo tu cuartel general",
-    "pt_BR": "A campanha agora começa com a escolha do seu quartel-general",
-    "de": "Der Einsatz beginnt jetzt mit der Wahl deines Hauptquartiers",
-    "fr": "La campagne commence désormais par le choix de votre QG",
-    "id": "Operasi kini dimulai dengan memilih markasmu",
-    "ja": "作戦は司令部の選択から始まる",
-    "ko": "이제 작전은 본부 선택으로 시작됩니다",
-    "zh_CN": "战役现在从选择总部开始",
-    "zh_TW": "戰役現在從選擇總部開始"
-   },
-   "ozet": {
-    "tr": "Misyon karargâhını haritadan sen seç: karargâh ve komşuları istikrar bonusuyla başlar. Gölge Cephesi ise her oyunda farklı ve gizli bir ilde doğar.",
-    "en": "Pick your mission HQ on the map: it and its neighbors start with extra stability. The Shadow Front now rises in a different, hidden district every game.",
-    "es": "Elige en el mapa el cuartel general de la misión: él y sus vecinos empiezan más estables. El Frente Sombra nace cada partida en una provincia oculta.",
-    "pt_BR": "Escolha no mapa o QG da missão: ele e os vizinhos começam mais estáveis. A Frente Sombria surge a cada partida em uma província diferente e oculta.",
-    "de": "Wähle dein Hauptquartier auf der Karte: Es und seine Nachbarn starten stabiler. Die Schattenfront entsteht jedes Spiel in einer anderen, verborgenen Provinz.",
-    "fr": "Choisissez le QG de la mission sur la carte : lui et ses voisins démarrent plus stables. Le Front de l'Ombre naît à chaque partie dans une province cachée.",
-    "id": "Pilih markas misi di peta: markas dan tetangganya mulai lebih stabil. Front Bayangan kini muncul di provinsi berbeda yang tersembunyi tiap permainan.",
-    "ja": "ミッション司令部をマップ上で選ぼう。司令部とその周辺は安定度ボーナス付きで開始。影の戦線は毎回別の隠れた州で発生します。",
-    "ko": "임무단 본부를 지도에서 직접 고르세요. 본부와 인접 지역은 안정도 보너스로 시작합니다. 그림자 전선은 매 게임 다른 숨겨진 주에서 나타납니다.",
-    "zh_CN": "在地图上自选特派团总部：总部及相邻地区开局稳定度更高。暗影阵线每局都会在不同的隐藏省份崛起。",
-    "zh_TW": "在地圖上自選特派團總部：總部及相鄰地區開局穩定度更高。暗影陣線每局都會在不同的隱藏省份崛起。"
-   },
-   "metin": {
-    "tr": [
-     "Her harekât artık farklı başlıyor! 2.1.4'le birlikte yeni harekâtta misyon karargâhının yerini sen belirliyorsun; Gölge Cephesi'nin nerede doğduğunu ise bilmiyorsun.",
-     "• Karargâhını seç: Harita açılınca bir ile dokun; kartta o ilin arazisi, başkente uzaklığı ve başlangıç bonusu görünür. Başkent önerilen seçenek olarak gelir; istersen Rastgele'ye de basabilirsin.",
-     "• Karargâh ili istikrar +10 ve destek +8, komşu iller istikrar +5 ve destek +4 ile başlar. Başlangıç birliklerin karargâhta konuşlanır; il elinde kaldıkça orada yeni birlik eğitebilirsin.",
-     "• Gizli isyan: Gölge Cephesi her oyunda farklı ve gizli bir ilde doğar. Yeri haritada görünmez; istihbarat toplayarak, ortaya çıkan hücrelerin izini sürerek onu bulursun. İlk muhbir ipucu bile belirsizdir.",
-     "• Gölge Cephesi modunda roller değişir: Önce hükümet karargâhını kurar ve yeri sana gösterilir. Sonra sen kendi karargâhını seçersin; saklanmaya elverişli arazi ve hükümet karargâhına uzaklık önemlidir. Hükümet senin yerini bilmez.",
-     "• Eski kayıtların olduğu gibi açılır. Rehberli tur ve Kriz Masası değişmedi.",
-     "Bu özellik bir oyuncumuzun önerisinden doğdu: her harekât farklı başlasın. Önerin için çok teşekkürler!",
-     "2.1.4 Google Play'de ve PC'de (itch.io) yayında. Yeni bir harekât başlat ve karargâhını kur!"
-    ],
-    "en": [
-     "Every campaign now starts differently! With 2.1.4 you decide where your mission sets up its headquarters in a new campaign, and you no longer know where the Shadow Front is born.",
-     "• Choose your HQ: when the map opens, tap a district; the card shows its terrain, distance to the capital and starting bonus. The capital comes as the recommended choice, or you can press Random.",
-     "• Your HQ district starts with stability +10 and support +8, its neighbors with stability +5 and support +4. Your starting units deploy at the HQ, and you can train new units there as long as the district holds.",
-     "• A hidden insurgency: the Shadow Front rises in a different, hidden district every game. Its location isn't shown on the map; gather intelligence and follow the trail of exposed cells to find it. Even the first informant tip is vague.",
-     "• In Shadow Front mode the roles switch: the government sets up its HQ first and shows you where it is. Then you choose your own base; terrain that favors hiding and the distance to the government HQ both matter. The government doesn't know where you are.",
-     "• Your old saves open exactly as before. The guided tour and the Crisis Desk are unchanged.",
-     "This feature came from one of our players' suggestions: every campaign should start differently. Thank you for the idea!",
-     "2.1.4 is out now on Google Play and on PC (itch.io). Start a new campaign and set up your HQ!"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-11-02-karargah-secimi-4a87c1.jpg",
-   "eklendi": "2026-11-02T17:50:03.441111Z"
-  },
-  {
-   "id": "2026-11-02-halvarya-saranis-harekatta",
-   "tarih": "2026-11-02",
-   "etiket": {
-    "tr": "Yeni haritalar",
-    "en": "New maps",
-    "es": "Nuevos mapas",
-    "pt_BR": "Novos mapas",
-    "de": "Neue Karten",
-    "fr": "Nouvelles cartes",
-    "id": "Peta baru",
-    "ja": "新マップ",
-    "ko": "새 지도",
-    "zh_CN": "新地图",
-    "zh_TW": "新地圖"
-   },
-   "baslik": {
-    "tr": "İki yeni harita harekâtta: Halvarya Fiyortları ve Saranis Adaları",
-    "en": "Two new maps in the campaign: Halvarya Fjords and Saranis Islands",
-    "es": "Dos mapas nuevos: Fiordos de Halvarya e Islas Saranis",
-    "pt_BR": "Dois novos mapas: Fiordes de Halvarya e Ilhas Saranis",
-    "de": "Zwei neue Karten: Halvarya-Fjorde und Saranis-Inseln",
-    "fr": "Deux nouvelles cartes : Fjords de Halvarya et Îles Saranis",
-    "id": "Dua peta baru: Fjord Halvarya dan Kepulauan Saranis",
-    "ja": "作戦に新マップ2つ：Halvaryaフィヨルドと Saranis諸島",
-    "ko": "작전에 새 지도 2개: Halvarya 피오르와 Saranis 제도",
-    "zh_CN": "战役新增两张地图：Halvarya峡湾与Saranis群岛",
-    "zh_TW": "戰役新增兩張地圖：Halvarya峽灣與Saranis群島"
-   },
-   "ozet": {
-    "tr": "Halvarya'da çığlar ve kar yükü dağ yollarını kapatıyor, Saranis'te volkan kül bulutları ve dev dalga getiriyor. Artık 5 harita, 5 felaket!",
-    "en": "In Halvarya, avalanches and snow load close the mountain roads; on Saranis, the volcano brings ash clouds and a giant wave. Now 5 maps, 5 disasters!",
-    "es": "En Halvarya, aludes y nieve cierran los pasos de montaña; en Saranis, el volcán trae ceniza y una ola gigante. ¡Ya son 5 mapas y 5 desastres!",
-    "pt_BR": "Em Halvarya, avalanches e neve fecham as estradas de montanha; em Saranis, o vulcão traz cinzas e uma onda gigante. Agora são 5 mapas e 5 desastres!",
-    "de": "In Halvarya sperren Lawinen und Schnee die Bergstraßen, auf Saranis bringt der Vulkan Asche und eine Riesenwelle. Jetzt 5 Karten, 5 Katastrophen!",
-    "fr": "À Halvarya, avalanches et neige coupent les routes de montagne ; à Saranis, le volcan amène cendres et vague géante. Désormais 5 cartes, 5 catastrophes !",
-    "id": "Di Halvarya, longsoran dan beban salju menutup jalan gunung; di Saranis, gunung api membawa awan abu dan gelombang raksasa. Kini 5 peta, 5 bencana!",
-    "ja": "Halvaryaでは雪崩と積雪が山道を閉ざし、Saranisでは火山が火山灰と巨大な波をもたらす。これで5マップ、5つの災害！",
-    "ko": "Halvarya에서는 눈사태와 적설이 산길을 막고, Saranis에서는 화산이 화산재 구름과 거대한 해일을 몰고 옵니다. 이제 지도 5개, 재난 5가지!",
-    "zh_CN": "Halvarya的雪崩与积雪封锁山路，Saranis的火山带来火山灰云与巨浪。现在共有5张地图、5种灾难！",
-    "zh_TW": "Halvarya的雪崩與積雪封鎖山路，Saranis的火山帶來火山灰雲與巨浪。現在共有5張地圖、5種災難！"
-   },
-   "metin": {
-    "tr": [
-     "ReBirth harekâtına iki yeni harita geldi! 2.1.4 güncellemesiyle Halvarya Fiyortları ve Saranis Adaları, Yeni harekât ekranında seni bekliyor. Artık 5 harita, 5 felaket var.",
-     "Halvarya Fiyortları: Fiyortların oyduğu bir kuzey kıyısı, çam ormanları ve buzullu Buzkırı Dağları. Yüzyılın en sert kışının ardından çığlar dağ kasabalarını gömdü.",
-     "• Uzun kış boyunca her bölgede kar birikir; kar yükü sınırı aşınca çığ iner, evler yıkılır ve dağ yolları günlerce kapanır.",
-     "• Soğuk da bir düşman: ısınması olmayan illerde hizmetler aksar, halkın desteği erir.",
-     "• Yeni girişimler: Çığ Bariyeri, Kar Küreme İstasyonu, Isınma Merkezi, Çığ Gözlem Ağı (erken uyarı), Jeotermal Isıtma Ağı ve dahası; yeni politika: Kış Seferberliği Yasası.",
-     "• Yeni Kar katmanı: hangi bölgenin çığ vermeye hazır olduğunu haritada gör.",
-     "Saranis Adaları: Bağlarla örtülü bir yarımada, lagün ve volkanik adalar. Morasca volkanı uyandı.",
-     "• Volkan basıncı sürekli yükselir; kül bulutları rüzgârla sürüklenip tarlaları ve bağları örter, ekonomiyi yavaşlatır.",
-     "• Bir patlama dev dalga tetikleyebilir: dalgakıranı olmayan kıyı illeri ağır hasar alır.",
-     "• Feribotu olmayan adalarda hizmetler ve ekonomi aksar. Kül çekilince volkanik toprak bereketlenir; Teraslı Bağ Kooperatifi bu bereketten iki kat yararlanır.",
-     "• Yeni girişimler: Dalgakıran ve Kıyı Seddi, Kül Temizleme Ekibi, Volkan Gözlemevi (tahliye uyarısı), Feribot Hattı, Teraslı Bağ Kooperatifi ve dahası; yeni politika: Kıyı Planlama Yasası. Yeni Kül katmanı kül örtüsünü ve korumasız kıyıları gösterir.",
-     "Her haritanın kendi senaryosu, hikâyesi, girişimleri, politikaları ve olayları var; iki haritada toplam 21 yeni olay seni bekliyor.",
-     "İki yeni Play Games başarımı: Kuzeyin Kalkanı (Halvarya'da çığ riski en yüksek beş bölgeyi Çığ Bariyeri ile koru) ve Külden Doğan (Saranis'te bir patlamayı Volkan Gözlemevi'nin uyarısıyla tahliye ederek atlat).",
-     "2.1.4 Google Play'de ve PC'de (itch.io) yayında. Oyunu güncelle, Yeni harekât ekranından haritanı seç!"
-    ],
-    "en": [
-     "Two new maps have joined the ReBirth campaign! With update 2.1.4, Halvarya Fjords and Saranis Islands are waiting for you on the New campaign screen. That makes 5 maps and 5 disasters.",
-     "Halvarya Fjords: A northern coast carved by fjords, with pine forests and the glaciated Buzkırı Mountains. After the harshest winter in a century, avalanches buried the mountain towns.",
-     "• Snow piles up in every district through the long winter; once the snow load passes its limit, avalanches come down, houses collapse and mountain roads stay closed for days.",
-     "• The cold is an enemy too: in districts without heating, services falter and public support melts away.",
-     "• New projects: Avalanche Barrier, Snow Clearing Station, Warming Center, Avalanche Monitoring Network (early warning), Geothermal Heating Network and more; new policy: Winter Mobilization Act.",
-     "• New Snow map layer: see which districts are about to let go.",
-     "Saranis Islands: A peninsula of vineyards, a lagoon and volcanic islands. Morasca volcano is awake.",
-     "• Volcanic pressure keeps rising; ash clouds drift on the wind, bury fields and vineyards and slow the economy.",
-     "• An eruption can trigger a giant wave: coastal districts without a sea wall take heavy damage.",
-     "• Islands without a ferry suffer weaker services and economy. Once the ash clears, the volcanic soil turns fertile, and the Terraced Vineyard Cooperative gets twice the benefit.",
-     "• New projects: Breakwater and Sea Wall, Ash Clearing Crew, Volcano Observatory (evacuation warning), Ferry Line, Terraced Vineyard Cooperative and more; new policy: Coastal Planning Act. The new Ash map layer marks ash cover and unprotected coasts.",
-     "Each map has its own scenario, story, projects, policies and events, with 21 new events across the two maps.",
-     "Two new Play Games achievements: Shield of the North (protect Halvarya's five most avalanche-prone districts with an Avalanche Barrier) and Born from the Ashes (survive an eruption on Saranis by evacuating on the Volcano Observatory's warning).",
-     "2.1.4 is out now on Google Play and on PC (itch.io). Update the game and pick your map on the New campaign screen!"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-11-02-halvarya-saranis-harekatta-c1bea8.jpg",
-   "eklendi": "2026-11-02T17:47:39.143845Z"
   },
   {
    "id": "2026-10-31-kara-kolera-basladi",
