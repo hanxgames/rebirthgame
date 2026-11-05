@@ -17,6 +17,17 @@ görselleri kendi önbelleğinden siler). Her yazımda paylas/<tr|en>/<kimlik>.h
                                                                       #   ör. '{"tepki": "kalp", "renk": {"vurgu": "#E30A17"}}'
   python tools/haber_ekle.py liste
   python tools/haber_ekle.py denetle                                  # şema, görseller, yetim dosyalar (siler)
+  python tools/haber_ekle.py ios-yayin [2.2.1]                        # App Store'da yayındaki iOS sürümünü (verilmezse App Store'dan
+                                                                      #   okunur) uygula: "ios>=X" (X ≤ o sürüm) → "ios". Saatte bir
+                                                                      #   .github/workflows/ios-surum.yml de çalıştırır.
+
+iOS sürümü Android'den geç yayına girer (App Store incelemesi): yeni sürümün notu ya da haberi iOS'ta o sürüm çıkmadan görünmesin
+diye platform listesinde sürüm koşullu öğe kullanılır: "ios>=2.2.1" = iOS'ta yalnız 2.2.1 ve sonrasını kuran oyuncuya (oyun 2.2.1+;
+bu öğeyi tanımayan eski sürümler kaydı hiç göstermez). "surum" alanı olan kayıtta (güncelleme notu ya da habere de verilebilir)
+"ekle" bunu kendisi yazar: App Store'daki iOS sürümü kaydın sürümünden eskiyse platform listesindeki "ios" (liste yoksa hepsi)
+"ios>=<surum>" olur. O sürüm App Store'da yayına girince "ios-yayin" (GitHub Actions saatte bir) öğeyi düz "ios"a çevirir: not,
+henüz güncellemeyen iOS oyuncusuna da görünür. Sürüm alanı olmayan, yeni sürüme bağlı bir haberde listeyi elle yaz:
+"platform": ["android", "pc", "web", "ios>=2.2.1"].
 
 taslak.json (TR ve EN zorunlu; baslik/ozet/etiket/metin'e isteğe bağlı başka dil anahtarları da eklenebilir: es, pt_BR, de, fr,
 id, ja, ko, zh_CN, zh_TW — oyun kendi dilindeki anahtarı gösterir, yoksa İngilizcesini; haberler.html yalnız tr/en gösterir):
@@ -24,7 +35,8 @@ id, ja, ko, zh_CN, zh_TW — oyun kendi dilindeki anahtarı gösterir, yoksa İn
     "tarih": "2026-10-15",                       # yoksa bugün
     "kisa": "kara-kolera",                       # kimliğin sonu; yoksa İngilizce başlıktan
     "etiket": {"tr": "Etkinlik", "en": "Event"}, # isteğe bağlı
-    "surum": "2.0.6",                            # güncelleme notlarında isteğe bağlı
+    "surum": "2.0.6",                            # güncelleme notlarında isteğe bağlı (haberde de olabilir): iOS'ta bu sürüm
+                                                 #   App Store'a çıkana dek gizler (yukarıdaki "ios>=" açıklaması)
     "baslik": {"tr": "...", "en": "..."},
     "ozet":   {"tr": "...", "en": "..."},        # oyundaki kartta görünür (2-3 satır)
     "metin":  {"tr": ["paragraf", "• madde"], "en": [...]},   # haberler.html'de; "• " ile başlayan satır madde olur
@@ -37,7 +49,8 @@ id, ja, ko, zh_CN, zh_TW — oyun kendi dilindeki anahtarı gösterir, yoksa İn
                                                  #   kapak isteğe bağlı (oynat düğmesinin ve oynatıcının görseli; yoksa gorsel).
                                                  #   Yerel dosyaları "video" komutu kopyalar (ekle'de adres verilir).
     "platform": ["android", "pc", "web"],        # isteğe bağlı: oyunda yalnız bu platformlarda (android|ios|pc|web) görünür;
-                                                 #   başka mağazaya satış bağlantısı veren haberi iOS'a koyma (App Store 3.1.1)
+                                                 #   başka mağazaya satış bağlantısı veren haberi iOS'a koyma (App Store 3.1.1).
+                                                 #   Öğe sürüm koşullu da olabilir: "ios>=2.2.1" (oyun 2.2.1+, yukarıda)
     "form": "moderator",                         # isteğe bağlı: haberler.html'de haberin altına başvuru düğmesi (js/basvuru.js
                                                  #   FORMLAR: kimlik → Google Formlar bağlantısı; site bir şey saklamaz)
     # --- kartın uzaktan görünümü (oyun 2.1.3+, eski sürümler yok sayar; site aynısını uygular; YenidenDogus
@@ -72,6 +85,8 @@ import json
 import os
 import re
 import sys
+import time
+import urllib.request
 
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 AKIS = os.path.join(KOK, "haberler.json")
@@ -87,6 +102,10 @@ ZAMAN = re.compile(r"(\d{4})-(\d{2})-(\d{2})( (\d{2}):(\d{2}))?")
 IZINLI = re.compile(r"https://([a-z0-9-]+\.)*(rebirthgame\.tr|hanxgames\.net|play\.google\.com|itch\.io|youtube\.com|youtu\.be)([/?#].*)?", re.I)
 EN_COK = 5
 BOY = (640, 360)
+PLATFORMLAR = ("android", "ios", "pc", "web")
+PLATFORM_OGE = re.compile(r"(android|ios|pc|web)(>=\d+(\.\d+){0,3})?")   # oyunun haber_paneli.platform_uygun'u ile aynı
+SURUM = re.compile(r"\d+(\.\d+){0,3}")
+IOS_MAGAZA = "https://itunes.apple.com/lookup?bundleId=com.hantro.rebirth&country=tr"   # App Store kimliği 6821863283
 DILLER = ("tr", "en")
 FORMLAR = ("moderator",)   # js/basvuru.js FORMLAR'daki kimlikler (Google Formlar bağlantıları)
 VIDEO = re.compile(r"https://(www\.|m\.)?(youtube\.com/(watch\?(\S*&)?v=|shorts/|embed/|live/)|youtu\.be/)[A-Za-z0-9_-]{11}([?&#]\S*)?"
@@ -281,8 +300,8 @@ def denetle_kayit(k: dict) -> list:
             except ValueError:
                 hata.append("anket.bitis (YYYY-AA-GG)")
     pl = k.get("platform")
-    if pl is not None and (not isinstance(pl, list) or not pl or any(x not in ("android", "ios", "pc", "web") for x in pl)):
-        hata.append("platform: android | ios | pc | web listesi")
+    if pl is not None and (not isinstance(pl, list) or not pl or any(not isinstance(x, str) or not PLATFORM_OGE.fullmatch(x) for x in pl)):
+        hata.append("platform: android | ios | pc | web listesi (öğe sürüm koşullu olabilir: ios>=2.2.1)")
     return hata + denetle_gorunum(k)
 
 
@@ -358,6 +377,65 @@ def yetim_sil(akis: dict) -> list:
     return silinen
 
 
+def surum_kiyas(a: str, b: str) -> int:
+    """"2.2.10" > "2.2.9" (eksik parça 0): -1 | 0 | 1 — oyunun haber_paneli.surum_kiyasla'sı ile aynı"""
+    x = [int(p) for p in str(a).split(".")]
+    y = [int(p) for p in str(b).split(".")]
+    n = max(len(x), len(y))
+    x, y = x + [0] * (n - len(x)), y + [0] * (n - len(y))
+    return (x > y) - (x < y)
+
+
+def ios_magaza_surumu() -> str:
+    """App Store'da yayındaki iOS sürümü (iTunes arama API'si; alınamazsa "")"""
+    try:
+        with urllib.request.urlopen("%s&t=%d" % (IOS_MAGAZA, int(time.time())), timeout=20) as r:
+            v = str(json.load(r)["results"][0]["version"])
+        return v if SURUM.fullmatch(v) else ""
+    except Exception:
+        return ""
+
+
+def ios_etiketle(kayit: dict, magaza: str) -> None:
+    """sürümlü kayıt iOS'ta o sürüm App Store'a çıkana dek gizli: platform'daki "ios" (liste yoksa hepsi) → "ios>=<surum>"
+    (magaza "" = bilinmiyor: yine etiketlenir, ios-yayin sonra düzeltir)"""
+    surum = str(kayit.get("surum", ""))
+    if not SURUM.fullmatch(surum) or (magaza and surum_kiyas(surum, magaza) <= 0):
+        return
+    pl = kayit.get("platform") or list(PLATFORMLAR)
+    if "ios" in pl:
+        kayit["platform"] = [("ios>=" + surum) if x == "ios" else x for x in pl]
+
+
+def ios_yayin_uygula(akis: dict, magaza: str) -> list:
+    """App Store'da yayındaki sürüm: "ios>=X" (X ≤ magaza) → "ios"; liste dört platformun hepsiyse alan kalkar. Değişen kimlikler."""
+    degisen = []
+    for l in TURLER.values():
+        for k in akis.get(l, []):
+            pl = k.get("platform")
+            if not isinstance(pl, list):
+                continue
+            yeni = ["ios" if x.startswith("ios>=") and surum_kiyas(x[5:], magaza) <= 0 else x for x in pl]
+            if yeni != pl:
+                if sorted(set(yeni)) == sorted(PLATFORMLAR):
+                    del k["platform"]
+                else:
+                    k["platform"] = yeni
+                degisen.append(k["id"])
+    return degisen
+
+
+def ios_yayin(surum: str = "") -> None:
+    magaza = surum or ios_magaza_surumu()
+    if not SURUM.fullmatch(magaza):
+        sys.exit("App Store'daki iOS sürümü alınamadı (%s)" % IOS_MAGAZA)
+    akis = oku()
+    degisen = ios_yayin_uygula(akis, magaza)
+    if degisen:
+        yaz(akis)
+    print("App Store iOS %s · iOS'ta açılan kayıtlar: %s" % (magaza, ", ".join(degisen) or "-"))
+
+
 def ekle(tur: str, taslak_yol: str, gorsel_yol: str) -> None:
     if tur not in TURLER:
         sys.exit("tür: haber | guncelleme")
@@ -376,6 +454,12 @@ def ekle(tur: str, taslak_yol: str, gorsel_yol: str) -> None:
     for alan in GORUNUM:   # boş liste ([] = düğmesiz kart) ve false da anlamlı
         if alan in t:
             kayit[alan] = t[alan]
+    if SURUM.fullmatch(str(kayit.get("surum", ""))):
+        magaza = ios_magaza_surumu()
+        ios_etiketle(kayit, magaza)
+        if any(str(x).startswith("ios>=") for x in kayit.get("platform", [])):
+            print("iOS: App Store'da %s → kayıt iOS'ta %s kurulunca görünür (ios-yayin o sürüm çıkınca herkese açar)"
+                  % (magaza or "bilinmiyor", kayit["surum"]))
     kayit["gorsel"] = gorsel_hazirla(gorsel_yol, kimlik)
     kayit["eklendi"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%fZ")   # aynı gün eklenenlerin sırası
     hata = denetle_kayit(kayit)
@@ -521,6 +605,8 @@ if __name__ == "__main__":
         liste()
     elif a == ["denetle"]:
         denetle()
+    elif len(a) in (1, 2) and a[0] == "ios-yayin":
+        ios_yayin(a[1] if len(a) == 2 else "")
     else:
         print(__doc__)
         sys.exit(2)

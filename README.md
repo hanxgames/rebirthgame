@@ -28,7 +28,12 @@ python tools/haber_ekle.py ekle guncelleme taslak.json gorsel.png   # yeni günc
 python tools/haber_ekle.py video <id> <tr> <en> [kapak.jpg]   # habere video: YouTube adresi ya da yerel .mp4 (assets/video/haber/'e
                                                             # kopyalanır, kayıt düşünce silinir); "- -" kaldırır
 python tools/haber_ekle.py sil <id> · liste · denetle
+python tools/haber_ekle.py ios-yayin [2.2.1]                # App Store'daki iOS sürümünü uygula ("ios>=X" → "ios"; saatte bir Actions)
 ```
+**iOS sürüm gecikmesi:** iOS sürümü App Store incelemesi yüzünden Android'den geç çıkar. `surum` alanlı kayıtta `ekle`, App Store'daki
+iOS sürümü daha eskiyse platform listesine `"ios>=<surum>"` yazar: oyunda (2.2.1+) iOS'ta yalnız o sürümü kuran oyuncu görür, eski
+sürümler hiç göstermez. O sürüm App Store'a çıkınca `.github/workflows/ios-surum.yml` (saatte bir, iTunes arama API'si) öğeyi düz
+`"ios"`a çevirip yayınlar. Sürüm alanı olmayan ama yeni sürüme bağlı bir haberde listeyi elle ver: `["android", "pc", "web", "ios>=2.2.1"]`.
 Taslak biçimi betiğin başında (başlık / özet / metin TR + EN zorunlu; oyunun diğer dilleri İngilizcesini gösterir; `baglanti` verilirse
 oyundaki "Detayları gör" o adresi, verilmezse `haberler.html#<id>` açar). `video` verilen kayıt sayfada üstte oynatıcıyla açılır: Türkçe sayfa
 `tr`, İngilizce sayfa (oyunun diğer bütün dilleri) `en` videosunu oynatır; YouTube oynatıcısı yalnız tıklayınca yüklenir (privacy.html §5). Ardından siteyi yayınla (git push): GitHub Pages birkaç

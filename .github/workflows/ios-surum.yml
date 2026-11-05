@@ -1,0 +1,39 @@
+name: iOS sürümü → haber akışı
+# App Store'da yeni iOS sürümü yayına girince haberler.json'daki sürüm koşullu "ios>=X" öğelerini düz "ios"a çevirir
+# (tools/haber_ekle.py ios-yayin): o sürümün notu/haberi henüz güncellemeyen iOS oyuncusuna da görünür. iOS sürümü
+# Android'den geç çıktığı için yeni sürümün kayıtları iOS'ta o zamana dek gizli kalır (haber_ekle.py başındaki açıklama).
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: ios-surum
+  cancel-in-progress: false
+
+jobs:
+  ios-yayin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: App Store sürümünü uygula
+        run: |
+          if ! grep -q '"ios>=' haberler.json; then echo "sürüm koşullu iOS kaydı yok"; exit 0; fi
+          pip install --quiet pillow
+          python tools/haber_ekle.py ios-yayin || echo "::warning::App Store sürümü alınamadı, sonraki saatte yeniden denenir"
+      - name: Değiştiyse yayınla
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then echo "değişiklik yok"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Haber akışı: iOS'ta yayına giren sürümün kayıtları iOS oyuncularına açıldı (ios-yayin)"
+          git push
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null || echo "::warning::Pages derlemesi tetiklenemedi"
