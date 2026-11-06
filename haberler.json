@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-03T18:58:55Z",
+ "guncelleme": "2026-11-06T16:10:07Z",
  "haberler": [
   {
    "id": "2026-11-03-haftalik-etkinlik",
@@ -329,6 +329,77 @@
  ],
  "guncellemeler": [
   {
+   "id": "2026-11-06-surum-2-2-4",
+   "tarih": "2026-11-06",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update",
+    "es": "Actualización",
+    "pt_BR": "Atualização",
+    "de": "Update",
+    "fr": "Mise à jour",
+    "id": "Pembaruan",
+    "ja": "アップデート",
+    "ko": "업데이트",
+    "zh_CN": "更新",
+    "zh_TW": "更新"
+   },
+   "surum": "2.2.4",
+   "baslik": {
+    "tr": "Sürüm 2.2.4: Daha sağlam Sefer, daha güvenli kararlar",
+    "en": "Version 2.2.4: Steadier Statecraft, safer decisions",
+    "es": "Versión 2.2.4: Estadista más estable y decisiones seguras",
+    "pt_BR": "Versão 2.2.4: Estadista mais estável e decisões seguras",
+    "de": "Version 2.2.4: Stabilere Staatskunst und Tippschutz",
+    "fr": "Version 2.2.4 : Gouverner plus stable, choix plus sûrs",
+    "id": "Versi 2.2.4: Negarawan lebih stabil, keputusan aman",
+    "ja": "バージョン2.2.4：国家経営の安定化と誤タップ防止",
+    "ko": "버전 2.2.4: 안정성 개선과 오터치 방지",
+    "zh_CN": "版本 2.2.4：治国更稳定，决策防误触",
+    "zh_TW": "版本 2.2.4：治國更穩定，決策防誤觸"
+   },
+   "ozet": {
+    "tr": "Sefer (Beta) çökmeleri giderildi, karar pencerelerine yanlış dokunuş koruması geldi, ordular fethedilen adadan denizle dönüyor; Play Games girişi iyileşti.",
+    "en": "Statecraft (Beta) crash fixes, an accidental-tap guard on decision windows, armies can sail home from conquered islands and better Play Games sign-in.",
+    "es": "Correcciones de cierres en Estadista (Beta), protección contra toques accidentales y ejércitos que vuelven por mar desde las islas.",
+    "pt_BR": "Correções de travamentos em Estadista (Beta), proteção contra toques acidentais e exércitos que voltam por mar das ilhas.",
+    "de": "Absturzkorrekturen für Staatskunst (Beta), Schutz vor versehentlichem Tippen und Armeen, die übers Meer von Inseln heimkehren.",
+    "fr": "Plantages corrigés dans Gouverner (bêta), protection contre les appuis accidentels et armées rapatriées des îles par la mer.",
+    "id": "Perbaikan crash di Negarawan (Beta), perlindungan dari ketukan tidak sengaja, dan pasukan kembali lewat laut dari pulau.",
+    "ja": "国家経営（ベータ）のクラッシュを修正。決定ウィンドウの誤タップ防止、征服した島から軍が海路で帰還、Play ゲームのログインも改善。",
+    "ko": "국가 경영(베타) 충돌 수정, 결정 창 오터치 방지, 점령한 섬에서 군대가 바다로 귀환, Play 게임즈 로그인 개선.",
+    "zh_CN": "修复治国（测试版）崩溃，决策窗口防误触，军队可从占领的岛屿经海路返回，并改进 Play 游戏登录。",
+    "zh_TW": "修正治國（測試版）當機，決策視窗防誤觸，軍隊可從占領的島嶼經海路返回，並改善 Play 遊戲登入。"
+   },
+   "metin": {
+    "tr": [
+     "2.2.4 Google Play'de yayında! Bu sürüm, oyuncularımızın Google Play yorumlarında bildirdiği sorunları düzeltiyor.",
+     "• Sefer (Beta): bazı telefonlarda oyunu kapatan çökmeler giderildi.",
+     "• Karar pencerelerinde yanlış dokunuş koruması: oyun sırasında kendiliğinden açılan bir karar penceresi, yanlışlıkla seçim yapmayasın diye kısa bir an bekler; düğmeler, altlarındaki çizgi dolunca etkinleşir.",
+     "• Sefer: fethettiğin adada kalan ordular artık denizden ana toprağa dönebiliyor. Barışta kendiliğinden, bedelsiz ve kayıpsız dönerler; savaşta geçişin riski düşman donanmasına bağlı. Hareket emriyle adaya ya da adadan ordu da gönderebilirsin.",
+     "• Haftalık Etkinlik: ana menüdeki düğme artık ilk etkinlikten önce de görünüyor; geri sayımı ve kuralları önceden incele. İlk etkinlik 9 Kasım Pazartesi başlıyor.",
+     "• Sefer dünya haritası zayıf telefonlarda daha akıcı; İHA kamerasında birlik adları artık seçtiğin dilde.",
+     "• Play Games girişi iyileştirildi.",
+     "Yorumlarınız için teşekkürler, iyi oyunlar!"
+    ],
+    "en": [
+     "2.2.4 is out now on Google Play! This update fixes issues our players reported in their Google Play reviews.",
+     "• Statecraft (Beta): fixed crashes that closed the game on some phones.",
+     "• Accidental-tap guard on decision windows: when a decision window pops up during play, it waits a brief moment so you don't pick an option by mistake; the buttons become active once the line under them fills up.",
+     "• Statecraft: armies left on a conquered island can now return to the mainland by sea. In peacetime they sail home on their own, at no cost and without losses; in wartime the crossing's risk depends on the enemy fleet. You can also send armies to or from an island with the Move order.",
+     "• Weekly Event: the main menu button now shows up before the first event, so you can check the countdown and the rules in advance. The first event starts on Monday, November 9.",
+     "• The Statecraft world map runs smoother on low-end phones, and unit names in the Recon Drone camera now appear in your language.",
+     "• Improved Play Games sign-in.",
+     "Thank you for your reviews, and have fun!"
+    ]
+   },
+   "platform": [
+    "android"
+   ],
+   "gorsel": "assets/img/haber/2026-11-06-surum-2-2-4-e496e4.jpg",
+   "eklendi": "2026-11-06T16:06:53.731965Z"
+  },
+  {
    "id": "2026-11-03-surum-2-2-0",
    "tarih": "2026-11-03",
    "etiket": {
@@ -623,76 +694,6 @@
    },
    "gorsel": "assets/img/haber/2026-10-28-surum-2-1-2-71a492.jpg",
    "eklendi": "2026-10-28T04:56:33.780839Z"
-  },
-  {
-   "id": "2026-10-23-surum-2-1-1",
-   "tarih": "2026-10-23",
-   "etiket": {
-    "tr": "Güncelleme",
-    "en": "Update",
-    "es": "Actualización",
-    "pt_BR": "Atualização",
-    "de": "Update",
-    "fr": "Mise à jour",
-    "id": "Pembaruan",
-    "ja": "アップデート",
-    "ko": "업데이트",
-    "zh_CN": "更新",
-    "zh_TW": "更新"
-   },
-   "surum": "2.1.1",
-   "baslik": {
-    "tr": "Sürüm 2.1.1: Gölge Cephesi yayında",
-    "en": "Version 2.1.1: Shadow Front is here",
-    "es": "Versión 2.1.1: llega Frente Sombra",
-    "pt_BR": "Versão 2.1.1: chegou a Frente Sombria",
-    "de": "Version 2.1.1: Die Schattenfront ist da",
-    "fr": "Version 2.1.1 : le Front de l'Ombre est là",
-    "id": "Versi 2.1.1: Front Bayangan hadir",
-    "ja": "バージョン2.1.1：「影の戦線」登場",
-    "ko": "버전 2.1.1: 그림자 전선 출시",
-    "zh_CN": "版本 2.1.1：暗影阵线上线",
-    "zh_TW": "版本 2.1.1：暗影陣線上線"
-   },
-   "ozet": {
-    "tr": "Yeni mod Gölge Cephesi: bu kez isyancı sensin. Gizli hücrelerini yönet, halkı kazan, misyonu barış masasına oturt. Ayrıca zafer ekranlarında Paylaş düğmesi ve efektlerde takılmaya son.",
-    "en": "New mode, Shadow Front: this time you are the rebellion. Lead secret cells, win the people over and bring the mission to the peace table. Plus a Share button on victory screens and no more stutter on effects.",
-    "es": "Nuevo modo, Frente Sombra: esta vez la rebelión eres tú. Dirige células secretas, gánate al pueblo y sienta a la Misión en la mesa de paz. Además, botón Compartir en las pantallas de victoria y adiós a los tirones en los efectos.",
-    "pt_BR": "Novo modo, Frente Sombria: desta vez a rebelião é você. Comande células secretas, conquiste o povo e leve a Missão à mesa da paz. Além disso, botão Compartilhar nas telas de vitória e fim das travadas nos efeitos.",
-    "de": "Neuer Modus Schattenfront: Diesmal bist du der Aufstand. Führe geheime Zellen, gewinne das Volk und bring die Mission an den Friedenstisch. Dazu eine Teilen-Schaltfläche auf den Siegesbildschirmen und kein Ruckeln mehr bei Effekten.",
-    "fr": "Nouveau mode, Front de l'Ombre : cette fois, la rébellion, c'est vous. Dirigez des cellules secrètes, gagnez le peuple et amenez la Mission à la table de paix. Aussi : un bouton Partager sur les écrans de victoire et plus de saccades sur les effets.",
-    "id": "Mode baru, Front Bayangan: kali ini kamulah pemberontaknya. Pimpin sel rahasia, rebut hati rakyat, dan bawa Misi ke meja perdamaian. Plus tombol Bagikan di layar kemenangan dan efek tanpa patah-patah.",
-    "ja": "新モード「影の戦線」：今度はあなたが反乱だ。秘密のセルを率い、民衆の心をつかみ、ミッションを和平の席に着かせよう。勝利画面のシェアボタン追加、エフェクトのカクつき解消も。",
-    "ko": "새 모드 '그림자 전선': 이번에는 당신이 반란입니다. 비밀 조직을 이끌고, 민심을 얻고, 임무단을 평화 협상 테이블에 앉히세요. 승리 화면 공유 버튼 추가, 효과 끊김 해결도 함께.",
-    "zh_CN": "新模式“暗影阵线”：这一次，你就是叛乱。领导秘密小组，赢得民心，让特派团坐上和平谈判桌。另有胜利画面分享按钮，特效卡顿也已修复。",
-    "zh_TW": "新模式「暗影陣線」：這一次，你就是叛亂。領導秘密小組，贏得民心，讓特派團坐上和平談判桌。另有勝利畫面分享按鈕，特效卡頓也已修正。"
-   },
-   "metin": {
-    "tr": [
-     "2.1.1 ile ReBirth'te ilk kez öteki taraftasın: yeni mod Gölge Cephesi yayında.",
-     "• Bu kez isyancı sensin: gizli hücrelerini yönet, halkı kazan, misyonu barış masasına oturt",
-     "• Her eylemin haritada görünen, zincirleme sonuçları var: baskı artınca misyon şehirlerden çekiliyor ve ajanlarıyla peşine düşüyor",
-     "• Konsey kararları, yolda jandarma kontrol noktaları ve oyunu bilen bir misyon: Kolay, Orta ve Zor; üç vilayette",
-     "• Moda özel arayüz, giriş sineması ve seslendirme",
-     "• Zafer ekranlarında Paylaş düğmesi: kazandığın harekâtı arkadaşlarınla paylaş",
-     "• Daha akıcı oyun: efektler ilk kez göründüğünde yaşanan takılmalar giderildi",
-     "• Çeviri ve arayüz düzeltmeleri",
-     "Gölge Cephesi'nin giriş sinematiğini Haberler sekmesindeki duyuruda izleyebilirsin. Güncellemeyi Google Play'den indirebilirsin."
-    ],
-    "en": [
-     "With 2.1.1 you are on the other side for the first time in ReBirth: the new Shadow Front mode is out now.",
-     "• This time you are the rebellion: lead secret cells, win the people over and bring the mission to the peace table",
-     "• Every action has visible, chain-reaction consequences on the map: under pressure the mission pulls out of cities and sends agents after you",
-     "• Council resolutions, gendarmerie checkpoints on the road and a mission that knows the game: Easy, Medium and Hard, across three provinces",
-     "• A dedicated interface, opening cinematic and voice acting for the mode",
-     "• Share button on victory screens: share a campaign you won with your friends",
-     "• Smoother play: no more stutter when effects appear for the first time",
-     "• Translation and interface fixes",
-     "Watch the Shadow Front's opening cinematic in the announcement on the News tab. Get the update on Google Play."
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-23-surum-2-1-1-84a86a.jpg",
-   "eklendi": "2026-10-23T14:54:07.850207Z"
   }
  ]
 }
