@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-06T16:10:07Z",
+ "guncelleme": "2026-11-09T08:34:12Z",
  "haberler": [
   {
    "id": "2026-11-03-haftalik-etkinlik",
@@ -329,6 +329,79 @@
  ],
  "guncellemeler": [
   {
+   "id": "2026-11-09-surum-2-2-5",
+   "tarih": "2026-11-09",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update",
+    "es": "Actualización",
+    "pt_BR": "Atualização",
+    "de": "Update",
+    "fr": "Mise à jour",
+    "id": "Pembaruan",
+    "ja": "アップデート",
+    "ko": "업데이트",
+    "zh_CN": "更新",
+    "zh_TW": "更新"
+   },
+   "surum": "2.2.5",
+   "baslik": {
+    "tr": "Sürüm 2.2.5: Sefer'de devlet, ticaret ve savunma",
+    "en": "Version 2.2.5: Government, trade and defense",
+    "es": "Versión 2.2.5: gobierno, comercio y defensa en Estadista",
+    "pt_BR": "Versão 2.2.5: governo, comércio e defesa em Estadista",
+    "de": "Version 2.2.5: Staat, Handel und Verteidigung",
+    "fr": "Version 2.2.5 : régime, commerce et défense",
+    "id": "Versi 2.2.5: pemerintahan, perdagangan, pertahanan",
+    "ja": "バージョン2.2.5：国家経営に政体・貿易・防衛",
+    "ko": "버전 2.2.5: 정치 체제, 무역, 국방",
+    "zh_CN": "版本 2.2.5：治国新增政体、贸易与国防",
+    "zh_TW": "版本 2.2.5：治國新增政體、貿易與國防"
+   },
+   "ozet": {
+    "tr": "Sefer'e devlet düzeni ve anayasa, gelenekler, dış ticaret ve yaptırımlar, savunma sanayii geldi; savaş odası takılması ve bir çökme giderildi.",
+    "en": "Statecraft adds forms of government and constitutional change, traditions, foreign trade and sanctions, and a defense industry; plus fixes.",
+    "es": "Estadista suma forma de gobierno y Constitución, tradiciones, comercio exterior, sanciones e industria de defensa, y correcciones.",
+    "pt_BR": "Estadista ganha forma de governo e Constituição, tradições, comércio exterior, sanções e indústria de defesa, além de correções.",
+    "de": "Staatskunst bringt Staatsform und Verfassung, Traditionen, Außenhandel, Sanktionen und Rüstungsindustrie, dazu Korrekturen.",
+    "fr": "Gouverner ajoute régime et Constitution, traditions, commerce extérieur, sanctions et industrie de défense, plus des correctifs.",
+    "id": "Negarawan kini punya bentuk pemerintahan dan konstitusi, tradisi, perdagangan, sanksi, dan industri pertahanan; plus perbaikan.",
+    "ja": "国家経営に政体と憲法改正、伝統、対外貿易と制裁、防衛産業が登場。作戦室のフリーズとクラッシュも修正。",
+    "ko": "국가 경영에 정치 체제와 개헌, 전통, 대외 무역과 제재, 방위 산업 추가. 전쟁 상황실 멈춤과 충돌도 수정.",
+    "zh_CN": "治国新增政体与修宪、传统、对外贸易与制裁、国防工业，并修复作战室卡住与崩溃问题。",
+    "zh_TW": "治國新增政體與修憲、傳統、對外貿易與制裁、國防工業，並修正作戰室卡住與當機問題。"
+   },
+   "metin": {
+    "tr": [
+     "2.2.5 Google Play'de yayında! Bu sürüm Sefer'e (Beta) devlet düzeni, dış ticaret ve savunma sanayii getiriyor.",
+     "• Sefer (Beta), devlet düzeni: her ülkenin kendi yönetim biçimi var. Anayasayı değiştirmek için komisyon kurar, Meclis'ten geçirir ya da halkoylamasına gidersin. Halvarya'da tacın siyasi rolü ve veraset kararlarını etkiliyor; ülkelerin gelenekleri reformla değişebilir ya da kaldırılabilir.",
+     "• Sefer, koalisyon: hükümet ortağınla yollarını ayırabilirsin; bedelini ve ortağın küskünlüğünü önceden görürsün. Siyasi sermaye dengesi de yenilendi.",
+     "• Sefer, dış ticaret: her mal için yerli üretimi, kimden alıp kime satacağını sen seçersin. Ortaklarla ticareti kısıtlayabilir ya da askıya alabilirsin; Konsey yaptırımları ambargoya dönüşür. Uzak güçler ucuz mal sunar ama teslimat riski taşır. Uzman heyeti, yurt dışı yatırım ve yabancı yatırım teşviki de eklendi.",
+     "• Sefer, savunma: güvenlik bütçesi silahlı kuvvetler, jandarma ve istihbarat arasında paylaşılıyor. Savunma sanayii yatırımla büyüyor, silah ihracatına açılıyor; tedarik politikasını sen belirliyorsun.",
+     "• Sefer, ordu: Birlik kur paneli, her an açabileceğin askerî kılavuz ve üst üste binen ordular için \"Hangi ordu?\" seçimi. Savaş odasındaki takılma giderildi, 4. Ordu'nun kurulup dağılması artık bildiriliyor.",
+     "• Gölge Cephesi: hücre emirleri artık hücrenin çevresindeki emir çarkında.",
+     "• Yeni metinlerin hepsi 11 dilde; Sefer'de kıta krizlerinin sıklığı daha dengeli. Ülke görünümündeyken biten seferden yeni sefere geçince oluşan çökme giderildi.",
+     "Teşekkürler Prempiti! Bu sürümdeki yeniliklerin ve düzeltmelerin büyük bölümü oyuncumuz Prempiti'nin ayrıntılı önerilerinden geldi. Zaman ayırıp yazdığın için çok teşekkür ederiz."
+    ],
+    "en": [
+     "2.2.5 is out now on Google Play! This update brings forms of government, foreign trade and a defense industry to Statecraft (Beta).",
+     "• Statecraft (Beta), form of government: every country has its own system. To change the constitution you set up a commission, pass it through Parliament or call a referendum. In Halvarya the Crown's political role and the line of succession shape your decisions, and each country's traditions can be reformed or abolished.",
+     "• Statecraft, coalition: you can part ways with a coalition partner and see the cost and the partner's resentment in advance. Political capital has been rebalanced too.",
+     "• Statecraft, foreign trade: for every commodity you choose how much to produce at home, who to buy from and who to sell to. You can restrict or suspend trade with partners, and Council sanctions turn into embargoes. Distant powers offer cheap goods at the risk of delivery disruptions. Expert delegations, investment abroad and a foreign investment program are also in.",
+     "• Statecraft, defense: the security budget is split between the armed forces, the gendarmerie and intelligence. The defense industry grows with investment and opens up arms exports, and you set the procurement policy.",
+     "• Statecraft, army: a Raise unit panel, a military handbook you can open any time and a \"Which army?\" picker for overlapping armies. The war room freeze is fixed, and you are now told when the 4th Army forms or disbands.",
+     "• Shadow Front: cell orders now sit on the order wheel around the cell.",
+     "• All new texts in 11 languages, and continental crises in Statecraft come at a steadier pace. Fixed a crash when starting a new campaign after one ended in the country view.",
+     "Thank you, Prempiti! Most of the new features and fixes in this update came from the detailed suggestions of our player Prempiti. Thank you for taking the time to write to us."
+    ]
+   },
+   "platform": [
+    "android"
+   ],
+   "gorsel": "assets/img/haber/2026-11-09-surum-2-2-5-5b9321.jpg",
+   "eklendi": "2026-11-09T08:34:12.162003Z"
+  },
+  {
    "id": "2026-11-06-surum-2-2-4",
    "tarih": "2026-11-06",
    "etiket": {
@@ -612,88 +685,6 @@
    },
    "gorsel": "assets/img/haber/2026-11-01-surum-2-1-3-374933.jpg",
    "eklendi": "2026-11-01T15:28:03.346120Z"
-  },
-  {
-   "id": "2026-10-28-surum-2-1-2",
-   "tarih": "2026-10-28",
-   "etiket": {
-    "tr": "Güncelleme",
-    "en": "Update",
-    "es": "Actualización",
-    "pt_BR": "Atualização",
-    "de": "Update",
-    "fr": "Mise à jour",
-    "id": "Pembaruan",
-    "ja": "アップデート",
-    "ko": "업데이트",
-    "zh_CN": "更新",
-    "zh_TW": "更新"
-   },
-   "surum": "2.1.2",
-   "baslik": {
-    "tr": "Sürüm 2.1.2: Oyuncu önerileriyle daha derin bir harekât",
-    "en": "Version 2.1.2: A deeper campaign, shaped by players",
-    "es": "Versión 2.1.2: Una campaña más profunda, hecha con los jugadores",
-    "pt_BR": "Versão 2.1.2: Uma campanha mais profunda, feita com os jogadores",
-    "de": "Version 2.1.2: Ein tieferer Einsatz, geprägt von euren Ideen",
-    "fr": "Version 2.1.2 : une campagne plus riche, façonnée par les joueurs",
-    "id": "Versi 2.1.2: Operasi yang lebih mendalam, dibentuk oleh pemain",
-    "ja": "バージョン2.1.2：プレイヤーの声で深まった作戦",
-    "ko": "버전 2.1.2: 플레이어 의견으로 더 깊어진 작전",
-    "zh_CN": "版本 2.1.2：玩家建议打造更有深度的战役",
-    "zh_TW": "版本 2.1.2：玩家建議打造更有深度的戰役"
-   },
-   "ozet": {
-    "tr": "Birliklere emir çarkı, bütçe açığında kademeli sonuçlar, belirgin zorluk farkları, senaryo birleştirme ve Gölge Cephesi'ne 5 strateji. Harekâtın Hikâyesi yenilendi, bildirilen hatalar düzeltildi.",
-    "en": "An order wheel for units, growing consequences for budget deficits, clearer difficulty levels, combined scenarios and 5 strategies for the Shadow Front. The Story of the Campaign is rebuilt and reported bugs are fixed.",
-    "es": "Rueda de órdenes para las unidades, consecuencias graduales del déficit, dificultades bien diferenciadas, escenarios combinables y 5 estrategias para el Frente Sombra. La historia de la campaña, renovada, y errores corregidos.",
-    "pt_BR": "Roda de ordens para as unidades, consequências graduais do déficit, dificuldades bem distintas, cenários combináveis e 5 estratégias para a Frente Sombria. A história da campanha renovada e bugs corrigidos.",
-    "de": "Befehlsrad für Einheiten, schrittweise Folgen bei Haushaltsdefiziten, deutlich unterschiedliche Schwierigkeitsgrade, kombinierbare Szenarien und 5 Strategien für die Schattenfront. Die Geschichte des Einsatzes ist neu, gemeldete Fehler sind behoben.",
-    "fr": "Roue des ordres pour les unités, conséquences progressives du déficit, niveaux de difficulté bien distincts, scénarios combinables et 5 stratégies pour le Front de l'Ombre. L'histoire de la campagne est repensée et les bugs signalés sont corrigés.",
-    "id": "Roda perintah untuk unit, dampak bertahap defisit anggaran, tingkat kesulitan yang lebih jelas, skenario yang bisa digabung, dan 5 strategi untuk Front Bayangan. Kisah Operasi diperbarui dan bug yang dilaporkan diperbaiki.",
-    "ja": "部隊への命令ホイール、財政赤字の段階的な影響、はっきり差がつく難易度、シナリオの組み合わせ、影の戦線に5つの戦略。作戦の記録を刷新し、報告された不具合も修正しました。",
-    "ko": "부대 명령 휠, 재정 적자의 단계적 결과, 확실히 달라진 난이도, 시나리오 조합, 그림자 전선의 5가지 전략. 작전의 기록이 새로워졌고 제보된 버그도 수정했습니다.",
-    "zh_CN": "部队指令轮、财政赤字的渐进后果、区分明显的难度、可组合的情景，以及暗影阵线的 5 种策略。战役纪事全面翻新，并修复了玩家反馈的问题。",
-    "zh_TW": "部隊指令輪、財政赤字的漸進後果、區分明顯的難度、可組合的情境，以及暗影陣線的 5 種策略。戰役紀事全面翻新，並修正了玩家回報的問題。"
-   },
-   "metin": {
-    "tr": [
-     "2.1.2, büyük ölçüde oyuncularımızın önerileriyle şekillendi.",
-     "• Emir çarkı: birliğe dokun, emirleri çevresindeki dilimlerden ver; üst üste binen birliklerde hangisini istediğini seç",
-     "• Bütçe açığı artık oyunu hemen bitirmiyor: açık büyüdükçe ve uzadıkça faiz, hizmetler ve halk desteğinde kademeli sonuçlar doğuruyor",
-     "• Siyasi sermaye dengesi: erken oyunda daha bol, biriktirmek pahalı; geç dönem için yeni kararlar",
-     "• Kolay, Orta ve Zor arasında belirgin farklar: olaylar, isyancıların davranışı ve uluslararası tepki zorluğa göre değişiyor",
-     "• Özel harekât yenilendi: Harita, Senaryo, Doktrin ve Zorluk ayrı sekmelerde; senaryoları birleştirip kendi meydan okumanı kur",
-     "• Enflasyonun nedenini gör: göstergede tahmin ve ayrıntılı döküm",
-     "• 13 yeni olay, dengelenmiş karar seçenekleri, orta ve geç döneme özgü baskılar",
-     "• Yeni İyileşme katmanı; ana menüde Haberler panelini gizleyebilirsin",
-     "• Harekâtın Hikâyesi: okunabilir hız, duraklat, önceki/sonraki an ve 0,5×–2× hız",
-     "• Gölge Cephesi: 5 strateji, karakol baskını planı, Dikkat ve militan dengesi, yeni Konsey kararları, çeşitlenen kontrol noktaları",
-     "• Kriz Masası: Baraj ve Karargâh görevlerinde yıldız süreleri gevşetildi",
-     "• Düzeltildi: Gölge Cephesi'nde yeniden başlatınca kapanma, grafik ayarından sonra donan ekran, siyasi sermaye yetmediği hâlde seçilebilen seçenekler, İstihkâm Bölüğü inşaat kapasitesi",
-     "Teşekkürler Prempiti! Bu sürümdeki hata düzeltmelerinin ve değişikliklerin birçoğu oyuncumuz Prempiti'nin ayrıntılı geri bildiriminden geldi. Zaman ayırıp yazdığın için çok teşekkür ederiz.",
-     "Güncelleme PC'de itch.io'da; Google Play'de mağaza onayının ardından yayına girer."
-    ],
-    "en": [
-     "2.1.2 was shaped largely by suggestions from our players.",
-     "• Order wheel: tap a unit and pick orders from the slices around it; choose which unit you mean when several overlap",
-     "• Budget deficits no longer end the game at once: the bigger and longer the deficit, the heavier the interest, service cuts and loss of support",
-     "• Political capital rebalanced: more of it early on, hoarding it costs you; new decisions for the late game",
-     "• Easy, Medium and Hard now feel different: events, rebel behaviour and international reactions all scale with difficulty",
-     "• Custom campaign rebuilt: Map, Scenario, Doctrine and Difficulty on separate tabs; combine scenarios into your own challenge",
-     "• See why inflation moves: a forecast on the gauge and a detailed breakdown",
-     "• 13 new events, rebalanced decisions, mid and late game pressures",
-     "• New Healing map layer; hide the News panel on the main menu",
-     "• The Story of the Campaign: readable pacing, pause, previous/next moment and 0.5×–2× speed",
-     "• Shadow Front: 5 strategies, outpost raid plans, Heat and militant balance, new Council resolutions, more varied checkpoints",
-     "• Crisis Desk: more time for stars on the Dam and Headquarters missions",
-     "• Fixed: Shadow Front closing on restart, screen freezing after changing graphics settings, options that could be picked without enough political capital, Engineer Company build capacity",
-     "Thank you, Prempiti! Many of the fixes and changes in this update came from the detailed feedback of our player Prempiti. Thank you for taking the time to write to us.",
-     "The update is out now on PC (itch.io) and arrives on Google Play once store review is complete."
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-10-28-surum-2-1-2-71a492.jpg",
-   "eklendi": "2026-10-28T04:56:33.780839Z"
   }
  ]
 }
