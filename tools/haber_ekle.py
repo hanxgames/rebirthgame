@@ -58,6 +58,8 @@ id, ja, ko, zh_CN, zh_TW — oyun kendi dilindeki anahtarı gösterir, yoksa İn
     "tepki": "kalp",                             # "ikili" (👍/👎, varsayılan) | "kalp" (tek kalp → begen sayacı) | "yok" (yalnız oyunda)
     "renk": {"vurgu": "#E30A17", "zemin": "#1A1210", "kenar": "#E30A17", "etiket": "#FFFFFF", "baslik": "#FFFFFF", "ozet": "#EADFCB"},
                                                  #   "#RRGGBB" ya da "#RRGGBBAA"; zemin/kenar verilince kart kendi kutusunda; etiket yoksa vurgu
+                                                 #   "tepki": "#FFFFFF" = kalbin rengi (oyun 2.2.6+; kalp kartın sağ altında, eski
+                                                 #   sürümler alanı atlar ve kalbi kendi renginde solda gösterir)
     "dugmeler": [{"metin": {"tr": "...", "en": "..."}, "baglanti": "https://...", "simge": "play", "stil": "ana"}],
                                                  #   en çok 3; "Detayları gör"ün yerine geçer, [] = düğmesiz. baglanti "detay" (ya da boş) =
                                                  #   haberler.html#<id>; https yalnız rebirthgame.tr, hanxgames.net, play.google.com, itch.io,
@@ -96,7 +98,7 @@ KAPAK_BOY = (1280, 720)
 TURLER = {"haber": "haberler", "guncelleme": "guncellemeler"}
 # kartın uzaktan görünümü (oyunun haber_paneli.gd'si ile aynı şema ve sınırlar)
 GORUNUM = ("tepki", "renk", "dugmeler", "sabitle", "vurgu", "duzen", "baslangic", "bitis")
-RENK_ANAHTAR = ("vurgu", "zemin", "kenar", "etiket", "baslik", "ozet")
+RENK_ANAHTAR = ("vurgu", "zemin", "kenar", "etiket", "baslik", "ozet", "tepki")   # tepki: kalbin rengi (oyun 2.2.6+)
 HEX = re.compile(r"#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?")
 ZAMAN = re.compile(r"(\d{4})-(\d{2})-(\d{2})( (\d{2}):(\d{2}))?")
 IZINLI = re.compile(r"https://([a-z0-9-]+\.)*(rebirthgame\.tr|hanxgames\.net|play\.google\.com|itch\.io|youtube\.com|youtu\.be)([/?#].*)?", re.I)

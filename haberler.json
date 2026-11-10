@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-10T09:47:30Z",
+ "guncelleme": "2026-11-10T10:05:33Z",
  "haberler": [
   {
    "id": "2026-11-10-ataturk-anma",
@@ -55,14 +55,15 @@
      "The HanX Games and ReBirth team"
     ]
    },
-   "tepki": "yok",
+   "tepki": "kalp",
    "renk": {
     "zemin": "#000000",
     "kenar": "#3A3A3A",
     "vurgu": "#FFFFFF",
     "etiket": "#FFFFFF",
     "baslik": "#FFFFFF",
-    "ozet": "#E6E6E6"
+    "ozet": "#E6E6E6",
+    "tepki": "#FFFFFF"
    },
    "dugmeler": [],
    "sabitle": true,
