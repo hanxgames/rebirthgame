@@ -1,77 +1,73 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-11T05:24:56Z",
+ "guncelleme": "2026-11-11T10:30:36Z",
  "haberler": [
   {
-   "id": "2026-11-10-ataturk-anma",
-   "tarih": "2026-11-10",
+   "id": "2026-11-11-senaryo-atolyesi-yakinda",
+   "tarih": "2026-11-11",
    "etiket": {
-    "tr": "Anma",
-    "en": "Remembrance",
-    "es": "Homenaje",
-    "pt_BR": "Homenagem",
-    "de": "Gedenken",
-    "fr": "Hommage",
-    "id": "Peringatan",
-    "ja": "追悼",
-    "ko": "추모",
-    "zh_CN": "纪念",
-    "zh_TW": "紀念"
+    "tr": "Yakında",
+    "en": "Coming soon",
+    "es": "Próximamente",
+    "pt_BR": "Em breve",
+    "de": "Demnächst",
+    "fr": "Bientôt",
+    "id": "Segera hadir",
+    "ja": "近日登場",
+    "ko": "출시 예정",
+    "zh_CN": "即将推出",
+    "zh_TW": "即將推出"
    },
    "baslik": {
-    "tr": "Mustafa Kemal Atatürk'ü saygıyla anıyoruz",
-    "en": "Remembering Mustafa Kemal Atatürk",
-    "es": "Recordamos a Mustafa Kemal Atatürk",
-    "pt_BR": "Lembramos Mustafa Kemal Atatürk",
-    "de": "Im Gedenken an Mustafa Kemal Atatürk",
-    "fr": "En mémoire de Mustafa Kemal Atatürk",
-    "id": "Mengenang Mustafa Kemal Atatürk",
-    "ja": "ムスタファ・ケマル・アタテュルクを追悼して",
-    "ko": "무스타파 케말 아타투르크를 기리며",
-    "zh_CN": "纪念土耳其国父阿塔图尔克",
-    "zh_TW": "紀念土耳其國父阿塔圖克"
+    "tr": "Yakında: Senaryo Atölyesi! Kuralları sen koy",
+    "en": "Coming soon: Scenario Workshop! You make the rules",
+    "es": "Muy pronto: Taller de escenarios, tus reglas",
+    "pt_BR": "Em breve: Oficina de Cenários! Você faz as regras",
+    "de": "Bald: die Szenario-Werkstatt! Deine Regeln",
+    "fr": "Bientôt : l'Atelier de scénarios, vos règles !",
+    "id": "Segera: Bengkel Skenario! Kamu buat aturannya",
+    "ja": "近日登場：シナリオ工房！ルールは君が決める",
+    "ko": "시나리오 공방 출시 예정! 규칙은 당신이",
+    "zh_CN": "即将推出：剧本工坊！规则由你来定",
+    "zh_TW": "即將推出：劇本工坊！規則由你來定"
    },
    "ozet": {
-    "tr": "Türkiye Cumhuriyeti'nin Kurucusu Gazi Mustafa Kemal Atatürk'ü aramızdan ayrılışının 88. yılında saygı, sevgi ve özlemle anıyoruz.",
-    "en": "On the 88th anniversary of his passing, we remember with deep respect Mustafa Kemal Atatürk, founder of the Republic of Türkiye.",
-    "es": "En el 88.º aniversario de su fallecimiento, recordamos con profundo respeto a Mustafa Kemal Atatürk, fundador de la República de Turquía.",
-    "pt_BR": "No 88º aniversário de sua morte, lembramos com profundo respeito Mustafa Kemal Atatürk, fundador da República da Turquia.",
-    "de": "Zu seinem 88. Todestag gedenken wir in tiefem Respekt Mustafa Kemal Atatürks, des Gründers der Republik Türkei.",
-    "fr": "En ce 88e anniversaire de sa disparition, nous rendons hommage avec un profond respect à Mustafa Kemal Atatürk, fondateur de la République de Turquie.",
-    "id": "Pada peringatan 88 tahun wafatnya, kami mengenang dengan penuh hormat Mustafa Kemal Atatürk, pendiri Republik Turki.",
-    "ja": "トルコ共和国の建国者ムスタファ・ケマル・アタテュルクの没後88年にあたり、深い敬意をもって追悼します。",
-    "ko": "무스타파 케말 아타투르크 서거 88주기를 맞아 깊은 경의를 표합니다.",
-    "zh_CN": "值土耳其共和国缔造者阿塔图尔克逝世88周年之际，我们怀着深深的敬意纪念他。",
-    "zh_TW": "值土耳其共和國締造者阿塔圖克逝世88週年之際，我們懷著深深的敬意紀念他。"
+    "tr": "Sandbox modu geliyor: kendi senaryonu kur; bölgeleri, isyancıları, askerleri ve kazanma koşulunu sen belirle. En iyileri oyunda herkesle buluşacak!",
+    "en": "A sandbox mode is coming: build your own scenario and set the regions, insurgents, troops and win condition. The best will be featured in the game!",
+    "es": "Llega un modo sandbox: crea tu escenario con regiones, insurgentes, tropas y condición de victoria. ¡Los mejores llegarán al juego!",
+    "pt_BR": "Vem aí um modo sandbox: crie seu próprio cenário com regiões, insurgentes e tropas. Os melhores chegarão ao jogo!",
+    "de": "Ein Sandbox-Modus kommt: Baue dein eigenes Szenario mit Regionen, Rebellen und Truppen. Die besten kommen ins Spiel!",
+    "fr": "Un mode bac à sable arrive : créez votre scénario, ses régions, insurgés et troupes. Les meilleurs seront en jeu !",
+    "id": "Mode sandbox segera hadir: buat skenario sendiri, atur wilayah dan pasukan. Skenario terbaik akan tampil di game!",
+    "ja": "サンドボックスモードが登場：地域の支配、反乱軍、部隊、勝利条件まで自分で決めてシナリオを作ろう。選ばれた作品はゲーム内で公開！",
+    "ko": "샌드박스 모드 출시 예정: 지역, 반군, 병력, 승리 조건을 직접 정해 나만의 시나리오를 만드세요. 우수작은 게임에 공개됩니다!",
+    "zh_CN": "沙盒模式即将到来：自己设定地区归属、叛军、部队和胜利条件，打造你的剧本。精选作品将在游戏中向所有玩家推出！",
+    "zh_TW": "沙盒模式即將到來：自己設定地區歸屬、叛軍、部隊和勝利條件，打造你的劇本。優秀作品將在遊戲中向所有玩家推出！"
    },
    "metin": {
     "tr": [
-     "\"Benim naçiz vücudum elbet bir gün toprak olacaktır, fakat Türkiye Cumhuriyeti ilelebet payidar kalacaktır.\"",
-     "HanX Games ve ReBirth ekibi"
+     "ReBirth'e yakında yepyeni bir mod geliyor: Senaryo Atölyesi! Harekât için bir sandbox modu; bu kez kuralları sen koyuyorsun.",
+     "• Kendi senaryonu kur: hangi bölgede kim hâkim, nerede kaç isyancı var, misyonun askerleri nerede duruyor, bütçe ne kadar, hangi girişimler açık ve oyun nasıl kazanılır; hepsine sen karar ver.",
+     "• İstersen misyonu yönet, istersen isyanı.",
+     "• Başkentte kuşatılmış tek bir kale mi? Yoksa bütün ülke isyanda, elinde tek şehir mi kaldı? Hayal et, kur, oyna.",
+     "• En iyi senaryolar ekibimizce seçilecek ve yazarının adıyla bütün oyunculara etkinlik olarak sunulacak. Oyunda yayınlanan bir sonraki senaryo seninki olabilir!",
+     "Senaryo Atölyesi bütün oyunculara açık olacak. Çok yakında; senaryo fikirlerini şimdiden düşünmeye başla!"
     ],
     "en": [
-     "\"My humble body will one day turn to dust, but the Republic of Türkiye will stand forever.\"",
-     "The HanX Games and ReBirth team"
+     "A brand-new mode is coming to ReBirth soon: the Scenario Workshop! It's a sandbox mode for the campaign, and this time you make the rules.",
+     "• Build your own scenario: decide who controls each region, where the insurgents are and how many, where the Mission's troops stand, the budget, which initiatives are open and how the game is won.",
+     "• Lead the Mission or lead the insurgency: your choice.",
+     "• A lone fortress under siege in the capital? Or the whole country in revolt, with a single city left in your hands? Imagine it, build it, play it.",
+     "• Our team will pick the best scenarios and bring them to every player as events, with the author's name on them. The next scenario published in the game could be yours!",
+     "The Scenario Workshop will be open to all players. Coming soon, so start thinking about your scenario ideas now!"
     ]
    },
    "tepki": "kalp",
-   "renk": {
-    "zemin": "#000000",
-    "kenar": "#3A3A3A",
-    "vurgu": "#FFFFFF",
-    "etiket": "#FFFFFF",
-    "baslik": "#FFFFFF",
-    "ozet": "#E6E6E6",
-    "tepki": "#FFFFFF"
-   },
-   "dugmeler": [],
    "sabitle": true,
-   "duzen": "genis",
-   "baslangic": "2026-11-09 21:00",
-   "bitis": "2026-11-10 21:00",
-   "gorsel": "assets/img/haber/2026-11-10-ataturk-anma-98a53e.jpg",
-   "eklendi": "2026-11-10T09:47:30.726937Z"
+   "vurgu": "parilti",
+   "gorsel": "assets/img/haber/2026-11-11-senaryo-atolyesi-yakinda-83220d.jpg",
+   "eklendi": "2026-11-11T10:27:58.197079Z"
   },
   {
    "id": "2026-11-03-haftalik-etkinlik",
