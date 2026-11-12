@@ -276,7 +276,12 @@
         govde.appendChild(ya);
       }
       if (k.anket && k.anket.secenekler) govde.appendChild(anketKutusu(k.anket));
-      if (window.RBPaylas) govde.appendChild(window.RBPaylas.dugme(k, dil()));   // hikâye/gönderi görseli + bağlantı (js/paylas.js)
+      if (window.RBPaylas) {   // hikâye/gönderi görseli + bağlantı ve yanında "Metni kopyala" (js/paylas.js)
+        var eylem = el("div", "news-acts");
+        eylem.appendChild(window.RBPaylas.dugme(k, dil()));
+        if (window.RBPaylas.kopya) eylem.appendChild(window.RBPaylas.kopya(k, dil()));
+        govde.appendChild(eylem);
+      }
       if (k.form && window.RBBasvuru) {   // başvuru düğmesi (js/basvuru.js → Google Formlar)
         var fk = el("div", "apl");
         govde.appendChild(fk);

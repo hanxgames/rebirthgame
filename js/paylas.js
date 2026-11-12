@@ -3,7 +3,7 @@
    - Telefonda "Paylaş" sistem paylaşım menüsünü dosyayla açar: Instagram, TikTok, YouTube, WhatsApp… hikâye ya da gönderi olarak.
      Dosya paylaşımı olmayan yerde (masaüstü) görsel indirilir.
    - Bağlantı: paylas/<dil>/<kimlik>.html — Open Graph önizlemeli sayfa, haberler.html#<kimlik>'e yönlendirir (tools/haber_ekle.py üretir).
-   window.RBPaylas.dugme(kayit, dil) kart için düğme döndürür. */
+   window.RBPaylas.dugme(kayit, dil) kart için düğme döndürür; .kopya(kayit, dil) yanındaki "Metni kopyala" simgesi. */
 (function () {
   "use strict";
   var SITE = "https://rebirthgame.tr/";
@@ -14,6 +14,7 @@
       ipucuMobil: "Paylaş'a dokun; Instagram, TikTok, YouTube ya da başka bir uygulamayı seç. Görsel hikâye ve gönderi için hazır.",
       ipucuMasa: "Görseli indir; Instagram, TikTok ya da YouTube'da hikâye veya gönderi olarak paylaş. Bağlantıyı da yanına ekleyebilirsin.",
       baglanti: "Bağlantıyla paylaş", diger: "Diğer uygulamalar", tamami: "Haberin tamamı", ucretsiz: "Google Play'de ücretsiz",
+      metin: "Metni kopyala", metinTamam: "Kopyalandı", metinHata: "Kopyalanamadı",
       dosya: { hikaye: "hikaye", gonderi: "gonderi" }
     },
     en: {
@@ -22,6 +23,7 @@
       ipucuMobil: "Tap Share and pick Instagram, TikTok, YouTube or any other app. The image is ready for stories and posts.",
       ipucuMasa: "Download the image and share it as a story or post on Instagram, TikTok or YouTube. You can add the link too.",
       baglanti: "Share the link", diger: "More apps", tamami: "Read more at", ucretsiz: "Free on Google Play",
+      metin: "Copy text", metinTamam: "Copied", metinHata: "Couldn't copy",
       dosya: { hikaye: "story", gonderi: "post" }
     },
     es: {
@@ -30,6 +32,7 @@
       ipucuMobil: "Toca Compartir y elige Instagram, TikTok, YouTube u otra app. La imagen está lista para historias y publicaciones.",
       ipucuMasa: "Descarga la imagen y compártela como historia o publicación en Instagram, TikTok o YouTube. También puedes añadir el enlace.",
       baglanti: "Compartir enlace", diger: "Más apps", tamami: "Más en", ucretsiz: "Gratis en Google Play",
+      metin: "Copiar texto", metinTamam: "Copiado", metinHata: "No se pudo copiar",
       dosya: { hikaye: "historia", gonderi: "publicacion" }
     },
     pt_BR: {
@@ -38,6 +41,7 @@
       ipucuMobil: "Toque em Compartilhar e escolha Instagram, TikTok, YouTube ou outro app. A imagem está pronta para stories e posts.",
       ipucuMasa: "Baixe a imagem e compartilhe como story ou post no Instagram, TikTok ou YouTube. Você também pode adicionar o link.",
       baglanti: "Compartilhar link", diger: "Mais apps", tamami: "Leia mais em", ucretsiz: "Grátis no Google Play",
+      metin: "Copiar texto", metinTamam: "Copiado", metinHata: "Não foi possível copiar",
       dosya: { hikaye: "story", gonderi: "post" }
     },
     de: {
@@ -46,6 +50,7 @@
       ipucuMobil: "Tippe auf Teilen und wähle Instagram, TikTok, YouTube oder eine andere App. Das Bild passt für Storys und Posts.",
       ipucuMasa: "Lade das Bild herunter und teile es als Story oder Post auf Instagram, TikTok oder YouTube. Den Link kannst du dazuschreiben.",
       baglanti: "Link teilen", diger: "Weitere Apps", tamami: "Mehr unter", ucretsiz: "Kostenlos bei Google Play",
+      metin: "Text kopieren", metinTamam: "Kopiert", metinHata: "Kopieren fehlgeschlagen",
       dosya: { hikaye: "story", gonderi: "post" }
     },
     fr: {
@@ -54,6 +59,7 @@
       ipucuMobil: "Touchez Partager et choisissez Instagram, TikTok, YouTube ou une autre app. L'image est prête pour les stories et les publications.",
       ipucuMasa: "Téléchargez l'image et partagez-la en story ou en publication sur Instagram, TikTok ou YouTube. Vous pouvez aussi ajouter le lien.",
       baglanti: "Partager le lien", diger: "Autres apps", tamami: "À lire sur", ucretsiz: "Gratuit sur Google Play",
+      metin: "Copier le texte", metinTamam: "Copié", metinHata: "Copie impossible",
       dosya: { hikaye: "story", gonderi: "publication" }
     },
     id: {
@@ -62,6 +68,7 @@
       ipucuMobil: "Ketuk Bagikan lalu pilih Instagram, TikTok, YouTube, atau aplikasi lain. Gambar siap untuk story dan postingan.",
       ipucuMasa: "Unduh gambarnya lalu bagikan sebagai story atau postingan di Instagram, TikTok, atau YouTube. Kamu juga bisa menambahkan tautannya.",
       baglanti: "Bagikan tautan", diger: "Aplikasi lain", tamami: "Selengkapnya di", ucretsiz: "Gratis di Google Play",
+      metin: "Salin teks", metinTamam: "Disalin", metinHata: "Gagal menyalin",
       dosya: { hikaye: "story", gonderi: "postingan" }
     },
     ja: {
@@ -70,6 +77,7 @@
       ipucuMobil: "「シェア」をタップして、Instagram、TikTok、YouTubeなどのアプリを選んでください。画像はストーリーにも投稿にも使えます。",
       ipucuMasa: "画像をダウンロードして、Instagram、TikTok、YouTubeでストーリーや投稿としてシェアしましょう。リンクも添えられます。",
       baglanti: "リンクでシェア", diger: "その他のアプリ", tamami: "続きはこちら", ucretsiz: "Google Playで無料配信中",
+      metin: "テキストをコピー", metinTamam: "コピーしました", metinHata: "コピーできませんでした",
       dosya: { hikaye: "story", gonderi: "post" }
     },
     ko: {
@@ -78,6 +86,7 @@
       ipucuMobil: "공유를 누르고 Instagram, TikTok, YouTube 등 원하는 앱을 선택하세요. 이미지는 스토리와 게시물에 맞게 준비되어 있습니다.",
       ipucuMasa: "이미지를 다운로드해 Instagram, TikTok, YouTube에 스토리나 게시물로 공유하세요. 링크도 함께 넣을 수 있습니다.",
       baglanti: "링크로 공유", diger: "다른 앱", tamami: "자세히 보기", ucretsiz: "Google Play에서 무료",
+      metin: "텍스트 복사", metinTamam: "복사됨", metinHata: "복사하지 못했습니다",
       dosya: { hikaye: "story", gonderi: "post" }
     },
     zh_CN: {
@@ -86,6 +95,7 @@
       ipucuMobil: "点击“分享”，选择 Instagram、TikTok、YouTube 或其他应用。图片已适配故事和帖子。",
       ipucuMasa: "下载图片，在 Instagram、TikTok 或 YouTube 上以故事或帖子形式分享，也可以附上链接。",
       baglanti: "分享链接", diger: "更多应用", tamami: "完整内容", ucretsiz: "Google Play 免费下载",
+      metin: "复制文字", metinTamam: "已复制", metinHata: "复制失败",
       dosya: { hikaye: "story", gonderi: "post" }
     },
     zh_TW: {
@@ -94,11 +104,14 @@
       ipucuMobil: "點選「分享」，選擇 Instagram、TikTok、YouTube 或其他 App。圖片已適用於限時動態與貼文。",
       ipucuMasa: "下載圖片，在 Instagram、TikTok 或 YouTube 以限時動態或貼文分享，也可以附上連結。",
       baglanti: "分享連結", diger: "更多 App", tamami: "完整內容", ucretsiz: "Google Play 免費下載",
+      metin: "複製文字", metinTamam: "已複製", metinHata: "複製失敗",
       dosya: { hikaye: "story", gonderi: "post" }
     }
   };
   var BOY = { hikaye: [1080, 1920], gonderi: [1080, 1350] };
   var IKON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7L16 7.2c.5.5 1.2.8 2 .8 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 .2 0 .5.1.7L8 9.8C7.5 9.3 6.8 9 6 9c-1.7 0-3 1.3-3 3s1.3 3 3 3c.8 0 1.5-.3 2-.8l7.1 4.2c-.1.2-.1.4-.1.6 0 1.6 1.3 2.9 2.9 2.9s2.9-1.3 2.9-2.9-1.2-2.9-2.8-2.9z"/></svg>';
+  var KOPYA = '<svg class="ic-kopya" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>'
+    + '<svg class="ic-tamam" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
 
   function y(dil) { return Y[dil] || Y.en; }
   function metin(d, dil) { if (!d) return ""; return d[dil] || d.en || d.tr || ""; }
@@ -386,6 +399,37 @@
     sec();
   }
 
+  // "Metni kopyala": haberin başlığı, özeti ve metni sayfadaki düzende düz yazı olarak ("• " maddeler alt alta, bloklar arasında boş satır)
+  function duzMetin(k, dil) {
+    var bloklar = [metin(k.baslik, dil), metin(k.ozet, dil)];
+    var son = null;
+    ((k.metin && (k.metin[dil] || k.metin.en || k.metin.tr)) || []).forEach(function (s) {
+      var madde = /^•\s*/.test(s);
+      var satir = madde ? "• " + s.replace(/^•\s*/, "") : s;
+      if (madde && son && son.madde) son.s += "\n" + satir;
+      else { son = { s: satir, madde: madde }; bloklar.push(son); }
+    });
+    return bloklar.map(function (b) { return typeof b === "string" ? b : b.s; }).filter(function (b) { return String(b).trim(); }).join("\n\n");
+  }
+  function eskiKopya(s) {   // Clipboard API yoksa (eski tarayıcı, güvensiz bağlam): gizli metin alanı + execCommand
+    return new Promise(function (ok, hata) {
+      var ta = document.createElement("textarea");
+      ta.value = s; ta.setAttribute("readonly", "");
+      ta.style.cssText = "position:fixed;top:0;left:-9999px;opacity:0";
+      document.body.appendChild(ta);
+      ta.select(); ta.setSelectionRange(0, s.length);
+      var b = false;
+      try { b = document.execCommand("copy"); } catch (e) { b = false; }
+      ta.remove();
+      if (b) ok(); else hata();
+    });
+  }
+  function panoya(s) {
+    if (navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext !== false)
+      return navigator.clipboard.writeText(s).catch(function () { return eskiKopya(s); });
+    return eskiKopya(s);
+  }
+
   window.RBPaylas = {
     dugme: function (k, dil) {
       var d = el("button", "news-share");
@@ -394,6 +438,24 @@
       d.addEventListener("click", function () { ac(k, dil, d); });
       return d;
     },
+    kopya: function (k, dil) {   // paylaş düğmesinin yanındaki kopyala simgesi
+      var t = y(dil), sure = 0;
+      var d = el("button", "news-copy");
+      d.type = "button"; d.innerHTML = KOPYA; d.title = t.metin; d.setAttribute("aria-label", t.metin);
+      var yazi = el("span", "news-copy-t"); yazi.setAttribute("aria-live", "polite");
+      d.appendChild(yazi);
+      function goster(durum, metni) {
+        d.classList.remove("is-ok", "is-err"); d.classList.add(durum);
+        yazi.textContent = metni;
+        clearTimeout(sure);
+        sure = setTimeout(function () { d.classList.remove("is-ok", "is-err"); yazi.textContent = ""; }, 2200);
+      }
+      d.addEventListener("click", function () {
+        panoya(duzMetin(k, dil)).then(function () { goster("is-ok", t.metinTamam); }, function () { goster("is-err", t.metinHata); });
+      });
+      return d;
+    },
+    metin: duzMetin,
     uret: uret
   };
 })();

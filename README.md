@@ -44,5 +44,7 @@ görseli tarayıcıda tuvalle çizilir; telefonda sistem paylaşım menüsüyle 
 masaüstünde indirilerek paylaşılır; bağlantı kopyalama ve WhatsApp/X/Facebook/Telegram/Reddit bağlantıları. Bağlantı adresi
 `paylas/<tr|en>/<kimlik>.html`: Open Graph önizlemeli, `noindex` sayfa; tarayıcıyı haberler.html#<kimlik>'e yönlendirir.
 `haber_ekle.py` her yazımda bu sayfaları yeniler, akıştan düşenlerinkini siler.
+Yanındaki kopyala simgesi ("Metni kopyala", `RBPaylas.kopya`) başlığı, özeti ve metni sayfadaki düzende düz yazı olarak panoya
+kopyalar (bloklar arasında boş satır, "• " maddeler alt alta; Reddit vb. gönderiye yapıştırmak için).
 
 Oyundaki tüm yer, kurum ve kişi adları kurgusaldır. © 2026 HanX Games.

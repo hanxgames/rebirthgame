@@ -138,6 +138,18 @@ a:hover { color: var(--accent-h); }
   letter-spacing: .1em; font-size: 13px; transition: border-color .2s, color .2s, background .2s; }
 .news-share:hover, .news-share:focus-visible { border-color: var(--accent); color: var(--accent-h); background: rgba(241,173,42,.08); }
 .news-share svg, .pay-main svg { width: 16px; height: 16px; fill: currentColor; flex: none; }
+.news-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; }
+.news-acts .news-share { margin-top: 0; }
+.news-copy { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 38px; height: 38px; padding: 0 11px;
+  border-radius: 999px; cursor: pointer; background: transparent; border: 1px solid var(--line2); color: var(--text); font-family: var(--f-caps);
+  font-weight: 700; text-transform: uppercase; letter-spacing: .1em; font-size: 13px; transition: border-color .2s, color .2s, background .2s; }
+.news-copy:hover, .news-copy:focus-visible { border-color: var(--accent); color: var(--accent-h); background: rgba(241,173,42,.08); }
+.news-copy svg { width: 16px; height: 16px; fill: currentColor; flex: none; }
+.news-copy .ic-tamam, .news-copy.is-ok .ic-kopya { display: none; }
+.news-copy.is-ok .ic-tamam { display: block; }
+.news-copy.is-ok { border-color: var(--accent); color: var(--accent-h); }
+.news-copy.is-err { border-color: #c0392b; color: #e8806f; }
+.news-copy-t:empty { display: none; }
 .pay-acik, .pay-acik body { overflow: hidden; }
 .pay-ov { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 16px; background: rgba(10,9,8,.78);
   -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); animation: payIn .2s ease-out; }
