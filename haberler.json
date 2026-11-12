@@ -1,73 +1,81 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-11T10:30:36Z",
+ "guncelleme": "2026-11-12T18:30:14Z",
  "haberler": [
   {
-   "id": "2026-11-11-senaryo-atolyesi-yakinda",
-   "tarih": "2026-11-11",
+   "id": "2026-11-12-sandbox-yayinda",
+   "tarih": "2026-11-12",
    "etiket": {
-    "tr": "Yakında",
-    "en": "Coming soon",
-    "es": "Próximamente",
-    "pt_BR": "Em breve",
-    "de": "Demnächst",
-    "fr": "Bientôt",
-    "id": "Segera hadir",
-    "ja": "近日登場",
-    "ko": "출시 예정",
-    "zh_CN": "即将推出",
-    "zh_TW": "即將推出"
+    "tr": "Yeni mod",
+    "en": "New mode",
+    "es": "Nuevo modo",
+    "pt_BR": "Novo modo",
+    "de": "Neuer Modus",
+    "fr": "Nouveau mode",
+    "id": "Mode baru",
+    "ja": "新モード",
+    "ko": "새 모드",
+    "zh_CN": "新模式",
+    "zh_TW": "新模式",
+    "ru": "Новый режим"
    },
+   "surum": "2.2.7",
    "baslik": {
-    "tr": "Yakında: Senaryo Atölyesi! Kuralları sen koy",
-    "en": "Coming soon: Scenario Workshop! You make the rules",
-    "es": "Muy pronto: Taller de escenarios, tus reglas",
-    "pt_BR": "Em breve: Oficina de Cenários! Você faz as regras",
-    "de": "Bald: die Szenario-Werkstatt! Deine Regeln",
-    "fr": "Bientôt : l'Atelier de scénarios, vos règles !",
-    "id": "Segera: Bengkel Skenario! Kamu buat aturannya",
-    "ja": "近日登場：シナリオ工房！ルールは君が決める",
-    "ko": "시나리오 공방 출시 예정! 규칙은 당신이",
-    "zh_CN": "即将推出：剧本工坊！规则由你来定",
-    "zh_TW": "即將推出：劇本工坊！規則由你來定"
+    "tr": "Sandbox (Beta) geldi: senaryonu kur, paylaş!",
+    "en": "Sandbox (Beta) is here: build and share scenarios!",
+    "es": "Llega Sandbox (Beta): ¡cree y comparta escenarios!",
+    "pt_BR": "Chegou o Sandbox (Beta): crie e compartilhe!",
+    "de": "Sandbox (Beta) ist da: Szenarien bauen und teilen!",
+    "fr": "Le Bac à sable (bêta) est là : créez, partagez !",
+    "id": "Sandbox (Beta) hadir: buat dan bagikan skenario!",
+    "ja": "サンドボックス（ベータ）登場：シナリオを作って共有！",
+    "ko": "샌드박스(베타) 출시! 시나리오를 공유",
+    "zh_CN": "沙盒（测试版）上线：打造并分享你的剧本！",
+    "zh_TW": "沙盒（測試版）上線：打造並分享你的劇本！",
+    "ru": "«Песочница» (бета) вышла: создайте свой сценарий!"
    },
    "ozet": {
-    "tr": "Sandbox modu geliyor: kendi senaryonu kur; bölgeleri, isyancıları, askerleri ve kazanma koşulunu sen belirle. En iyileri oyunda herkesle buluşacak!",
-    "en": "A sandbox mode is coming: build your own scenario and set the regions, insurgents, troops and win condition. The best will be featured in the game!",
-    "es": "Llega un modo sandbox: crea tu escenario con regiones, insurgentes, tropas y condición de victoria. ¡Los mejores llegarán al juego!",
-    "pt_BR": "Vem aí um modo sandbox: crie seu próprio cenário com regiões, insurgentes e tropas. Os melhores chegarão ao jogo!",
-    "de": "Ein Sandbox-Modus kommt: Baue dein eigenes Szenario mit Regionen, Rebellen und Truppen. Die besten kommen ins Spiel!",
-    "fr": "Un mode bac à sable arrive : créez votre scénario, ses régions, insurgés et troupes. Les meilleurs seront en jeu !",
-    "id": "Mode sandbox segera hadir: buat skenario sendiri, atur wilayah dan pasukan. Skenario terbaik akan tampil di game!",
-    "ja": "サンドボックスモードが登場：地域の支配、反乱軍、部隊、勝利条件まで自分で決めてシナリオを作ろう。選ばれた作品はゲーム内で公開！",
-    "ko": "샌드박스 모드 출시 예정: 지역, 반군, 병력, 승리 조건을 직접 정해 나만의 시나리오를 만드세요. 우수작은 게임에 공개됩니다!",
-    "zh_CN": "沙盒模式即将到来：自己设定地区归属、叛军、部队和胜利条件，打造你的剧本。精选作品将在游戏中向所有玩家推出！",
-    "zh_TW": "沙盒模式即將到來：自己設定地區歸屬、叛軍、部隊和勝利條件，打造你的劇本。優秀作品將在遊戲中向所有玩家推出！"
+    "tr": "Sandbox'ta haritayı, birlikleri, isyancıları ve kazanma koşulunu sen belirle; oyna ve kodla arkadaşlarınla paylaş. En iyileri etkinlik olacak!",
+    "en": "In Sandbox, set the map, units, insurgents and victory condition yourself, then play it and share it with friends via a code. The best become events!",
+    "es": "Cree su escenario en Sandbox, juéguelo y compártalo con sus amigos mediante un código. ¡Los mejores serán eventos!",
+    "pt_BR": "Crie seu cenário no Sandbox, jogue e compartilhe com seus amigos por um código. Os melhores virarão eventos!",
+    "de": "Bauen Sie Ihr eigenes Szenario, spielen und teilen Sie es per Code mit Freunden. Die besten werden zu Events!",
+    "fr": "Créez votre scénario, jouez-le et partagez-le par code avec vos amis. Les meilleurs deviendront des événements !",
+    "id": "Buat skenario Anda sendiri, mainkan, lalu bagikan ke teman lewat kode. Skenario terbaik akan jadi event!",
+    "ja": "メインメニューのサンドボックスで、マップ、部隊、反乱軍、勝利条件を自由に設定。プレイしてコードで友達と共有しよう。優れたシナリオはイベントに！",
+    "ko": "메인 메뉴의 샌드박스에서 지도, 부대, 반군, 승리 조건을 직접 정하고 플레이한 뒤 코드로 친구와 공유하십시오. 우수작은 이벤트가 됩니다!",
+    "zh_CN": "在主菜单的沙盒中自行设定地图、部队、叛军和胜利条件，游玩后通过代码与好友分享。最佳剧本将成为游戏活动！",
+    "zh_TW": "在主選單的沙盒中自行設定地圖、部隊、叛軍和勝利條件，遊玩後透過代碼與好友分享。優秀劇本將成為遊戲活動！",
+    "ru": "В «Песочнице» сами задайте карту, войска, повстанцев и условие победы, играйте и делитесь с друзьями по коду. Лучшие станут событиями!"
    },
    "metin": {
     "tr": [
-     "ReBirth'e yakında yepyeni bir mod geliyor: Senaryo Atölyesi! Harekât için bir sandbox modu; bu kez kuralları sen koyuyorsun.",
-     "• Kendi senaryonu kur: hangi bölgede kim hâkim, nerede kaç isyancı var, misyonun askerleri nerede duruyor, bütçe ne kadar, hangi girişimler açık ve oyun nasıl kazanılır; hepsine sen karar ver.",
-     "• İstersen misyonu yönet, istersen isyanı.",
-     "• Başkentte kuşatılmış tek bir kale mi? Yoksa bütün ülke isyanda, elinde tek şehir mi kaldı? Hayal et, kur, oyna.",
-     "• En iyi senaryolar ekibimizce seçilecek ve yazarının adıyla bütün oyunculara etkinlik olarak sunulacak. Oyunda yayınlanan bir sonraki senaryo seninki olabilir!",
-     "Senaryo Atölyesi bütün oyunculara açık olacak. Çok yakında; senaryo fikirlerini şimdiden düşünmeye başla!"
+     "Sandbox (Beta) yayında! Ana menüdeki yeni düğmeyle Senaryo Atölyesi'ne gir; bu kez kuralları sen koyuyorsun.",
+     "• Kendi senaryonu kur: hangi ili kimin tuttuğunu, birliklerin ve isyancı hücrelerinin yerini, kuralları ve kazanma koşulunu sen belirle. Hazır şablonlarla hızlıca da başlayabilirsin.",
+     "• Dört adımlı düzenleyici: Harita, Kurallar, Hedefler, Ad ve paylaş. İstediğin an Dene'ye dokun, senaryonu hemen oyna.",
+     "• Arkadaşlarınla paylaş: Kodu kopyala, arkadaşına gönder; o da kodu yapıştırıp senaryonu kendi oyununda oynasın. Onların senaryolarını da aynı yolla açabilirsin.",
+     "• HanX'e gönder: gurur duyduğun senaryoyu bize yolla. Ekibimizin seçtiği senaryolar, istersen adınla, bütün oyunculara etkinlik olarak sunulacak.",
+     "Sandbox şimdilik Beta; görüşlerin ve hata bildirimlerin bizim için çok değerli. Haydi, ilk senaryonu kur!"
     ],
     "en": [
-     "A brand-new mode is coming to ReBirth soon: the Scenario Workshop! It's a sandbox mode for the campaign, and this time you make the rules.",
-     "• Build your own scenario: decide who controls each region, where the insurgents are and how many, where the Mission's troops stand, the budget, which initiatives are open and how the game is won.",
-     "• Lead the Mission or lead the insurgency: your choice.",
-     "• A lone fortress under siege in the capital? Or the whole country in revolt, with a single city left in your hands? Imagine it, build it, play it.",
-     "• Our team will pick the best scenarios and bring them to every player as events, with the author's name on them. The next scenario published in the game could be yours!",
-     "The Scenario Workshop will be open to all players. Coming soon, so start thinking about your scenario ideas now!"
+     "Sandbox (Beta) is live! Tap the new button on the main menu to enter the Scenario Workshop; this time, you make the rules.",
+     "• Build your own scenario: decide who holds each district, where units and insurgent cells stand, the rules and the victory condition. Ready-made templates get you started fast.",
+     "• A four-step editor: Map, Rules, Objectives, Name & share. Tap Test at any moment to play your scenario right away.",
+     "• Share it with friends: copy the code and send it; your friend pastes it and plays your scenario in their own game. You can open their scenarios the same way.",
+     "• Send to HanX: send us the scenario you're proud of. Scenarios picked by our team will be offered to every player as events, with your name on them if you wish.",
+     "Sandbox is in Beta for now, so your feedback and bug reports mean a lot to us. Go build your first scenario!"
     ]
    },
+   "platform": [
+    "android",
+    "ios>=2.2.7"
+   ],
+   "gorsel": "assets/img/haber/2026-11-12-sandbox-yayinda-d7ef92.jpg",
+   "eklendi": "2026-11-12T18:30:09.178893Z",
    "tepki": "kalp",
    "sabitle": true,
-   "vurgu": "parilti",
-   "gorsel": "assets/img/haber/2026-11-11-senaryo-atolyesi-yakinda-83220d.jpg",
-   "eklendi": "2026-11-11T10:27:58.197079Z"
+   "vurgu": "parilti"
   },
   {
    "id": "2026-11-03-haftalik-etkinlik",
@@ -328,6 +336,77 @@
   }
  ],
  "guncellemeler": [
+  {
+   "id": "2026-11-12-surum-2-2-7",
+   "tarih": "2026-11-12",
+   "etiket": {
+    "tr": "Güncelleme",
+    "en": "Update",
+    "es": "Actualización",
+    "pt_BR": "Atualização",
+    "de": "Update",
+    "fr": "Mise à jour",
+    "id": "Pembaruan",
+    "ja": "アップデート",
+    "ko": "업데이트",
+    "zh_CN": "更新",
+    "zh_TW": "更新",
+    "ru": "Обновление"
+   },
+   "surum": "2.2.7",
+   "baslik": {
+    "tr": "Sürüm 2.2.7: Sandbox (Beta) ve Rusça",
+    "en": "Version 2.2.7: Sandbox (Beta) and Russian",
+    "es": "Versión 2.2.7: Sandbox (Beta) y ruso",
+    "pt_BR": "Versão 2.2.7: Sandbox (Beta) e russo",
+    "de": "Version 2.2.7: Sandbox (Beta) und Russisch",
+    "fr": "Version 2.2.7 : Bac à sable (bêta) et russe",
+    "id": "Versi 2.2.7: Sandbox (Beta) dan bahasa Rusia",
+    "ja": "バージョン2.2.7：サンドボックス（ベータ）とロシア語",
+    "ko": "버전 2.2.7: 샌드박스(베타)와 러시아어",
+    "zh_CN": "2.2.7版：沙盒（测试版）与新语言",
+    "zh_TW": "2.2.7版：沙盒（測試版）與新語言",
+    "ru": "Версия 2.2.7: «Песочница» (бета) и русский язык"
+   },
+   "ozet": {
+    "tr": "Ana menüde yeni Sandbox (Beta): senaryonu kur, oyna, kodla paylaş, HanX'e gönder. Oyun artık Rusça da; güvenlik iyileştirmeleri ve hata düzeltmeleri.",
+    "en": "New on the main menu: Sandbox (Beta). Build, play and share your own scenarios. Now in Russian too, plus security improvements and bug fixes.",
+    "es": "Nuevo Sandbox (Beta): cree, juegue y comparta sus escenarios. Además, idioma ruso, mejoras de seguridad y corrección de errores.",
+    "pt_BR": "Novo Sandbox (Beta): crie, jogue e compartilhe seus cenários. E mais: idioma russo, melhorias de segurança e correções de bugs.",
+    "de": "Neu: Sandbox (Beta) – Szenarien bauen, spielen und teilen. Dazu Russisch als Sprache, mehr Sicherheit und Fehlerbehebungen.",
+    "fr": "Nouveau Bac à sable (bêta) : créez, jouez et partagez vos scénarios. Et aussi : le russe, plus de sécurité et des corrections.",
+    "id": "Sandbox (Beta) baru: buat, mainkan, dan bagikan skenario Anda. Plus bahasa Rusia, peningkatan keamanan, dan perbaikan bug.",
+    "ja": "メインメニューに新しいサンドボックス（ベータ）：シナリオを作り、遊び、共有しよう。ロシア語に対応し、セキュリティ改善とバグ修正も。",
+    "ko": "메인 메뉴에 샌드박스(베타) 추가: 시나리오를 만들고 플레이하고 공유하십시오. 러시아어 지원, 보안 개선 및 버그 수정도 포함됩니다.",
+    "zh_CN": "主菜单新增沙盒（测试版）：打造、游玩并分享你的剧本。新增一种界面语言，并带来安全性改进和错误修复。",
+    "zh_TW": "主選單新增沙盒（測試版）：打造、遊玩並分享你的劇本。新增一種介面語言，並帶來安全性改進與錯誤修正。",
+    "ru": "Новое в главном меню: «Песочница» (бета) — создавайте, играйте и делитесь сценариями. Русский язык, улучшения безопасности и исправления."
+   },
+   "metin": {
+    "tr": [
+     "2.2.7 Google Play'de yayında! Bu sürüm ana menüye Sandbox'ı (Beta) getiriyor ve oyuna on ikinci dilini ekliyor.",
+     "• Sandbox (Beta): ana menüde Özel oyun'un altındaki yeni düğme Senaryo Atölyesi'ni açar. Senaryolarım listesi, hazır şablonlar ve dört adımlı düzenleyici (Harita, Kurallar, Hedefler, Ad ve paylaş): illeri, birlikleri, isyancı hücrelerini, kuralları ve kazanma koşulunu sen belirlersin. Oyunda hedef kartı ilerlemeni gösterir, sonuç ekranı senaryonun nasıl bittiğini anlatır.",
+     "• Paylaşım kodu: senaryonu kod olarak kopyala; arkadaşın yapıştırıp kendi oyununda oynasın.",
+     "• HanX'e gönder: senaryonu bize yolla; ekibimizin seçtiği senaryolar bütün oyunculara etkinlik olarak sunulur. Gönderimlerin nasıl işlendiği gizlilik politikamızda.",
+     "• Yeni dil: Rusça. Oyunun bütün metinleri Rusçaya çevrildi; cihazın dili Rusçaysa oyun Rusça açılır, Ayarlar → Dil'den de seçebilirsin.",
+     "• Güvenlik iyileştirmeleri (uygulama içi satın alımlar artık imzasıyla doğrulanıyor) ve hata düzeltmeleri."
+    ],
+    "en": [
+     "2.2.7 is out now on Google Play! This update brings Sandbox (Beta) to the main menu and adds the game's twelfth language.",
+     "• Sandbox (Beta): the new button under Special modes on the main menu opens the Scenario Workshop. My Scenarios, ready-made templates and a four-step editor (Map, Rules, Objectives, Name & share): you decide the districts, units, insurgent cells, rules and victory condition. In play, an objective card tracks your progress and a results screen shows how your scenario ended.",
+     "• Share codes: copy your scenario as a code; your friend pastes it and plays it in their own game.",
+     "• Send to HanX: send us your scenario; scenarios picked by our team are offered to every player as events. Our privacy policy explains how submissions are handled.",
+     "• New language: Russian. All of the game's text is now translated into Russian; the game starts in Russian on Russian-language devices, and you can also pick it in Settings → Language.",
+     "• Security improvements (in-app purchases are now verified by their signature) and bug fixes."
+    ]
+   },
+   "platform": [
+    "android",
+    "ios>=2.2.7"
+   ],
+   "gorsel": "assets/img/haber/2026-11-12-surum-2-2-7-5e0956.jpg",
+   "eklendi": "2026-11-12T18:30:10.200141Z"
+  },
   {
    "id": "2026-11-11-surum-2-2-6",
    "tarih": "2026-11-11",
@@ -603,80 +682,6 @@
    },
    "gorsel": "assets/img/haber/2026-11-03-surum-2-2-0-94b6d7.jpg",
    "eklendi": "2026-11-03T18:58:55.097946Z"
-  },
-  {
-   "id": "2026-11-02-surum-2-1-4",
-   "tarih": "2026-11-02",
-   "etiket": {
-    "tr": "Güncelleme",
-    "en": "Update",
-    "es": "Actualización",
-    "pt_BR": "Atualização",
-    "de": "Update",
-    "fr": "Mise à jour",
-    "id": "Pembaruan",
-    "ja": "アップデート",
-    "ko": "업데이트",
-    "zh_CN": "更新",
-    "zh_TW": "更新"
-   },
-   "surum": "2.1.4",
-   "baslik": {
-    "tr": "Sürüm 2.1.4: İki yeni harita ve karargâh seçimi",
-    "en": "Version 2.1.4: Two new maps and HQ selection",
-    "es": "Versión 2.1.4: Dos mapas nuevos y elección de cuartel general",
-    "pt_BR": "Versão 2.1.4: Dois novos mapas e escolha do quartel-general",
-    "de": "Version 2.1.4: Zwei neue Karten und Wahl des Hauptquartiers",
-    "fr": "Version 2.1.4 : deux nouvelles cartes et choix du QG",
-    "id": "Versi 2.1.4: Dua peta baru dan pemilihan markas",
-    "ja": "バージョン2.1.4：新マップ2つと司令部選択",
-    "ko": "버전 2.1.4: 새 지도 2개와 본부 선택",
-    "zh_CN": "版本 2.1.4：两张新地图与总部选择",
-    "zh_TW": "版本 2.1.4：兩張新地圖與總部選擇"
-   },
-   "ozet": {
-    "tr": "Halvarya Fiyortları ve Saranis Adaları harekâtta. Karargâhını sen seçiyorsun, Gölge Cephesi gizli bir ilde doğuyor. Adreno'da daha akıcı harita ve düzeltmeler.",
-    "en": "Halvarya Fjords and Saranis Islands join the campaign. Choose your HQ; the Shadow Front now rises in a hidden district. Smoother maps on Adreno, plus fixes.",
-    "es": "Fiordos de Halvarya e Islas Saranis llegan a la campaña. Elige tu cuartel general; el Frente Sombra nace oculto. Mapa más fluido en Adreno y correcciones.",
-    "pt_BR": "Fiordes de Halvarya e Ilhas Saranis chegam à campanha. Escolha seu QG; a Frente Sombria surge oculta. Mapa mais fluido em Adreno e correções.",
-    "de": "Halvarya-Fjorde und Saranis-Inseln im Einsatz. Wähle dein Hauptquartier; die Schattenfront entsteht verborgen. Flüssiger auf Adreno, dazu Korrekturen.",
-    "fr": "Fjords de Halvarya et Îles Saranis rejoignent la campagne. Choisissez votre QG ; le Front de l'Ombre naît caché. Carte plus fluide sur Adreno et correctifs.",
-    "id": "Fjord Halvarya dan Kepulauan Saranis hadir di operasi. Pilih markasmu; Front Bayangan muncul tersembunyi. Peta lebih mulus di Adreno, plus perbaikan.",
-    "ja": "Halvaryaフィヨルドと Saranis諸島が作戦に登場。司令部を自分で選び、影の戦線は隠れた州で発生。Adreno端末でのマップ動作改善と修正も。",
-    "ko": "Halvarya 피오르와 Saranis 제도가 작전에 추가됩니다. 본부를 직접 고르고, 그림자 전선은 숨겨진 주에서 나타납니다. Adreno 기기 지도 개선 및 수정.",
-    "zh_CN": "Halvarya峡湾与Saranis群岛加入战役；自选总部，暗影阵线在隐藏省份崛起。Adreno设备上地图更流畅，并修复多项问题。",
-    "zh_TW": "Halvarya峽灣與Saranis群島加入戰役；自選總部，暗影陣線在隱藏省份崛起。Adreno裝置上地圖更流暢，並修正多項問題。"
-   },
-   "metin": {
-    "tr": [
-     "2.1.4 Google Play'de ve PC'de (itch.io) yayında! Bu sürümde harekâta iki yeni harita geliyor ve her yeni harekât karargâh seçimiyle başlıyor.",
-     "• Yeni harekât haritaları: Halvarya Fiyortları (çığlar, kar yükü, kapanan dağ yolları, soğuk) ve Saranis Adaları (volkan basıncı, kül bulutları, patlama ve dev dalga, feribotsuz adalar, verimli volkanik toprak). Her haritanın kendi senaryosu, girişimleri, politikaları ve olayları var; yeni Kar ve Kül katmanları.",
-     "• İki yeni Play Games başarımı: Kuzeyin Kalkanı ve Külden Doğan.",
-     "• Karargâhını seç: yeni harekâtta misyon karargâhını haritadan sen seçersin; karargâh ili ve komşuları istikrar bonusuyla başlar, birliklerin orada konuşlanır.",
-     "• Gizli isyan: Gölge Cephesi her oyunda farklı ve gizli bir ilde doğar; onu istihbaratla bul.",
-     "• Gölge Cephesi modunda hükümet karargâhını görür, kendi karargâhını seçersin; hükümet senin yerini bilmez.",
-     "• Adreno ekran kartlı cihazlarda harita daha akıcı.",
-     "• Kurtarılan Topraklar başarımı artık Gölge Cephesi'nin elindeki bir bölgeyi geri aldığında açılıyor.",
-     "• Bölge paneli uzun çevirilerde (Almanca vb.) artık taşmıyor.",
-     "• Brifing ve giriş metinlerinde düzeltmeler.",
-     "Eski kayıtların olduğu gibi açılır. Yeni haritaların ve karargâh seçiminin ayrıntıları Haberler'de. İyi oyunlar!"
-    ],
-    "en": [
-     "2.1.4 is out now on Google Play and on PC (itch.io)! This update adds two new maps to the campaign, and every new campaign now starts with choosing your HQ.",
-     "• New campaign maps: Halvarya Fjords (avalanches, snow load, closed mountain roads, cold) and Saranis Islands (volcanic pressure, ash clouds, eruptions and a giant wave, islands without ferries, fertile volcanic soil). Each map has its own scenario, projects, policies and events, plus new Snow and Ash map layers.",
-     "• Two new Play Games achievements: Shield of the North and Born from the Ashes.",
-     "• Choose your HQ: in a new campaign you pick the mission headquarters on the map; the HQ district and its neighbors start with extra stability, and your units deploy there.",
-     "• A hidden insurgency: the Shadow Front rises in a different, hidden district every game. Find it with intelligence.",
-     "• In Shadow Front mode you see the government HQ and choose your own base; the government doesn't know where you are.",
-     "• Smoother map on devices with Adreno graphics.",
-     "• The Liberated Lands achievement now unlocks when you take back a district held by the Shadow Front.",
-     "• The district panel no longer overflows with long translations (German and others).",
-     "• Fixes to the briefing and intro texts.",
-     "Your old saves open exactly as before. Read more about the new maps and HQ selection in News. Have fun!"
-    ]
-   },
-   "gorsel": "assets/img/haber/2026-11-02-surum-2-1-4-c86f0c.jpg",
-   "eklendi": "2026-11-02T17:51:30.290522Z"
   }
  ]
 }
