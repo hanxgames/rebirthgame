@@ -1,8 +1,81 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-18T08:30:09Z",
+ "guncelleme": "2026-11-20T11:55:52Z",
  "haberler": [
+  {
+   "id": "2026-11-20-sefer-cok-oyunculu-yakinda",
+   "tarih": "2026-11-20",
+   "etiket": {
+    "tr": "Yakında",
+    "en": "Coming soon",
+    "es": "Próximamente",
+    "pt_BR": "Em breve",
+    "de": "Demnächst",
+    "fr": "Bientôt",
+    "id": "Segera hadir",
+    "ja": "近日公開",
+    "ko": "출시 예정",
+    "zh_CN": "即将推出",
+    "zh_TW": "即將推出",
+    "ru": "Скоро"
+   },
+   "baslik": {
+    "tr": "Sefer'e çok oyunculu geliyor: arkadaşlarını topla!",
+    "en": "Multiplayer is coming to Statecraft: rally your friends!",
+    "es": "El multijugador llega a Estadista: ¡reúne a tus amigos!",
+    "pt_BR": "O multijogador está chegando ao Estadista: reúna seus amigos!",
+    "de": "Mehrspieler kommt zu Staatskunst: Trommle deine Freunde zusammen!",
+    "fr": "Le multijoueur arrive dans Gouverner : rassemble tes amis !",
+    "id": "Multiplayer segera hadir di Negarawan: kumpulkan teman-temanmu!",
+    "ja": "「国家経営」にマルチプレイがやって来る：仲間を集めよう！",
+    "ko": "'국가 경영'에 멀티플레이가 온다: 친구들을 모아라!",
+    "zh_CN": "「治国」即将加入多人模式：召集你的朋友！",
+    "zh_TW": "「治國」即將加入多人模式：召集你的朋友！",
+    "ru": "В «Державе» скоро мультиплеер: собирай друзей!"
+   },
+   "ozet": {
+    "tr": "Sefer'in çok oyunculu altyapısı üzerinde çalışıyoruz ve sona yaklaştık. Aldorya kıtasında ülkeleri arkadaşlarınla yönetmeye hazırlan: ekibini şimdiden kur!",
+    "en": "We're working on multiplayer for Statecraft and we're getting close. Get ready to rule the nations of Aldorya with your friends: start building your team now!",
+    "es": "Estamos trabajando en el multijugador de Estadista y ya falta poco. Prepárate para gobernar las naciones de Aldorya con tus amigos: ¡forma tu equipo ya!",
+    "pt_BR": "Estamos trabalhando no multijogador do Estadista e já está perto. Prepare-se para governar as nações de Aldorya com seus amigos: monte seu time agora!",
+    "de": "Wir arbeiten am Mehrspielermodus für Staatskunst und sind fast so weit. Mach dich bereit, die Länder Aldoryas mit deinen Freunden zu regieren: Stell jetzt dein Team zusammen!",
+    "fr": "Nous travaillons sur le multijoueur de Gouverner et nous approchons du but. Prépare-toi à diriger les nations d'Aldorya avec tes amis : forme ton équipe dès maintenant !",
+    "id": "Kami sedang menggarap multiplayer untuk Negarawan dan sudah hampir selesai. Bersiaplah memimpin negara-negara Aldorya bersama teman-temanmu: bentuk timmu sekarang!",
+    "ja": "「国家経営」のマルチプレイを開発中で、完成が近づいています。仲間と一緒にAldorya大陸の国々を治める準備をしよう。今のうちにチームを集めておこう！",
+    "ko": "'국가 경영' 멀티플레이를 개발 중이며 거의 완성 단계입니다. 친구들과 함께 Aldorya 대륙의 나라들을 다스릴 준비를 하세요. 지금 바로 팀을 꾸려 보세요!",
+    "zh_CN": "我们正在开发「治国」的多人模式，即将完成。准备好和朋友一起治理Aldorya大陆的国家吧：现在就组建你的队伍！",
+    "zh_TW": "我們正在開發「治國」的多人模式，即將完成。準備好和朋友一起治理Aldorya大陸的國家吧：現在就組建你的隊伍！",
+    "ru": "Мы работаем над мультиплеером для «Державы», и он уже близко. Готовься править странами Aldorya вместе с друзьями: собирай команду уже сейчас!"
+   },
+   "metin": {
+    "tr": [
+     "Sefer'e çok oyunculu geliyor! Çok oyunculu altyapı üzerinde çalışıyoruz ve sona yaklaştık.",
+     "Hedefimiz, Aldorya kıtasındaki ülkeleri arkadaşlarınla birlikte yönetebilmen: kimi müttefikin, kimi rakibin olacak.",
+     "• Ekibini şimdiden topla: Sefer'i birlikte oynamak isteyen arkadaşlarına ReBirth'ü önermenin tam zamanı.",
+     "• Ülkeni seçmeye hazırlan: Tarsel, Kesra, Varzan, Halvarya ve Saranis.",
+     "• Diplomasi, ittifaklar, Kıtalar Konseyi oylamaları ve savaşlar arkadaşlarınla bambaşka bir hâl alacak.",
+     "Çıkış tarihini ve ayrıntıları burada, Haberler'de duyuracağız. Fikirlerini ve beklentilerini hanxdestek@gmail.com adresine ya da r/ReBirthSocial'a yaz; her mesajı okuyoruz."
+    ],
+    "en": [
+     "Multiplayer is coming to Statecraft! We're working on the multiplayer infrastructure and we're getting close.",
+     "Our goal is to let you rule the nations of the Aldorya continent together with your friends: some will be your allies, some your rivals.",
+     "• Rally your team now: it's the perfect time to tell the friends you want to play Statecraft with about ReBirth.",
+     "• Get ready to pick your country: Tarsel, Kesra, Varzan, Halvarya and Saranis.",
+     "• Diplomacy, alliances, Council of Continents votes and wars will feel completely different with friends.",
+     "We'll announce the release date and details right here in News. Send your ideas and wishes to hanxdestek@gmail.com or r/ReBirthSocial; we read every message."
+    ]
+   },
+   "platform": [
+    "android",
+    "ios"
+   ],
+   "tepki": "kalp",
+   "sabitle": true,
+   "vurgu": "parilti",
+   "gorsel": "assets/img/haber/2026-11-20-sefer-cok-oyunculu-yakinda-f35cd2.jpg",
+   "eklendi": "2026-11-20T11:55:34.087291Z"
+  },
   {
    "id": "2026-11-18-10-bin-oyuncu",
    "tarih": "2026-11-18",
@@ -78,9 +151,7 @@
    },
    "gorsel": "assets/img/haber/2026-11-18-10-bin-oyuncu-d61815.jpg",
    "eklendi": "2026-11-18T08:30:01.837329Z",
-   "tepki": "kalp",
-   "sabitle": true,
-   "vurgu": "parilti"
+   "tepki": "kalp"
   },
   {
    "id": "2026-11-12-sandbox-yayinda",
@@ -224,68 +295,6 @@
    },
    "gorsel": "assets/img/haber/2026-11-03-sefer-beta-946361.jpg",
    "eklendi": "2026-11-03T18:54:34.753351Z"
-  },
-  {
-   "id": "2026-11-03-ios-app-store",
-   "tarih": "2026-11-03",
-   "etiket": {
-    "tr": "Duyuru",
-    "en": "Announcement",
-    "es": "Anuncio",
-    "pt_BR": "Anúncio",
-    "de": "Ankündigung",
-    "fr": "Annonce",
-    "id": "Pengumuman",
-    "ja": "お知らせ",
-    "ko": "공지",
-    "zh_CN": "公告",
-    "zh_TW": "公告"
-   },
-   "baslik": {
-    "tr": "ReBirth artık App Store'da!",
-    "en": "ReBirth is now on the App Store!",
-    "es": "¡ReBirth ya está en el App Store!",
-    "pt_BR": "ReBirth chegou à App Store!",
-    "de": "ReBirth ist jetzt im App Store!",
-    "fr": "ReBirth est maintenant sur l'App Store !",
-    "id": "ReBirth kini hadir di App Store!",
-    "ja": "ReBirthがApp Storeに登場！",
-    "ko": "ReBirth가 App Store에 출시되었습니다!",
-    "zh_CN": "ReBirth现已登陆App Store！",
-    "zh_TW": "ReBirth現已登陸App Store！"
-   },
-   "ozet": {
-    "tr": "ReBirth: Rebuild & Resist artık iPhone ve iPad'de! Ücretsiz başla, internetsiz oyna. iOS kullanan arkadaşlarına da haber ver.",
-    "en": "ReBirth: Rebuild & Resist is now on iPhone and iPad! Free to start, plays offline. Tell your friends on iOS too.",
-    "es": "¡ReBirth: Rebuild & Resist ya está en iPhone y iPad! Gratis para empezar y sin conexión. Avisa también a tus amigos con iOS.",
-    "pt_BR": "ReBirth: Rebuild & Resist chegou ao iPhone e ao iPad! Grátis para começar e dá para jogar offline. Conte para seus amigos no iOS.",
-    "de": "ReBirth: Rebuild & Resist gibt es jetzt für iPhone und iPad! Kostenlos starten, offline spielen. Sag es auch deinen Freunden mit iOS.",
-    "fr": "ReBirth : Rebuild & Resist est disponible sur iPhone et iPad ! Gratuit pour commencer, jouable hors ligne. Prévenez vos amis sur iOS.",
-    "id": "ReBirth: Rebuild & Resist kini ada di iPhone dan iPad! Gratis untuk mulai, bisa dimainkan offline. Kabari juga temanmu pengguna iOS.",
-    "ja": "ReBirth: Rebuild & ResistがiPhoneとiPadに登場！無料で始められ、オフラインでも遊べます。iOSの友だちにも教えてあげよう。",
-    "ko": "ReBirth: Rebuild & Resist가 이제 iPhone과 iPad에서! 무료로 시작하고 오프라인에서도 플레이할 수 있습니다. iOS를 쓰는 친구에게도 알려 주세요.",
-    "zh_CN": "ReBirth: Rebuild & Resist现已登陆iPhone和iPad！免费开始，支持离线游玩。也告诉用iOS的朋友吧。",
-    "zh_TW": "ReBirth: Rebuild & Resist現已登陸iPhone與iPad！免費開始，支援離線遊玩。也告訴用iOS的朋友吧。"
-   },
-   "metin": {
-    "tr": [
-     "ReBirth artık App Store'da! ReBirth: Rebuild & Resist'i iPhone ve iPad'ine ücretsiz indirebilirsin.",
-     "• Aynı harekât, aynı haritalar: felaketlerin yıktığı vilayeti yeniden kur, halkın güvenini kazan, Gölge Cephesi'ni barış masasına getir.",
-     "• Ücretsiz başla, internetsiz oyna; oyun 11 dilde.",
-     "• Android'de oynuyorsan iPhone ya da iPad kullanan arkadaşlarına da haber ver!",
-     "App Store sayfasını açmak için aşağıdaki düğmeye dokun. İyi oyunlar!"
-    ],
-    "en": [
-     "ReBirth is now on the App Store! You can download ReBirth: Rebuild & Resist for free on your iPhone and iPad.",
-     "• The same campaign and the same maps: rebuild a province torn apart by disaster, win the people's trust and bring the Shadow Front to the peace table.",
-     "• Free to start, plays offline, in 11 languages.",
-     "• If you play on Android, tell your friends with an iPhone or iPad!",
-     "Tap the button below to open the App Store page. Have fun!"
-    ]
-   },
-   "baglanti": "https://apps.apple.com/app/id6821863283",
-   "gorsel": "assets/img/haber/2026-11-03-ios-app-store-d1dbbd.jpg",
-   "eklendi": "2026-11-03T18:20:21.315704Z"
   },
   {
    "id": "2026-10-31-kara-kolera-basladi",
