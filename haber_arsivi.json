@@ -1,6 +1,77 @@
 {
  "_not": "Akışta bir kez yer almış bütün haberler (tools/statik.py yazar; haber_ekle.py sil buradan da siler).",
  "kayitlar": {
+  "2026-11-22-topluluk-acildi": {
+   "id": "2026-11-22-topluluk-acildi",
+   "tarih": "2026-11-22",
+   "etiket": {
+    "tr": "Topluluk",
+    "en": "Community",
+    "es": "Comunidad",
+    "pt_BR": "Comunidade",
+    "de": "Community",
+    "fr": "Communauté",
+    "id": "Komunitas",
+    "ja": "コミュニティ",
+    "ko": "커뮤니티",
+    "zh_CN": "社区",
+    "zh_TW": "社群",
+    "ru": "Сообщество"
+   },
+   "baslik": {
+    "tr": "Topluluk açıldı: görüşlerini paylaş!",
+    "en": "The Community is open: share your thoughts!",
+    "es": "¡Abrimos la Comunidad: comparte tus ideas!",
+    "pt_BR": "A Comunidade abriu: compartilhe suas ideias!",
+    "de": "Die Community ist offen: Teilen Sie Ihre Ideen!",
+    "fr": "La Communauté est ouverte : partagez vos idées !",
+    "id": "Komunitas sudah dibuka: bagikan pendapat Anda!",
+    "ja": "コミュニティ開設：あなたの声を聞かせて！",
+    "ko": "커뮤니티 오픈! 의견을 나눠 주세요",
+    "zh_CN": "社区开放了：分享你的想法！",
+    "zh_TW": "社群開放了：分享你的想法！",
+    "ru": "Сообщество открыто: делитесь мнением!"
+   },
+   "ozet": {
+    "tr": "Sitemizdeki yeni Topluluk'ta öneri, hata bildirimi, strateji ve ekran görüntülerini paylaş; oy ver, yorum yap, diğer komutanlarla tartış!",
+    "en": "Share suggestions, bug reports, strategies and screenshots in our new Community; vote, comment and talk with other commanders!",
+    "es": "Comparta sugerencias, errores, estrategias y capturas; vote, comente y hable con otros comandantes.",
+    "pt_BR": "Compartilhe sugestões, bugs, estratégias e capturas; vote, comente e converse com outros comandantes.",
+    "de": "Teilen Sie Vorschläge, Fehler, Strategien und Screenshots, stimmen Sie ab und diskutieren Sie mit anderen.",
+    "fr": "Partagez suggestions, bugs, stratégies et captures ; votez, commentez et discutez avec d'autres commandants.",
+    "id": "Bagikan saran, bug, strategi, dan tangkapan layar; beri suara dan berdiskusi dengan komandan lain.",
+    "ja": "提案、不具合報告、戦略、スクリーンショットを共有して、投票やコメントでほかの司令官と語り合おう！",
+    "ko": "제안, 버그 제보, 전략, 게임 화면을 공유하고 투표와 의견으로 다른 지휘관들과 이야기해 보세요!",
+    "zh_CN": "在新社区分享建议、问题报告、策略和截图，投票、评论，与其他指挥官交流！",
+    "zh_TW": "在新社群分享建議、問題回報、策略和截圖，投票、留言，與其他指揮官交流！",
+    "ru": "Делитесь идеями, ошибками, стратегиями и скриншотами; голосуйте, комментируйте и общайтесь с другими командирами."
+   },
+   "metin": {
+    "tr": [
+     "ReBirth'ün topluluk sayfası açıldı! Sitemizdeki Topluluk bölümünde oyunla ilgili her şeyi paylaşabilirsin.",
+     "• Öneri, hata bildirimi, strateji ya da senaryo fikrini yaz; istersen bir ekran görüntüsü ekle.",
+     "• Beğendiğin gönderilere oy ver; gönderileri en çok beğenilen, en çok yorumlanan ya da en yeni diye sırala.",
+     "• Yorumlarda diğer komutanlarla tartış; başka dildeki gönderileri tek dokunuşla çevir.",
+     "• Google hesabınla giriş yapıp bir takma ad seçmen yeterli; e-postan hiçbir zaman görünmez.",
+     "En çok oy alan önerileri yakından takip ediyoruz. Haydi, ilk gönderini paylaş!"
+    ],
+    "en": [
+     "ReBirth's community page is open! Share anything about the game in the Community section of our website.",
+     "• Post a suggestion, bug report, strategy or scenario idea, and add a screenshot if you like.",
+     "• Upvote the posts you like and sort posts by top, most comments or newest.",
+     "• Discuss with other commanders in the comments, and translate posts in other languages with one tap.",
+     "• Just sign in with your Google account and pick a nickname; your email is never shown.",
+     "We keep a close eye on the most-voted suggestions. Go ahead and share your first post!"
+    ]
+   },
+   "baglanti": "https://rebirthgame.tr/topluluk.html",
+   "gorsel": "assets/img/haber/2026-11-22-topluluk-acildi-c917d6.jpg",
+   "eklendi": "2026-11-21T21:13:17.996181Z",
+   "tepki": "kalp",
+   "sabitle": true,
+   "vurgu": "parilti",
+   "tur": "haberler"
+  },
   "2026-11-20-sefer-cok-oyunculu-yakinda": {
    "id": "2026-11-20-sefer-cok-oyunculu-yakinda",
    "tarih": "2026-11-20",
@@ -69,8 +140,6 @@
     "ios"
    ],
    "tepki": "kalp",
-   "sabitle": true,
-   "vurgu": "parilti",
    "gorsel": "assets/img/haber/2026-11-20-sefer-cok-oyunculu-yakinda-f35cd2.jpg",
    "eklendi": "2026-11-20T11:55:34.087291Z",
    "tur": "haberler"
