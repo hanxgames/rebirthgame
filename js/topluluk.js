@@ -99,6 +99,7 @@ const S = {
   "f.link": { tr: "Bağlantı, sosyal medya adresi ve tanıtım paylaşılamaz.", en: "Links, social media handles and self-promotion aren't allowed.", es: "No se permiten enlaces, redes sociales ni autopromoción.", pt_BR: "Links, redes sociais e autopromoção não são permitidos.", de: "Links, Social-Media-Hinweise und Eigenwerbung sind nicht erlaubt.", fr: "Les liens, réseaux sociaux et l'autopromotion sont interdits.", id: "Tautan, akun media sosial, dan promosi diri tidak diperbolehkan.", ja: "リンク、SNSアカウント、宣伝は投稿できません。", ko: "링크, SNS 계정, 홍보는 올릴 수 없습니다.", zh_CN: "禁止发布链接、社交媒体账号和自我推广。", zh_TW: "禁止發布連結、社群帳號和自我推廣。" },
   "f.kufur": { tr: "Mesajın uygunsuz bir ifade içeriyor. Lütfen düzelt.", en: "Your message contains offensive language. Please edit it.", es: "Tu mensaje contiene lenguaje ofensivo. Corrígelo, por favor.", pt_BR: "Sua mensagem contém linguagem ofensiva. Edite-a, por favor.", de: "Deine Nachricht enthält beleidigende Sprache. Bitte ändere sie.", fr: "Votre message contient des propos offensants. Merci de le modifier.", id: "Pesanmu mengandung kata kasar. Silakan ubah.", ja: "不適切な表現が含まれています。修正してください。", ko: "부적절한 표현이 포함되어 있습니다. 수정해 주세요.", zh_CN: "你的内容包含不当用语，请修改。", zh_TW: "你的內容包含不當用語，請修改。" },
   "fast": { tr: "Çok hızlı paylaşıyorsun. Gönderiler arasında 1 dakika, yorumlar arasında 15 saniye bekle.", en: "You're posting too fast. Wait 1 minute between posts and 15 seconds between comments.", es: "Publicas demasiado rápido. Espera 1 minuto entre publicaciones y 15 segundos entre comentarios.", pt_BR: "Você está publicando rápido demais. Espere 1 minuto entre publicações e 15 segundos entre comentários.", de: "Zu schnell. Warte 1 Minute zwischen Beiträgen und 15 Sekunden zwischen Kommentaren.", fr: "Vous publiez trop vite. Attendez 1 minute entre les publications et 15 secondes entre les commentaires.", id: "Terlalu cepat. Tunggu 1 menit antarpostingan dan 15 detik antarkomentar.", ja: "投稿が速すぎます。投稿は1分、コメントは15秒あけてください。", ko: "너무 빨리 올리고 있습니다. 게시물은 1분, 댓글은 15초 간격을 두세요.", zh_CN: "发得太快了。发帖间隔 1 分钟，评论间隔 15 秒。", zh_TW: "發得太快了。發文間隔 1 分鐘，留言間隔 15 秒。" },
+  "pinned": { tr: "Sabitlendi", en: "Pinned", es: "Fijado", pt_BR: "Fixado", de: "Angepinnt", fr: "Épinglé", id: "Disematkan", ja: "固定", ko: "고정됨", zh_CN: "置顶", zh_TW: "置頂" },
   "more": { tr: "Devamı", en: "More", es: "Más", pt_BR: "Mais", de: "Mehr", fr: "Plus", id: "Selengkapnya", ja: "続きを読む", ko: "더 보기", zh_CN: "更多", zh_TW: "更多" },
 };
 
@@ -252,8 +253,13 @@ async function yukle() {
     const liste = [];
     s.forEach((c) => { liste.push(Object.assign({ id: c.key }, c.val())); });
     const sinir = simdi() - SAKLAMA_MS;
-    gonderiler = liste.filter((p) => p.t >= sinir && ((!p.gizli && (p.b || 0) < OTO_GIZLE) || yonetici));
-    gonderiler.sort((a, b) => (b[sira] || 0) - (a[sira] || 0) || b.t - a.t);
+    gonderiler = liste.filter((p) => (p.t >= sinir || p.sabit) && ((!p.gizli && (p.b || 0) < OTO_GIZLE) || yonetici));
+    // sabit gönderi (yalnız yönetici koyar) her sıralamada en üstte; sıralama sorgusu onu getirmezse ayrıca okunur
+    if (!gonderiler.some((p) => p.sabit)) {
+      const sb = await get(query(ref(db, "topluluk_gonderi"), orderByChild("sabit"), endAt(true), limitToLast(3)));
+      sb.forEach((c) => { if (c.val().sabit === true && !c.val().gizli) gonderiler.push(Object.assign({ id: c.key }, c.val())); });
+    }
+    gonderiler.sort((a, b) => (b.sabit === true) - (a.sabit === true) || (b[sira] || 0) - (a[sira] || 0) || b.t - a.t);
     const derin = (location.hash.match(/^#p=([A-Za-z0-9_-]+)/) || [])[1];
     if (derin && !gonderiler.some((p) => p.id === derin)) {
       const d = await get(ref(db, "topluluk_gonderi/" + derin));
@@ -276,7 +282,7 @@ async function temizle() {
   try {
     const s = await get(query(ref(db, "topluluk_gonderi"), orderByChild("t"), endAt(simdi() - SAKLAMA_MS - 60000), limitToFirst(10)));
     const sil = {};
-    s.forEach((c) => { sil["topluluk_gonderi/" + c.key] = null; sil["topluluk_yorum/" + c.key] = null; if (c.val().g) sil["topluluk_gorsel/" + c.key] = null; });
+    s.forEach((c) => { if (c.val().sabit) return; sil["topluluk_gonderi/" + c.key] = null; sil["topluluk_yorum/" + c.key] = null; if (c.val().g) sil["topluluk_gorsel/" + c.key] = null; });
     if (Object.keys(sil).length) await update(ref(db), sil);
   } catch (e) { /* bir sonraki ziyaretçi dener */ }
 }
@@ -299,7 +305,7 @@ function listeCiz() {
 }
 
 function kart(p) {
-  const a = el("article", "tp-post" + (acik.has(p.id) ? " is-open" : "") + (p.gizli ? " is-hidden" : ""));
+  const a = el("article", "tp-post" + (acik.has(p.id) ? " is-open" : "") + (p.gizli ? " is-hidden" : "") + (p.sabit ? " is-pinned" : ""));
   a.id = "p-" + p.id;
   // oy
   const oy = el("div", "tp-vote");
@@ -320,6 +326,7 @@ function kart(p) {
   const z = el("time", null, zamanMetni(p.t)); z.dateTime = new Date(p.t).toISOString();
   ust.appendChild(z);
   if (p.dil !== lang) ust.appendChild(el("span", "tp-lang", dilAdi(p.dil)));
+  if (p.sabit) ust.appendChild(el("span", "tp-pin", "📌 " + t("pinned")));
   if (p.gizli) ust.appendChild(el("span", "tp-flag", t("hidden")));
   const bild = Math.max(Object.keys(bildirimler[p.id] || {}).length, p.b || 0);
   if (yonetici && bild) ust.appendChild(el("span", "tp-flag", bild + " " + t("reports")));

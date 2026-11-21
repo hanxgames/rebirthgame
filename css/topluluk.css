@@ -93,3 +93,5 @@
 .tp-leader b { color: #ff4d3d !important; }
 .tp-flair { font-family: var(--f-caps); font-weight: 700; letter-spacing: .12em; font-size: 10px; line-height: 1; padding: 3px 6px 2px;
   border-radius: 3px; background: #d8483b; color: #fff; }
+.tp-post.is-pinned { border-color: rgba(241,173,42,.55); background: rgba(241,173,42,.05); }
+.tp-pin { font-family: var(--f-caps); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: 11px; color: var(--accent); }
