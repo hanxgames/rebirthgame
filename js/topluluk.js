@@ -88,7 +88,8 @@ const params = new URLSearchParams(location.search);
 const EMU = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && params.get("emu") === "1";
 const app = initializeApp({
   apiKey: "AIzaSyA4X01HBNqUiD2hGSQ6Sc9iSuH8H9zxcAE",
-  authDomain: "dead-mans-deck-global.firebaseapp.com",
+  // giriş penceresi panelin Hosting alanından açılır: Google OAuth istemcisinde kayıtlı yönlendirme adresi bu (firebaseapp.com değil)
+  authDomain: "rebirth-panel-2eijd8.web.app",
   databaseURL: "https://dead-mans-deck-global-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "dead-mans-deck-global",
   appId: "1:102593608481:web:88adee0bffe40ecc921c60",
