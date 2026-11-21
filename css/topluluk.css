@@ -95,3 +95,18 @@
   border-radius: 3px; background: #d8483b; color: #fff; }
 .tp-post.is-pinned { border-color: rgba(241,173,42,.55); background: rgba(241,173,42,.05); }
 .tp-pin { font-family: var(--f-caps); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: 11px; color: var(--accent); }
+
+/* oy kutusu (2026-11-22): çerçeveli, belirgin oklar, kendi oyun renkli */
+.tp-post { grid-template-columns: 52px 1fr; }
+.tp-vote { gap: 4px; padding: 6px 0; border: 1px solid var(--line2); border-radius: 999px; background: rgba(255,255,255,.03); align-self: start; }
+.tp-vote button { width: 38px; height: 34px; display: grid; place-items: center; border-radius: 999px; color: var(--cream2); }
+.tp-vote button svg { width: 20px; height: 20px; fill: currentColor; }
+.tp-vote .tp-down svg { transform: rotate(180deg); }
+.tp-vote .tp-up:hover { color: var(--accent); background: rgba(241,173,42,.14); }
+.tp-vote .tp-down:hover { color: #7fb2e8; background: rgba(127,178,232,.14); }
+.tp-vote .tp-up.is-on { color: #191817; background: var(--accent); }
+.tp-vote .tp-down.is-on { color: #191817; background: #7fb2e8; }
+.tp-vote b { font-size: 16px; text-align: center; }
+.tp-vote.is-up b { color: var(--accent); }
+.tp-vote.is-down b { color: #7fb2e8; }
+@media (max-width: 560px) { .tp-post { grid-template-columns: 46px 1fr; } .tp-vote button { width: 34px; height: 30px; } }
