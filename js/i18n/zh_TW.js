@@ -1,7 +1,7 @@
 /* ReBirth tanıtım sitesi — Geleneksel Çince metinleri (js/dil.js gerektiğinde yükler; anahtarlar i18n.js'teki tr/en ile aynı). */
 window.RB_I18N = window.RB_I18N || {};
 window.RB_I18N["zh_TW"] = {
- "meta.title": "ReBirth — 3D手機策略遊戲 · 災後重建與反叛亂作戰",
+ "meta.title": "ReBirth：重建家園 單機戰爭策略遊戲",
  "meta.desc": "在地震、洪水與乾旱摧毀的省份重建家園，指揮部隊，把暗影陣線逼上談判桌。ReBirth是一款免費開玩、可離線遊玩的3D手機策略遊戲。",
  "nav.story": "故事",
  "nav.game": "遊戲",

@@ -1,0 +1,588 @@
+<!doctype html>
+<!-- Üretilmiş sayfa: tools/statik.py (kaynak: index.html + js/i18n). Elle düzenleme. -->
+<html lang="es" data-sabit-dil="es" data-dil="es">
+<head>
+<meta charset="utf-8">
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ReBirth: Estrategia de Guerra — Juego de estrategia 3D sin conexión</title>
+<meta name="description" content="Juego de estrategia móvil: reconstruye provincias arrasadas por terremotos, inundaciones y sequías, dirige tus fuerzas y lleva al Frente Sombra a la mesa de negociación. ReBirth: empieza gratis y juega sin conexión.">
+<meta name="keywords" content="ReBirth, mobil strateji oyunu, strateji oyunu, yeniden inşa, isyanla mücadele, Rebel Inc benzeri, 3D strateji, yönetim oyunu, Android oyun, HanX Games, mobile strategy game, nation building, counter-insurgency">
+<meta name="theme-color" content="#191817">
+<meta name="apple-itunes-app" content="app-id=6821863283">
+<meta name="google-site-verification" content="bIguatcX437S-KmT8B1zFTFKgv-FUBip_9dqCjkeIvQ">
+<link rel="canonical" href="https://rebirthgame.tr/es/">
+<link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/">
+<link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/">
+<link rel="alternate" hreflang="es" href="https://rebirthgame.tr/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://rebirthgame.tr/pt-br/">
+<link rel="alternate" hreflang="de" href="https://rebirthgame.tr/de/">
+<link rel="alternate" hreflang="fr" href="https://rebirthgame.tr/fr/">
+<link rel="alternate" hreflang="id" href="https://rebirthgame.tr/id/">
+<link rel="alternate" hreflang="ja" href="https://rebirthgame.tr/ja/">
+<link rel="alternate" hreflang="ko" href="https://rebirthgame.tr/ko/">
+<link rel="alternate" hreflang="zh-CN" href="https://rebirthgame.tr/zh-cn/">
+<link rel="alternate" hreflang="zh-TW" href="https://rebirthgame.tr/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://rebirthgame.tr/">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ReBirth">
+<meta property="og:title" content="ReBirth: Estrategia de Guerra — Juego de estrategia 3D sin conexión">
+<meta property="og:description" content="Juego de estrategia móvil: reconstruye provincias arrasadas por terremotos, inundaciones y sequías, dirige tus fuerzas y lleva al Frente Sombra a la mesa de negociación. ReBirth: empieza gratis y juega sin conexión.">
+<meta property="og:image" content="https://rebirthgame.tr/assets/img/ui/og.jpg">
+<meta property="og:url" content="https://rebirthgame.tr/es/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoGame","name":"ReBirth","url":"https://rebirthgame.tr/",
+ "image":"https://rebirthgame.tr/assets/img/ui/og.jpg",
+ "description":"A 3D strategy and management game about rebuilding disaster-hit provinces and counter-insurgency.",
+ "genre":["Strategy","Simulation"],"gamePlatform":["Android","iOS","Windows","Linux","Web browser"],"operatingSystem":"Android, iOS, Windows, Linux",
+ "applicationCategory":"Game","inLanguage":["tr","en","es","pt-BR","de","fr","id","ja","ko","zh-CN","zh-TW"],
+ "publisher":{"@type":"Organization","name":"HanX Games"},
+ "sameAs":["https://hanx-games.itch.io/rebirth","https://youtu.be/5sEuAHAH5xM","https://play.google.com/store/apps/details?id=com.hantro.business","https://apps.apple.com/app/id6821863283"],
+ "offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://play.google.com/store/apps/details?id=com.hantro.business"},{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://apps.apple.com/app/id6821863283"}]}
+</script>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css?v=5">
+<link rel="stylesheet" href="css/dil.css?v=1">
+<link rel="preload" as="image" href="assets/video/hero.jpg">
+</head>
+<body class="is-loading">
+
+<!-- ==================================================================== yükleme perdesi -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__mark">
+    <svg viewBox="0 0 120 70" class="sunmark" aria-hidden="true">
+      <defs><clipPath id="sunclip-l"><rect x="0" y="0" width="120" height="44"/></clipPath></defs>
+      <g clip-path="url(/es/#sunclip-l)">
+        <circle class="sunmark__disc" cx="60" cy="44" r="26"/>
+      </g>
+      <g class="sunmark__bars">
+        <rect x="34" y="47" width="52" height="4" rx="1"/><rect x="38" y="54" width="44" height="4" rx="1"/><rect x="45" y="61" width="30" height="4" rx="1"/>
+      </g>
+      <line class="sunmark__line" x1="2" y1="44" x2="118" y2="44"/>
+    </svg>
+    <div class="loader__word"><span class="re">RE</span>BIRTH</div>
+  </div>
+  <div class="loader__bar"><i id="loaderBar"></i></div>
+  <div class="loader__text" data-i18n="load.text">Preparando la campaña</div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- ==================================================================== gezinme -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="/es/#top" aria-label="ReBirth">
+    <span class="re">RE</span>BIRTH
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="/es/#hikaye" data-i18n="nav.story">Historia</a>
+    <a href="/es/#oyun" data-i18n="nav.game">Juego</a>
+    <a href="/es/#harita" data-i18n="nav.map">Mapa</a>
+    <a href="/es/#felaketler" data-i18n="nav.disasters">Catástrofes</a>
+    <a href="/es/#hava" data-i18n="nav.air">Poder aéreo</a>
+    <a href="/es/#kriz" data-i18n="nav.crisis">Mesa de Crisis</a>
+    <a href="/es/#oyunlar" data-i18n="nav.arcade">Minijuegos</a>
+    <a href="/es/#galeri" data-i18n="nav.gallery">Galería</a>
+    <a href="/es/#sss" data-i18n="nav.faq">FAQ</a>
+  </nav>
+  <div class="nav__right">
+    <button class="nav__lang dil-btn" id="langBtn" type="button" aria-label="Dil / Language">TR</button>
+    <button class="nav__sound" id="soundBtn" type="button" aria-pressed="false" aria-label="Ses">
+      <span class="eq"><i></i><i></i><i></i><i></i></span>
+    </button>
+    <a class="btn btn--accent btn--sm nav__play" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dnav" target="_blank" rel="noopener" data-i18n="nav.play">Google Play</a>
+    <button class="nav__burger" id="burger" type="button" aria-label="Menü" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ==================================================================== kahraman -->
+<section class="hero" id="hero">
+  <div class="hero__media">
+    <video class="hero__video" id="heroVideo" muted loop playsinline preload="none" poster="assets/video/hero.jpg" data-src="assets/video/hero.mp4"></video>
+    <div class="hero__shade"></div>
+    <img class="hero__silhouette" src="assets/img/ui/menu_hero.svg" alt="" aria-hidden="true">
+  </div>
+  <div class="hero__content">
+    <div class="kicker hero__kicker" data-i18n="hero.kicker">Estrategia móvil en 3D · Reconstrucción · Contrainsurgencia</div>
+    <h1 class="wordmark" aria-label="ReBirth">
+      <span class="wordmark__re">RE</span><span class="wordmark__birth">BIRTH</span>
+    </h1>
+    <div class="hero__sun">
+      <i class="hero__rule"></i>
+      <svg viewBox="0 0 120 70" class="sunmark sunmark--hero" aria-hidden="true">
+        <defs><clipPath id="sunclip-h"><rect x="0" y="0" width="120" height="44"/></clipPath></defs>
+        <g clip-path="url(/es/#sunclip-h)"><circle class="sunmark__disc" cx="60" cy="44" r="26"/></g>
+        <g class="sunmark__bars"><rect x="34" y="47" width="52" height="4" rx="1"/><rect x="38" y="54" width="44" height="4" rx="1"/><rect x="45" y="61" width="30" height="4" rx="1"/></g>
+      </svg>
+      <i class="hero__rule"></i>
+    </div>
+    <p class="script hero__slogan" data-i18n-html="hero.slogan">Tierras frágiles.<br>Mañanas más fuertes.</p>
+    <p class="hero__lead" data-i18n="hero.lead">Una provincia yace en ruinas y el Frente Sombra está llenando el vacío. Tú coordinas la misión internacional: reconstruye, gánate la confianza de la gente y pon fin a la guerra en la mesa de negociación.</p>
+    <div class="hero__ctas">
+      <a class="appstore appstore--lg" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-es.svg" alt="Descárgalo en el App Store" height="56"></a>
+      <a class="btn btn--accent btn--lg magnetic" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dhero" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg>
+        <span data-i18n="hero.play">Disponible en Google Play</span>
+      </a>
+      <button class="btn btn--ghost btn--lg magnetic" type="button" data-trailer>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13c0 .6.7 1 1.2.6l10-6.5c.5-.3.5-1 0-1.3l-10-6.5C8.7 4.5 8 4.9 8 5.5z"/></svg>
+        <span data-i18n="hero.trailer">Ver el tráiler</span>
+      </button>
+      <a class="btn btn--ghost btn--lg magnetic" href="https://hanx-games.itch.io/rebirth" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-7v2h3v2H7v-2h3v-2H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v9h16V6H4z"/></svg>
+        <span data-i18n="hero.pc">Jugar en PC</span>
+        <span class="sale-badge" data-sale-until="2026-11-30T20:59:00Z" data-i18n="hero.sale">50% de descuento</span>
+      </a>
+    </div>
+    <div class="hero__meta">
+      <span class="pill pill--muted" data-i18n="hero.ios">También en el App Store</span>
+      <span class="hero__free" data-i18n="hero.free">Empieza gratis · Juega sin conexión · 11 idiomas</span>
+    </div>
+  </div>
+  <a class="hero__scroll" href="/es/#hikaye"><span data-i18n="hero.scroll">Entra en la historia</span><i></i></a>
+  <div class="ticker" aria-hidden="true"><div class="ticker__track" id="ticker"></div></div>
+</section>
+
+<!-- ==================================================================== hikâye (kaydırmalı sinematik) -->
+<section class="story" id="hikaye">
+  <div class="story__pin" id="storyPin">
+    <div class="story__frames">
+      <figure class="story__frame is-on" data-i="1"><img src="assets/img/cine/s1.webp" alt=""><img class="story__lights" src="assets/img/cine/s1_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="2"><img data-src="assets/img/cine/s2.webp" alt=""></figure>
+      <figure class="story__frame" data-i="3"><img data-src="assets/img/cine/s3.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s3_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="4"><img data-src="assets/img/cine/s4.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s4_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="5"><img data-src="assets/img/cine/s5.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s5_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="6"><img data-src="assets/img/cine/s6.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s6_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="7"><img data-src="assets/img/cine/s7.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s7_on.webp" alt=""></figure>
+    </div>
+    <div class="story__shade"></div>
+    <div class="story__flash" id="storyFlash"></div>
+    <div class="story__head">
+      <div class="kicker" data-i18n="story.kicker">Cinemática inicial</div>
+      <h2 class="title" data-i18n="story.title">Una noche, todo cambió</h2>
+    </div>
+    <div class="story__captions">
+      <p class="story__cap is-on" data-i="1" data-i18n="story.1">Tarsel. Un valle rodeado de montañas, un puerto en la costa. Una noche tranquila…</p>
+      <p class="story__cap" data-i="2" data-i18n="story.2">Un terremoto de magnitud 7,8 derrumbó la provincia. La ciudad arde.</p>
+      <p class="story__cap" data-i="3" data-i18n="story.3">Bajo los escombros se oyen voces. Cada hora es una vida.</p>
+      <p class="story__cap" data-i="4" data-i18n="story.4">La ira desbordó las plazas. La gente dejó de confiar en el Estado.</p>
+      <p class="story__cap" data-i="5" data-i18n="story.5">El Frente Sombra llenó el vacío. Una fortaleza en las montañas, miedo en los pueblos.</p>
+      <p class="story__cap" data-i="6" data-i18n="story.6">Una misión internacional de estabilización está en camino.</p>
+      <p class="story__cap story__cap--final" data-i="7" data-i18n="story.7">Coordinador, la mesa es suya.</p>
+    </div>
+    <div class="story__progress"><span id="storyNum">01</span><i><b id="storyBar"></b></i><span>07</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== oyunun kalbi -->
+<section class="section pillars" id="oyun">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="pillars.kicker">El corazón del juego</div>
+      <h2 class="title" data-i18n="pillars.title">Construye. Dirige. Gana.</h2>
+      <p class="lead" data-i18n="pillars.lead">Cada carretera que reparas, cada clínica que abres y cada unidad que despliegas cambia la estabilidad, el apoyo y la seguridad de 14 distritos.</p>
+    </header>
+    <div class="pillars__grid">
+      <article class="pillar reveal" data-video="assets/video/insa.mp4" data-poster="assets/video/insa.jpg">
+        <div class="pillar__media"><video muted loop playsinline preload="none"></video></div>
+        <div class="pillar__body">
+          <div class="pillar__num">01</div>
+          <h3 data-i18n="p1.t">Reconstruye</h3>
+          <p data-i18n="p1.d">Retira los escombros, convierte los campamentos de tiendas en hogares y la oscuridad en electricidad. Agua, salud, escuelas, mercados y consejos locales devuelven la vida a los pueblos.</p>
+        </div>
+      </article>
+      <article class="pillar reveal" data-video="assets/video/catisma.mp4" data-poster="assets/video/catisma.jpg">
+        <div class="pillar__media"><video muted loop playsinline preload="none"></video></div>
+        <div class="pillar__body">
+          <div class="pillar__num">02</div>
+          <h3 data-i18n="p2.t">Dirige</h3>
+          <p data-i18n="p2.d">Infantería, mecanizada, gendarmería, fuerzas especiales, ingenieros y milicia local. Ordena patrullas, asaltos o protección. Pero cada baja civil te cuesta legitimidad.</p>
+        </div>
+      </article>
+      <article class="pillar reveal" data-video="assets/video/kasaba.mp4" data-poster="assets/video/kasaba.jpg">
+        <div class="pillar__media"><video muted loop playsinline preload="none"></video></div>
+        <div class="pillar__body">
+          <div class="pillar__num">03</div>
+          <h3 data-i18n="p3.t">Gana corazones</h3>
+          <p data-i18n="p3.d">El verdadero frente es la opinión pública. Alcanza el 100% de legitimidad y el Frente Sombra se sentará a negociar. Firma la paz y gana la campaña.</p>
+        </div>
+      </article>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><b data-count="14">0</b><span data-i18n="stat.districts">distritos</span></div>
+      <div class="stat"><b data-count="40">0</b><span data-i18n="stat.initiatives">iniciativas</span></div>
+      <div class="stat"><b data-count="30">0</b><span data-i18n="stat.policies">políticas</span></div>
+      <div class="stat"><b data-count="80" data-prefix="~">0</b><span data-i18n="stat.events">eventos dinámicos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== interaktif harita -->
+<section class="section mapsec" id="harita">
+  <div class="container">
+    <header class="sec-head sec-head--row reveal">
+      <div>
+        <div class="kicker" data-i18n="map.kicker">Mapa de operaciones</div>
+        <h2 class="title" data-i18n="map.title">Lee el mapa</h2>
+      </div>
+      <p class="lead" data-i18n="map.lead">El mapa real, sacado directamente del juego. Toca un distrito y cambia de capa: ¿dónde hacen falta tropas, dónde un hospital, dónde empleo?</p>
+    </header>
+    <div class="opsmap reveal" id="opsmap">
+      <div class="opsmap__stage" id="mapStage">
+        <img class="opsmap__img opsmap__img--day" id="mapDay" src="assets/img/map/tarsel_gun_k.webp" data-hi="assets/img/map/tarsel_gun.webp" alt="Tarsel">
+        <img class="opsmap__img opsmap__img--night" id="mapNight" src="assets/img/map/tarsel_gece_k.webp" data-hi="assets/img/map/tarsel_gece.webp" alt="" aria-hidden="true">
+        <svg class="opsmap__svg" id="mapSvg" viewBox="0 0 2100 1400" preserveAspectRatio="xMidYMid slice" aria-label="Tarsel"></svg>
+        <div class="opsmap__scan" aria-hidden="true"></div>
+        <div class="opsmap__tip" id="mapTip"></div>
+      </div>
+      <aside class="opsmap__panel">
+        <div class="opsmap__tools">
+          <div class="seg" id="lensSeg">
+            <span class="seg__label" data-i18n="map.lens">Capa</span>
+            <button type="button" class="is-on" data-lens="stab" data-i18n="map.l.stab">Estabilidad</button>
+            <button type="button" data-lens="ctrl" data-i18n="map.l.ctrl">Control</button>
+            <button type="button" data-lens="sec" data-i18n="map.l.sec">Seguridad</button>
+            <button type="button" data-lens="none" data-i18n="map.l.none">Simple</button>
+          </div>
+          <div class="seg seg--sm" id="todSeg">
+            <button type="button" class="is-on" data-tod="day" data-i18n="map.day">Día</button>
+            <button type="button" data-tod="night" data-i18n="map.night">Noche</button>
+          </div>
+        </div>
+        <div class="dossier" id="dossier">
+          <div class="dossier__empty" data-i18n="map.hint">Toca un distrito</div>
+        </div>
+        <div class="legend" id="legend"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== felaketler -->
+<section class="section disasters" id="felaketler">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="dis.kicker">Cinco mapas, cinco catástrofes</div>
+      <h2 class="title" data-i18n="dis.title">Cada provincia tiene su propia herida</h2>
+    </header>
+    <div class="dis__grid">
+      <article class="dis reveal" data-fx="quake" data-video="assets/video/deprem.mp4" data-poster="assets/video/deprem.jpg">
+        <div class="dis__media"><video muted loop playsinline preload="none"></video><canvas class="dis__fx"></canvas>
+          <svg class="dis__cracks" viewBox="0 0 400 260" preserveAspectRatio="none" aria-hidden="true"><path d="M0 140 L60 128 L92 150 L140 120 L170 138 L230 104 L262 126 L320 96 L400 112"/><path d="M140 120 L150 80 L132 40 L146 0"/><path d="M262 126 L276 170 L258 214 L270 260"/></svg>
+        </div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--accent"></i><span data-i18n="dis.t.tag">Terremoto · Montañas</span><em class="pill pill--good" data-i18n="dis.free">Gratis</em></div>
+          <h3 data-i18n="dis.t.name">Provincia de Tarsel</h3>
+          <p data-i18n="dis.t.d">Las réplicas derriban los edificios sin reforzar. Vigila la red sísmica, monta campamentos de tiendas y equipos de búsqueda y rescate, y refuerza las viviendas antes del próximo terremoto.</p>
+        </div>
+      </article>
+      <article class="dis reveal" data-fx="rain" data-video="assets/video/sel.mp4" data-poster="assets/video/sel.jpg">
+        <div class="dis__media"><video muted loop playsinline preload="none"></video><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--blue"></i><span data-i18n="dis.k.tag">Inundación · Delta</span><em class="pill pill--accent" data-i18n="dis.premium">Premium</em></div>
+          <h3 data-i18n="dis.k.name">Delta de Kesra</h3>
+          <p data-i18n="dis.k.d">El río crece cada primavera. Levanta diques, estaciones de bombeo y viviendas sobre pilotes, y luego cultiva el limo fértil que deja el agua.</p>
+        </div>
+      </article>
+      <article class="dis reveal" data-fx="dust" data-video="assets/video/kurak.mp4" data-poster="assets/video/kurak.jpg">
+        <div class="dis__media"><video muted loop playsinline preload="none"></video><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--sand"></i><span data-i18n="dis.v.tag">Sequía · Meseta</span><em class="pill pill--accent" data-i18n="dis.premium">Premium</em></div>
+          <h3 data-i18n="dis.v.name">Meseta de Varzan</h3>
+          <p data-i18n="dis.v.d">Cada distrito sufre su propio estrés hídrico, y los jóvenes sedientos se unen con más facilidad al Frente Sombra. Perfora pozos, construye aljibes, envía camiones cisterna y planta un cinturón verde.</p>
+        </div>
+      </article>
+      <article class="dis dis--genis reveal" data-fx="snow">
+        <div class="dis__media"><img src="assets/img/map/halvarya_kart.webp" alt="Halvarya" loading="lazy"><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--ice"></i><span data-i18n="dis.h.tag">Aludes · Fiordos</span><em class="pill pill--accent" data-i18n="dis.premium">Premium</em></div>
+          <h3 data-i18n="dis.h.name">Fiordos de Halvarya</h3>
+          <p data-i18n="dis.h.d">La nieve se acumula en cada distrito durante el largo invierno; los aludes derrumban casas y cierran los pasos de montaña. Levanta barreras antialudes y una red de vigilancia, despeja las carreteras y combate el frío con centros de calor.</p>
+        </div>
+      </article>
+      <article class="dis dis--genis reveal" data-fx="ash">
+        <div class="dis__media"><img src="assets/img/map/saranis_kart.webp" alt="Saranis" loading="lazy"><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--lava"></i><span data-i18n="dis.s.tag">Volcán · Islas</span><em class="pill pill--accent" data-i18n="dis.premium">Premium</em></div>
+          <h3 data-i18n="dis.s.name">Islas Saranis</h3>
+          <p data-i18n="dis.s.d">La presión del volcán Morasca no deja de subir. La ceniza sepulta los campos y una erupción puede lanzar una ola gigante contra la costa. Construye rompeolas y un observatorio, opera ferris a las islas y planta viñedos en el fértil suelo volcánico.</p>
+        </div>
+      </article>
+    </div>
+    <div class="dis__maps reveal">
+      <figure><img src="assets/img/map/tarsel_maket.webp" alt="Tarsel" loading="lazy"><figcaption>Tarsel</figcaption></figure>
+      <figure><img src="assets/img/map/kesra_maket.webp" alt="Kesra" loading="lazy"><figcaption>Kesra</figcaption></figure>
+      <figure><img src="assets/img/map/varzan_maket.webp" alt="Varzan" loading="lazy"><figcaption>Varzan</figcaption></figure>
+      <figure><img src="assets/img/map/halvarya_maket.webp" alt="Halvarya" loading="lazy"><figcaption>Halvarya</figcaption></figure>
+      <figure><img src="assets/img/map/saranis_maket.webp" alt="Saranis" loading="lazy"><figcaption>Saranis</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== hava gücü -->
+<section class="section air" id="hava">
+  <div class="container air__grid">
+    <div class="air__media reveal">
+      <div class="air__frame">
+        <video id="airVideo" muted loop playsinline preload="none" data-poster="assets/video/sinematik.jpg" data-src="assets/video/sinematik.mp4"></video>
+      </div>
+    </div>
+    <div class="air__body">
+      <header class="sec-head reveal">
+        <div class="kicker" data-i18n="air.kicker">Fuerza Aérea</div>
+        <h2 class="title" data-i18n="air.title">El cielo también es tuyo</h2>
+        <p class="lead" data-i18n="air.lead">Ordena un ataque aéreo y la cámara se fija tras tu caza, gira sobre el objetivo cuando sale el misil y sigue la explosión. Toca la pantalla y recuperas el control.</p>
+      </header>
+      <div class="units reveal">
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24h36M24 14v20M14 20l10 4 10-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg><b data-i18n="air.u1">Dron de reconocimiento</b><span data-i18n="air.u1d">Tus ojos en el cielo. Descubre células ocultas.</span></div>
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h40M24 12v24M16 30h16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M20 24l-6 10M28 24l6 10" stroke="currentColor" stroke-width="2"/></svg><b data-i18n="air.u2">Dron armado</b><span data-i18n="air.u2d">Ataques de precisión en distritos vecinos.</span></div>
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 14h36M24 14v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M12 26c0-4 6-6 12-6h6c4 0 8 3 8 6s-4 6-8 6H18c-3 0-6-2-6-6zM38 26h6M24 32l-4 6h14" fill="none" stroke="currentColor" stroke-width="2.2"/></svg><b data-i18n="air.u3">Helicóptero de ataque</b><span data-i18n="air.u3d">Respuesta rápida y apoyo cercano.</span></div>
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l4 14 14 8v4l-14-3-1 10 5 4v3l-8-2-8 2v-3l5-4-1-10-14 3v-4l14-8z" fill="currentColor"/></svg><b data-i18n="air.u4">Caza</b><span data-i18n="air.u4d">Ataques demoledores en cualquier punto de la provincia.</span></div>
+      </div>
+      <div class="radio reveal" id="radio">
+        <div class="radio__head"><span class="radio__led"></span><b data-i18n="radio.title">Radio</b><span data-i18n="radio.sub">Voces reales del juego · toca para escuchar</span></div>
+        <canvas class="radio__wave" id="radioWave" height="60"></canvas>
+        <div class="radio__btns">
+          <button type="button" data-voice="sec_1" data-i18n="radio.1">Unidad seleccionada</button>
+          <button type="button" data-voice="hareket_1" data-i18n="radio.2">Orden de movimiento</button>
+          <button type="button" data-voice="taarruz_1" data-i18n="radio.3">Asalto</button>
+          <button type="button" data-voice="vurus_1" data-i18n="radio.4">Ataque aéreo</button>
+          <button type="button" data-voice="karargah_yok_1" data-i18n="radio.5">Cuartel general destruido</button>
+          <button type="button" data-voice="konvoy_pusu_1" data-i18n="radio.6">Convoy emboscado</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== kriz masası -->
+<section class="section crisis" id="kriz">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker kicker--new" data-i18n="crisis.kicker">Novedad · Mesa de Crisis 2.0</div>
+      <h2 class="title" data-i18n="crisis.title">Siete crisis. Siete juegos.</h2>
+      <p class="lead" data-i18n="crisis.lead">Cada misión tiene su propia mesa, sus propias reglas y sus propios escenarios 3D en el mapa. Caben en una tarde y te acompañan durante días.</p>
+    </header>
+    <div class="crisis__grid" id="crisisGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================================== yaşayan dünya -->
+<section class="section world" id="dunya">
+  <div class="container">
+    <header class="sec-head sec-head--row reveal">
+      <div>
+        <div class="kicker" data-i18n="world.kicker">Un mundo vivo</div>
+        <h2 class="title" data-i18n="world.title">La guerra sigue de noche</h2>
+      </div>
+      <p class="lead" data-i18n="world.lead">De noche, los distritos estables brillan, los disputados parpadean y los que están en manos insurgentes se apagan. Arrastra y compruébalo.</p>
+    </header>
+    <div class="compare reveal" id="compare">
+      <video class="compare__a" muted loop playsinline preload="none" data-poster="assets/video/gunbatimi.jpg" data-src="assets/video/gunbatimi.mp4"></video>
+      <div class="compare__b" id="compareB"><video muted loop playsinline preload="none" data-poster="assets/video/gece.jpg" data-src="assets/video/gece.mp4"></video></div>
+      <div class="compare__handle" id="compareHandle"><span data-i18n="world.drag">Arrastra</span></div>
+      <span class="compare__lbl compare__lbl--a">☀</span><span class="compare__lbl compare__lbl--b">☾</span>
+    </div>
+    <div class="moments">
+      <div class="kicker reveal" data-i18n="mom.kicker">Momentos inolvidables</div>
+      <div class="moments__track" id="moments">
+        <figure class="moment"><img data-shot="16_secim_gecesi" alt="" loading="lazy"><figcaption><b data-i18n="mom.1t">Noche electoral</b><span data-i18n="mom.1d">Al cerrar las urnas empieza la emisión en directo y los resultados llegan distrito a distrito.</span></figcaption></figure>
+        <figure class="moment"><img data-shot="15_konvoy" alt="" loading="lazy"><figcaption><b data-i18n="mom.2t">Convoyes de ayuda</b><span data-i18n="mom.2d">Planifica la ruta y envía escoltas a los distritos de riesgo.</span></figcaption></figure>
+        <figure class="moment"><img data-shot="09_bayram" alt="" loading="lazy"><figcaption><b data-i18n="mom.3t">Fiesta de la cosecha</b><span data-i18n="mom.3d">Fuegos artificiales sobre los pueblos donde ha vuelto la paz.</span></figcaption></figure>
+        <figure class="moment"><img data-shot="18_gazete" alt="" loading="lazy"><figcaption><b data-i18n="mom.4t">Periódico mensual</b><span data-i18n="mom.4d">Horizonte de Tarsel lleva tu historia a la portada cada mes.</span></figcaption></figure>
+        <figure class="moment"><img data-shot="17_kriz_masasi" alt="" loading="lazy"><figcaption><b data-i18n="mom.5t">Mesa de Crisis</b><span data-i18n="mom.5d">Siete misiones, valoración con estrellas.</span></figcaption></figure>
+        <figure class="moment"><img data-shot="19_hikaye" alt="" loading="lazy"><figcaption><b data-i18n="mom.6t">La historia de la campaña</b><span data-i18n="mom.6d">Al final, toda tu campaña se reproduce como una película en cámara rápida.</span></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== mini oyunlar -->
+<section class="section arcade" id="oyunlar">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="arc.kicker">Centro de mando</div>
+      <h2 class="title" data-i18n="arc.title">Cuatro minimisiones en tu navegador</h2>
+      <p class="lead" data-i18n="arc.lead">Creadas con los mapas y sonidos del propio juego. Calienta motores aquí y después lánzate a la campaña de verdad.</p>
+    </header>
+    <div class="arcade__tabs reveal" id="arcTabs">
+      <button type="button" class="arc-tab is-on" data-game="hava"><i class="arc-tab__ico">✈</i><b data-i18n="arc.hava">Ataque aéreo</b><span data-i18n="arc.hava.d">Da en el blanco, protege a los civiles.</span><em class="arc-tab__best"></em></button>
+      <button type="button" class="arc-tab" data-game="golge"><i class="arc-tab__ico">◎</i><b data-i18n="arc.golge">Caza de sombras</b><span data-i18n="arc.golge.d">Encuentra las células con tus informantes.</span><em class="arc-tab__best"></em></button>
+      <button type="button" class="arc-tab" data-game="insa"><i class="arc-tab__ico">▲</i><b data-i18n="arc.insa">Reconstrucción</b><span data-i18n="arc.insa.d">Levanta la provincia en 12 meses.</span><em class="arc-tab__best"></em></button>
+      <button type="button" class="arc-tab" data-game="konvoy"><i class="arc-tab__ico">➜</i><b data-i18n="arc.konvoy">Corredor de ayuda</b><span data-i18n="arc.konvoy.d">Haz pasar el convoy entre las emboscadas.</span><em class="arc-tab__best"></em></button>
+    </div>
+    <div class="arcade__screen reveal">
+      <div class="arcade__bezel">
+        <div class="arcade__stage" id="arcStage"><div class="arcade__loading" data-i18n="arc.loading">Cargando…</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== galeri -->
+<section class="section gallery" id="galeri">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="gal.kicker">Galería</div>
+      <h2 class="title" data-i18n="gal.title">Imágenes desde el terreno</h2>
+    </header>
+    <div class="gallery__grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================================== gazete: son güncelleme -->
+<section class="section paper-sec" id="guncelleme">
+  <div class="container">
+    <article class="paper reveal">
+      <div class="paper__mast">
+        <span class="paper__issue" data-i18n="news.issue">Versión 2.0.7</span>
+        <h2 class="paper__name" data-i18n="news.paper">Horizonte de Tarsel</h2>
+        <span class="paper__date">HanX Games</span>
+      </div>
+      <p class="paper__motto script" data-i18n="news.motto">«De entre los escombros, un periódico que mira al mañana»</p>
+      <div class="paper__rule"></div>
+      <div class="paper__grid">
+        <div class="paper__main">
+          <div class="paper__band" data-i18n="news.band">En portada</div>
+          <h3 class="paper__head" data-i18n="news.head">La Mesa de Crisis ya son siete juegos</h3>
+          <p class="paper__lead" data-i18n="news.lead">Lechada para una presa que se agrieta, un mapa de casos que esconde una bomba contaminada, las cuatro puertas de una capital sitiada: cada misión tiene su propia mesa y sus propias reglas.</p>
+          <img class="paper__photo" src="assets/img/guncelleme_207.jpg" alt="" loading="lazy">
+        </div>
+        <div class="paper__side">
+          <h4 data-i18n="news.c1h">Escala realista</h4><p data-i18n="news.c1">Vehículos, soldados y zombis tienen ahora el tamaño adecuado respecto a los edificios. Un zombi ya no es más alto que el muro del campamento.</p>
+          <h4 data-i18n="news.c2h">Mapas más limpios</h4><p data-i18n="news.c2">Se acabaron los extremos de carretera flotando, los puentes superpuestos y la grúa portuaria encima de las casas; y bajo los incendios, marcas de quemado naturales en lugar de círculos oscuros.</p>
+          <h4 data-i18n="news.c3h">Opinión</h4><p class="script paper__quote" data-i18n="news.c3">«Una presa no se salva en la mesa. Se salva en la grieta.»</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ==================================================================== ücretsiz / premium -->
+<section class="section premium" id="premium">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="prem.kicker">Empieza gratis</div>
+      <h2 class="title" data-i18n="prem.title">Una sola compra para todo</h2>
+    </header>
+    <div class="premium__grid">
+      <div class="plan reveal">
+        <div class="plan__name" data-i18n="prem.free">Gratis</div>
+        <div class="plan__desc" data-i18n="prem.freeD">La campaña de Tarsel completa</div>
+        <ul><li data-i18n="prem.f1">Provincia de Tarsel, escenario estándar</li><li data-i18n="prem.f2">Doctrina de desarrollo</li><li data-i18n="prem.f3">Todas las iniciativas y unidades</li><li class="is-muted" data-i18n="prem.f4">Con anuncios</li></ul>
+        <a class="appstore appstore--plan" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-es.svg" alt="Descárgalo en el App Store" height="48"></a>
+        <a class="btn btn--ghost plan__btn" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dpremium_ucretsiz" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg><span data-i18n="prem.freeBtn">Descargar gratis</span></a>
+      </div>
+      <div class="plan plan--prem reveal">
+        <div class="plan__crown">♛</div>
+        <div class="plan__name" data-i18n="prem.prem">Premium</div>
+        <div class="plan__desc" data-i18n="prem.premD">Pago único · Sin suscripción</div>
+        <ul><li data-i18n="prem.p1">Mapas de Kesra, Varzan, Halvarya y Saranis</li><li data-i18n="prem.p2">Todos los escenarios y doctrinas</li><li data-i18n="prem.p3">Mesa de Crisis y Fuerza Aérea</li><li data-i18n="prem.p4">Todos los mapas y eventos futuros</li><li data-i18n="prem.p5">Sin anuncios</li></ul>
+        <a class="appstore appstore--plan" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-es.svg" alt="Descárgalo en el App Store" height="48"></a>
+        <a class="btn btn--accent plan__btn" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dpremium" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg><span data-i18n="hero.play">Disponible en Google Play</span></a>
+        <p class="plan__note" data-i18n="prem.note">Premium se compra dentro del juego.</p>
+      </div>
+    </div>
+    <!-- PC: itch.io'nun resmî satın alma kutusu (fiyat ve indirim canlı gelir); dar ekranda yalnız düğme -->
+    <div class="plan plan--pc premium__pc reveal">
+      <div>
+        <div class="plan__name" data-i18n="prem.pc">Versión completa</div>
+        <div class="plan__desc" data-i18n="prem.pcD">Windows · Linux · itch.io</div>
+        <ul><li data-i18n="prem.c1">Descárguela para Windows y Linux</li><li data-i18n="prem.c2">Sus partidas se guardan en su ordenador</li><li data-i18n="prem.c3">Demo gratis en el navegador</li></ul>
+        <a class="btn btn--ghost plan__btn" href="https://hanx-games.itch.io/rebirth/purchase" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-7v2h3v2H7v-2h3v-2H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v9h16V6H4z"/></svg><span data-i18n="prem.pcBtn">Obtener la versión completa</span>
+          <span class="sale-badge" data-sale-until="2026-11-30T20:59:00Z" data-i18n="hero.sale">50% de descuento</span></a>
+      </div>
+      <div class="itch-kutu"><iframe src="https://itch.io/embed/5152900?linkback=true&amp;bg_color=1f1d1b&amp;fg_color=ece4d0&amp;link_color=f1ad2a&amp;border_color=3a3631" width="552" height="167" loading="lazy" title="ReBirth — itch.io"><a href="https://hanx-games.itch.io/rebirth">ReBirth by HanX Games</a></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== sss -->
+<section class="section faq" id="sss">
+  <div class="container container--narrow">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="faq.kicker">Preguntas frecuentes</div>
+      <h2 class="title" data-i18n="faq.title">Buenas preguntas</h2>
+    </header>
+    <div class="faq__list reveal">
+      <details><summary data-i18n="faq.q1">¿En qué dispositivos puedo jugar?</summary><p data-i18n="faq.a1">En teléfonos y tabletas Android (Google Play), iPhone y iPad (App Store) y PC: la versión para Windows y Linux y una demo gratuita para navegador están en itch.io.</p></details>
+      <details><summary data-i18n="faq.q2">¿Necesito conexión a internet?</summary><p data-i18n="faq.a2">No. ReBirth se juega completamente sin conexión.</p></details>
+      <details><summary data-i18n="faq.q3">¿Es de pago?</summary><p data-i18n="faq.a3">La campaña de Tarsel completa es gratuita. Premium es una compra única, sin suscripción, y además elimina los anuncios.</p></details>
+      <details><summary data-i18n="faq.q4">¿Qué idiomas incluye?</summary><p data-i18n="faq.a4">Inglés, turco, español, portugués de Brasil, alemán, francés, indonesio, japonés, coreano, chino simplificado y chino tradicional. Voces en inglés y en turco.</p></details>
+      <details><summary data-i18n="faq.q5">¿Cuánto dura una campaña?</summary><p data-i18n="faq.a5">Una campaña completa dura unas cuantas horas y continúa donde la dejaste. Las misiones de la Mesa de Crisis caben en una sola sesión.</p></details>
+      <details><summary data-i18n="faq.q6">¿Se parece a Rebel Inc.?</summary><p data-i18n="faq.a6">Es de la misma familia: combina la reconstrucción con la contrainsurgencia. ReBirth va más allá con cinco mapas de catástrofes, un mundo en 3D, una fuerza aérea y misiones de crisis.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== son çağrı -->
+<section class="final" id="indir">
+  <video class="final__video" muted loop playsinline preload="none" data-poster="assets/video/bayram.jpg" data-src="assets/video/bayram.mp4"></video>
+  <div class="final__shade"></div>
+  <div class="final__content reveal">
+    <img class="final__logo" src="assets/img/ui/logo.webp" alt="ReBirth">
+    <h2 class="title" data-i18n="cta.title">La provincia te espera</h2>
+    <p class="lead" data-i18n="cta.lead">Descárgalo, lanza tu primera iniciativa y mira cómo Tarsel vuelve a levantarse.</p>
+    <div class="hero__ctas">
+      <a class="appstore appstore--lg" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-es.svg" alt="Descárgalo en el App Store" height="56"></a>
+      <a class="btn btn--accent btn--lg magnetic" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dfinal" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg>
+        <span data-i18n="hero.play">Disponible en Google Play</span>
+      </a>
+      <button class="btn btn--ghost btn--lg magnetic" type="button" data-trailer>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13c0 .6.7 1 1.2.6l10-6.5c.5-.3.5-1 0-1.3l-10-6.5C8.7 4.5 8 4.9 8 5.5z"/></svg>
+        <span data-i18n="hero.trailer">Ver el tráiler</span>
+      </button>
+      <a class="btn btn--ghost btn--lg magnetic" href="https://hanx-games.itch.io/rebirth" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-7v2h3v2H7v-2h3v-2H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v9h16V6H4z"/></svg>
+        <span data-i18n="hero.pc">Jugar en PC</span>
+        <span class="sale-badge" data-sale-until="2026-11-30T20:59:00Z" data-i18n="hero.sale">50% de descuento</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__in">
+    <div class="footer__brand"><span class="nav__logo"><span class="re">RE</span>BIRTH</span><span class="script" data-i18n-html="hero.slogan">Tierras frágiles.<br>Mañanas más fuertes.</span></div>
+    <div class="footer__links">
+      <a href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dfooter" target="_blank" rel="noopener">Google Play</a>
+      <a href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener">App Store</a>
+      <a href="https://hanx-games.itch.io/rebirth" target="_blank" rel="noopener" lang="en">itch.io</a>
+      <a href="haberler.html?lang=es" data-keep-lang="haberler.html" data-i18n="foot.news">Noticias</a>
+      <a href="privacy.html?lang=es" data-keep-lang="privacy.html" data-i18n="foot.privacy">Privacidad</a>
+      <a href="support.html?lang=es" data-keep-lang="support.html" data-i18n="foot.support">Soporte</a>
+      <a href="/es/#top" data-i18n="foot.top">Volver arriba</a>
+    </div>
+    <div class="footer__meta"><span data-i18n="foot.studio">Una producción de HanX Games</span> · © 2026 · <span data-i18n="foot.note">Todos los lugares, organizaciones y personas de ReBirth son ficticios.</span></div>
+  </div>
+</footer>
+
+<!-- ==================================================================== fragman penceresi -->
+<div class="modal" id="trailerModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal__shade" data-close></div>
+  <div class="modal__box">
+    <button class="modal__close" type="button" data-close data-i18n-attr="aria-label:modal.close" aria-label="Cerrar">×</button>
+    <video id="trailerVideo" controls playsinline preload="none"></video>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" aria-hidden="true"><img id="lightboxImg" alt=""><button class="modal__close" type="button" data-close aria-label="×">×</button></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/i18n.js?v=5"></script>
+<script src="js/dil.js?v=4"></script>
+<script src="js/host.js?v=2" data-root=""></script>
+<script src="js/map.js"></script>
+<script src="js/main.js?v=6"></script>
+<script src="js/sayac.js?v=1" defer></script>
+</body>
+</html>

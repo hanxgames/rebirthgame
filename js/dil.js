@@ -32,7 +32,14 @@
     return BUL[ana] ? ana : null;
   }
 
+  // statik dil sayfaları (tools/dil_sayfalari.py üretir: /en/, /es/, /pt-br/…): <html data-sabit-dil="en"> o sayfanın dilidir
+  var SAYFA = { tr: "tr", en: "en", es: "es", pt_BR: "pt-br", de: "de", fr: "fr", id: "id", ja: "ja", ko: "ko", zh_CN: "zh-cn", zh_TW: "zh-tw" };
+  function sabit() { var k = document.documentElement.getAttribute("data-sabit-dil"); return BUL[k] ? k : null; }
+  function sayfa(k) { return "/" + (SAYFA[k] || "en") + "/"; }
+
   function sec() {
+    var sb = sabit();
+    if (sb) return sb;
     var q = coz(new URLSearchParams(location.search).get("lang"));
     if (q) return q;
     if (location.hash === "#tr") return "tr";
@@ -100,6 +107,7 @@
 
   // hreflang ile gelen ?lang= sayfasının kanonik adresi kendisi olsun (yoksa Google dil sürümlerini kopya sayar)
   function kanonik(taban) {
+    if (sabit()) return;   // statik dil sayfasının kanonik adresi HTML'de (kendisi)
     var q = coz(new URLSearchParams(location.search).get("lang"));
     var l = document.querySelector('link[rel="canonical"]');
     if (!l) { l = document.createElement("link"); l.rel = "canonical"; document.head.appendChild(l); }
@@ -108,8 +116,9 @@
 
   var GLOBE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 6h-2.9a15.6 15.6 0 00-1.4-3.6A8 8 0 0118.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a8.2 8.2 0 010-4h3.4a16.5 16.5 0 000 4H4.3zm.8 2h2.9c.3 1.3.8 2.5 1.4 3.6A8 8 0 015.1 16zM8 8H5.1a8 8 0 014.3-3.6C8.8 5.5 8.3 6.7 8 8zm4 12c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14.7 14.7 0 010-4h4.6a14.7 14.7 0 010 4zm.3 5.6c.6-1.1 1.1-2.3 1.4-3.6h2.9a8 8 0 01-4.3 3.6zm1.7-5.6a16.5 16.5 0 000-4h3.4a8.2 8.2 0 010 4h-3.4z"/></svg>';
 
-  // dil düğmesi: dokununca 11 dilin listesi açılır; seçilince kaydedip sec(k) çağrılır
-  function menu(dugme, simdiki, secildi) {
+  // dil düğmesi: dokununca 11 dilin listesi açılır; seçilince kaydedip sec(k) çağrılır.
+  // gezinti: ana sayfa (main.js) seçilen dilin statik sayfasına gider (/en/, /es/…); diğer sayfalar yerinde çevirir
+  function menu(dugme, simdiki, secildi, gezinti) {
     dugme.innerHTML = GLOBE + '<span data-dil-kisa></span><i class="dil-ok" aria-hidden="true"></i>';
     dugme.setAttribute("aria-haspopup", "listbox");
     dugme.setAttribute("aria-expanded", "false");
@@ -149,6 +158,7 @@
           if (d.k === aktif) return;
           aktif = d.k;
           kaydet(d.k);
+          if (gezinti) { location.href = sayfa(d.k) + location.hash; return; }
           adresi_guncelle(d.k);
           secildi(d.k);
         });
@@ -171,5 +181,5 @@
   }
 
   window.RBDil = { DILLER: DILLER, coz: coz, sec: sec, kaydet: kaydet, ana: ana, html: html, yukle: yukle, uygula: uygula, rozet: rozet,
-    kanonik: kanonik, menu: menu };
+    kanonik: kanonik, menu: menu, sabit: sabit, sayfa: sayfa };
 })();

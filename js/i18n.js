@@ -1,8 +1,8 @@
 /* ReBirth tanıtım sitesi — metinler (TR / EN). Anahtarlar index.html'de data-i18n, data-i18n-html, data-i18n-attr ile kullanılır. */
-window.RB_I18N_SURUM = 2; // js/i18n/<dil>.js önbellek sürümü (dil.js); dil dosyaları değişince artır
+window.RB_I18N_SURUM = 3; // js/i18n/<dil>.js önbellek sürümü (dil.js); dil dosyaları değişince artır
 window.RB_I18N = {
   tr: {
-    "meta.title": "ReBirth — 3D Mobil Strateji Oyunu · Yeniden İnşa ve İsyanla Mücadele",
+    "meta.title": "ReBirth: Savaş ve Şehir Kurma — İnternetsiz 3D Strateji Oyunu",
     "meta.desc": "Depremin, selin ve kuraklığın yıktığı vilayetleri yeniden kur, birliklerine komuta et, Gölge Cephesi'ni barış masasına getir. ReBirth: ücretsiz başla, internetsiz oyna.",
     "nav.story": "Hikâye", "nav.game": "Oyun", "nav.map": "Harita", "nav.disasters": "Felaketler", "nav.air": "Hava Gücü",
     "nav.crisis": "Kriz Masası", "nav.arcade": "Mini Oyunlar", "nav.gallery": "Galeri", "nav.faq": "SSS",
@@ -152,7 +152,7 @@ window.RB_I18N = {
   },
 
   en: {
-    "meta.title": "ReBirth — 3D Mobile Strategy Game · Rebuild and Counter-Insurgency",
+    "meta.title": "ReBirth: Offline War Strategy — Free 3D Strategy Game",
     "meta.desc": "Rebuild provinces torn apart by earthquake, flood and drought, command your forces and bring the Shadow Front to the negotiating table. ReBirth: free to start, plays offline.",
     "nav.story": "Story", "nav.game": "Game", "nav.map": "Map", "nav.disasters": "Disasters", "nav.air": "Air Power",
     "nav.crisis": "Crisis Desk", "nav.arcade": "Mini Games", "nav.gallery": "Gallery", "nav.faq": "FAQ",

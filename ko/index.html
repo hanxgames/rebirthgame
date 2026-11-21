@@ -1,0 +1,588 @@
+<!doctype html>
+<!-- Üretilmiş sayfa: tools/statik.py (kaynak: index.html + js/i18n). Elle düzenleme. -->
+<html lang="ko" data-sabit-dil="ko" data-dil="ko">
+<head>
+<meta charset="utf-8">
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ReBirth: 재건과 전쟁의 오프라인 전략 시뮬레이션</title>
+<meta name="description" content="지진, 홍수, 가뭄으로 무너진 주(州)를 재건하고, 부대를 지휘해 그림자 전선을 협상 테이블로 끌어내세요. 3D 모바일 전략 게임 ReBirth: 무료로 시작하고 오프라인으로 즐기세요.">
+<meta name="keywords" content="ReBirth, mobil strateji oyunu, strateji oyunu, yeniden inşa, isyanla mücadele, Rebel Inc benzeri, 3D strateji, yönetim oyunu, Android oyun, HanX Games, mobile strategy game, nation building, counter-insurgency">
+<meta name="theme-color" content="#191817">
+<meta name="apple-itunes-app" content="app-id=6821863283">
+<meta name="google-site-verification" content="bIguatcX437S-KmT8B1zFTFKgv-FUBip_9dqCjkeIvQ">
+<link rel="canonical" href="https://rebirthgame.tr/ko/">
+<link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/">
+<link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/">
+<link rel="alternate" hreflang="es" href="https://rebirthgame.tr/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://rebirthgame.tr/pt-br/">
+<link rel="alternate" hreflang="de" href="https://rebirthgame.tr/de/">
+<link rel="alternate" hreflang="fr" href="https://rebirthgame.tr/fr/">
+<link rel="alternate" hreflang="id" href="https://rebirthgame.tr/id/">
+<link rel="alternate" hreflang="ja" href="https://rebirthgame.tr/ja/">
+<link rel="alternate" hreflang="ko" href="https://rebirthgame.tr/ko/">
+<link rel="alternate" hreflang="zh-CN" href="https://rebirthgame.tr/zh-cn/">
+<link rel="alternate" hreflang="zh-TW" href="https://rebirthgame.tr/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://rebirthgame.tr/">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ReBirth">
+<meta property="og:title" content="ReBirth: 재건과 전쟁의 오프라인 전략 시뮬레이션">
+<meta property="og:description" content="지진, 홍수, 가뭄으로 무너진 주(州)를 재건하고, 부대를 지휘해 그림자 전선을 협상 테이블로 끌어내세요. 3D 모바일 전략 게임 ReBirth: 무료로 시작하고 오프라인으로 즐기세요.">
+<meta property="og:image" content="https://rebirthgame.tr/assets/img/ui/og.jpg">
+<meta property="og:url" content="https://rebirthgame.tr/ko/">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoGame","name":"ReBirth","url":"https://rebirthgame.tr/",
+ "image":"https://rebirthgame.tr/assets/img/ui/og.jpg",
+ "description":"A 3D strategy and management game about rebuilding disaster-hit provinces and counter-insurgency.",
+ "genre":["Strategy","Simulation"],"gamePlatform":["Android","iOS","Windows","Linux","Web browser"],"operatingSystem":"Android, iOS, Windows, Linux",
+ "applicationCategory":"Game","inLanguage":["tr","en","es","pt-BR","de","fr","id","ja","ko","zh-CN","zh-TW"],
+ "publisher":{"@type":"Organization","name":"HanX Games"},
+ "sameAs":["https://hanx-games.itch.io/rebirth","https://youtu.be/5sEuAHAH5xM","https://play.google.com/store/apps/details?id=com.hantro.business","https://apps.apple.com/app/id6821863283"],
+ "offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://play.google.com/store/apps/details?id=com.hantro.business"},{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://apps.apple.com/app/id6821863283"}]}
+</script>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css?v=5">
+<link rel="stylesheet" href="css/dil.css?v=1">
+<link rel="preload" as="image" href="assets/video/hero.jpg">
+</head>
+<body class="is-loading">
+
+<!-- ==================================================================== yükleme perdesi -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__mark">
+    <svg viewBox="0 0 120 70" class="sunmark" aria-hidden="true">
+      <defs><clipPath id="sunclip-l"><rect x="0" y="0" width="120" height="44"/></clipPath></defs>
+      <g clip-path="url(/ko/#sunclip-l)">
+        <circle class="sunmark__disc" cx="60" cy="44" r="26"/>
+      </g>
+      <g class="sunmark__bars">
+        <rect x="34" y="47" width="52" height="4" rx="1"/><rect x="38" y="54" width="44" height="4" rx="1"/><rect x="45" y="61" width="30" height="4" rx="1"/>
+      </g>
+      <line class="sunmark__line" x1="2" y1="44" x2="118" y2="44"/>
+    </svg>
+    <div class="loader__word"><span class="re">RE</span>BIRTH</div>
+  </div>
+  <div class="loader__bar"><i id="loaderBar"></i></div>
+  <div class="loader__text" data-i18n="load.text">작전 준비 중</div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- ==================================================================== gezinme -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="/ko/#top" aria-label="ReBirth">
+    <span class="re">RE</span>BIRTH
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="/ko/#hikaye" data-i18n="nav.story">스토리</a>
+    <a href="/ko/#oyun" data-i18n="nav.game">게임</a>
+    <a href="/ko/#harita" data-i18n="nav.map">지도</a>
+    <a href="/ko/#felaketler" data-i18n="nav.disasters">재난</a>
+    <a href="/ko/#hava" data-i18n="nav.air">항공 전력</a>
+    <a href="/ko/#kriz" data-i18n="nav.crisis">위기 대응실</a>
+    <a href="/ko/#oyunlar" data-i18n="nav.arcade">미니 게임</a>
+    <a href="/ko/#galeri" data-i18n="nav.gallery">갤러리</a>
+    <a href="/ko/#sss" data-i18n="nav.faq">FAQ</a>
+  </nav>
+  <div class="nav__right">
+    <button class="nav__lang dil-btn" id="langBtn" type="button" aria-label="Dil / Language">TR</button>
+    <button class="nav__sound" id="soundBtn" type="button" aria-pressed="false" aria-label="Ses">
+      <span class="eq"><i></i><i></i><i></i><i></i></span>
+    </button>
+    <a class="btn btn--accent btn--sm nav__play" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dnav" target="_blank" rel="noopener" data-i18n="nav.play">Google Play</a>
+    <button class="nav__burger" id="burger" type="button" aria-label="Menü" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ==================================================================== kahraman -->
+<section class="hero" id="hero">
+  <div class="hero__media">
+    <video class="hero__video" id="heroVideo" muted loop playsinline preload="none" poster="assets/video/hero.jpg" data-src="assets/video/hero.mp4"></video>
+    <div class="hero__shade"></div>
+    <img class="hero__silhouette" src="assets/img/ui/menu_hero.svg" alt="" aria-hidden="true">
+  </div>
+  <div class="hero__content">
+    <div class="kicker hero__kicker" data-i18n="hero.kicker">3D 모바일 전략 · 재건 · 반군 진압</div>
+    <h1 class="wordmark" aria-label="ReBirth">
+      <span class="wordmark__re">RE</span><span class="wordmark__birth">BIRTH</span>
+    </h1>
+    <div class="hero__sun">
+      <i class="hero__rule"></i>
+      <svg viewBox="0 0 120 70" class="sunmark sunmark--hero" aria-hidden="true">
+        <defs><clipPath id="sunclip-h"><rect x="0" y="0" width="120" height="44"/></clipPath></defs>
+        <g clip-path="url(/ko/#sunclip-h)"><circle class="sunmark__disc" cx="60" cy="44" r="26"/></g>
+        <g class="sunmark__bars"><rect x="34" y="47" width="52" height="4" rx="1"/><rect x="38" y="54" width="44" height="4" rx="1"/><rect x="45" y="61" width="30" height="4" rx="1"/></g>
+      </svg>
+      <i class="hero__rule"></i>
+    </div>
+    <p class="script hero__slogan" data-i18n-html="hero.slogan">위태로운 땅.<br>더 강한 내일.</p>
+    <p class="hero__lead" data-i18n="hero.lead">한 주(州)가 폐허가 되었고, 그 빈자리를 그림자 전선이 파고들고 있습니다. 국제 임무단의 조정관은 바로 당신. 재건하고, 주민의 신뢰를 얻고, 협상 테이블에서 전쟁을 끝내세요.</p>
+    <div class="hero__ctas">
+      <a class="appstore appstore--lg" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-ko.svg" alt="App Store에서 다운로드하기" height="56"></a>
+      <a class="btn btn--accent btn--lg magnetic" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dhero" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg>
+        <span data-i18n="hero.play">Google Play에서 받기</span>
+      </a>
+      <button class="btn btn--ghost btn--lg magnetic" type="button" data-trailer>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13c0 .6.7 1 1.2.6l10-6.5c.5-.3.5-1 0-1.3l-10-6.5C8.7 4.5 8 4.9 8 5.5z"/></svg>
+        <span data-i18n="hero.trailer">트레일러 보기</span>
+      </button>
+      <a class="btn btn--ghost btn--lg magnetic" href="https://hanx-games.itch.io/rebirth" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-7v2h3v2H7v-2h3v-2H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v9h16V6H4z"/></svg>
+        <span data-i18n="hero.pc">PC에서 플레이</span>
+        <span class="sale-badge" data-sale-until="2026-11-30T20:59:00Z" data-i18n="hero.sale">50% 할인</span>
+      </a>
+    </div>
+    <div class="hero__meta">
+      <span class="pill pill--muted" data-i18n="hero.ios">App Store에서도 플레이</span>
+      <span class="hero__free" data-i18n="hero.free">무료로 시작 · 오프라인 플레이 · 11개 언어</span>
+    </div>
+  </div>
+  <a class="hero__scroll" href="/ko/#hikaye"><span data-i18n="hero.scroll">이야기 속으로</span><i></i></a>
+  <div class="ticker" aria-hidden="true"><div class="ticker__track" id="ticker"></div></div>
+</section>
+
+<!-- ==================================================================== hikâye (kaydırmalı sinematik) -->
+<section class="story" id="hikaye">
+  <div class="story__pin" id="storyPin">
+    <div class="story__frames">
+      <figure class="story__frame is-on" data-i="1"><img src="assets/img/cine/s1.webp" alt=""><img class="story__lights" src="assets/img/cine/s1_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="2"><img data-src="assets/img/cine/s2.webp" alt=""></figure>
+      <figure class="story__frame" data-i="3"><img data-src="assets/img/cine/s3.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s3_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="4"><img data-src="assets/img/cine/s4.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s4_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="5"><img data-src="assets/img/cine/s5.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s5_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="6"><img data-src="assets/img/cine/s6.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s6_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="7"><img data-src="assets/img/cine/s7.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s7_on.webp" alt=""></figure>
+    </div>
+    <div class="story__shade"></div>
+    <div class="story__flash" id="storyFlash"></div>
+    <div class="story__head">
+      <div class="kicker" data-i18n="story.kicker">오프닝 영상</div>
+      <h2 class="title" data-i18n="story.title">어느 밤, 모든 것이 바뀌었다</h2>
+    </div>
+    <div class="story__captions">
+      <p class="story__cap is-on" data-i="1" data-i18n="story.1">Tarsel. 산맥에 둘러싸인 계곡, 해안의 항구. 고요한 밤…</p>
+      <p class="story__cap" data-i="2" data-i18n="story.2">규모 7.8의 지진이 주 전체를 무너뜨렸다. 도시가 불타고 있다.</p>
+      <p class="story__cap" data-i="3" data-i18n="story.3">잔해 속에서 목소리가 들려온다. 한 시간이 곧 한 생명이다.</p>
+      <p class="story__cap" data-i="4" data-i18n="story.4">분노가 광장으로 쏟아져 나왔다. 사람들은 더 이상 국가를 믿지 않았다.</p>
+      <p class="story__cap" data-i="5" data-i18n="story.5">그 빈자리를 그림자 전선이 채웠다. 산에는 요새가, 마을에는 공포가.</p>
+      <p class="story__cap" data-i="6" data-i18n="story.6">국제 안정화 임무단이 출발했다.</p>
+      <p class="story__cap story__cap--final" data-i="7" data-i18n="story.7">조정관님, 이제 지휘는 당신의 몫입니다.</p>
+    </div>
+    <div class="story__progress"><span id="storyNum">01</span><i><b id="storyBar"></b></i><span>07</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== oyunun kalbi -->
+<section class="section pillars" id="oyun">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="pillars.kicker">게임의 핵심</div>
+      <h2 class="title" data-i18n="pillars.title">재건하라. 지휘하라. 승리하라.</h2>
+      <p class="lead" data-i18n="pillars.lead">수리한 도로, 문을 연 진료소, 배치한 부대 하나하나가 14개 지구의 안정, 지지, 안보를 바꿉니다.</p>
+    </header>
+    <div class="pillars__grid">
+      <article class="pillar reveal" data-video="assets/video/insa.mp4" data-poster="assets/video/insa.jpg">
+        <div class="pillar__media"><video muted loop playsinline preload="none"></video></div>
+        <div class="pillar__body">
+          <div class="pillar__num">01</div>
+          <h3 data-i18n="p1.t">재건</h3>
+          <p data-i18n="p1.d">잔해를 치우고, 천막촌을 주택으로, 어둠을 전기로 바꾸세요. 물, 보건, 학교, 시장, 지방 의회가 마을에 다시 활기를 불어넣습니다.</p>
+        </div>
+      </article>
+      <article class="pillar reveal" data-video="assets/video/catisma.mp4" data-poster="assets/video/catisma.jpg">
+        <div class="pillar__media"><video muted loop playsinline preload="none"></video></div>
+        <div class="pillar__body">
+          <div class="pillar__num">02</div>
+          <h3 data-i18n="p2.t">지휘</h3>
+          <p data-i18n="p2.d">보병, 기계화 부대, 헌병, 특수부대, 공병, 지역 민병대. 순찰, 공격, 경계를 명령하세요. 하지만 민간인 피해가 날 때마다 정당성이 깎입니다.</p>
+        </div>
+      </article>
+      <article class="pillar reveal" data-video="assets/video/kasaba.mp4" data-poster="assets/video/kasaba.jpg">
+        <div class="pillar__media"><video muted loop playsinline preload="none"></video></div>
+        <div class="pillar__body">
+          <div class="pillar__num">03</div>
+          <h3 data-i18n="p3.t">민심 얻기</h3>
+          <p data-i18n="p3.d">진짜 전선은 여론입니다. 정당성이 100%에 이르면 그림자 전선이 협상 테이블에 나옵니다. 평화 협정에 서명하고 작전을 승리로 이끄세요.</p>
+        </div>
+      </article>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><b data-count="14">0</b><span data-i18n="stat.districts">지구</span></div>
+      <div class="stat"><b data-count="40">0</b><span data-i18n="stat.initiatives">사업</span></div>
+      <div class="stat"><b data-count="30">0</b><span data-i18n="stat.policies">정책</span></div>
+      <div class="stat"><b data-count="80" data-prefix="~">0</b><span data-i18n="stat.events">동적 이벤트</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== interaktif harita -->
+<section class="section mapsec" id="harita">
+  <div class="container">
+    <header class="sec-head sec-head--row reveal">
+      <div>
+        <div class="kicker" data-i18n="map.kicker">작전 지도</div>
+        <h2 class="title" data-i18n="map.title">지도 읽기</h2>
+      </div>
+      <p class="lead" data-i18n="map.lead">게임에서 그대로 가져온 실제 지도입니다. 지구를 탭하고 레이어를 바꿔 보세요. 병력이 필요한 곳, 병원이 필요한 곳, 일자리가 필요한 곳은 어디일까요?</p>
+    </header>
+    <div class="opsmap reveal" id="opsmap">
+      <div class="opsmap__stage" id="mapStage">
+        <img class="opsmap__img opsmap__img--day" id="mapDay" src="assets/img/map/tarsel_gun_k.webp" data-hi="assets/img/map/tarsel_gun.webp" alt="Tarsel">
+        <img class="opsmap__img opsmap__img--night" id="mapNight" src="assets/img/map/tarsel_gece_k.webp" data-hi="assets/img/map/tarsel_gece.webp" alt="" aria-hidden="true">
+        <svg class="opsmap__svg" id="mapSvg" viewBox="0 0 2100 1400" preserveAspectRatio="xMidYMid slice" aria-label="Tarsel"></svg>
+        <div class="opsmap__scan" aria-hidden="true"></div>
+        <div class="opsmap__tip" id="mapTip"></div>
+      </div>
+      <aside class="opsmap__panel">
+        <div class="opsmap__tools">
+          <div class="seg" id="lensSeg">
+            <span class="seg__label" data-i18n="map.lens">레이어</span>
+            <button type="button" class="is-on" data-lens="stab" data-i18n="map.l.stab">안정</button>
+            <button type="button" data-lens="ctrl" data-i18n="map.l.ctrl">통제</button>
+            <button type="button" data-lens="sec" data-i18n="map.l.sec">안보</button>
+            <button type="button" data-lens="none" data-i18n="map.l.none">기본</button>
+          </div>
+          <div class="seg seg--sm" id="todSeg">
+            <button type="button" class="is-on" data-tod="day" data-i18n="map.day">주간</button>
+            <button type="button" data-tod="night" data-i18n="map.night">야간</button>
+          </div>
+        </div>
+        <div class="dossier" id="dossier">
+          <div class="dossier__empty" data-i18n="map.hint">지구를 탭하세요</div>
+        </div>
+        <div class="legend" id="legend"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== felaketler -->
+<section class="section disasters" id="felaketler">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="dis.kicker">다섯 개의 지도, 다섯 가지 재난</div>
+      <h2 class="title" data-i18n="dis.title">모든 주에는 저마다의 상처가 있다</h2>
+    </header>
+    <div class="dis__grid">
+      <article class="dis reveal" data-fx="quake" data-video="assets/video/deprem.mp4" data-poster="assets/video/deprem.jpg">
+        <div class="dis__media"><video muted loop playsinline preload="none"></video><canvas class="dis__fx"></canvas>
+          <svg class="dis__cracks" viewBox="0 0 400 260" preserveAspectRatio="none" aria-hidden="true"><path d="M0 140 L60 128 L92 150 L140 120 L170 138 L230 104 L262 126 L320 96 L400 112"/><path d="M140 120 L150 80 L132 40 L146 0"/><path d="M262 126 L276 170 L258 214 L270 260"/></svg>
+        </div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--accent"></i><span data-i18n="dis.t.tag">지진 · 산악</span><em class="pill pill--good" data-i18n="dis.free">무료</em></div>
+          <h3 data-i18n="dis.t.name">Tarsel 주</h3>
+          <p data-i18n="dis.t.d">여진이 보강되지 않은 건물을 무너뜨립니다. 지진 감시망을 주시하고, 천막촌과 수색 구조를 준비하고, 다음 지진에 대비해 주택을 보강하세요.</p>
+        </div>
+      </article>
+      <article class="dis reveal" data-fx="rain" data-video="assets/video/sel.mp4" data-poster="assets/video/sel.jpg">
+        <div class="dis__media"><video muted loop playsinline preload="none"></video><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--blue"></i><span data-i18n="dis.k.tag">홍수 · 삼각주</span><em class="pill pill--accent" data-i18n="dis.premium">프리미엄</em></div>
+          <h3 data-i18n="dis.k.name">Kesra 삼각주</h3>
+          <p data-i18n="dis.k.d">강은 봄마다 불어납니다. 홍수 제방, 펌프장, 고상 가옥을 짓고, 물이 남기고 간 비옥한 퇴적토에서 농사를 지으세요.</p>
+        </div>
+      </article>
+      <article class="dis reveal" data-fx="dust" data-video="assets/video/kurak.mp4" data-poster="assets/video/kurak.jpg">
+        <div class="dis__media"><video muted loop playsinline preload="none"></video><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--sand"></i><span data-i18n="dis.v.tag">가뭄 · 고원</span><em class="pill pill--accent" data-i18n="dis.premium">프리미엄</em></div>
+          <h3 data-i18n="dis.v.name">Varzan 고원</h3>
+          <p data-i18n="dis.v.d">지구마다 물 부족 정도가 다르고, 목마른 청년들은 그림자 전선에 더 쉽게 가담합니다. 우물을 파고, 저수조를 짓고, 급수차를 운영하고, 녹지대를 조성하세요.</p>
+        </div>
+      </article>
+      <article class="dis dis--genis reveal" data-fx="snow">
+        <div class="dis__media"><img src="assets/img/map/halvarya_kart.webp" alt="Halvarya" loading="lazy"><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--ice"></i><span data-i18n="dis.h.tag">눈사태 · 피오르</span><em class="pill pill--accent" data-i18n="dis.premium">프리미엄</em></div>
+          <h3 data-i18n="dis.h.name">Halvarya 피오르</h3>
+          <p data-i18n="dis.h.d">긴 겨울 동안 모든 지구에 눈이 쌓이고, 눈사태가 집을 무너뜨리고 산길을 막습니다. 눈사태 방벽과 감시망을 세우고, 도로를 제설하고, 난방 센터로 추위를 견디세요.</p>
+        </div>
+      </article>
+      <article class="dis dis--genis reveal" data-fx="ash">
+        <div class="dis__media"><img src="assets/img/map/saranis_kart.webp" alt="Saranis" loading="lazy"><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--lava"></i><span data-i18n="dis.s.tag">화산 · 제도</span><em class="pill pill--accent" data-i18n="dis.premium">프리미엄</em></div>
+          <h3 data-i18n="dis.s.name">Saranis 제도</h3>
+          <p data-i18n="dis.s.d">Morasca 화산의 압력은 멈추지 않고 오릅니다. 화산재가 밭을 덮고, 분화는 거대한 해일을 해안으로 보낼 수 있습니다. 방파제와 관측소를 짓고, 섬으로 페리를 운항하고, 비옥한 화산 토양에 포도밭을 일구세요.</p>
+        </div>
+      </article>
+    </div>
+    <div class="dis__maps reveal">
+      <figure><img src="assets/img/map/tarsel_maket.webp" alt="Tarsel" loading="lazy"><figcaption>Tarsel</figcaption></figure>
+      <figure><img src="assets/img/map/kesra_maket.webp" alt="Kesra" loading="lazy"><figcaption>Kesra</figcaption></figure>
+      <figure><img src="assets/img/map/varzan_maket.webp" alt="Varzan" loading="lazy"><figcaption>Varzan</figcaption></figure>
+      <figure><img src="assets/img/map/halvarya_maket.webp" alt="Halvarya" loading="lazy"><figcaption>Halvarya</figcaption></figure>
+      <figure><img src="assets/img/map/saranis_maket.webp" alt="Saranis" loading="lazy"><figcaption>Saranis</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== hava gücü -->
+<section class="section air" id="hava">
+  <div class="container air__grid">
+    <div class="air__media reveal">
+      <div class="air__frame">
+        <video id="airVideo" muted loop playsinline preload="none" data-poster="assets/video/sinematik.jpg" data-src="assets/video/sinematik.mp4"></video>
+      </div>
+    </div>
+    <div class="air__body">
+      <header class="sec-head reveal">
+        <div class="kicker" data-i18n="air.kicker">공군</div>
+        <h2 class="title" data-i18n="air.title">하늘도 당신의 것</h2>
+        <p class="lead" data-i18n="air.lead">공습을 명령하면 카메라가 전투기 뒤에 고정되고, 미사일이 발사되는 순간 목표 위로 넘어가 폭발을 지켜봅니다. 화면을 탭하면 다시 지휘권이 돌아옵니다.</p>
+      </header>
+      <div class="units reveal">
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24h36M24 14v20M14 20l10 4 10-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg><b data-i18n="air.u1">정찰 드론</b><span data-i18n="air.u1d">하늘의 눈. 숨어 있는 세포를 드러냅니다.</span></div>
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h40M24 12v24M16 30h16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M20 24l-6 10M28 24l6 10" stroke="currentColor" stroke-width="2"/></svg><b data-i18n="air.u2">무장 드론</b><span data-i18n="air.u2d">인접 지구에 정밀 타격.</span></div>
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 14h36M24 14v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M12 26c0-4 6-6 12-6h6c4 0 8 3 8 6s-4 6-8 6H18c-3 0-6-2-6-6zM38 26h6M24 32l-4 6h14" fill="none" stroke="currentColor" stroke-width="2.2"/></svg><b data-i18n="air.u3">공격 헬기</b><span data-i18n="air.u3d">신속 대응과 근접 지원.</span></div>
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l4 14 14 8v4l-14-3-1 10 5 4v3l-8-2-8 2v-3l5-4-1-10-14 3v-4l14-8z" fill="currentColor"/></svg><b data-i18n="air.u4">전투기</b><span data-i18n="air.u4d">주 어디든 닿는 강력한 타격.</span></div>
+      </div>
+      <div class="radio reveal" id="radio">
+        <div class="radio__head"><span class="radio__led"></span><b data-i18n="radio.title">무전</b><span data-i18n="radio.sub">실제 게임 속 음성 · 탭해서 듣기</span></div>
+        <canvas class="radio__wave" id="radioWave" height="60"></canvas>
+        <div class="radio__btns">
+          <button type="button" data-voice="sec_1" data-i18n="radio.1">부대 선택</button>
+          <button type="button" data-voice="hareket_1" data-i18n="radio.2">이동 명령</button>
+          <button type="button" data-voice="taarruz_1" data-i18n="radio.3">공격</button>
+          <button type="button" data-voice="vurus_1" data-i18n="radio.4">공습</button>
+          <button type="button" data-voice="karargah_yok_1" data-i18n="radio.5">본부 함락</button>
+          <button type="button" data-voice="konvoy_pusu_1" data-i18n="radio.6">수송대 매복</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== kriz masası -->
+<section class="section crisis" id="kriz">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker kicker--new" data-i18n="crisis.kicker">신규 · 위기 대응실 2.0</div>
+      <h2 class="title" data-i18n="crisis.title">일곱 가지 위기. 일곱 가지 게임.</h2>
+      <p class="lead" data-i18n="crisis.lead">임무마다 고유한 상황판, 고유한 규칙, 지도 위 고유한 3D 무대가 있습니다. 하룻저녁이면 끝나지만 며칠 동안 머릿속을 떠나지 않습니다.</p>
+    </header>
+    <div class="crisis__grid" id="crisisGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================================== yaşayan dünya -->
+<section class="section world" id="dunya">
+  <div class="container">
+    <header class="sec-head sec-head--row reveal">
+      <div>
+        <div class="kicker" data-i18n="world.kicker">살아 있는 세계</div>
+        <h2 class="title" data-i18n="world.title">밤에도 전쟁은 계속된다</h2>
+      </div>
+      <p class="lead" data-i18n="world.lead">안정된 지구는 밤에 환히 빛나고, 경합 지구는 깜빡이며, 반군이 장악한 지구는 어둠에 잠깁니다. 드래그해서 확인하세요.</p>
+    </header>
+    <div class="compare reveal" id="compare">
+      <video class="compare__a" muted loop playsinline preload="none" data-poster="assets/video/gunbatimi.jpg" data-src="assets/video/gunbatimi.mp4"></video>
+      <div class="compare__b" id="compareB"><video muted loop playsinline preload="none" data-poster="assets/video/gece.jpg" data-src="assets/video/gece.mp4"></video></div>
+      <div class="compare__handle" id="compareHandle"><span data-i18n="world.drag">드래그</span></div>
+      <span class="compare__lbl compare__lbl--a">☀</span><span class="compare__lbl compare__lbl--b">☾</span>
+    </div>
+    <div class="moments">
+      <div class="kicker reveal" data-i18n="mom.kicker">잊지 못할 순간들</div>
+      <div class="moments__track" id="moments">
+        <figure class="moment"><img data-shot="16_secim_gecesi" alt="" loading="lazy"><figcaption><b data-i18n="mom.1t">선거의 밤</b><span data-i18n="mom.1d">투표가 마감되면 생방송이 시작되고, 지구별로 결과가 속속 들어옵니다.</span></figcaption></figure>
+        <figure class="moment"><img data-shot="15_konvoy" alt="" loading="lazy"><figcaption><b data-i18n="mom.2t">구호 수송대</b><span data-i18n="mom.2d">경로를 계획하고 위험한 지구에 호위를 보내세요.</span></figcaption></figure>
+        <figure class="moment"><img data-shot="09_bayram" alt="" loading="lazy"><figcaption><b data-i18n="mom.3t">추수 축제</b><span data-i18n="mom.3d">평화가 돌아온 마을 위로 터지는 불꽃놀이.</span></figcaption></figure>
+        <figure class="moment"><img data-shot="18_gazete" alt="" loading="lazy"><figcaption><b data-i18n="mom.4t">월간 신문</b><span data-i18n="mom.4d">Tarsel 지평선이 매달 당신의 이야기를 1면에 싣습니다.</span></figcaption></figure>
+        <figure class="moment"><img data-shot="17_kriz_masasi" alt="" loading="lazy"><figcaption><b data-i18n="mom.5t">위기 대응실</b><span data-i18n="mom.5d">일곱 가지 임무, 별점 평가.</span></figcaption></figure>
+        <figure class="moment"><img data-shot="19_hikaye" alt="" loading="lazy"><figcaption><b data-i18n="mom.6t">작전의 이야기</b><span data-i18n="mom.6d">마지막에는 작전 전체가 타임랩스 영상으로 펼쳐집니다.</span></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== mini oyunlar -->
+<section class="section arcade" id="oyunlar">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="arc.kicker">지휘 본부</div>
+      <h2 class="title" data-i18n="arc.title">브라우저에서 즐기는 미니 임무 4종</h2>
+      <p class="lead" data-i18n="arc.lead">게임의 실제 지도와 사운드로 만들었습니다. 여기서 몸을 풀고, 진짜 작전에 나서세요.</p>
+    </header>
+    <div class="arcade__tabs reveal" id="arcTabs">
+      <button type="button" class="arc-tab is-on" data-game="hava"><i class="arc-tab__ico">✈</i><b data-i18n="arc.hava">공습</b><span data-i18n="arc.hava.d">목표는 정확히, 민간인은 안전하게.</span><em class="arc-tab__best"></em></button>
+      <button type="button" class="arc-tab" data-game="golge"><i class="arc-tab__ico">◎</i><b data-i18n="arc.golge">그림자 사냥</b><span data-i18n="arc.golge.d">정보원과 함께 세포를 찾아내세요.</span><em class="arc-tab__best"></em></button>
+      <button type="button" class="arc-tab" data-game="insa"><i class="arc-tab__ico">▲</i><b data-i18n="arc.insa">재건</b><span data-i18n="arc.insa.d">12개월 안에 주를 다시 일으키세요.</span><em class="arc-tab__best"></em></button>
+      <button type="button" class="arc-tab" data-game="konvoy"><i class="arc-tab__ico">➜</i><b data-i18n="arc.konvoy">구호 회랑</b><span data-i18n="arc.konvoy.d">매복을 뚫고 수송대를 통과시키세요.</span><em class="arc-tab__best"></em></button>
+    </div>
+    <div class="arcade__screen reveal">
+      <div class="arcade__bezel">
+        <div class="arcade__stage" id="arcStage"><div class="arcade__loading" data-i18n="arc.loading">불러오는 중…</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== galeri -->
+<section class="section gallery" id="galeri">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="gal.kicker">갤러리</div>
+      <h2 class="title" data-i18n="gal.title">현장의 순간들</h2>
+    </header>
+    <div class="gallery__grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================================== gazete: son güncelleme -->
+<section class="section paper-sec" id="guncelleme">
+  <div class="container">
+    <article class="paper reveal">
+      <div class="paper__mast">
+        <span class="paper__issue" data-i18n="news.issue">버전 2.0.7</span>
+        <h2 class="paper__name" data-i18n="news.paper">Tarsel 지평선</h2>
+        <span class="paper__date">HanX Games</span>
+      </div>
+      <p class="paper__motto script" data-i18n="news.motto">“잔해 속에서 내일을 바라보는 신문”</p>
+      <div class="paper__rule"></div>
+      <div class="paper__grid">
+        <div class="paper__main">
+          <div class="paper__band" data-i18n="news.band">톱뉴스</div>
+          <h3 class="paper__head" data-i18n="news.head">위기 대응실, 이제 일곱 가지 게임으로</h3>
+          <p class="paper__lead" data-i18n="news.lead">금이 간 댐에 주입하는 그라우트, 오염된 펌프를 숨긴 발병 지도, 포위된 수도의 네 관문. 임무마다 고유한 상황판과 규칙이 있습니다.</p>
+          <img class="paper__photo" src="assets/img/guncelleme_207.jpg" alt="" loading="lazy">
+        </div>
+        <div class="paper__side">
+          <h4 data-i18n="news.c1h">현실적인 크기</h4><p data-i18n="news.c1">차량, 병사, 좀비의 크기를 건물에 맞췄습니다. 이제 좀비가 캠프 담장보다 크지 않습니다.</p>
+          <h4 data-i18n="news.c2h">더 깔끔해진 지도</h4><p data-i18n="news.c2">허공에 뜬 도로 끝, 겹친 다리, 집 위에 올라앉은 항만 크레인이 사라졌고, 화재 아래에는 검은 원 대신 자연스러운 그을음 자국이 남습니다.</p>
+          <h4 data-i18n="news.c3h">칼럼</h4><p class="script paper__quote" data-i18n="news.c3">“댐은 회의 테이블이 아니라 균열 앞에서 지켜진다.”</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ==================================================================== ücretsiz / premium -->
+<section class="section premium" id="premium">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="prem.kicker">무료로 시작</div>
+      <h2 class="title" data-i18n="prem.title">한 번 구매로 모든 것을</h2>
+    </header>
+    <div class="premium__grid">
+      <div class="plan reveal">
+        <div class="plan__name" data-i18n="prem.free">무료</div>
+        <div class="plan__desc" data-i18n="prem.freeD">Tarsel 작전 전체</div>
+        <ul><li data-i18n="prem.f1">Tarsel 주, 표준 시나리오</li><li data-i18n="prem.f2">개발 독트린</li><li data-i18n="prem.f3">모든 사업과 부대</li><li class="is-muted" data-i18n="prem.f4">광고 포함</li></ul>
+        <a class="appstore appstore--plan" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-ko.svg" alt="App Store에서 다운로드하기" height="48"></a>
+        <a class="btn btn--ghost plan__btn" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dpremium_ucretsiz" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg><span data-i18n="prem.freeBtn">무료 다운로드</span></a>
+      </div>
+      <div class="plan plan--prem reveal">
+        <div class="plan__crown">♛</div>
+        <div class="plan__name" data-i18n="prem.prem">프리미엄</div>
+        <div class="plan__desc" data-i18n="prem.premD">한 번 구매 · 구독 없음</div>
+        <ul><li data-i18n="prem.p1">Kesra, Varzan, Halvarya, Saranis 지도</li><li data-i18n="prem.p2">모든 시나리오와 독트린</li><li data-i18n="prem.p3">위기 대응실과 공군</li><li data-i18n="prem.p4">앞으로 추가될 모든 지도와 이벤트</li><li data-i18n="prem.p5">광고 없음</li></ul>
+        <a class="appstore appstore--plan" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-ko.svg" alt="App Store에서 다운로드하기" height="48"></a>
+        <a class="btn btn--accent plan__btn" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dpremium" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg><span data-i18n="hero.play">Google Play에서 받기</span></a>
+        <p class="plan__note" data-i18n="prem.note">프리미엄은 게임 안에서 구매합니다.</p>
+      </div>
+    </div>
+    <!-- PC: itch.io'nun resmî satın alma kutusu (fiyat ve indirim canlı gelir); dar ekranda yalnız düğme -->
+    <div class="plan plan--pc premium__pc reveal">
+      <div>
+        <div class="plan__name" data-i18n="prem.pc">정식 버전</div>
+        <div class="plan__desc" data-i18n="prem.pcD">Windows · Linux · itch.io</div>
+        <ul><li data-i18n="prem.c1">Windows 및 Linux용 다운로드</li><li data-i18n="prem.c2">저장 파일은 컴퓨터에 보관됩니다</li><li data-i18n="prem.c3">브라우저 무료 체험판</li></ul>
+        <a class="btn btn--ghost plan__btn" href="https://hanx-games.itch.io/rebirth/purchase" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-7v2h3v2H7v-2h3v-2H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v9h16V6H4z"/></svg><span data-i18n="prem.pcBtn">정식 버전 받기</span>
+          <span class="sale-badge" data-sale-until="2026-11-30T20:59:00Z" data-i18n="hero.sale">50% 할인</span></a>
+      </div>
+      <div class="itch-kutu"><iframe src="https://itch.io/embed/5152900?linkback=true&amp;bg_color=1f1d1b&amp;fg_color=ece4d0&amp;link_color=f1ad2a&amp;border_color=3a3631" width="552" height="167" loading="lazy" title="ReBirth — itch.io"><a href="https://hanx-games.itch.io/rebirth">ReBirth by HanX Games</a></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== sss -->
+<section class="section faq" id="sss">
+  <div class="container container--narrow">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="faq.kicker">FAQ</div>
+      <h2 class="title" data-i18n="faq.title">궁금한 점들</h2>
+    </header>
+    <div class="faq__list reveal">
+      <details><summary data-i18n="faq.q1">어떤 기기에서 플레이할 수 있나요?</summary><p data-i18n="faq.a1">Android 휴대폰과 태블릿(Google Play), iPhone과 iPad(App Store), 그리고 PC에서 플레이할 수 있습니다. Windows 및 Linux 버전과 무료 브라우저 데모는 itch.io에 있습니다.</p></details>
+      <details><summary data-i18n="faq.q2">인터넷 연결이 필요한가요?</summary><p data-i18n="faq.a2">아니요. ReBirth는 완전히 오프라인으로 플레이할 수 있습니다.</p></details>
+      <details><summary data-i18n="faq.q3">유료인가요?</summary><p data-i18n="faq.a3">Tarsel 작전 전체는 무료입니다. 프리미엄은 구독 없는 1회 구매이며, 광고도 제거됩니다.</p></details>
+      <details><summary data-i18n="faq.q4">어떤 언어를 지원하나요?</summary><p data-i18n="faq.a4">영어, 튀르키예어, 스페인어, 브라질 포르투갈어, 독일어, 프랑스어, 인도네시아어, 일본어, 한국어, 중국어 간체, 중국어 번체를 지원합니다. 음성은 영어와 튀르키예어로 제공됩니다.</p></details>
+      <details><summary data-i18n="faq.q5">작전 하나는 얼마나 걸리나요?</summary><p data-i18n="faq.a5">전체 작전은 몇 시간 정도 걸리며, 중단한 지점부터 이어서 할 수 있습니다. 위기 대응실 임무는 한 번 앉은 자리에서 끝낼 수 있습니다.</p></details>
+      <details><summary data-i18n="faq.q6">Rebel Inc.와 비슷한가요?</summary><p data-i18n="faq.a6">같은 계열입니다. 재건과 반군 진압을 결합했죠. ReBirth는 여기에 다섯 가지 재난 지도, 3D 세계, 공군, 위기 임무를 더했습니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== son çağrı -->
+<section class="final" id="indir">
+  <video class="final__video" muted loop playsinline preload="none" data-poster="assets/video/bayram.jpg" data-src="assets/video/bayram.mp4"></video>
+  <div class="final__shade"></div>
+  <div class="final__content reveal">
+    <img class="final__logo" src="assets/img/ui/logo.webp" alt="ReBirth">
+    <h2 class="title" data-i18n="cta.title">주가 당신을 기다립니다</h2>
+    <p class="lead" data-i18n="cta.lead">다운로드하고 첫 사업을 시작해 Tarsel이 다시 일어서는 모습을 지켜보세요.</p>
+    <div class="hero__ctas">
+      <a class="appstore appstore--lg" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-ko.svg" alt="App Store에서 다운로드하기" height="56"></a>
+      <a class="btn btn--accent btn--lg magnetic" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dfinal" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg>
+        <span data-i18n="hero.play">Google Play에서 받기</span>
+      </a>
+      <button class="btn btn--ghost btn--lg magnetic" type="button" data-trailer>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13c0 .6.7 1 1.2.6l10-6.5c.5-.3.5-1 0-1.3l-10-6.5C8.7 4.5 8 4.9 8 5.5z"/></svg>
+        <span data-i18n="hero.trailer">트레일러 보기</span>
+      </button>
+      <a class="btn btn--ghost btn--lg magnetic" href="https://hanx-games.itch.io/rebirth" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-7v2h3v2H7v-2h3v-2H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v9h16V6H4z"/></svg>
+        <span data-i18n="hero.pc">PC에서 플레이</span>
+        <span class="sale-badge" data-sale-until="2026-11-30T20:59:00Z" data-i18n="hero.sale">50% 할인</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__in">
+    <div class="footer__brand"><span class="nav__logo"><span class="re">RE</span>BIRTH</span><span class="script" data-i18n-html="hero.slogan">위태로운 땅.<br>더 강한 내일.</span></div>
+    <div class="footer__links">
+      <a href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dfooter" target="_blank" rel="noopener">Google Play</a>
+      <a href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener">App Store</a>
+      <a href="https://hanx-games.itch.io/rebirth" target="_blank" rel="noopener" lang="en">itch.io</a>
+      <a href="haberler.html?lang=ko" data-keep-lang="haberler.html" data-i18n="foot.news">뉴스</a>
+      <a href="privacy.html?lang=ko" data-keep-lang="privacy.html" data-i18n="foot.privacy">개인정보처리방침</a>
+      <a href="support.html?lang=ko" data-keep-lang="support.html" data-i18n="foot.support">지원</a>
+      <a href="/ko/#top" data-i18n="foot.top">맨 위로</a>
+    </div>
+    <div class="footer__meta"><span data-i18n="foot.studio">HanX Games 제작</span> · © 2026 · <span data-i18n="foot.note">ReBirth에 등장하는 모든 장소, 단체, 인물은 허구입니다.</span></div>
+  </div>
+</footer>
+
+<!-- ==================================================================== fragman penceresi -->
+<div class="modal" id="trailerModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal__shade" data-close></div>
+  <div class="modal__box">
+    <button class="modal__close" type="button" data-close data-i18n-attr="aria-label:modal.close" aria-label="닫기">×</button>
+    <video id="trailerVideo" controls playsinline preload="none"></video>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" aria-hidden="true"><img id="lightboxImg" alt=""><button class="modal__close" type="button" data-close aria-label="×">×</button></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/i18n.js?v=5"></script>
+<script src="js/dil.js?v=4"></script>
+<script src="js/host.js?v=2" data-root=""></script>
+<script src="js/map.js"></script>
+<script src="js/main.js?v=6"></script>
+<script src="js/sayac.js?v=1" defer></script>
+</body>
+</html>

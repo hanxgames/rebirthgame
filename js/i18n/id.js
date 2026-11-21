@@ -1,7 +1,7 @@
 /* ReBirth tanıtım sitesi — Endonezce metinleri (js/dil.js gerektiğinde yükler; anahtarlar i18n.js'teki tr/en ile aynı). */
 window.RB_I18N = window.RB_I18N || {};
 window.RB_I18N["id"] = {
- "meta.title": "ReBirth — Game Strategi Mobile 3D · Bangun Kembali dan Lawan Pemberontak",
+ "meta.title": "ReBirth: Game Strategi Perang — Strategi 3D Offline Gratis",
  "meta.desc": "Bangun kembali provinsi yang hancur oleh gempa bumi, banjir, dan kekeringan, pimpin pasukanmu, dan bawa Front Bayangan ke meja perundingan. ReBirth, game strategi mobile 3D: gratis untuk mulai, bisa dimainkan offline.",
  "nav.story": "Kisah",
  "nav.game": "Game",

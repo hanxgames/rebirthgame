@@ -22,6 +22,11 @@
   /* ------------------------------------------------------------------ dil */
   /* 11 dil (js/dil.js); tr/en sözlüğü i18n.js'te, diğerleri js/i18n/<kod>.js (başlarken yüklenir). Eksik anahtar en → tr'ye düşer. */
   var D = window.RBDil;
+  // eski ?lang= ana sayfa adresleri (oyun, paylaşımlar, Google dizini) o dilin statik sayfasına gider: /?lang=en → /en/
+  if (!D.sabit()) {
+    var eskiDil = D.coz(new URLSearchParams(location.search).get("lang"));
+    if (eskiDil) { location.replace(D.sayfa(eskiDil) + location.hash); return; }
+  }
   var lang = D.sec();
   var CJK = /^(ja|zh_CN|zh_TW)$/;   // sözcük arası boşluk yok: başlık animasyonu harf harf bölünür
   function t(k) {
@@ -64,7 +69,7 @@
   }
   D.menu($("#langBtn"), lang, function (k) {
     D.yukle(k, function () { lang = k; applyLang(false); sfx("ui_tik", 0.5); });
-  });
+  }, true);
 
   function sfx(n, v) { if (window.RBHost) RBHost.sfx(n, v); }
 
@@ -647,7 +652,7 @@
   burger.addEventListener("click", function () { menu(!links.classList.contains("is-open")); });
   links.addEventListener("click", function (e) { if (e.target.closest("a")) menu(false); });
   var navMap = {};
-  $$("#navLinks a").forEach(function (a) { navMap[a.getAttribute("href").slice(1)] = a; });
+  $$("#navLinks a").forEach(function (a) { navMap[a.getAttribute("href").split("#")[1]] = a; });   // "#oyun" ya da statik sayfada "/en/#oyun"
   var secIO = new IntersectionObserver(function (ents) {
     ents.forEach(function (en) {
       if (!en.isIntersecting) return;

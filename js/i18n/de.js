@@ -1,7 +1,7 @@
 /* ReBirth tanıtım sitesi — Almanca metinleri (js/dil.js gerektiğinde yükler; anahtarlar i18n.js'teki tr/en ile aynı). */
 window.RB_I18N = window.RB_I18N || {};
 window.RB_I18N["de"] = {
- "meta.title": "ReBirth — 3D-Strategiespiel fürs Handy · Wiederaufbau und Aufstandsbekämpfung",
+ "meta.title": "ReBirth: Aufbau-Strategiespiel — 3D-Strategie offline spielen",
  "meta.desc": "Baue Provinzen wieder auf, die Erdbeben, Hochwasser und Dürre verwüstet haben, befehlige deine Truppen und bring die Schattenfront an den Verhandlungstisch. ReBirth, das 3D-Strategiespiel fürs Handy: kostenlos starten, offline spielen.",
  "nav.story": "Story",
  "nav.game": "Spiel",

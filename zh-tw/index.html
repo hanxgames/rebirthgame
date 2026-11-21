@@ -1,0 +1,588 @@
+<!doctype html>
+<!-- Üretilmiş sayfa: tools/statik.py (kaynak: index.html + js/i18n). Elle düzenleme. -->
+<html lang="zh-TW" data-sabit-dil="zh_TW" data-dil="zh_TW">
+<head>
+<meta charset="utf-8">
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ReBirth：重建家園 單機戰爭策略遊戲</title>
+<meta name="description" content="在地震、洪水與乾旱摧毀的省份重建家園，指揮部隊，把暗影陣線逼上談判桌。ReBirth是一款免費開玩、可離線遊玩的3D手機策略遊戲。">
+<meta name="keywords" content="ReBirth, mobil strateji oyunu, strateji oyunu, yeniden inşa, isyanla mücadele, Rebel Inc benzeri, 3D strateji, yönetim oyunu, Android oyun, HanX Games, mobile strategy game, nation building, counter-insurgency">
+<meta name="theme-color" content="#191817">
+<meta name="apple-itunes-app" content="app-id=6821863283">
+<meta name="google-site-verification" content="bIguatcX437S-KmT8B1zFTFKgv-FUBip_9dqCjkeIvQ">
+<link rel="canonical" href="https://rebirthgame.tr/zh-tw/">
+<link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/">
+<link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/">
+<link rel="alternate" hreflang="es" href="https://rebirthgame.tr/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://rebirthgame.tr/pt-br/">
+<link rel="alternate" hreflang="de" href="https://rebirthgame.tr/de/">
+<link rel="alternate" hreflang="fr" href="https://rebirthgame.tr/fr/">
+<link rel="alternate" hreflang="id" href="https://rebirthgame.tr/id/">
+<link rel="alternate" hreflang="ja" href="https://rebirthgame.tr/ja/">
+<link rel="alternate" hreflang="ko" href="https://rebirthgame.tr/ko/">
+<link rel="alternate" hreflang="zh-CN" href="https://rebirthgame.tr/zh-cn/">
+<link rel="alternate" hreflang="zh-TW" href="https://rebirthgame.tr/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://rebirthgame.tr/">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ReBirth">
+<meta property="og:title" content="ReBirth：重建家園 單機戰爭策略遊戲">
+<meta property="og:description" content="在地震、洪水與乾旱摧毀的省份重建家園，指揮部隊，把暗影陣線逼上談判桌。ReBirth是一款免費開玩、可離線遊玩的3D手機策略遊戲。">
+<meta property="og:image" content="https://rebirthgame.tr/assets/img/ui/og.jpg">
+<meta property="og:url" content="https://rebirthgame.tr/zh-tw/">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoGame","name":"ReBirth","url":"https://rebirthgame.tr/",
+ "image":"https://rebirthgame.tr/assets/img/ui/og.jpg",
+ "description":"A 3D strategy and management game about rebuilding disaster-hit provinces and counter-insurgency.",
+ "genre":["Strategy","Simulation"],"gamePlatform":["Android","iOS","Windows","Linux","Web browser"],"operatingSystem":"Android, iOS, Windows, Linux",
+ "applicationCategory":"Game","inLanguage":["tr","en","es","pt-BR","de","fr","id","ja","ko","zh-CN","zh-TW"],
+ "publisher":{"@type":"Organization","name":"HanX Games"},
+ "sameAs":["https://hanx-games.itch.io/rebirth","https://youtu.be/5sEuAHAH5xM","https://play.google.com/store/apps/details?id=com.hantro.business","https://apps.apple.com/app/id6821863283"],
+ "offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://play.google.com/store/apps/details?id=com.hantro.business"},{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://apps.apple.com/app/id6821863283"}]}
+</script>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css?v=5">
+<link rel="stylesheet" href="css/dil.css?v=1">
+<link rel="preload" as="image" href="assets/video/hero.jpg">
+</head>
+<body class="is-loading">
+
+<!-- ==================================================================== yükleme perdesi -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__mark">
+    <svg viewBox="0 0 120 70" class="sunmark" aria-hidden="true">
+      <defs><clipPath id="sunclip-l"><rect x="0" y="0" width="120" height="44"/></clipPath></defs>
+      <g clip-path="url(/zh-tw/#sunclip-l)">
+        <circle class="sunmark__disc" cx="60" cy="44" r="26"/>
+      </g>
+      <g class="sunmark__bars">
+        <rect x="34" y="47" width="52" height="4" rx="1"/><rect x="38" y="54" width="44" height="4" rx="1"/><rect x="45" y="61" width="30" height="4" rx="1"/>
+      </g>
+      <line class="sunmark__line" x1="2" y1="44" x2="118" y2="44"/>
+    </svg>
+    <div class="loader__word"><span class="re">RE</span>BIRTH</div>
+  </div>
+  <div class="loader__bar"><i id="loaderBar"></i></div>
+  <div class="loader__text" data-i18n="load.text">戰役準備中</div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- ==================================================================== gezinme -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="/zh-tw/#top" aria-label="ReBirth">
+    <span class="re">RE</span>BIRTH
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="/zh-tw/#hikaye" data-i18n="nav.story">故事</a>
+    <a href="/zh-tw/#oyun" data-i18n="nav.game">遊戲</a>
+    <a href="/zh-tw/#harita" data-i18n="nav.map">地圖</a>
+    <a href="/zh-tw/#felaketler" data-i18n="nav.disasters">災害</a>
+    <a href="/zh-tw/#hava" data-i18n="nav.air">空中武力</a>
+    <a href="/zh-tw/#kriz" data-i18n="nav.crisis">危機應變室</a>
+    <a href="/zh-tw/#oyunlar" data-i18n="nav.arcade">小遊戲</a>
+    <a href="/zh-tw/#galeri" data-i18n="nav.gallery">藝廊</a>
+    <a href="/zh-tw/#sss" data-i18n="nav.faq">常見問題</a>
+  </nav>
+  <div class="nav__right">
+    <button class="nav__lang dil-btn" id="langBtn" type="button" aria-label="Dil / Language">TR</button>
+    <button class="nav__sound" id="soundBtn" type="button" aria-pressed="false" aria-label="Ses">
+      <span class="eq"><i></i><i></i><i></i><i></i></span>
+    </button>
+    <a class="btn btn--accent btn--sm nav__play" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dnav" target="_blank" rel="noopener" data-i18n="nav.play">Google Play</a>
+    <button class="nav__burger" id="burger" type="button" aria-label="Menü" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ==================================================================== kahraman -->
+<section class="hero" id="hero">
+  <div class="hero__media">
+    <video class="hero__video" id="heroVideo" muted loop playsinline preload="none" poster="assets/video/hero.jpg" data-src="assets/video/hero.mp4"></video>
+    <div class="hero__shade"></div>
+    <img class="hero__silhouette" src="assets/img/ui/menu_hero.svg" alt="" aria-hidden="true">
+  </div>
+  <div class="hero__content">
+    <div class="kicker hero__kicker" data-i18n="hero.kicker">3D手機策略 · 災後重建 · 反叛亂</div>
+    <h1 class="wordmark" aria-label="ReBirth">
+      <span class="wordmark__re">RE</span><span class="wordmark__birth">BIRTH</span>
+    </h1>
+    <div class="hero__sun">
+      <i class="hero__rule"></i>
+      <svg viewBox="0 0 120 70" class="sunmark sunmark--hero" aria-hidden="true">
+        <defs><clipPath id="sunclip-h"><rect x="0" y="0" width="120" height="44"/></clipPath></defs>
+        <g clip-path="url(/zh-tw/#sunclip-h)"><circle class="sunmark__disc" cx="60" cy="44" r="26"/></g>
+        <g class="sunmark__bars"><rect x="34" y="47" width="52" height="4" rx="1"/><rect x="38" y="54" width="44" height="4" rx="1"/><rect x="45" y="61" width="30" height="4" rx="1"/></g>
+      </svg>
+      <i class="hero__rule"></i>
+    </div>
+    <p class="script hero__slogan" data-i18n-html="hero.slogan">脆弱的土地，<br>更堅強的明天。</p>
+    <p class="hero__lead" data-i18n="hero.lead">一個省份已成廢墟，暗影陣線正趁虛而入。你是國際特派團的協調官：重建家園、贏得民心，在談判桌上結束這場戰爭。</p>
+    <div class="hero__ctas">
+      <a class="appstore appstore--lg" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-zh_TW.svg" alt="在 App Store 下載" height="56"></a>
+      <a class="btn btn--accent btn--lg magnetic" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dhero" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg>
+        <span data-i18n="hero.play">在Google Play下載</span>
+      </a>
+      <button class="btn btn--ghost btn--lg magnetic" type="button" data-trailer>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13c0 .6.7 1 1.2.6l10-6.5c.5-.3.5-1 0-1.3l-10-6.5C8.7 4.5 8 4.9 8 5.5z"/></svg>
+        <span data-i18n="hero.trailer">觀看預告片</span>
+      </button>
+      <a class="btn btn--ghost btn--lg magnetic" href="https://hanx-games.itch.io/rebirth" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-7v2h3v2H7v-2h3v-2H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v9h16V6H4z"/></svg>
+        <span data-i18n="hero.pc">在電腦上玩</span>
+        <span class="sale-badge" data-sale-until="2026-11-30T20:59:00Z" data-i18n="hero.sale">現省50%</span>
+      </a>
+    </div>
+    <div class="hero__meta">
+      <span class="pill pill--muted" data-i18n="hero.ios">App Store同步上架</span>
+      <span class="hero__free" data-i18n="hero.free">免費開玩 · 可離線遊玩 · 11種語言</span>
+    </div>
+  </div>
+  <a class="hero__scroll" href="/zh-tw/#hikaye"><span data-i18n="hero.scroll">進入故事</span><i></i></a>
+  <div class="ticker" aria-hidden="true"><div class="ticker__track" id="ticker"></div></div>
+</section>
+
+<!-- ==================================================================== hikâye (kaydırmalı sinematik) -->
+<section class="story" id="hikaye">
+  <div class="story__pin" id="storyPin">
+    <div class="story__frames">
+      <figure class="story__frame is-on" data-i="1"><img src="assets/img/cine/s1.webp" alt=""><img class="story__lights" src="assets/img/cine/s1_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="2"><img data-src="assets/img/cine/s2.webp" alt=""></figure>
+      <figure class="story__frame" data-i="3"><img data-src="assets/img/cine/s3.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s3_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="4"><img data-src="assets/img/cine/s4.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s4_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="5"><img data-src="assets/img/cine/s5.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s5_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="6"><img data-src="assets/img/cine/s6.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s6_on.webp" alt=""></figure>
+      <figure class="story__frame" data-i="7"><img data-src="assets/img/cine/s7.webp" alt=""><img class="story__lights" data-src="assets/img/cine/s7_on.webp" alt=""></figure>
+    </div>
+    <div class="story__shade"></div>
+    <div class="story__flash" id="storyFlash"></div>
+    <div class="story__head">
+      <div class="kicker" data-i18n="story.kicker">開場影片</div>
+      <h2 class="title" data-i18n="story.title">一夜之間，一切都變了</h2>
+    </div>
+    <div class="story__captions">
+      <p class="story__cap is-on" data-i="1" data-i18n="story.1">Tarsel。群山環繞的河谷，海岸邊的港口。一個寧靜的夜晚……</p>
+      <p class="story__cap" data-i="2" data-i18n="story.2">一場芮氏規模7.8的強震，讓全省夷為平地。城市陷入一片火海。</p>
+      <p class="story__cap" data-i="3" data-i18n="story.3">瓦礫下傳來呼救聲。每一個小時，都是一條人命。</p>
+      <p class="story__cap" data-i="4" data-i18n="story.4">憤怒湧上廣場。人民對國家失去了信任。</p>
+      <p class="story__cap" data-i="5" data-i18n="story.5">暗影陣線趁虛而入。山中有要塞，村裡滿是恐懼。</p>
+      <p class="story__cap" data-i="6" data-i18n="story.6">國際穩定特派團已經出發。</p>
+      <p class="story__cap story__cap--final" data-i="7" data-i18n="story.7">協調官，接下來就看您了。</p>
+    </div>
+    <div class="story__progress"><span id="storyNum">01</span><i><b id="storyBar"></b></i><span>07</span></div>
+  </div>
+</section>
+
+<!-- ==================================================================== oyunun kalbi -->
+<section class="section pillars" id="oyun">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="pillars.kicker">遊戲核心</div>
+      <h2 class="title" data-i18n="pillars.title">建設。指揮。致勝。</h2>
+      <p class="lead" data-i18n="pillars.lead">你修好的每條道路、開設的每間診所、派出的每支部隊，都會改變14個地區的穩定、支持與安全。</p>
+    </header>
+    <div class="pillars__grid">
+      <article class="pillar reveal" data-video="assets/video/insa.mp4" data-poster="assets/video/insa.jpg">
+        <div class="pillar__media"><video muted loop playsinline preload="none"></video></div>
+        <div class="pillar__body">
+          <div class="pillar__num">01</div>
+          <h3 data-i18n="p1.t">重建</h3>
+          <p data-i18n="p1.d">清除瓦礫，把帳篷營區變成住宅，讓黑暗重新亮起燈火。供水、醫療、學校、市場與地方議會，讓城鎮重新活絡起來。</p>
+        </div>
+      </article>
+      <article class="pillar reveal" data-video="assets/video/catisma.mp4" data-poster="assets/video/catisma.jpg">
+        <div class="pillar__media"><video muted loop playsinline preload="none"></video></div>
+        <div class="pillar__body">
+          <div class="pillar__num">02</div>
+          <h3 data-i18n="p2.t">指揮</h3>
+          <p data-i18n="p2.d">步兵、機械化部隊、憲兵、特種部隊、工兵與地方民兵。下達巡邏、突擊或守衛命令。但每一次平民傷亡，都會侵蝕你的正當性。</p>
+        </div>
+      </article>
+      <article class="pillar reveal" data-video="assets/video/kasaba.mp4" data-poster="assets/video/kasaba.jpg">
+        <div class="pillar__media"><video muted loop playsinline preload="none"></video></div>
+        <div class="pillar__body">
+          <div class="pillar__num">03</div>
+          <h3 data-i18n="p3.t">贏得民心</h3>
+          <p data-i18n="p3.d">真正的前線在民心。正當性達到100%時，暗影陣線就會坐上談判桌。簽下和平協議，贏得戰役。</p>
+        </div>
+      </article>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><b data-count="14">0</b><span data-i18n="stat.districts">個地區</span></div>
+      <div class="stat"><b data-count="40">0</b><span data-i18n="stat.initiatives">項舉措</span></div>
+      <div class="stat"><b data-count="30">0</b><span data-i18n="stat.policies">項政策</span></div>
+      <div class="stat"><b data-count="80" data-prefix="~">0</b><span data-i18n="stat.events">個動態事件</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== interaktif harita -->
+<section class="section mapsec" id="harita">
+  <div class="container">
+    <header class="sec-head sec-head--row reveal">
+      <div>
+        <div class="kicker" data-i18n="map.kicker">作戰地圖</div>
+        <h2 class="title" data-i18n="map.title">看懂地圖</h2>
+      </div>
+      <p class="lead" data-i18n="map.lead">直接取自遊戲的真實地圖。點選地區並切換圖層：哪裡需要部隊、哪裡需要醫院、哪裡需要工作機會？</p>
+    </header>
+    <div class="opsmap reveal" id="opsmap">
+      <div class="opsmap__stage" id="mapStage">
+        <img class="opsmap__img opsmap__img--day" id="mapDay" src="assets/img/map/tarsel_gun_k.webp" data-hi="assets/img/map/tarsel_gun.webp" alt="Tarsel">
+        <img class="opsmap__img opsmap__img--night" id="mapNight" src="assets/img/map/tarsel_gece_k.webp" data-hi="assets/img/map/tarsel_gece.webp" alt="" aria-hidden="true">
+        <svg class="opsmap__svg" id="mapSvg" viewBox="0 0 2100 1400" preserveAspectRatio="xMidYMid slice" aria-label="Tarsel"></svg>
+        <div class="opsmap__scan" aria-hidden="true"></div>
+        <div class="opsmap__tip" id="mapTip"></div>
+      </div>
+      <aside class="opsmap__panel">
+        <div class="opsmap__tools">
+          <div class="seg" id="lensSeg">
+            <span class="seg__label" data-i18n="map.lens">圖層</span>
+            <button type="button" class="is-on" data-lens="stab" data-i18n="map.l.stab">穩定</button>
+            <button type="button" data-lens="ctrl" data-i18n="map.l.ctrl">控制</button>
+            <button type="button" data-lens="sec" data-i18n="map.l.sec">安全</button>
+            <button type="button" data-lens="none" data-i18n="map.l.none">無</button>
+          </div>
+          <div class="seg seg--sm" id="todSeg">
+            <button type="button" class="is-on" data-tod="day" data-i18n="map.day">白天</button>
+            <button type="button" data-tod="night" data-i18n="map.night">夜間</button>
+          </div>
+        </div>
+        <div class="dossier" id="dossier">
+          <div class="dossier__empty" data-i18n="map.hint">點選一個地區</div>
+        </div>
+        <div class="legend" id="legend"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== felaketler -->
+<section class="section disasters" id="felaketler">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="dis.kicker">五張地圖，五種災害</div>
+      <h2 class="title" data-i18n="dis.title">每個省份，都有自己的傷痕</h2>
+    </header>
+    <div class="dis__grid">
+      <article class="dis reveal" data-fx="quake" data-video="assets/video/deprem.mp4" data-poster="assets/video/deprem.jpg">
+        <div class="dis__media"><video muted loop playsinline preload="none"></video><canvas class="dis__fx"></canvas>
+          <svg class="dis__cracks" viewBox="0 0 400 260" preserveAspectRatio="none" aria-hidden="true"><path d="M0 140 L60 128 L92 150 L140 120 L170 138 L230 104 L262 126 L320 96 L400 112"/><path d="M140 120 L150 80 L132 40 L146 0"/><path d="M262 126 L276 170 L258 214 L270 260"/></svg>
+        </div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--accent"></i><span data-i18n="dis.t.tag">地震 · 山區</span><em class="pill pill--good" data-i18n="dis.free">免費</em></div>
+          <h3 data-i18n="dis.t.name">Tarsel省</h3>
+          <p data-i18n="dis.t.d">餘震會震垮未經補強的建築。密切留意地震監測網，搭建帳篷營區並展開搜救，在下一次地震來臨前做好房屋耐震補強。</p>
+        </div>
+      </article>
+      <article class="dis reveal" data-fx="rain" data-video="assets/video/sel.mp4" data-poster="assets/video/sel.jpg">
+        <div class="dis__media"><video muted loop playsinline preload="none"></video><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--blue"></i><span data-i18n="dis.k.tag">洪水 · 三角洲</span><em class="pill pill--accent" data-i18n="dis.premium">進階版</em></div>
+          <h3 data-i18n="dis.k.name">Kesra三角洲</h3>
+          <p data-i18n="dis.k.d">河水每年春天都會暴漲。興建防洪堤、抽水站與高腳屋，再用洪水退去後留下的肥沃沖積土耕作。</p>
+        </div>
+      </article>
+      <article class="dis reveal" data-fx="dust" data-video="assets/video/kurak.mp4" data-poster="assets/video/kurak.jpg">
+        <div class="dis__media"><video muted loop playsinline preload="none"></video><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--sand"></i><span data-i18n="dis.v.tag">乾旱 · 高原</span><em class="pill pill--accent" data-i18n="dis.premium">進階版</em></div>
+          <h3 data-i18n="dis.v.name">Varzan高原</h3>
+          <p data-i18n="dis.v.d">每個地區的水資源壓力各不相同，缺水的年輕人更容易投靠暗影陣線。鑿井、蓋蓄水池、派出送水車、種植綠帶。</p>
+        </div>
+      </article>
+      <article class="dis dis--genis reveal" data-fx="snow">
+        <div class="dis__media"><img src="assets/img/map/halvarya_kart.webp" alt="Halvarya" loading="lazy"><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--ice"></i><span data-i18n="dis.h.tag">雪崩 · 峽灣</span><em class="pill pill--accent" data-i18n="dis.premium">進階版</em></div>
+          <h3 data-i18n="dis.h.name">Halvarya峽灣</h3>
+          <p data-i18n="dis.h.d">漫長冬季裡，每個地區都在積雪；雪崩摧毀房屋、封鎖山路。修建防雪崩屏障與監測網，清除道路積雪，用供暖中心抵禦嚴寒。</p>
+        </div>
+      </article>
+      <article class="dis dis--genis reveal" data-fx="ash">
+        <div class="dis__media"><img src="assets/img/map/saranis_kart.webp" alt="Saranis" loading="lazy"><canvas class="dis__fx"></canvas></div>
+        <div class="dis__body">
+          <div class="dis__tag"><i class="dot dot--lava"></i><span data-i18n="dis.s.tag">火山 · 群島</span><em class="pill pill--accent" data-i18n="dis.premium">進階版</em></div>
+          <h3 data-i18n="dis.s.name">Saranis群島</h3>
+          <p data-i18n="dis.s.d">Morasca火山的壓力不斷上升。火山灰掩埋農田，一次噴發就可能把巨浪推向海岸。修建防波堤與觀測站，開通前往各島的渡輪，在肥沃的火山土壤上種植葡萄園。</p>
+        </div>
+      </article>
+    </div>
+    <div class="dis__maps reveal">
+      <figure><img src="assets/img/map/tarsel_maket.webp" alt="Tarsel" loading="lazy"><figcaption>Tarsel</figcaption></figure>
+      <figure><img src="assets/img/map/kesra_maket.webp" alt="Kesra" loading="lazy"><figcaption>Kesra</figcaption></figure>
+      <figure><img src="assets/img/map/varzan_maket.webp" alt="Varzan" loading="lazy"><figcaption>Varzan</figcaption></figure>
+      <figure><img src="assets/img/map/halvarya_maket.webp" alt="Halvarya" loading="lazy"><figcaption>Halvarya</figcaption></figure>
+      <figure><img src="assets/img/map/saranis_maket.webp" alt="Saranis" loading="lazy"><figcaption>Saranis</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== hava gücü -->
+<section class="section air" id="hava">
+  <div class="container air__grid">
+    <div class="air__media reveal">
+      <div class="air__frame">
+        <video id="airVideo" muted loop playsinline preload="none" data-poster="assets/video/sinematik.jpg" data-src="assets/video/sinematik.mp4"></video>
+      </div>
+    </div>
+    <div class="air__body">
+      <header class="sec-head reveal">
+        <div class="kicker" data-i18n="air.kicker">空軍</div>
+        <h2 class="title" data-i18n="air.title">天空也屬於你</h2>
+        <p class="lead" data-i18n="air.lead">下令空襲後，鏡頭會緊跟在戰鬥機後方，飛彈發射時轉到目標上空，見證爆炸的瞬間。輕觸螢幕，立刻拿回操控權。</p>
+      </header>
+      <div class="units reveal">
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24h36M24 14v20M14 20l10 4 10-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg><b data-i18n="air.u1">偵察無人機</b><span data-i18n="air.u1d">你在空中的眼睛。揪出藏身的小組。</span></div>
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h40M24 12v24M16 30h16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M20 24l-6 10M28 24l6 10" stroke="currentColor" stroke-width="2"/></svg><b data-i18n="air.u2">武裝無人機</b><span data-i18n="air.u2d">對鄰近地區進行精準打擊。</span></div>
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 14h36M24 14v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M12 26c0-4 6-6 12-6h6c4 0 8 3 8 6s-4 6-8 6H18c-3 0-6-2-6-6zM38 26h6M24 32l-4 6h14" fill="none" stroke="currentColor" stroke-width="2.2"/></svg><b data-i18n="air.u3">攻擊直升機</b><span data-i18n="air.u3d">快速反應，近接支援。</span></div>
+        <div class="unit"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l4 14 14 8v4l-14-3-1 10 5 4v3l-8-2-8 2v-3l5-4-1-10-14 3v-4l14-8z" fill="currentColor"/></svg><b data-i18n="air.u4">戰鬥機</b><span data-i18n="air.u4d">重火力直達全省每個角落。</span></div>
+      </div>
+      <div class="radio reveal" id="radio">
+        <div class="radio__head"><span class="radio__led"></span><b data-i18n="radio.title">無線電</b><span data-i18n="radio.sub">遊戲內真實配音 · 點一下播放</span></div>
+        <canvas class="radio__wave" id="radioWave" height="60"></canvas>
+        <div class="radio__btns">
+          <button type="button" data-voice="sec_1" data-i18n="radio.1">已選取部隊</button>
+          <button type="button" data-voice="hareket_1" data-i18n="radio.2">移動命令</button>
+          <button type="button" data-voice="taarruz_1" data-i18n="radio.3">突擊</button>
+          <button type="button" data-voice="vurus_1" data-i18n="radio.4">空襲</button>
+          <button type="button" data-voice="karargah_yok_1" data-i18n="radio.5">總部陷落</button>
+          <button type="button" data-voice="konvoy_pusu_1" data-i18n="radio.6">車隊遭伏擊</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== kriz masası -->
+<section class="section crisis" id="kriz">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker kicker--new" data-i18n="crisis.kicker">全新 · 危機應變室 2.0</div>
+      <h2 class="title" data-i18n="crisis.title">七場危機，七種玩法。</h2>
+      <p class="lead" data-i18n="crisis.lead">每項任務都有專屬面板、專屬規則，以及地圖上專屬的3D場景。一個晚上就能玩完，卻讓人回味好幾天。</p>
+    </header>
+    <div class="crisis__grid" id="crisisGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================================== yaşayan dünya -->
+<section class="section world" id="dunya">
+  <div class="container">
+    <header class="sec-head sec-head--row reveal">
+      <div>
+        <div class="kicker" data-i18n="world.kicker">活生生的世界</div>
+        <h2 class="title" data-i18n="world.title">夜裡，戰爭仍在繼續</h2>
+      </div>
+      <p class="lead" data-i18n="world.lead">穩定的地區在夜裡燈火通明，爭奪中的地區燈光閃爍，叛軍控制的地區則陷入黑暗。拖曳看看吧。</p>
+    </header>
+    <div class="compare reveal" id="compare">
+      <video class="compare__a" muted loop playsinline preload="none" data-poster="assets/video/gunbatimi.jpg" data-src="assets/video/gunbatimi.mp4"></video>
+      <div class="compare__b" id="compareB"><video muted loop playsinline preload="none" data-poster="assets/video/gece.jpg" data-src="assets/video/gece.mp4"></video></div>
+      <div class="compare__handle" id="compareHandle"><span data-i18n="world.drag">拖曳</span></div>
+      <span class="compare__lbl compare__lbl--a">☀</span><span class="compare__lbl compare__lbl--b">☾</span>
+    </div>
+    <div class="moments">
+      <div class="kicker reveal" data-i18n="mom.kicker">難忘時刻</div>
+      <div class="moments__track" id="moments">
+        <figure class="moment"><img data-shot="16_secim_gecesi" alt="" loading="lazy"><figcaption><b data-i18n="mom.1t">開票之夜</b><span data-i18n="mom.1d">投票一結束，直播隨即開始，各地區開票結果陸續出爐。</span></figcaption></figure>
+        <figure class="moment"><img data-shot="15_konvoy" alt="" loading="lazy"><figcaption><b data-i18n="mom.2t">援助車隊</b><span data-i18n="mom.2d">規劃路線，派護衛前往高風險地區。</span></figcaption></figure>
+        <figure class="moment"><img data-shot="09_bayram" alt="" loading="lazy"><figcaption><b data-i18n="mom.3t">豐收節</b><span data-i18n="mom.3d">和平重回的城鎮上空綻放煙火。</span></figcaption></figure>
+        <figure class="moment"><img data-shot="18_gazete" alt="" loading="lazy"><figcaption><b data-i18n="mom.4t">每月報紙</b><span data-i18n="mom.4d">《Tarsel地平線報》每個月都把你的故事登上頭版。</span></figcaption></figure>
+        <figure class="moment"><img data-shot="17_kriz_masasi" alt="" loading="lazy"><figcaption><b data-i18n="mom.5t">危機應變室</b><span data-i18n="mom.5d">七項任務，星級評價。</span></figcaption></figure>
+        <figure class="moment"><img data-shot="19_hikaye" alt="" loading="lazy"><figcaption><b data-i18n="mom.6t">戰役紀事</b><span data-i18n="mom.6d">最後，你的整場戰役會以縮時影片完整重播。</span></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== mini oyunlar -->
+<section class="section arcade" id="oyunlar">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="arc.kicker">指揮中心</div>
+      <h2 class="title" data-i18n="arc.title">在瀏覽器裡玩四個迷你任務</h2>
+      <p class="lead" data-i18n="arc.lead">使用遊戲原本的地圖與音效打造。先在這裡暖身，再投入真正的戰役。</p>
+    </header>
+    <div class="arcade__tabs reveal" id="arcTabs">
+      <button type="button" class="arc-tab is-on" data-game="hava"><i class="arc-tab__ico">✈</i><b data-i18n="arc.hava">空襲</b><span data-i18n="arc.hava.d">命中目標，保護平民。</span><em class="arc-tab__best"></em></button>
+      <button type="button" class="arc-tab" data-game="golge"><i class="arc-tab__ico">◎</i><b data-i18n="arc.golge">獵影行動</b><span data-i18n="arc.golge.d">靠線人找出潛伏小組。</span><em class="arc-tab__best"></em></button>
+      <button type="button" class="arc-tab" data-game="insa"><i class="arc-tab__ico">▲</i><b data-i18n="arc.insa">重建</b><span data-i18n="arc.insa.d">在12個月內讓全省重新站起來。</span><em class="arc-tab__best"></em></button>
+      <button type="button" class="arc-tab" data-game="konvoy"><i class="arc-tab__ico">➜</i><b data-i18n="arc.konvoy">援助走廊</b><span data-i18n="arc.konvoy.d">護送車隊突破伏擊。</span><em class="arc-tab__best"></em></button>
+    </div>
+    <div class="arcade__screen reveal">
+      <div class="arcade__bezel">
+        <div class="arcade__stage" id="arcStage"><div class="arcade__loading" data-i18n="arc.loading">載入中…</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== galeri -->
+<section class="section gallery" id="galeri">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="gal.kicker">藝廊</div>
+      <h2 class="title" data-i18n="gal.title">前線實景</h2>
+    </header>
+    <div class="gallery__grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================================== gazete: son güncelleme -->
+<section class="section paper-sec" id="guncelleme">
+  <div class="container">
+    <article class="paper reveal">
+      <div class="paper__mast">
+        <span class="paper__issue" data-i18n="news.issue">版本 2.0.7</span>
+        <h2 class="paper__name" data-i18n="news.paper">Tarsel地平線報</h2>
+        <span class="paper__date">HanX Games</span>
+      </div>
+      <p class="paper__motto script" data-i18n="news.motto">「從瓦礫中望向明天的報紙」</p>
+      <div class="paper__rule"></div>
+      <div class="paper__grid">
+        <div class="paper__main">
+          <div class="paper__band" data-i18n="news.band">頭條</div>
+          <h3 class="paper__head" data-i18n="news.head">危機應變室擴充為七種玩法</h3>
+          <p class="paper__lead" data-i18n="news.lead">替龜裂的水壩灌漿、在病例地圖中找出遭汙染的水泵、守住被圍首府的四座城門：每項任務都有專屬面板與專屬規則。</p>
+          <img class="paper__photo" src="assets/img/guncelleme_207.jpg" alt="" loading="lazy">
+        </div>
+        <div class="paper__side">
+          <h4 data-i18n="news.c1h">真實比例</h4><p data-i18n="news.c1">車輛、士兵與殭屍都依建築比例調整大小。殭屍再也不會比營區圍牆還高了。</p>
+          <h4 data-i18n="news.c2h">更乾淨的地圖</h4><p data-i18n="news.c2">懸空的道路端點、重疊的橋梁，以及壓在民宅上的港口吊車都已修正；火焰下方的黑色圓圈也換成了自然的燒焦痕跡。</p>
+          <h4 data-i18n="news.c3h">專欄</h4><p class="script paper__quote" data-i18n="news.c3">「水壩不是在談判桌上保住的，而是在裂縫前。」</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ==================================================================== ücretsiz / premium -->
+<section class="section premium" id="premium">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="prem.kicker">免費開玩</div>
+      <h2 class="title" data-i18n="prem.title">一次購買，全部解鎖</h2>
+    </header>
+    <div class="premium__grid">
+      <div class="plan reveal">
+        <div class="plan__name" data-i18n="prem.free">免費</div>
+        <div class="plan__desc" data-i18n="prem.freeD">完整Tarsel戰役</div>
+        <ul><li data-i18n="prem.f1">Tarsel省，標準情境</li><li data-i18n="prem.f2">發展方針</li><li data-i18n="prem.f3">所有舉措與部隊</li><li class="is-muted" data-i18n="prem.f4">含廣告</li></ul>
+        <a class="appstore appstore--plan" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-zh_TW.svg" alt="在 App Store 下載" height="48"></a>
+        <a class="btn btn--ghost plan__btn" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dpremium_ucretsiz" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg><span data-i18n="prem.freeBtn">免費下載</span></a>
+      </div>
+      <div class="plan plan--prem reveal">
+        <div class="plan__crown">♛</div>
+        <div class="plan__name" data-i18n="prem.prem">進階版</div>
+        <div class="plan__desc" data-i18n="prem.premD">一次買斷 · 免訂閱</div>
+        <ul><li data-i18n="prem.p1">Kesra、Varzan、Halvarya與Saranis地圖</li><li data-i18n="prem.p2">所有情境與方針</li><li data-i18n="prem.p3">危機應變室與空軍</li><li data-i18n="prem.p4">未來推出的所有地圖與活動</li><li data-i18n="prem.p5">無廣告</li></ul>
+        <a class="appstore appstore--plan" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-zh_TW.svg" alt="在 App Store 下載" height="48"></a>
+        <a class="btn btn--accent plan__btn" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dpremium" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg><span data-i18n="hero.play">在Google Play下載</span></a>
+        <p class="plan__note" data-i18n="prem.note">進階版可在遊戲內購買。</p>
+      </div>
+    </div>
+    <!-- PC: itch.io'nun resmî satın alma kutusu (fiyat ve indirim canlı gelir); dar ekranda yalnız düğme -->
+    <div class="plan plan--pc premium__pc reveal">
+      <div>
+        <div class="plan__name" data-i18n="prem.pc">完整版</div>
+        <div class="plan__desc" data-i18n="prem.pcD">Windows · Linux · itch.io</div>
+        <ul><li data-i18n="prem.c1">下載Windows與Linux版</li><li data-i18n="prem.c2">存檔保留在您的電腦上</li><li data-i18n="prem.c3">瀏覽器免費試玩</li></ul>
+        <a class="btn btn--ghost plan__btn" href="https://hanx-games.itch.io/rebirth/purchase" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-7v2h3v2H7v-2h3v-2H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v9h16V6H4z"/></svg><span data-i18n="prem.pcBtn">下載完整版</span>
+          <span class="sale-badge" data-sale-until="2026-11-30T20:59:00Z" data-i18n="hero.sale">現省50%</span></a>
+      </div>
+      <div class="itch-kutu"><iframe src="https://itch.io/embed/5152900?linkback=true&amp;bg_color=1f1d1b&amp;fg_color=ece4d0&amp;link_color=f1ad2a&amp;border_color=3a3631" width="552" height="167" loading="lazy" title="ReBirth — itch.io"><a href="https://hanx-games.itch.io/rebirth">ReBirth by HanX Games</a></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== sss -->
+<section class="section faq" id="sss">
+  <div class="container container--narrow">
+    <header class="sec-head reveal">
+      <div class="kicker" data-i18n="faq.kicker">常見問題</div>
+      <h2 class="title" data-i18n="faq.title">你可能想問</h2>
+    </header>
+    <div class="faq__list reveal">
+      <details><summary data-i18n="faq.q1">可以在哪些裝置上玩？</summary><p data-i18n="faq.a1">Android手機與平板（Google Play）、iPhone與iPad（App Store），以及電腦：Windows與Linux版本和免費的網頁試玩版都在itch.io上。</p></details>
+      <details><summary data-i18n="faq.q2">需要連網嗎？</summary><p data-i18n="faq.a2">不需要。ReBirth可以完全離線遊玩。</p></details>
+      <details><summary data-i18n="faq.q3">要付費嗎？</summary><p data-i18n="faq.a3">完整的Tarsel戰役免費。進階版為一次性購買、免訂閱，還會移除廣告。</p></details>
+      <details><summary data-i18n="faq.q4">支援哪些語言？</summary><p data-i18n="faq.a4">英文、土耳其文、西班牙文、巴西葡萄牙文、德文、法文、印尼文、日文、韓文、簡體中文與繁體中文。配音提供英文與土耳其文。</p></details>
+      <details><summary data-i18n="faq.q5">一場戰役要玩多久？</summary><p data-i18n="faq.a5">完整的一場戰役需要數小時，並可從上次中斷的地方繼續。危機應變室任務一次就能玩完。</p></details>
+      <details><summary data-i18n="faq.q6">跟Rebel Inc.很像嗎？</summary><p data-i18n="faq.a6">屬於同一類型：結合了重建與反叛亂。ReBirth在此基礎上加入五張災害地圖、3D世界、空軍與危機任務。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== son çağrı -->
+<section class="final" id="indir">
+  <video class="final__video" muted loop playsinline preload="none" data-poster="assets/video/bayram.jpg" data-src="assets/video/bayram.mp4"></video>
+  <div class="final__shade"></div>
+  <div class="final__content reveal">
+    <img class="final__logo" src="assets/img/ui/logo.webp" alt="ReBirth">
+    <h2 class="title" data-i18n="cta.title">全省都在等你</h2>
+    <p class="lead" data-i18n="cta.lead">立即下載，啟動你的第一項舉措，見證Tarsel重獲新生。</p>
+    <div class="hero__ctas">
+      <a class="appstore appstore--lg" href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener"><img data-appstore="" src="assets/img/badge/app-store-zh_TW.svg" alt="在 App Store 下載" height="56"></a>
+      <a class="btn btn--accent btn--lg magnetic" href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dfinal" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l10.7-9.2c.3-.3.3-.8 0-1.1L4.9 2.2c-.4-.2-.9.1-.9.6zm12.7 7.4 2.6-1.5c.9.5.9 1.8 0 2.3l-2.6 1.5-2-1.2 2-1.1z"/></svg>
+        <span data-i18n="hero.play">在Google Play下載</span>
+      </a>
+      <button class="btn btn--ghost btn--lg magnetic" type="button" data-trailer>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13c0 .6.7 1 1.2.6l10-6.5c.5-.3.5-1 0-1.3l-10-6.5C8.7 4.5 8 4.9 8 5.5z"/></svg>
+        <span data-i18n="hero.trailer">觀看預告片</span>
+      </button>
+      <a class="btn btn--ghost btn--lg magnetic" href="https://hanx-games.itch.io/rebirth" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-7v2h3v2H7v-2h3v-2H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v9h16V6H4z"/></svg>
+        <span data-i18n="hero.pc">在電腦上玩</span>
+        <span class="sale-badge" data-sale-until="2026-11-30T20:59:00Z" data-i18n="hero.sale">現省50%</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__in">
+    <div class="footer__brand"><span class="nav__logo"><span class="re">RE</span>BIRTH</span><span class="script" data-i18n-html="hero.slogan">脆弱的土地，<br>更堅強的明天。</span></div>
+    <div class="footer__links">
+      <a href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dfooter" target="_blank" rel="noopener">Google Play</a>
+      <a href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener">App Store</a>
+      <a href="https://hanx-games.itch.io/rebirth" target="_blank" rel="noopener" lang="en">itch.io</a>
+      <a href="haberler.html?lang=zh_TW" data-keep-lang="haberler.html" data-i18n="foot.news">最新消息</a>
+      <a href="privacy.html?lang=zh_TW" data-keep-lang="privacy.html" data-i18n="foot.privacy">隱私權政策</a>
+      <a href="support.html?lang=zh_TW" data-keep-lang="support.html" data-i18n="foot.support">支援</a>
+      <a href="/zh-tw/#top" data-i18n="foot.top">回到頂端</a>
+    </div>
+    <div class="footer__meta"><span data-i18n="foot.studio">HanX Games 出品</span> · © 2026 · <span data-i18n="foot.note">ReBirth中的所有地點、組織與人物皆為虛構。</span></div>
+  </div>
+</footer>
+
+<!-- ==================================================================== fragman penceresi -->
+<div class="modal" id="trailerModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal__shade" data-close></div>
+  <div class="modal__box">
+    <button class="modal__close" type="button" data-close data-i18n-attr="aria-label:modal.close" aria-label="關閉">×</button>
+    <video id="trailerVideo" controls playsinline preload="none"></video>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" aria-hidden="true"><img id="lightboxImg" alt=""><button class="modal__close" type="button" data-close aria-label="×">×</button></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/i18n.js?v=5"></script>
+<script src="js/dil.js?v=4"></script>
+<script src="js/host.js?v=2" data-root=""></script>
+<script src="js/map.js"></script>
+<script src="js/main.js?v=6"></script>
+<script src="js/sayac.js?v=1" defer></script>
+</body>
+</html>

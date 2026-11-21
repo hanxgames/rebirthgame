@@ -1,7 +1,7 @@
 /* ReBirth tanıtım sitesi — Portekizce (Brezilya) metinleri (js/dil.js gerektiğinde yükler; anahtarlar i18n.js'teki tr/en ile aynı). */
 window.RB_I18N = window.RB_I18N || {};
 window.RB_I18N["pt_BR"] = {
- "meta.title": "ReBirth — Jogo de estratégia 3D para celular · Reconstrução e contrainsurgência",
+ "meta.title": "ReBirth: Estratégia de Guerra — Jogo de estratégia 3D offline",
  "meta.desc": "Jogo de estratégia para celular: reconstrua províncias devastadas por terremoto, enchente e seca, comande suas forças e leve a Frente Sombria à mesa de negociação. ReBirth: comece grátis e jogue offline.",
  "nav.story": "História",
  "nav.game": "Jogo",

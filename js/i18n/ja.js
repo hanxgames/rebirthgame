@@ -1,7 +1,7 @@
 /* ReBirth tanıtım sitesi — Japonca metinleri (js/dil.js gerektiğinde yükler; anahtarlar i18n.js'teki tr/en ile aynı). */
 window.RB_I18N = window.RB_I18N || {};
 window.RB_I18N["ja"] = {
- "meta.title": "ReBirth — 3Dスマホ戦略ゲーム · 復興と対反乱作戦",
+ "meta.title": "ReBirth：復興と戦争のオフライン戦略シミュレーション",
  "meta.desc": "地震、洪水、干ばつで荒廃した州を復興し、部隊を指揮して、影の戦線を和平の席に着かせよう。ReBirthは無料で始められ、オフラインでも遊べる3Dスマホ戦略ゲーム。",
  "nav.story": "ストーリー",
  "nav.game": "ゲーム",

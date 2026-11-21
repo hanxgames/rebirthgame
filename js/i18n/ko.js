@@ -1,7 +1,7 @@
 /* ReBirth tanıtım sitesi — Korece metinleri (js/dil.js gerektiğinde yükler; anahtarlar i18n.js'teki tr/en ile aynı). */
 window.RB_I18N = window.RB_I18N || {};
 window.RB_I18N["ko"] = {
- "meta.title": "ReBirth — 3D 모바일 전략 게임 · 재건과 반군 진압",
+ "meta.title": "ReBirth: 재건과 전쟁의 오프라인 전략 시뮬레이션",
  "meta.desc": "지진, 홍수, 가뭄으로 무너진 주(州)를 재건하고, 부대를 지휘해 그림자 전선을 협상 테이블로 끌어내세요. 3D 모바일 전략 게임 ReBirth: 무료로 시작하고 오프라인으로 즐기세요.",
  "nav.story": "스토리",
  "nav.game": "게임",
