@@ -11,6 +11,20 @@ import { getDatabase, ref, get, update, push, query, orderByChild, limitToLast, 
 
 const D = window.RBDil;
 const SAKLAMA_MS = 30 * 86400000;
+// içerik süzgeçleri: YenidenDogus/ajanlar/site/topluluk_kurallar.py BAGLANTI / TANITIM / KUFUR / AD_YASAK ile birebir (kurallar da reddeder)
+const BAGLANTI = /(https?:|www\.|[a-z0-9]\.(com|net|org|io|gg|tr|me|ly|xyz|app|dev|co|tv|link|site|shop|ru|de|info|biz|online|store|live)[^a-z])/i;
+const TANITIM = /(youtu|twitch|instagram|tiktok|discord|telegram|whatsapp|facebook|twitter|patreon|onlyfans|abone ol|abone olun|subscribe|follow me|takip et|kanalıma|kanalima|my channel)/i;
+const KUFUR = /[^a-zçğıöşü](amk|amq|orospu|siktir|sikerim|sikeyim|sikik|sikim|yarrak|yarak|piç|pic kurusu|pezevenk|kahpe|ananı|anani|ananızı|gavat|ibne|kaltak|şerefsiz|serefsiz|fuck|shit|bitch|cunt|nigger|nigga|faggot|asshole|whore|slut|motherf|puta|mierda|cabrón|cabron|caralho|porra|foda-se|scheiße|scheisse|hurensohn|fotze|putain|merde|connard|salope|anjing|bangsat|kontol|memek|ngentot)/i;
+const AD_YASAK = /(admin|y[oö]netici|moderat|[^a-z]mods?[^a-z]|hanx|leader|lider|official|resmi|staff|destek|support|rebirth|geli[sş]tirici|developer)/i;
+const GONDERI_ARALIK = 60000, YORUM_ARALIK = 15000, OTO_GIZLE = 3;
+// sorunlu metin için hata anahtarı (yoksa ""); yönetici muaf
+function suzgec(metin) {
+  if (yonetici) return "";
+  const m = " " + metin + " ";
+  if (BAGLANTI.test(m) || TANITIM.test(m)) return "f.link";
+  if (KUFUR.test(m)) return "f.kufur";
+  return "";
+}
 const GORSEL_EN_COK = 280000;
 const ETIKETLER = ["oneri", "hata", "strateji", "senaryo", "diger"];
 const GONDERI_DILLERI = [["tr", "Türkçe"], ["en", "English"], ["es", "Español"], ["pt_BR", "Português"], ["de", "Deutsch"],
@@ -73,7 +87,7 @@ const S = {
   "err": { tr: "Bir şeyler ters gitti. Lütfen yeniden dene.", en: "Something went wrong. Please try again.", es: "Algo salió mal. Inténtalo de nuevo.", pt_BR: "Algo deu errado. Tente novamente.", de: "Etwas ist schiefgelaufen. Bitte versuche es erneut.", fr: "Une erreur s'est produite. Réessayez.", id: "Terjadi kesalahan. Coba lagi.", ja: "問題が発生しました。もう一度お試しください。", ko: "문제가 발생했습니다. 다시 시도해 주세요.", zh_CN: "出错了，请重试。", zh_TW: "發生錯誤，請重試。" },
   "limit": { tr: "Bugünlük paylaşım sınırına ulaştın (günde 5 gönderi, 60 yorum). Yarın yeniden dene.", en: "You've reached today's limit (5 posts, 60 comments a day). Try again tomorrow.", es: "Llegaste al límite de hoy (5 publicaciones y 60 comentarios al día). Vuelve mañana.", pt_BR: "Você atingiu o limite de hoje (5 publicações e 60 comentários por dia). Tente amanhã.", de: "Tageslimit erreicht (5 Beiträge, 60 Kommentare pro Tag). Versuche es morgen wieder.", fr: "Limite du jour atteinte (5 publications, 60 commentaires par jour). Réessayez demain.", id: "Batas hari ini tercapai (5 postingan, 60 komentar per hari). Coba lagi besok.", ja: "本日の上限に達しました（1日5投稿・60コメント）。明日またお試しください。", ko: "오늘 한도에 도달했습니다(하루 게시물 5개, 댓글 60개). 내일 다시 시도해 주세요.", zh_CN: "已达今日上限（每天 5 帖、60 条评论），请明天再试。", zh_TW: "已達今日上限（每天 5 篇、60 則留言），請明天再試。" },
   "img.err": { tr: "Görsel işlenemedi; başka bir görsel dene.", en: "Couldn't process the image; try another one.", es: "No se pudo procesar la imagen; prueba otra.", pt_BR: "Não foi possível processar a imagem; tente outra.", de: "Das Bild konnte nicht verarbeitet werden; versuche ein anderes.", fr: "Impossible de traiter l'image ; essayez-en une autre.", id: "Gambar gagal diproses; coba gambar lain.", ja: "画像を処理できませんでした。別の画像をお試しください。", ko: "이미지를 처리하지 못했습니다. 다른 이미지를 사용해 보세요.", zh_CN: "无法处理该图片，请换一张。", zh_TW: "無法處理這張圖片，請換一張。" },
-  "rules": { tr: "Saygılı ol, kişisel bilgi paylaşma, reklam yapma. Bu kurallara uymayan gönderiler kaldırılır.", en: "Be respectful, don't share personal information and don't advertise. Posts that break these rules are removed.", es: "Sé respetuoso, no compartas datos personales ni hagas publicidad. Se eliminan las publicaciones que incumplan estas reglas.", pt_BR: "Seja respeitoso, não compartilhe dados pessoais nem faça propaganda. Publicações que violem essas regras são removidas.", de: "Sei respektvoll, teile keine persönlichen Daten und mach keine Werbung. Beiträge, die dagegen verstoßen, werden entfernt.", fr: "Soyez respectueux, ne partagez pas d'informations personnelles et ne faites pas de publicité. Les publications qui enfreignent ces règles sont retirées.", id: "Bersikaplah sopan, jangan bagikan data pribadi, dan jangan beriklan. Postingan yang melanggar akan dihapus.", ja: "礼儀を守り、個人情報の共有や宣伝はしないでください。ルール違反の投稿は削除されます。", ko: "서로 존중하고 개인정보 공유와 광고는 하지 마세요. 규칙을 어긴 게시물은 삭제됩니다.", zh_CN: "请互相尊重，不要分享个人信息或发布广告。违反规则的帖子将被删除。", zh_TW: "請互相尊重，不要分享個人資訊或發布廣告。違反規則的貼文將被刪除。" },
+  "rules": { tr: "Kurallar: saygılı ol; küfür, hakaret ve nefret söylemi yasak; spam ve aynı içeriği tekrar tekrar paylaşmak yasak; bağlantı, sosyal medya adresi ve tanıtım (self promotion) yasak; kişisel bilgi paylaşma; yetkili taklidi yapma. Kurallara uymayan gönderiler kaldırılır, hesap engellenir. 3 kişinin bildirdiği gönderi incelenene dek gizlenir.", en: "Rules: be respectful; no profanity, insults or hate speech; no spam or repeated posts; no links, social media handles or self-promotion; don't share personal information; don't impersonate staff. Posts that break the rules are removed and accounts blocked. A post reported by 3 people is hidden until reviewed.", es: "Reglas: sé respetuoso; nada de insultos, groserías ni odio; nada de spam ni publicaciones repetidas; nada de enlaces, redes sociales ni autopromoción; no compartas datos personales; no te hagas pasar por el equipo. Se eliminan las publicaciones que incumplan las reglas y se bloquean las cuentas. Una publicación denunciada por 3 personas se oculta hasta su revisión.", pt_BR: "Regras: seja respeitoso; sem palavrões, insultos ou discurso de ódio; sem spam ou publicações repetidas; sem links, redes sociais ou autopromoção; não compartilhe dados pessoais; não se passe pela equipe. Publicações que violem as regras são removidas e as contas bloqueadas. Uma publicação denunciada por 3 pessoas fica oculta até ser revisada.", de: "Regeln: Sei respektvoll; keine Beleidigungen, Schimpfwörter oder Hassrede; kein Spam und keine wiederholten Beiträge; keine Links, Social-Media-Hinweise oder Eigenwerbung; keine persönlichen Daten; gib dich nicht als Team aus. Verstöße werden entfernt und Konten gesperrt. Ein von 3 Personen gemeldeter Beitrag wird bis zur Prüfung ausgeblendet.", fr: "Règles : soyez respectueux ; pas d'insultes, de grossièretés ni de propos haineux ; pas de spam ni de publications répétées ; pas de liens, de réseaux sociaux ni d'autopromotion ; ne partagez pas d'informations personnelles ; ne vous faites pas passer pour l'équipe. Les publications non conformes sont retirées et les comptes bloqués. Une publication signalée par 3 personnes est masquée jusqu'à son examen.", id: "Aturan: bersikap sopan; dilarang kata kasar, hinaan, atau ujaran kebencian; dilarang spam atau posting berulang; dilarang tautan, akun media sosial, atau promosi diri; jangan bagikan data pribadi; jangan menyamar sebagai staf. Postingan yang melanggar dihapus dan akunnya diblokir. Postingan yang dilaporkan 3 orang disembunyikan sampai ditinjau.", ja: "ルール：礼儀を守ること。暴言・侮辱・ヘイト、スパムや同じ内容の繰り返し、リンク・SNSアカウント・宣伝、個人情報の共有、運営のなりすましは禁止です。違反した投稿は削除され、アカウントはブロックされます。3人から報告された投稿は確認まで非表示になります。", ko: "규칙: 서로 존중하세요. 욕설·모욕·혐오 발언, 스팸과 같은 내용 반복 게시, 링크·SNS 계정·홍보, 개인정보 공유, 운영진 사칭은 금지입니다. 규칙을 어긴 게시물은 삭제되고 계정은 차단됩니다. 3명이 신고한 게시물은 검토 전까지 숨겨집니다.", zh_CN: "规则：互相尊重；禁止脏话、辱骂和仇恨言论；禁止刷屏和重复发帖；禁止链接、社交媒体账号和自我推广；不要分享个人信息；不要冒充官方。违规帖子将被删除，账号将被封禁。被 3 人举报的帖子在审核前会被隐藏。", zh_TW: "規則：互相尊重；禁止髒話、辱罵和仇恨言論；禁止洗版和重複發文；禁止連結、社群帳號和自我推廣；不要分享個人資訊；不要冒充官方。違規貼文將被刪除，帳號將被封鎖。被 3 人檢舉的貼文在審核前會被隱藏。" },
   "expire": { tr: "Gönderiler 30 gün sonra kendiliğinden silinir.", en: "Posts are deleted automatically after 30 days.", es: "Las publicaciones se eliminan automáticamente a los 30 días.", pt_BR: "As publicações são excluídas automaticamente após 30 dias.", de: "Beiträge werden nach 30 Tagen automatisch gelöscht.", fr: "Les publications sont supprimées automatiquement au bout de 30 jours.", id: "Postingan otomatis dihapus setelah 30 hari.", ja: "投稿は30日後に自動で削除されます。", ko: "게시물은 30일 후 자동으로 삭제됩니다.", zh_CN: "帖子将在 30 天后自动删除。", zh_TW: "貼文將在 30 天後自動刪除。" },
   "privacy": { tr: "Gizlilik", en: "Privacy", es: "Privacidad", pt_BR: "Privacidade", de: "Datenschutz", fr: "Confidentialité", id: "Privasi", ja: "プライバシー", ko: "개인정보", zh_CN: "隐私", zh_TW: "隱私" },
   "hidden": { tr: "Gizli (yalnız yönetici görür)", en: "Hidden (admins only)", es: "Oculta (solo administradores)", pt_BR: "Oculta (só administradores)", de: "Ausgeblendet (nur Admins)", fr: "Masquée (admins uniquement)", id: "Disembunyikan (hanya admin)", ja: "非表示（管理者のみ）", ko: "숨김(관리자만)", zh_CN: "已隐藏（仅管理员可见）", zh_TW: "已隱藏（僅管理員可見）" },
@@ -81,6 +95,10 @@ const S = {
   "unhide": { tr: "Göster", en: "Unhide", es: "Mostrar", pt_BR: "Mostrar", de: "Einblenden", fr: "Afficher", id: "Tampilkan", ja: "表示", ko: "표시", zh_CN: "取消隐藏", zh_TW: "取消隱藏" },
   "block": { tr: "Yazarı engelle", en: "Block author", es: "Bloquear autor", pt_BR: "Bloquear autor", de: "Autor sperren", fr: "Bloquer l'auteur", id: "Blokir penulis", ja: "投稿者をブロック", ko: "작성자 차단", zh_CN: "封禁作者", zh_TW: "封鎖作者" },
   "reports": { tr: "bildirim", en: "reports", es: "denuncias", pt_BR: "denúncias", de: "Meldungen", fr: "signalements", id: "laporan", ja: "件の報告", ko: "건 신고", zh_CN: "次举报", zh_TW: "次檢舉" },
+  "nick.bad": { tr: "Bu takma ad kullanılamaz (yetkili adları, bağlantı ve uygunsuz ifadeler yasak).", en: "You can't use this nickname (staff names, links and offensive words aren't allowed).", es: "No puedes usar este apodo (no se permiten nombres de staff, enlaces ni palabras ofensivas).", pt_BR: "Você não pode usar este apelido (nomes da equipe, links e palavras ofensivas não são permitidos).", de: "Dieser Spitzname ist nicht erlaubt (keine Team-Namen, Links oder beleidigenden Wörter).", fr: "Ce pseudo n'est pas autorisé (noms de l'équipe, liens et mots offensants interdits).", id: "Nama panggilan ini tidak bisa dipakai (nama staf, tautan, dan kata kasar dilarang).", ja: "このニックネームは使用できません（運営を名乗る名前、リンク、不適切な言葉は禁止）。", ko: "이 닉네임은 사용할 수 없습니다(운영진 사칭, 링크, 욕설 금지).", zh_CN: "无法使用此昵称（禁止冒充官方、链接和不当用语）。", zh_TW: "無法使用此暱稱（禁止冒充官方、連結和不當用語）。" },
+  "f.link": { tr: "Bağlantı, sosyal medya adresi ve tanıtım paylaşılamaz.", en: "Links, social media handles and self-promotion aren't allowed.", es: "No se permiten enlaces, redes sociales ni autopromoción.", pt_BR: "Links, redes sociais e autopromoção não são permitidos.", de: "Links, Social-Media-Hinweise und Eigenwerbung sind nicht erlaubt.", fr: "Les liens, réseaux sociaux et l'autopromotion sont interdits.", id: "Tautan, akun media sosial, dan promosi diri tidak diperbolehkan.", ja: "リンク、SNSアカウント、宣伝は投稿できません。", ko: "링크, SNS 계정, 홍보는 올릴 수 없습니다.", zh_CN: "禁止发布链接、社交媒体账号和自我推广。", zh_TW: "禁止發布連結、社群帳號和自我推廣。" },
+  "f.kufur": { tr: "Mesajın uygunsuz bir ifade içeriyor. Lütfen düzelt.", en: "Your message contains offensive language. Please edit it.", es: "Tu mensaje contiene lenguaje ofensivo. Corrígelo, por favor.", pt_BR: "Sua mensagem contém linguagem ofensiva. Edite-a, por favor.", de: "Deine Nachricht enthält beleidigende Sprache. Bitte ändere sie.", fr: "Votre message contient des propos offensants. Merci de le modifier.", id: "Pesanmu mengandung kata kasar. Silakan ubah.", ja: "不適切な表現が含まれています。修正してください。", ko: "부적절한 표현이 포함되어 있습니다. 수정해 주세요.", zh_CN: "你的内容包含不当用语，请修改。", zh_TW: "你的內容包含不當用語，請修改。" },
+  "fast": { tr: "Çok hızlı paylaşıyorsun. Gönderiler arasında 1 dakika, yorumlar arasında 15 saniye bekle.", en: "You're posting too fast. Wait 1 minute between posts and 15 seconds between comments.", es: "Publicas demasiado rápido. Espera 1 minuto entre publicaciones y 15 segundos entre comentarios.", pt_BR: "Você está publicando rápido demais. Espere 1 minuto entre publicações e 15 segundos entre comentários.", de: "Zu schnell. Warte 1 Minute zwischen Beiträgen und 15 Sekunden zwischen Kommentaren.", fr: "Vous publiez trop vite. Attendez 1 minute entre les publications et 15 secondes entre les commentaires.", id: "Terlalu cepat. Tunggu 1 menit antarpostingan dan 15 detik antarkomentar.", ja: "投稿が速すぎます。投稿は1分、コメントは15秒あけてください。", ko: "너무 빨리 올리고 있습니다. 게시물은 1분, 댓글은 15초 간격을 두세요.", zh_CN: "发得太快了。发帖间隔 1 分钟，评论间隔 15 秒。", zh_TW: "發得太快了。發文間隔 1 分鐘，留言間隔 15 秒。" },
   "more": { tr: "Devamı", en: "More", es: "Más", pt_BR: "Mais", de: "Mehr", fr: "Plus", id: "Selengkapnya", ja: "続きを読む", ko: "더 보기", zh_CN: "更多", zh_TW: "更多" },
 };
 
@@ -191,6 +209,7 @@ function kullaniciCiz() {
   kaydet.addEventListener("click", async () => {
     const v = giris.value.trim().replace(/[<>&]/g, "");
     if (v.length < 2) { giris.focus(); return; }
+    if (!yonetici && (AD_YASAK.test(" " + v + " ") || suzgec(v))) { uyar(t("nick.bad")); giris.focus(); return; }
     try { await update(ref(db), { ["topluluk_ad/" + kullanici.uid]: v }); takma = v; kaydet.textContent = "✓"; setTimeout(() => { kaydet.textContent = t("save"); }, 1500); }
     catch (e) { uyar(t("err")); }
   });
@@ -233,7 +252,7 @@ async function yukle() {
     const liste = [];
     s.forEach((c) => { liste.push(Object.assign({ id: c.key }, c.val())); });
     const sinir = simdi() - SAKLAMA_MS;
-    gonderiler = liste.filter((p) => p.t >= sinir && (!p.gizli || yonetici));
+    gonderiler = liste.filter((p) => p.t >= sinir && ((!p.gizli && (p.b || 0) < OTO_GIZLE) || yonetici));
     gonderiler.sort((a, b) => (b[sira] || 0) - (a[sira] || 0) || b.t - a.t);
     const derin = (location.hash.match(/^#p=([A-Za-z0-9_-]+)/) || [])[1];
     if (derin && !gonderiler.some((p) => p.id === derin)) {
@@ -297,12 +316,12 @@ function kart(p) {
   const g = el("div", "tp-main");
   const ust = el("div", "tp-meta");
   ust.appendChild(el("span", "tp-tag tp-tag--" + p.etiket, t("tag." + p.etiket)));
-  ust.appendChild(el("b", null, p.ad));
+  ust.appendChild(adEtiketi(p));
   const z = el("time", null, zamanMetni(p.t)); z.dateTime = new Date(p.t).toISOString();
   ust.appendChild(z);
   if (p.dil !== lang) ust.appendChild(el("span", "tp-lang", dilAdi(p.dil)));
   if (p.gizli) ust.appendChild(el("span", "tp-flag", t("hidden")));
-  const bild = Object.keys(bildirimler[p.id] || {}).length;
+  const bild = Math.max(Object.keys(bildirimler[p.id] || {}).length, p.b || 0);
   if (yonetici && bild) ust.appendChild(el("span", "tp-flag", bild + " " + t("reports")));
   g.appendChild(ust);
   const ceviriAcik = !!ceviri[p.id];
@@ -343,7 +362,10 @@ function kart(p) {
     const bl = el("button", null, t("report"));
     bl.type = "button";
     bl.addEventListener("click", async () => {
-      try { await update(ref(db), { ["topluluk_bildir/" + p.id + "/" + kullanici.uid]: serverTimestamp() }); } catch (e) { /* zaten bildirilmiş */ }
+      try {
+        const b = (await get(ref(db, "topluluk_gonderi/" + p.id + "/b"))).val() || 0;
+        await update(ref(db), { ["topluluk_bildir/" + p.id + "/" + kullanici.uid]: serverTimestamp(), ["topluluk_gonderi/" + p.id + "/b"]: b + 1 });
+      } catch (e) { /* zaten bildirilmiş */ }
       bl.textContent = t("reported"); bl.disabled = true;
     });
     d.appendChild(bl);
@@ -376,6 +398,14 @@ function kart(p) {
   return a;
 }
 
+// yazar adı: yönetici rozeti (r: "leader", kurallar yalnız yöneticiye izin verir) kırmızı ad + LEADER
+function adEtiketi(x) {
+  const k = el("span", "tp-author" + (x.r === "leader" ? " tp-leader" : ""));
+  k.appendChild(el("b", null, x.ad));
+  if (x.r === "leader") k.appendChild(el("span", "tp-flair", "LEADER"));
+  return k;
+}
+
 function ac(pid) {
   if (acik.has(pid)) acik.delete(pid); else acik.add(pid);
   const p = gonderiler.find((x) => x.id === pid);
@@ -404,7 +434,7 @@ async function yorumlariYukle(p, kutu) {
   yorumlar.forEach((c) => {
     const s = el("div", "tp-comment");
     const ust = el("div", "tp-meta");
-    ust.appendChild(el("b", null, c.ad));
+    ust.appendChild(adEtiketi(c));
     ust.appendChild(el("time", null, zamanMetni(c.t)));
     if (c.dil !== lang) ust.appendChild(el("span", "tp-lang", dilAdi(c.dil)));
     s.appendChild(ust);
@@ -449,9 +479,13 @@ async function yorumlariYukle(p, kutu) {
     const metin = ta.value.trim();
     if (!metin) return;
     if (!takma) { uyar(t("nick")); return; }
+    const sz = suzgec(metin);
+    if (sz) { uyar(t(sz)); return; }
+    if (!yonetici && Date.now() - sonYorum < YORUM_ARALIK) { uyar(t("fast")); return; }
     g.disabled = true;
     try {
       await yorumYaz(p, metin);
+      sonYorum = Date.now();
       p.yorum = (p.yorum || 0) + 1;
       const eski = document.getElementById("p-" + p.id);
       if (eski) eski.replaceWith(kart(p));
@@ -461,6 +495,7 @@ async function yorumlariYukle(p, kutu) {
 }
 
 /* ------------------------------------------------------------------ yazma */
+let sonGonderi = 0, sonYorum = 0;
 function sinirHatasi(e) { return e && /PERMISSION_DENIED|permission/i.test(String(e.code || e.message)) ? t("limit") : t("err"); }
 
 async function sayac(alan) {
@@ -492,7 +527,9 @@ async function yorumYaz(p, metin) {
     const cid = push(ref(db, "topluluk_yorum/" + p.id)).key;
     try {
       await update(ref(db), {
-        ["topluluk_yorum/" + p.id + "/" + cid]: { u: kullanici.uid, ad: takma, metin: metin.slice(0, 2000), dil: yaziDili(metin), t: serverTimestamp() },
+        ["topluluk_yorum/" + p.id + "/" + cid]: Object.assign({ u: kullanici.uid, ad: takma, metin: metin.slice(0, 2000), dil: yaziDili(metin), t: serverTimestamp() },
+          yonetici ? { r: "leader" } : {}),
+        ["topluluk_sinir/" + kullanici.uid + "/son_y"]: serverTimestamp(),
         ["topluluk_gonderi/" + p.id + "/yorum"]: (say.val() || 0) + 1,
         ["topluluk_sinir/" + kullanici.uid + "/" + gunNo() + "/y"]: n + 1,
       });
@@ -535,6 +572,9 @@ form.addEventListener("submit", async (e) => {
   formHata("");
   const baslik = form.baslik.value.trim(), metin = form.metin.value.trim();
   if (baslik.length < 3 || !kullanici || !takma) return;
+  const sz = suzgec(baslik + " " + metin);
+  if (sz) { formHata(t(sz)); return; }
+  if (!yonetici && Date.now() - sonGonderi < GONDERI_ARALIK) { formHata(t("fast")); return; }
   const btn = form.querySelector("button[type=submit]");
   btn.disabled = true;
   try {
@@ -542,12 +582,14 @@ form.addEventListener("submit", async (e) => {
     if (n >= 5) throw { code: "PERMISSION_DENIED" };
     const pid = push(ref(db, "topluluk_gonderi")).key;
     const veri = {
-      ["topluluk_gonderi/" + pid]: { u: kullanici.uid, ad: takma, baslik: baslik.slice(0, 120), metin: metin.slice(0, 4000),
-        etiket: form.etiket.value, dil: form.dil.value, t: serverTimestamp(), g: !!gorselVeri, puan: 0, yorum: 0 },
+      ["topluluk_gonderi/" + pid]: Object.assign({ u: kullanici.uid, ad: takma, baslik: baslik.slice(0, 120), metin: metin.slice(0, 4000),
+        etiket: form.etiket.value, dil: form.dil.value, t: serverTimestamp(), g: !!gorselVeri, puan: 0, yorum: 0 }, yonetici ? { r: "leader" } : {}),
+      ["topluluk_sinir/" + kullanici.uid + "/son_g"]: serverTimestamp(),
       ["topluluk_sinir/" + kullanici.uid + "/" + gunNo() + "/g"]: n + 1,
     };
     if (gorselVeri) veri["topluluk_gorsel/" + pid] = gorselVeri;
     await update(ref(db), veri);
+    sonGonderi = Date.now();
     form.reset(); gorselVeri = null; $("#tpPreview").hidden = true; $("#tpCompose").hidden = true;
     sira = "t"; siraUygula(); acik.add(pid);
     await yukle();
