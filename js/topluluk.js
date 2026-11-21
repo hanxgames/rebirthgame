@@ -75,6 +75,7 @@ const S = {
   "comment.ph": { tr: "Yorum yaz…", en: "Write a comment…", es: "Escribe un comentario…", pt_BR: "Escreva um comentário…", de: "Kommentar schreiben…", fr: "Écrire un commentaire…", id: "Tulis komentar…", ja: "コメントを書く…", ko: "댓글 쓰기…", zh_CN: "写评论…", zh_TW: "寫留言…" },
   "send": { tr: "Gönder", en: "Send", es: "Enviar", pt_BR: "Enviar", de: "Senden", fr: "Envoyer", id: "Kirim", ja: "送信", ko: "보내기", zh_CN: "发送", zh_TW: "送出" },
   "translate": { tr: "Çevir", en: "Translate", es: "Traducir", pt_BR: "Traduzir", de: "Übersetzen", fr: "Traduire", id: "Terjemahkan", ja: "翻訳", ko: "번역", zh_CN: "翻译", zh_TW: "翻譯" },
+  "translating": { tr: "Çevriliyor…", en: "Translating…", es: "Traduciendo…", pt_BR: "Traduzindo…", de: "Wird übersetzt…", fr: "Traduction…", id: "Menerjemahkan…", ja: "翻訳中…", ko: "번역 중…", zh_CN: "翻译中…", zh_TW: "翻譯中…" },
   "original": { tr: "Aslını göster", en: "Show original", es: "Ver original", pt_BR: "Ver original", de: "Original anzeigen", fr: "Voir l'original", id: "Lihat asli", ja: "原文を表示", ko: "원문 보기", zh_CN: "显示原文", zh_TW: "顯示原文" },
   "report": { tr: "Bildir", en: "Report", es: "Denunciar", pt_BR: "Denunciar", de: "Melden", fr: "Signaler", id: "Laporkan", ja: "報告", ko: "신고", zh_CN: "举报", zh_TW: "檢舉" },
   "reported": { tr: "Bildirildi, teşekkürler", en: "Reported, thanks", es: "Denunciado, gracias", pt_BR: "Denunciado, obrigado", de: "Gemeldet, danke", fr: "Signalé, merci", id: "Dilaporkan, terima kasih", ja: "報告しました", ko: "신고했습니다", zh_CN: "已举报，谢谢", zh_TW: "已檢舉，謝謝" },
@@ -457,8 +458,11 @@ async function yorumlariYukle(p, kutu) {
       b.type = "button";
       b.addEventListener("click", async () => {
         if (ceviri[anahtar]) { delete ceviri[anahtar]; m.textContent = c.metin; b.textContent = t("translate"); return; }
+        b.disabled = true; b.textContent = t("translating");
         const r = await cevir(c.metin, c.dil);
+        b.disabled = false;
         if (r) { ceviri[anahtar] = r; m.textContent = r; b.textContent = t("original"); }
+        else { b.textContent = t("translate"); uyar(t("err")); }
       });
       d.appendChild(b);
     }
@@ -631,30 +635,63 @@ async function kucult(dosya) {
 }
 
 /* ------------------------------------------------------------------ çeviri */
-// Chrome'un cihaz üstü çevirmeni (Translator API) varsa sayfada çevirir; yoksa Google Çeviri'de açar
+// Sayfanın içinde çevirir (yeni sekme yok): 1) Chrome'un cihaz üstü çevirmeni (Translator API), 2) Google Çeviri'nin web uç noktası
+// (anahtarsız, CORS açık), 3) MyMemory (ücretsiz). Hepsi başarısızsa null → uyarı.
 const bcp = (k) => ({ pt_BR: "pt", zh_CN: "zh", zh_TW: "zh-Hant" })[k] || k;
+const gkod = (k) => ({ zh_CN: "zh-CN", zh_TW: "zh-TW", pt_BR: "pt" })[k] || k;
+function parcala(metin, en) {   // paragraf/cümle sınırından en çok `en` karakterlik parçalar
+  const out = [];
+  let kalan = metin;
+  while (kalan.length > en) {
+    let i = Math.max(kalan.lastIndexOf("\n", en), kalan.lastIndexOf(". ", en));
+    if (i < en / 3) i = en;
+    out.push(kalan.slice(0, i + 1)); kalan = kalan.slice(i + 1);
+  }
+  if (kalan) out.push(kalan);
+  return out;
+}
+async function cevirGoogle(metin, kaynak) {
+  let sonuc = "";
+  for (const p of parcala(metin, 1800)) {
+    const r = await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=" + gkod(kaynak) + "&tl=" + gkod(lang) + "&q=" + encodeURIComponent(p));
+    if (!r.ok) throw new Error("gtx " + r.status);
+    const j = await r.json();
+    sonuc += (j[0] || []).map((x) => x[0]).join("");
+  }
+  return sonuc;
+}
+async function cevirMyMemory(metin, kaynak) {
+  let sonuc = "";
+  for (const p of parcala(metin, 450)) {
+    const r = await fetch("https://api.mymemory.translated.net/get?langpair=" + gkod(kaynak) + "|" + gkod(lang) + "&q=" + encodeURIComponent(p));
+    const j = await r.json();
+    if (!j || j.responseStatus !== 200) throw new Error("mymemory");
+    sonuc += j.responseData.translatedText + (/\n$/.test(p) ? "\n" : " ");
+  }
+  return sonuc.trim();
+}
 async function cevir(metin, kaynak) {
-  const hedef = bcp(lang), kay = bcp(kaynak);
+  if (!metin) return "";
   try {
     if ("Translator" in self) {
-      const d = await self.Translator.availability({ sourceLanguage: kay, targetLanguage: hedef });
+      const d = await self.Translator.availability({ sourceLanguage: bcp(kaynak), targetLanguage: bcp(lang) });
       if (d && d !== "unavailable") {
-        const c = await self.Translator.create({ sourceLanguage: kay, targetLanguage: hedef });
+        const c = await self.Translator.create({ sourceLanguage: bcp(kaynak), targetLanguage: bcp(lang) });
         return await c.translate(metin);
       }
     }
-  } catch (e) { /* Google Çeviri'ye düş */ }
-  const g = { zh_CN: "zh-CN", zh_TW: "zh-TW", pt_BR: "pt" }[lang] || lang;
-  window.open("https://translate.google.com/?sl=auto&tl=" + g + "&op=translate&text=" + encodeURIComponent(metin.slice(0, 4500)), "_blank", "noopener");
+  } catch (e) { /* sonrakine geç */ }
+  try { return await cevirGoogle(metin, kaynak); } catch (e) { /* sonrakine geç */ }
+  try { return await cevirMyMemory(metin, kaynak); } catch (e) { /* çevrilemedi */ }
   return null;
 }
 async function cevirGonderi(p, btn) {
   if (ceviri[p.id]) { delete ceviri[p.id]; }
   else {
     btn.disabled = true;
-    const b = await cevir(p.baslik, p.dil);
-    if (b == null) { btn.disabled = false; return; }
-    const m = p.metin ? await cevir(p.metin, p.dil) : "";
+    btn.textContent = t("translating");
+    const [b, m] = await Promise.all([cevir(p.baslik, p.dil), cevir(p.metin || "", p.dil)]);
+    if (b == null) { btn.disabled = false; btn.textContent = t("translate"); uyar(t("err")); return; }
     ceviri[p.id] = { baslik: b, metin: m || p.metin };
   }
   const k = document.getElementById("p-" + p.id);
