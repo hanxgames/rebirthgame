@@ -91,6 +91,8 @@ import time
 import urllib.request
 
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import statik   # noqa: E402  haber arşivi + statik haber/rehber sayfaları + site haritası (tools/statik.py)
 AKIS = os.path.join(KOK, "haberler.json")
 GORSEL_KLASOR = "assets/img/haber"
 VIDEO_KLASOR = "assets/video/haber"   # habere kopyalanan videolar ve kapakları (kayıt düşünce silinir)
@@ -129,6 +131,7 @@ def yaz(akis: dict) -> None:
         f.write("\n")
     os.replace(tmp, AKIS)
     paylas_sayfalari(akis)
+    statik.haber_ve_rehber(akis)   # arşiv + /tr/haber/ /en/news/ /tr/rehber/ /en/guide/ sayfaları + sitemap.xml
 
 
 PAYLAS_KLASOR = "paylas"   # paylas/<dil>/<kimlik>.html: sosyal medya önizlemesi (Open Graph) + haberler.html#<kimlik>'e yönlendirme
@@ -365,6 +368,7 @@ def sirala_kirp(akis: dict) -> list:
 
 def yetim_sil(akis: dict) -> list:
     kullanilan = {os.path.basename(k.get("gorsel", "")) for liste in TURLER.values() for k in akis.get(liste, [])}
+    kullanilan |= statik.arsiv_gorselleri()   # akıştan düşen haberlerin statik sayfaları (/tr/haber/, /en/news/) görsellerini kullanır
     for liste in TURLER.values():   # habere kopyalanmış video ve kapak dosyaları
         for k in akis.get(liste, []):
             if isinstance(k.get("video"), dict):
@@ -483,6 +487,7 @@ def sil(kimlik: str) -> None:
         akis[liste] = [k for k in akis.get(liste, []) if k["id"] != kimlik]
     if sum(len(akis.get(l, [])) for l in TURLER.values()) == once:
         sys.exit("bulunamadı: " + kimlik)
+    statik.arsivden_sil(kimlik)   # elle silinen haber statik sayfalardan da kalkar (akıştan kendiliğinden düşen arşivde kalır)
     yetim_sil(akis)
     yaz(akis)
     print("silindi:", kimlik)

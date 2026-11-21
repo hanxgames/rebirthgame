@@ -1,0 +1,256 @@
+{
+ "_not": "Rehber sayfaları (tools/statik.py → /tr/rehber/<tr-adres>/ ve /en/guide/<en-adres>/). Metin satırı \"• \" ile başlarsa madde olur. Oyun değişince metni güncelle, sonra python tools/statik.py.",
+ "rehberler": [
+  {
+   "kimlik": "baslangic",
+   "tarih": "2026-11-21",
+   "gorsel": "assets/img/rehber/baslangic.jpg",
+   "tr": {
+    "adres": "baslangic",
+    "baslik": "ReBirth başlangıç rehberi: ilk harekâtını kazanmak için ipuçları",
+    "ozet": "ReBirth: Savaş ve Şehir Kurma'ya yeni mi başladın? Dönemler, iller, ekonomi, ordu ve Gölge Cephesi hakkında bilmen gerekenler ve işe yarayan ipuçları.",
+    "bolumler": [
+     {"h": "Görevin ne?", "metin": [
+      "Büyük bir felaketten sonra merkezî otorite çökmüş, Gölge Cephesi adlı silahlı örgüt boşluğu dolduruyor. Sen Uluslararası İstikrar Misyonu'nun koordinatörüsün: hayat kurtar, düzeni sağla, halkın güvenini kazan ve sonunda yönetimi halka devret.",
+      "ReBirth bölümlere ayrılmaz. Aynı haritada yıllar geçer ve her karar kalıcıdır: iller ne yaptığını hatırlar, yaptığın her yapı haritada kalır."]},
+     {"h": "İlk adım: karargâhını seç", "metin": [
+      "Yeni harekâtta misyon karargâhını kendin seçersin; Gölge Cephesi ise haritada gizli bir ilde doğar. Birlikler yol ağı üzerinde hareket ettiği için yolların kesiştiği, merkeze yakın bir il birliklerinin her yere çabuk yetişmesini sağlar."]},
+     {"h": "Dört dönem", "metin": [
+      "Harekât dört dönemden geçer; her dönemin kendi hedefleri vardır:",
+      "• Acil Müdahale: enkazı kaldır, illeri ayakta tut, ilk istikrarı sağla.",
+      "• Yeniden İnşa: illeri kontrol altına al, hizmetleri ve meşruiyeti büyüt, yerel meclisleri kur.",
+      "• Kalkınma ve Yerel Güç: yerel orduyu yetiştir, vergi gelirini bağışların önüne geçir, seçimi başar.",
+      "• Devir Teslim: yabancı birlikleri azalt, isyancı il bırakma, istikrarı ve meşruiyeti yüksek tut.",
+      "Dönemler ilerledikçe sahada tutabileceğin yabancı birlik sayısı azalır. Yerel güçleri erkenden yetiştirmeye başla."]},
+     {"h": "İlleri okumayı öğren", "metin": [
+      "Her ilin istikrarı, desteği, güvenliği, hizmetleri, ekonomisi, istihbaratı, isyancı nüfuzu, kini, yolsuzluğu ve sana duyduğu güven vardır. Bir ile dokun: panel, desteği neyin artırıp neyin düşürdüğünü tek tek gösterir.",
+      "Harita katmanlarıyla (istikrar, kontrol, güvenlik) nereye asker, nereye hastane, nereye iş gerektiğini bir bakışta görürsün."]},
+     {"h": "Güven yavaş kazanılır, kin yavaş söner", "metin": [
+      "Tamamlanan girişimler güveni artırır. Sivil kayıplar, sert önlemler ve tutulmayan sözler ise kin biriktirir; bu kin yıllar içinde söner ve o sürede Gölge Cephesi'nin adam devşirmesini kolaylaştırır.",
+      "Bir ilde sert davranmadan önce iki kez düşün: kısa vadede kazandığın güvenlik, uzun vadede sana pahalıya patlayabilir."]},
+     {"h": "Parayı akıllıca harca", "metin": [
+      "Başta gelirinin büyük kısmı uluslararası bağışlardan gelir ama zamanla bağışçı yorgunluğu başlar. Pazar, tarım kooperatifi, mikrokredi ve sanayi gibi girişimlerle vergi tabanını erkenden kur.",
+      "Güvenli eşiğin üstünde harcamak enflasyonu tetikler ve her şeyi pahalılaştırır. Yolsuzluk da bütçeden pay alır; yönetim girişimleri bunu azaltır."]},
+     {"h": "Girişimler ve politikalar", "metin": [
+      "Girişimler altyapı, sağlık, eğitim, yönetim, ekonomi ve güvenlik dallarındadır; her biri haritada kalıcı bir yapı olarak belirir. Bazıları önkoşul ister, bazıları belli bir dönemde açılır.",
+      "Politikalar güvenlik, yönetişim, toplum ve ekonomi dallarındadır; siyasi sermaye ve bütçeyle alınır. Bazı politikalar birbiriyle çelişir, seçmeden önce etkilerini oku."]},
+     {"h": "Ordu ve hava gücü", "metin": [
+      "Birlikler yol ağı üzerinde hareket eder ve devriye, taarruz ya da koruma görevi alır. Piyade, mekanize birlik, jandarma, özel kuvvetler, istihkâm ve yerel güçlerin yanında hava gücün de var:",
+      "• Keşif İHA'sı gökteki gözündür, gizli hücreleri ortaya çıkarır.",
+      "• SİHA komşu illere hassas vuruş yapar.",
+      "• Taarruz helikopteri hızlı müdahale ve yakın destek sağlar.",
+      "• Savaş uçağı vilayetin her yerine ağır vuruş yapar.",
+      "Pusular ve el yapımı patlayıcılar birliklerine kayıp verdirebilir; güvenliği zayıf yollarda dikkatli ol."]},
+     {"h": "Gölge Cephesi'ni tanı", "metin": [
+      "Örgüt gerilla, sabotaj, propaganda ve terör hücreleriyle çalışır ve senin baskına göre strateji değiştirir: gizlenir, yayılır, gerilla savaşına ya da toprak ele geçirmeye geçer, bazen de müzakere arar.",
+      "Hücreler ancak o ildeki istihbarat yeterince yükselince görünür. Sürekli birlik varlığı, muhbir ağları ve keşif İHA'ları gizliliği aşındırır.",
+      "Örgütün karargâhını bulup yok etmek onu sarsar. Ama tek yol silah değil: af ve uzlaşmayla barış masası da bir zafer yoludur."]},
+     {"h": "Olaylar: her seçeneğin bir bedeli var", "metin": [
+      "Artçı depremler, protestolar, bağışçı konferansları, rehine krizleri gibi olaylarda karar sende. Her seçeneğin etkisi renkli ipuçlarıyla gösterilir; bazıları risklidir ve sonuçları aylar sonra ortaya çıkabilir."]},
+     {"h": "Kaybetmemek için", "metin": [
+      "Meşruiyetin uzun süre dibe vurursa, uluslararası destek tükenirse, bütçe derin açığa düşerse ya da karargâhın düşerse harekât biter. Bu göstergelere her ay bir göz at."]},
+     {"h": "Beş harita, beş felaket", "metin": [
+      "• Tarsel: deprem ve dağlar. Artçılara karşı evleri güçlendir, çadır kentler kur.",
+      "• Kesra Deltası: her bahar taşan nehir. Set, pompa istasyonu ve kazıklı evler kur.",
+      "• Varzan Platosu: kuraklık. Kuyu aç, sarnıç kur, tankerle su taşı.",
+      "• Halvarya Fiyortları: uzun kış ve çığlar. Çığ bariyerleri kur, yolları açık tut.",
+      "• Saranis Adaları: yanardağ ve dev dalga tehlikesi. Dalgakıran ve gözlemevi kur, adalara feribot işlet."]},
+     {"h": "Harekâttan sonra", "metin": [
+      "Zaferden sonra aynı haritada barış döneminde devam edebilirsin. Ana menüde seni daha fazlası bekliyor: Kriz Masası'nın yedi görevi, isyanı yönettiğin Gölge Cephesi modu, ülke yönetimi modu Sefer ve kendi senaryolarını kurduğun Sandbox."]}
+    ]
+   },
+   "en": {
+    "adres": "beginners-guide",
+    "baslik": "ReBirth beginner's guide: tips to win your first campaign",
+    "ozet": "New to ReBirth: Offline War Strategy? What you need to know about phases, districts, the economy, your forces and the Shadow Front, plus tips that work.",
+    "bolumler": [
+     {"h": "What is your job?", "metin": [
+      "After a great disaster, central authority has collapsed and an armed group called the Shadow Front is filling the vacuum. You coordinate the International Stabilization Mission: save lives, restore order, win the people's trust and, in the end, hand the province back to its people.",
+      "ReBirth has no levels. Years pass on the same map and every decision sticks: districts remember what you did, and everything you build stays on the map."]},
+     {"h": "First step: choose your headquarters", "metin": [
+      "In a new campaign you choose where the Mission's headquarters stands, while the Shadow Front is born in a hidden district. Your units move along the road network, so a central district where roads meet lets them reach every corner quickly."]},
+     {"h": "Four phases", "metin": [
+      "The campaign moves through four phases, each with its own goals:",
+      "• Emergency Response: clear the rubble, keep districts standing, reach your first stability.",
+      "• Reconstruction: bring districts under control, grow services and legitimacy, set up local councils.",
+      "• Development and Local Power: train the local army, make tax income overtake donations, hold a successful election.",
+      "• Handover: draw down foreign troops, leave no district to the insurgents, keep stability and legitimacy high.",
+      "The number of foreign units you can keep in the field shrinks as the phases go by. Start training local forces early."]},
+     {"h": "Learn to read the districts", "metin": [
+      "Every district has stability, support, security, services, economy, intelligence, insurgent influence, grievance, corruption and trust in you. Tap a district and the panel shows, factor by factor, what is raising or lowering its support.",
+      "Map layers (stability, control, security) show at a glance where you need troops, where a hospital and where jobs."]},
+     {"h": "Trust builds slowly, grievance fades slowly", "metin": [
+      "Finished initiatives build trust. Civilian casualties, harsh measures and broken promises build grievance instead; it fades over years, and until then it makes recruiting easier for the Shadow Front.",
+      "Think twice before cracking down on a district: the security you gain today can cost you dearly later."]},
+     {"h": "Spend wisely", "metin": [
+      "At first most of your income comes from international donations, but donor fatigue sets in over time. Build a tax base early with initiatives such as markets, farm cooperatives, microcredit and industry.",
+      "Spending above the safe threshold triggers inflation and makes everything more expensive. Corruption also takes its cut of the budget; governance initiatives reduce it."]},
+     {"h": "Initiatives and policies", "metin": [
+      "Initiatives cover infrastructure, health, education, governance, economy and security, and each one appears on the map as a lasting building. Some need prerequisites, some unlock in a later phase.",
+      "Policies come in four branches: security, governance, society and economy, and cost political capital and budget. Some policies conflict with each other, so read their effects before you choose."]},
+     {"h": "Forces and air power", "metin": [
+      "Units move along the road network on patrol, assault or guard orders. Besides infantry, mechanized units, gendarmerie, special forces, engineers and local forces, you also have air power:",
+      "• The recon drone is your eye in the sky and exposes hidden cells.",
+      "• The armed drone makes precision strikes on neighboring districts.",
+      "• The attack helicopter brings rapid response and close support.",
+      "• The fighter jet delivers heavy strikes anywhere in the province.",
+      "Ambushes and roadside bombs can cost you troops, so be careful on roads with weak security."]},
+     {"h": "Know the Shadow Front", "metin": [
+      "The group works through guerrilla, sabotage, propaganda and terror cells, and changes strategy based on your pressure: it hides, spreads, switches to guerrilla war or land grabs, and sometimes seeks talks.",
+      "Cells only show up once intelligence in their district is high enough. A steady troop presence, informant networks and recon drones wear down their cover.",
+      "Finding and destroying their headquarters shakes the group. But guns are not the only way: amnesty and compromise at the negotiating table are a path to victory too."]},
+     {"h": "Events: every choice has a price", "metin": [
+      "Aftershocks, protests, donor conferences, hostage crises: the call is yours. Colored hints show the effects of each option; some are risky, and their consequences can surface months later."]},
+     {"h": "How not to lose", "metin": [
+      "The campaign ends if your legitimacy stays at rock bottom for too long, international support runs out, the budget sinks deep into the red or your headquarters falls. Check these every month."]},
+     {"h": "Five maps, five disasters", "metin": [
+      "• Tarsel: earthquakes and mountains. Retrofit homes against aftershocks and set up tent cities.",
+      "• Kesra Delta: a river that floods every spring. Build levees, pumping stations and stilt houses.",
+      "• Varzan Plateau: drought. Drill wells, build cisterns and run water tankers.",
+      "• Halvarya Fjords: long winters and avalanches. Build avalanche barriers and keep the roads open.",
+      "• Saranis Islands: a volcano and the threat of a giant wave. Build breakwaters and an observatory, and run ferries to the islands."]},
+     {"h": "After the campaign", "metin": [
+      "After victory you can keep playing the same map in peacetime. More waits on the main menu: the seven missions of the Crisis Desk, the Shadow Front mode where you lead the insurgency, the country-ruling mode Statecraft, and Sandbox, where you build your own scenarios."]}
+    ]
+   }
+  },
+  {
+   "kimlik": "sefer",
+   "tarih": "2026-11-21",
+   "gorsel": "assets/img/rehber/sefer.jpg",
+   "tr": {
+    "adres": "sefer",
+    "baslik": "Sefer rehberi: ülkeni altmış yıl boyunca yönet",
+    "ozet": "ReBirth'ün ülke yönetimi modu Sefer'de ekonomi, Meclis, diplomasi, Kıtalar Konseyi ve savaş: başlamadan önce bilmen gerekenler ve ipuçları.",
+    "bolumler": [
+     {"h": "Sefer nedir?", "metin": [
+      "Sefer (Beta), ReBirth'ün büyük strateji modu. Bu kez bir vilayeti değil, bütün bir ülkeyi yönetiyorsun: 2031'den başlayarak altmış yıl boyunca, Aldorya kıtasında.",
+      "Başlamak için ana menüde Yeni oyun → Sefer'i seç ve beş ülkeden birini al: Tarsel, Kesra, Varzan, Halvarya ya da Saranis. Her ülkenin kendi yönetim biçimi, gelenekleri ve sorunları var."]},
+     {"h": "Ülkeni tanı", "metin": [
+      "Hazine, büyüme, borç, enflasyon, işsizlik, istikrar, halk desteği, Meclis desteği, siyasi sermaye, uluslararası itibar ve teknoloji ülkenin nabzıdır. Her ay sonundaki kısa rapor neyin iyiye, neyin kötüye gittiğini özetler."]},
+     {"h": "Meclis, kanunlar ve anayasa", "metin": [
+      "Bütçeyi dengele, kanunlarını Meclis'ten geçir ve seçimlere hazırlan. Koalisyon ortağınla yollarını ayırabilirsin; bedelini ve ortağın küskünlüğünü önceden görürsün.",
+      "Anayasayı değiştirmek için komisyon kurar, Meclis'ten geçirir ya da halkoylamasına gidersin. Ülkelerin gelenekleri reformla değişebilir ya da kaldırılabilir."]},
+     {"h": "Araştırma ve Yükseliş Yolu", "metin": [
+      "Araştırma ağacı ve Yükseliş Yolu, ülkenin geleceğini çağlar boyunca şekillendirir. Hangi alana yatırım yaptığın, ekonomini, ordunu ve itibarını yıllar sonra bile etkiler."]},
+     {"h": "Ekonomi, dış ticaret ve savunma", "metin": [
+      "• Dış ticaret: her mal için yerli üretimi, kimden alıp kime satacağını sen seçersin. Uzak güçler ucuz mal sunar ama teslimat riski taşır.",
+      "• Yatırım: uzman heyetleri, yurt dışı yatırım ve yabancı yatırım teşviki ekonomini büyütür.",
+      "• Savunma: güvenlik bütçesini silahlı kuvvetler, jandarma ve istihbarat arasında paylaşırsın; savunma sanayii yatırımla büyür ve silah ihracatına açılır."]},
+     {"h": "Diplomasi ve Kıtalar Konseyi", "metin": [
+      "Anlaşmalar yap, Konsey'e önerge ver, oylamalarda tarafını seç. Kıta gerginliği herkesin gözü önündedir; tırmanan krizlerde dostlarına silah yardımı ve gönüllü gönderebilirsin.",
+      "Konsey yaptırımları ambargoya dönüşebilir. Ortaklarınla ticareti kısıtlamak ya da askıya almak da senin elinde."]},
+     {"h": "Savaş ve fetih", "metin": [
+      "Ordularını haritada yönet, Taarruz Harekâtı ekranında saldırını planla ve gerçek zamanlı izle.",
+      "Fethettiğin toprakları askerî, sivil ya da özerk yönetimle idare et; her biri direnişi, uyumu, geliri ve itibarı farklı etkiler. Barış masasında kukla devlet kurabilirsin. Büyük krizlerde Dünya Uzlaşı Asamblesi toplanır: küresel ateşkes, yaptırımlar ve barış gücü kararları alınır."]},
+     {"h": "Ülkene in", "metin": [
+      "Ülkeni 3B haritada gör; yatırımları, afetleri ve seçim mitinglerini yerinde izle."]},
+     {"h": "İpuçları", "metin": [
+      "• Bütçe açığını büyütme: borç ve enflasyon istikrarı yavaş yavaş aşındırır.",
+      "• Siyasi sermayeni büyük reformlara sakla.",
+      "• Komşularınla ilişkini izle: gerginlik ve kötü şöhret seni kıtada yalnız bırakabilir.",
+      "• Savaş açmadan önce fethin bedelini düşün: fethedilen topraklar yönetilmek ister.",
+      "Sefer şu an Beta'da. Gördüğün hataları ve önerilerini hanxdestek@gmail.com adresine yaz; her mesajı okuyoruz."]}
+    ]
+   },
+   "en": {
+    "adres": "statecraft",
+    "baslik": "Statecraft guide: rule your country for sixty years",
+    "ozet": "The economy, Parliament, diplomacy, the Council of Continents and war in Statecraft, ReBirth's country-ruling mode: what to know before you start, plus tips.",
+    "bolumler": [
+     {"h": "What is Statecraft?", "metin": [
+      "Statecraft (Beta) is ReBirth's grand strategy mode. This time you don't run a single province but a whole country: for sixty years starting in 2031, on the continent of Aldorya.",
+      "To start, pick New game → Statecraft on the main menu and choose one of five countries: Tarsel, Kesra, Varzan, Halvarya or Saranis. Each has its own form of government, traditions and problems."]},
+     {"h": "Know your country", "metin": [
+      "Treasury, growth, debt, inflation, unemployment, stability, public support, parliamentary support, political capital, international reputation and technology are your country's pulse. A short report at the end of each month sums up what is getting better and what is getting worse."]},
+     {"h": "Parliament, laws and the constitution", "metin": [
+      "Balance the budget, pass your laws through Parliament and get ready for elections. You can break with your coalition partner; you see the cost and the partner's resentment in advance.",
+      "To change the constitution, set up a commission, pass it through Parliament or call a referendum. Countries' traditions can be reformed or abolished."]},
+     {"h": "Research and the Path of Ascent", "metin": [
+      "The research tree and the Path of Ascent shape your country's future across eras. Where you invest affects your economy, army and reputation even years later."]},
+     {"h": "Economy, foreign trade and defense", "metin": [
+      "• Foreign trade: for every good you choose domestic production, whom to buy from and whom to sell to. Distant powers offer cheap goods but carry delivery risk.",
+      "• Investment: expert missions, investment abroad and foreign investment incentives grow your economy.",
+      "• Defense: you split the security budget between the armed forces, gendarmerie and intelligence; the defense industry grows with investment and can open up to arms exports."]},
+     {"h": "Diplomacy and the Council of Continents", "metin": [
+      "Sign agreements, table motions at the Council and pick a side in votes. Continental tension is out in the open; when crises escalate you can send arms and volunteers to your friends.",
+      "Council sanctions can turn into embargoes. Restricting or suspending trade with partners is also in your hands."]},
+     {"h": "War and conquest", "metin": [
+      "Command your armies on the map, plan your attack on the Offensive Operation screen and watch it unfold in real time.",
+      "Govern conquered land under military, civil or autonomous rule; each affects resistance, integration, income and reputation differently. At the peace table you can set up a puppet state. In major crises the World Concord Assembly meets to vote on global ceasefires, sanctions and peacekeepers."]},
+     {"h": "Enter your country", "metin": [
+      "See your country on the 3D map and watch investments, disasters and election rallies up close."]},
+     {"h": "Tips", "metin": [
+      "• Don't let the deficit grow: debt and inflation slowly wear down stability.",
+      "• Save political capital for big reforms.",
+      "• Watch your relations with neighbors: tension and a bad reputation can leave you alone on the continent.",
+      "• Think about the cost of conquest before you go to war: conquered land has to be governed.",
+      "Statecraft is in Beta. Send bugs and suggestions to hanxdestek@gmail.com; we read every message."]}
+    ]
+   }
+  },
+  {
+   "kimlik": "sandbox",
+   "tarih": "2026-11-21",
+   "gorsel": "assets/img/rehber/sandbox.jpg",
+   "tr": {
+    "adres": "sandbox",
+    "baslik": "Sandbox rehberi: kendi senaryonu kur, oyna ve paylaş",
+    "ozet": "Senaryo Atölyesi'nde haritayı, birlikleri, isyancı hücrelerini ve kazanma koşulunu sen belirlersin. Adım adım senaryo kurma, kodla paylaşma ve HanX'e gönderme.",
+    "bolumler": [
+     {"h": "Sandbox nedir?", "metin": [
+      "Ana menüdeki Sandbox (Beta) düğmesi Senaryo Atölyesi'ni açar: harekât için bir senaryo düzenleyicisi. Hangi ilin kimde olduğunu, birlikleri, isyancı hücrelerini, kuralları ve kazanma koşulunu sen belirlersin; sonra oynar ve arkadaşlarınla paylaşırsın."]},
+     {"h": "Hızlı başlangıç: şablonlar", "metin": [
+      "Senaryolarım listesi boşken şablon galerisi açılır. Bir şablon seçip Başla'ya dokun; hazır bir senaryo üzerinden düzenlemeye başlarsın."]},
+     {"h": "Dört adımda senaryo", "metin": [
+      "• Harita: fırçalarla illeri Hükümete, çekişmeli ya da Gölge Cephesi'ne ver; birlik ve hücre yerleştir. Bir ile dokununca açılan il dosyasında kontrolü, karargâhları, göstergeleri, birlikleri, hücreleri ve hazır yapıları tek tek ayarlarsın.",
+      "• Kurallar: taraf, harita, zorluk, doktrin, dönem ve zamanın akışı; sivil, askerî, Gölge Cephesi ve olay ayarları; takviyeler.",
+      "• Hedefler: Kazanırsın ve Kaybedersin kartlarına koşullarını ekle, süreyi ve süre dolunca ne olacağını seç.",
+      "• Ad ve paylaş: başlık, kısa açıklama, brifing ve yazar adı."]},
+     {"h": "Dene, kaydet, oyna", "metin": [
+      "Üst çubuktaki Dene ile senaryonu istediğin an oyna, Geri al ile son düzenlemeleri geri al. Oyunda hedef kartı ilerlemeni, sonuç ekranı senaryonun nasıl bittiğini gösterir."]},
+     {"h": "Arkadaşlarınla paylaş", "metin": [
+      "Ad ve paylaş adımında ya da Senaryolarım'da Kodu kopyala'ya dokun: senaryon tek bir kod olarak panoya kopyalanır. Kodu arkadaşına gönder; o da Senaryolarım'daki kod yapıştırma penceresinden içe aktarıp kendi oyununda oynasın. Onların senaryolarını da aynı yolla açabilirsin."]},
+     {"h": "HanX'e gönder", "metin": [
+      "Gurur duyduğun senaryoyu HanX'e gönder düğmesiyle bize yolla. Ekibimizin seçtiği senaryolar, istersen adınla, bütün oyunculara etkinlik olarak sunulur. Gönderimlerin nasıl işlendiği gizlilik politikamızda anlatılıyor."]},
+     {"h": "Topluluk senaryoları", "metin": [
+      "Seçilen senaryoları bu sayfada ve oyunun Haberler bölümünde duyuracağız. İlk senaryo seninki olabilir!"]},
+     {"h": "İyi bir senaryo için ipuçları", "metin": [
+      "• Tek cümlelik bir fikirle başla: başkentte kuşatılmış tek bir kale ya da isyanda bir ülkede elinde kalan son şehir.",
+      "• Hedefleri sade tut: oyuncu neyi başarması gerektiğini ilk bakışta anlasın.",
+      "• Brifinge hikâyeyi yaz: oyuncu neden orada olduğunu bilerek başlasın.",
+      "• Paylaşmadan önce Dene ile en az bir kez baştan sona oyna."]}
+    ]
+   },
+   "en": {
+    "adres": "sandbox",
+    "baslik": "Sandbox guide: build, play and share your own scenario",
+    "ozet": "In the Scenario Workshop you set the map, units, insurgent cells and victory condition. Build a scenario step by step, share it with a code and send it to HanX.",
+    "bolumler": [
+     {"h": "What is Sandbox?", "metin": [
+      "The Sandbox (Beta) button on the main menu opens the Scenario Workshop: a scenario editor for the campaign. You decide who holds each district, where units and insurgent cells stand, the rules and the victory condition, then play it and share it with friends."]},
+     {"h": "Quick start: templates", "metin": [
+      "While My Scenarios is empty, the template gallery opens. Pick a template and tap Start to begin editing from a ready-made scenario."]},
+     {"h": "A scenario in four steps", "metin": [
+      "• Map: use brushes to give districts to the Government, mark them contested or hand them to the Shadow Front, and place units and cells. Tap a district to open its file and fine-tune control, headquarters, indicators, units, cells and ready-made buildings.",
+      "• Rules: side, map, difficulty, doctrine, phase and the flow of time; civil, military, Shadow Front and event settings; reinforcements.",
+      "• Objectives: add conditions to the You win and You lose cards, then set the duration and what happens when time runs out.",
+      "• Name & share: title, short description, briefing and author name."]},
+     {"h": "Test, save, play", "metin": [
+      "Tap Test on the top bar to play your scenario at any moment, and Undo to roll back your latest edits. In play, an objective card tracks your progress and a results screen shows how your scenario ended."]},
+     {"h": "Share with friends", "metin": [
+      "Tap Copy code in the Name & share step or in My Scenarios: your scenario is copied to the clipboard as a single code. Send it to a friend; they paste it in the paste-code window in My Scenarios and play it in their own game. You can open their scenarios the same way."]},
+     {"h": "Send to HanX", "metin": [
+      "Send the scenario you're proud of with the Send to HanX button. Scenarios picked by our team are offered to every player as events, with your name on them if you wish. Our privacy policy explains how submissions are handled."]},
+     {"h": "Community scenarios", "metin": [
+      "We'll announce picked scenarios on this page and in the game's News section. The first one could be yours!"]},
+     {"h": "Tips for a good scenario", "metin": [
+      "• Start from a one-line idea: a lone fortress under siege in the capital, or the last city left in a country in revolt.",
+      "• Keep objectives simple: players should see at a glance what they need to achieve.",
+      "• Tell the story in the briefing: players should know why they are there.",
+      "• Before sharing, play it once from start to finish with Test."]}
+    ]
+   }
+  }
+ ]
+}

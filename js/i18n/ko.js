@@ -266,6 +266,7 @@ window.RB_I18N["ko"] = {
  "foot.privacy": "개인정보처리방침",
  "foot.support": "지원",
  "foot.news": "뉴스",
+ "foot.guides": "가이드",
  "foot.top": "맨 위로",
  "foot.note": "ReBirth에 등장하는 모든 장소, 단체, 인물은 허구입니다.",
  "modal.close": "닫기"

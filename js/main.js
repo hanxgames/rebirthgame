@@ -57,6 +57,8 @@
     $("#soundBtn").setAttribute("aria-label", t("nav.sound"));
     $("#burger").setAttribute("aria-label", t("nav.menu"));
     $$("a[data-keep-lang]").forEach(function (a) { a.href = a.getAttribute("data-keep-lang") + "?lang=" + lang; });
+    // rehberler yalnız tr/en (tools/statik.py): Türkçe → /tr/rehber/, diğer diller İngilizcesi
+    $$("a[data-rehber]").forEach(function (a) { a.href = lang === "tr" ? "/tr/rehber/" : "/en/guide/"; });
     buildTicker();
     buildCrisis(first);
     buildMoments();

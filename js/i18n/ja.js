@@ -266,6 +266,7 @@ window.RB_I18N["ja"] = {
  "foot.privacy": "プライバシー",
  "foot.support": "サポート",
  "foot.news": "ニュース",
+ "foot.guides": "ガイド",
  "foot.top": "トップへ戻る",
  "foot.note": "ReBirthに登場する地名、組織、人物はすべて架空のものです。",
  "modal.close": "閉じる"

@@ -266,6 +266,7 @@ window.RB_I18N["id"] = {
  "foot.privacy": "Privasi",
  "foot.support": "Dukungan",
  "foot.news": "Berita",
+ "foot.guides": "Panduan",
  "foot.top": "Kembali ke atas",
  "foot.note": "Semua tempat, organisasi, dan tokoh dalam ReBirth adalah fiktif.",
  "modal.close": "Tutup"

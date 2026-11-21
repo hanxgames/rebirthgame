@@ -266,6 +266,7 @@ window.RB_I18N["es"] = {
  "foot.privacy": "Privacidad",
  "foot.support": "Soporte",
  "foot.news": "Noticias",
+ "foot.guides": "Guías",
  "foot.top": "Volver arriba",
  "foot.note": "Todos los lugares, organizaciones y personas de ReBirth son ficticios.",
  "modal.close": "Cerrar"

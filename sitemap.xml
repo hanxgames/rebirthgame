@@ -360,4 +360,314 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://rebirthgame.tr/haberler.html?lang=zh_TW"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rebirthgame.tr/haberler.html"/>
   </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/rehber/baslangic/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/rehber/baslangic/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/guide/beginners-guide/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/rehber/sefer/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/rehber/sefer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/guide/statecraft/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/rehber/sandbox/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/rehber/sandbox/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/guide/sandbox/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/rehber/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/rehber/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/guide/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/guide/beginners-guide/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/guide/beginners-guide/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/rehber/baslangic/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/guide/statecraft/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/guide/statecraft/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/rehber/sefer/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/guide/sandbox/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/guide/sandbox/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/rehber/sandbox/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/guide/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/guide/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/rehber/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-20-sefer-cok-oyunculu-yakinda/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-20-sefer-cok-oyunculu-yakinda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-20-sefer-cok-oyunculu-yakinda/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-18-10-bin-oyuncu/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-18-10-bin-oyuncu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-18-10-bin-oyuncu/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-12-surum-2-2-7/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-12-surum-2-2-7/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-12-surum-2-2-7/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-12-sandbox-yayinda/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-12-sandbox-yayinda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-12-sandbox-yayinda/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-11-surum-2-2-6/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-11-surum-2-2-6/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-11-surum-2-2-6/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-09-surum-2-2-5/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-09-surum-2-2-5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-09-surum-2-2-5/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-06-surum-2-2-4/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-06-surum-2-2-4/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-06-surum-2-2-4/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-03-surum-2-2-0/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-03-surum-2-2-0/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-03-surum-2-2-0/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-03-haftalik-etkinlik/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-03-haftalik-etkinlik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-03-haftalik-etkinlik/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-03-sefer-beta/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-03-sefer-beta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-03-sefer-beta/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-03-ios-app-store/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-03-ios-app-store/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-03-ios-app-store/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-02-surum-2-1-4/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-02-surum-2-1-4/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-02-surum-2-1-4/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-02-karargah-secimi/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-02-karargah-secimi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-02-karargah-secimi/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-02-halvarya-saranis-harekatta/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-02-halvarya-saranis-harekatta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-02-halvarya-saranis-harekatta/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-01-surum-2-1-3/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-01-surum-2-1-3/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-01-surum-2-1-3/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-10-31-kara-kolera-basladi/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-31-kara-kolera-basladi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-31-kara-kolera-basladi/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-10-28-surum-2-1-2/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-28-surum-2-1-2/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-28-surum-2-1-2/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-10-23-surum-2-1-1/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-23-surum-2-1-1/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-23-surum-2-1-1/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-10-23-surum-2-1-0/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-23-surum-2-1-0/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-23-surum-2-1-0/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-10-22-golge-cephesi/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-22-golge-cephesi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-22-golge-cephesi/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-10-20-surum-2-0-9/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-20-surum-2-0-9/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-20-surum-2-0-9/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-10-20-yeni-diller-2-0-9/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-20-yeni-diller-2-0-9/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-20-yeni-diller-2-0-9/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-10-14-bilgisayarda/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-14-bilgisayarda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-14-bilgisayarda/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-10-14-surum-2-0-5/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-14-surum-2-0-5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-14-surum-2-0-5/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-10-14-surum-2-0-4/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-14-surum-2-0-4/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-14-surum-2-0-4/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-10-13-surum-2-0-3/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-13-surum-2-0-3/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-13-surum-2-0-3/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/tr/haber/</loc><changefreq>weekly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-20-sefer-cok-oyunculu-yakinda/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-20-sefer-cok-oyunculu-yakinda/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-20-sefer-cok-oyunculu-yakinda/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-18-10-bin-oyuncu/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-18-10-bin-oyuncu/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-18-10-bin-oyuncu/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-12-surum-2-2-7/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-12-surum-2-2-7/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-12-surum-2-2-7/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-12-sandbox-yayinda/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-12-sandbox-yayinda/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-12-sandbox-yayinda/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-11-surum-2-2-6/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-11-surum-2-2-6/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-11-surum-2-2-6/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-09-surum-2-2-5/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-09-surum-2-2-5/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-09-surum-2-2-5/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-06-surum-2-2-4/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-06-surum-2-2-4/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-06-surum-2-2-4/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-03-surum-2-2-0/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-03-surum-2-2-0/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-03-surum-2-2-0/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-03-haftalik-etkinlik/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-03-haftalik-etkinlik/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-03-haftalik-etkinlik/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-03-sefer-beta/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-03-sefer-beta/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-03-sefer-beta/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-03-ios-app-store/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-03-ios-app-store/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-03-ios-app-store/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-02-surum-2-1-4/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-02-surum-2-1-4/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-02-surum-2-1-4/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-02-karargah-secimi/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-02-karargah-secimi/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-02-karargah-secimi/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-02-halvarya-saranis-harekatta/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-02-halvarya-saranis-harekatta/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-02-halvarya-saranis-harekatta/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-01-surum-2-1-3/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-01-surum-2-1-3/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-01-surum-2-1-3/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-10-31-kara-kolera-basladi/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-31-kara-kolera-basladi/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-31-kara-kolera-basladi/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-10-28-surum-2-1-2/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-28-surum-2-1-2/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-28-surum-2-1-2/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-10-23-surum-2-1-1/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-23-surum-2-1-1/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-23-surum-2-1-1/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-10-23-surum-2-1-0/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-23-surum-2-1-0/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-23-surum-2-1-0/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-10-22-golge-cephesi/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-22-golge-cephesi/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-22-golge-cephesi/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-10-20-surum-2-0-9/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-20-surum-2-0-9/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-20-surum-2-0-9/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-10-20-yeni-diller-2-0-9/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-20-yeni-diller-2-0-9/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-20-yeni-diller-2-0-9/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-10-14-bilgisayarda/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-14-bilgisayarda/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-14-bilgisayarda/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-10-14-surum-2-0-5/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-14-surum-2-0-5/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-14-surum-2-0-5/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-10-14-surum-2-0-4/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-14-surum-2-0-4/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-14-surum-2-0-4/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-10-13-surum-2-0-3/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-10-13-surum-2-0-3/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-10-13-surum-2-0-3/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/</loc><changefreq>weekly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/"/>
+  </url>
 </urlset>

@@ -12,7 +12,18 @@ galeri ve tarayıcıda oynanan dört mini görev (Hava Harekâtı, Gölge Avı, 
   `css/dil.css` (`?lang=` → kayıtlı seçim → tarayıcı dili). Ana sayfa metni tr/en `js/i18n.js`'te, diğerleri `js/i18n/<kod>.js`
   (aynı anahtarlar; i18n.js'e anahtar ekleyince dokuz dosyaya da ekle). Haberler/destek/gizlilik kısa metinleri `js/doc.js` sözlüğünde;
   destek ve gizlilik metni, mini oyunlar, ses, fragman ve ekran görüntüleri yalnız tr/en (diğer diller İngilizcesini görür).
-  Dil sürümleri `?lang=<kod>` adresleri: hreflang `index.html`/`haberler.html` başında ve `sitemap.xml`'de.
+  Haberler/destek/gizlilik dil sürümleri `?lang=<kod>` adresleri (hreflang sayfa başında ve `sitemap.xml`'de).
+- **Statik sayfalar (2026-11-21, SEO; `python tools/statik.py`, node gerekir; üretilen dosyaları elle düzenleme):**
+  - Ana sayfanın dil sayfaları `/tr/ /en/ /es/ /pt-br/ /de/ /fr/ /id/ /ja/ /ko/ /zh-cn/ /zh-tw/`: kaynak `index.html` + sözlükler; başlık,
+    açıklama, kanonik, hreflang ve `data-i18n` metinleri sunucuda o dilde. `<html data-sabit-dil>` dili sabitler (`js/dil.js`),
+    `<base href="/">` göreli adresleri köke bağlar (sayfa içi çapalar `/en/#oyun` biçiminde üretilir). **`index.html` ya da `js/i18n*`
+    değişince betiği çalıştır.** Kök `/` x-default: dili ziyaretçiye göre seçer; dil menüsü statik sayfaya gider; eski `/?lang=xx`
+    adresleri `js/main.js`'te `/xx/`'e yönlenir. Sayfa başlıkları (`meta.title`) her dilde Play'deki adla başlar (aramalarda bu ad aranıyor).
+  - Haber sayfaları `/tr/haber/<kimlik>/` ve `/en/news/<kimlik>/` + liste sayfaları: kaynak `haber_arsivi.json` (akışta bir kez yer
+    almış her haber; akıştan kendiliğinden düşen arşivde ve sayfasıyla kalır, görseli silinmez; `haber_ekle.py sil` arşivden de siler).
+    `haber_ekle.py` her yazımda haber/rehber sayfalarını ve `sitemap.xml`'i yeniler (node gerekmez).
+  - Rehberler `/tr/rehber/<adres>/` ve `/en/guide/<adres>/`: kaynak `rehberler.json` (başlangıç, Sefer, Sandbox; görseller
+    `assets/img/rehber/`). Oyun değişince metni güncelle. Ana sayfa alt bilgisinde "Rehberler" (`data-rehber`, tr → /tr/rehber/, diğer diller /en/guide/).
 - Mini oyunlar `js/games/<id>.js`, sözleşme `js/games/CONTRACT.md`, tek tek deneme `oyun.html?g=<id>&lang=tr|en`.
 - Görseller, videolar, sesler ve harita verisi oyunun kendisinden: `python tools/build_assets.py <oyun_deposu> [--font] [--img] [--map] [--audio] [--video]`
   (oyun deposu ve tanıtım çekimleri gerekir; ayrıntı betiğin başında).
