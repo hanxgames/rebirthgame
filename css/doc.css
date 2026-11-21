@@ -167,6 +167,22 @@ a:hover { color: var(--accent-h); }
 .pay-prev { position: relative; display: grid; place-items: center; margin: 0 auto 14px; background: #121110; border-radius: 10px; overflow: hidden;
   border: 1px solid var(--line); aspect-ratio: 9 / 16; height: min(46vh, 460px); max-width: 100%; }
 .pay-prev--gonderi { aspect-ratio: 4 / 5; }
+/* telefon: pencere kaydırmadan sığsın (görünür yükseklik dvh; önizleme kalan alana göre küçülür) */
+@supports (height: 1dvh) { .pay-prev { height: min(46dvh, 460px); } }
+@media (max-width: 560px), (max-height: 760px) {
+  .pay-ov { padding: 10px; }
+  .pay-box { max-height: calc(100vh - 20px); max-height: calc(100dvh - 20px); padding: 14px 14px 12px; }
+  .pay-h { font-size: 21px; margin-bottom: 10px; }
+  .pay-x { top: 8px; right: 8px; width: 32px; height: 32px; }
+  .pay-tabs { margin-bottom: 8px; }
+  .pay-tab { padding: 7px 8px; font-size: 12px; }
+  .pay-prev { height: clamp(170px, calc(100vh - 380px), 460px); margin-bottom: 10px; }
+  .pay-ipucu { display: none; }
+  .pay-links { margin-top: 10px; padding-top: 8px; }
+  .pay-links__t { margin-bottom: 6px; }
+  .pay-link { padding: 6px 10px; font-size: 12.5px; }
+}
+@supports (height: 1dvh) { @media (max-width: 560px), (max-height: 760px) { .pay-prev { height: clamp(170px, calc(100dvh - 380px), 460px); } } }
 .pay-prev img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .pay-wait { position: absolute; color: var(--muted); font-size: 14px; display: none; }
 .pay-prev.is-wait .pay-wait { display: block; }

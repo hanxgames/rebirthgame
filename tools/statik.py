@@ -317,7 +317,7 @@ def sayfa(dil, yol, alt_yol, tur, baslik, aciklama, gorsel, ld, kicker, h1, meta
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">%(ld)s</script>
 <link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/doc.css?v=9">
+<link rel="stylesheet" href="css/doc.css?v=10">
 <link rel="stylesheet" href="css/dil.css?v=1">
 </head>
 <body class="art">

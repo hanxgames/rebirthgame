@@ -110,3 +110,10 @@
 .tp-vote.is-up b { color: var(--accent); }
 .tp-vote.is-down b { color: #7fb2e8; }
 @media (max-width: 560px) { .tp-post { grid-template-columns: 46px 1fr; } .tp-vote button { width: 34px; height: 30px; } }
+/* dar ekran: form ekrandan taşmasın (dosya seçici ve seçim kutuları sütunu genişletmesin) */
+.tp-compose form { grid-template-columns: minmax(0, 1fr); }
+.tp-compose form > *, .tp-row > * { min-width: 0; }
+.tp-file { flex-wrap: wrap; }
+.tp-file input { max-width: 100%; min-width: 0; font-size: 13px; }
+.tp select { max-width: 100%; text-overflow: ellipsis; }
+@media (max-width: 560px) { .tp-compose { padding: 14px 12px; } .tp-btns .doc-btn { flex: 1 1 auto; justify-content: center; } }
