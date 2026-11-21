@@ -115,7 +115,7 @@
 
   function y(dil) { return Y[dil] || Y.en; }
   function metin(d, dil) { if (!d) return ""; return d[dil] || d.en || d.tr || ""; }
-  function adres(k, dil) { return SITE + "paylas/" + dil + "/" + encodeURIComponent(k.id) + ".html"; }
+  function adres(k, dil) { if (k.url) return k.url; return SITE + "paylas/" + dil + "/" + encodeURIComponent(k.id) + ".html"; }
   function buyuk(s, dil) {   // Türkçe büyük harf; Latin marka adları noktasız kalır (oyunda Defs.tr_upper)
     var u = dil === "tr" ? s.toLocaleUpperCase("tr-TR") : s.toUpperCase();
     return dil === "tr" ? u.replace(/REBİRTH/g, "REBIRTH").replace(/REDDİT/g, "REDDIT") : u;
@@ -240,12 +240,17 @@
     }
     // etiket + tarih
     var x = 60, cx = x;
-    if (k.etiket) cx += cip(c, x, gy, metin(k.etiket, dil), cipRengi(k)) + 18;
-    c.font = "700 32px 'Barlow Condensed'"; c.fillStyle = "#c7bba3"; c.textBaseline = "middle";
-    c.fillText(tarih(k.tarih, dil).toUpperCase() + (k.surum ? "  ·  V" + k.surum : ""), cx, gy + 26);
+    if (k.etiket) cx += cip(c, x, gy, buyuk(metin(k.etiket, dil), dil), cipRengi(k)) + 18;
+    c.font = "700 32px 'Barlow Condensed'"; c.textBaseline = "middle";
+    if (k.yazar) {   // topluluk gönderisi: yazarın takma adı (yönetici kırmızı)
+      c.fillStyle = k.yazarRenk || "#ece4d0"; c.fillText(k.yazar, cx, gy + 26);
+      cx += c.measureText(k.yazar).width; c.fillStyle = "#c7bba3"; c.fillText("  ·  ", cx, gy + 26); cx += c.measureText("  ·  ").width;
+    }
+    c.fillStyle = "#c7bba3";
+    c.fillText(buyuk(tarih(k.tarih, dil), dil) + (k.surum ? "  ·  V" + k.surum : ""), cx, gy + 26);
     // başlık
     var hik = bicim === "hikaye";
-    var bs = baslikSigdir(c, buyuk(metin(k.baslik, dil), dil), 960, hik ? 96 : 76, hik ? 60 : 52, hik ? 4 : 3);
+    var bs = baslikSigdir(c, buyuk(metin(k.baslik, dil), k.dil || dil), 960, hik ? 96 : 76, hik ? 60 : 52, hik ? 4 : 3);
     c.fillStyle = "#ece4d0"; c.textBaseline = "top"; c.font = bs.boy + "px Anton";
     var by = gy + 92;
     // Anton'da Türkçe büyük harf noktaları (İ, Ö, Ü) üst satıra değmesin: satır aralığı 1,22
@@ -262,7 +267,7 @@
     c.fillStyle = "#f1ad2a"; yuvarlak(c, 60, cta, 960, bh, 20); c.fill();
     c.fillStyle = "#201d1b"; c.textBaseline = "top";
     c.font = "700 " + (hik ? 34 : 28) + "px 'Barlow Condensed'";
-    c.fillText(t.tamami.toUpperCase(), 100, cta + (hik ? 30 : 22));
+    c.fillText(buyuk(k.alt || t.tamami, dil), 100, cta + (hik ? 30 : 22));
     c.font = (hik ? 80 : 62) + "px Anton";
     c.fillText("REBIRTHGAME.TR", 100, cta + (hik ? 70 : 52));
     // güneş simgesi (logodaki gibi)
@@ -274,10 +279,41 @@
     return tv;
   }
 
+  // görselsiz topluluk gönderisi: oyun haritası üstünde "TOPLULUK" kapağı (16:9)
+  function temaKapak(im, yazi, dil) {
+    var W = 1600, H = 900, tv = document.createElement("canvas"); tv.width = W; tv.height = H;
+    var c = tv.getContext("2d");
+    kapla(c, im, 0, 0, W, H);
+    var g = c.createRadialGradient(W / 2, H / 2, 120, W / 2, H / 2, W * 0.62);
+    g.addColorStop(0, "rgba(25,24,23,.55)"); g.addColorStop(1, "rgba(25,24,23,.9)");
+    c.fillStyle = g; c.fillRect(0, 0, W, H);
+    c.strokeStyle = "rgba(241,173,42,.5)"; c.lineWidth = 4; c.strokeRect(36, 36, W - 72, H - 72);
+    // konuşma balonları
+    c.fillStyle = "#f1ad2a";
+    yuvarlak(c, 600, 170, 260, 170, 34); c.fill();
+    c.beginPath(); c.moveTo(650, 330); c.lineTo(640, 395); c.lineTo(712, 334); c.closePath(); c.fill();
+    c.fillStyle = "rgba(236,228,208,.92)";
+    yuvarlak(c, 760, 245, 240, 150, 30); c.fill();
+    c.beginPath(); c.moveTo(950, 385); c.lineTo(962, 440); c.lineTo(900, 390); c.closePath(); c.fill();
+    c.fillStyle = "#201d1b";
+    [0, 1, 2].forEach(function (i) { c.beginPath(); c.arc(684 + i * 46, 255, 13, 0, Math.PI * 2); c.fill(); });
+    c.textAlign = "center"; c.textBaseline = "alphabetic";
+    c.font = "700 40px 'Barlow Condensed'"; c.fillStyle = "#c7bba3";
+    c.fillText("R E B I R T H", W / 2, 520);
+    var boy = 170; c.font = boy + "px Anton";
+    var s = buyuk(yazi, dil);
+    while (boy > 80 && c.measureText(s).width > W - 200) { boy -= 10; c.font = boy + "px Anton"; }
+    c.fillStyle = "#f1ad2a"; c.fillText(s, W / 2, 520 + boy + 20);
+    c.textAlign = "left";
+    tv.naturalWidth = W; tv.naturalHeight = H;   // kapla() için
+    return tv;
+  }
+
   function uret(k, dil, bicim) {
-    var kaynak = (k.video && k.video.kapak) || k.gorsel;
+    var kaynak = (k.video && k.video.kapak) || k.gorsel || "assets/img/map/tarsel_gece.webp";
     return Promise.all([resim(kaynak), resim("assets/img/ui/logo.webp"), yaziTipleri()]).then(function (r) {
-      var tv = ciz(k, dil, bicim, r[0], r[1]);
+      var im = k.gorsel || (k.video && k.video.kapak) || !k.tema ? r[0] : temaKapak(r[0], k.tema, dil);
+      var tv = ciz(k, dil, bicim, im, r[1]);
       return new Promise(function (ok) {
         tv.toBlob(function (b) { ok(b); }, "image/jpeg", 0.92);
       });
@@ -293,10 +329,10 @@
   function ac(k, dil, geri) {
     var t = y(dil), url = adres(k, dil), baslik = metin(k.baslik, dil);
     var ov = el("div", "pay-ov"), kutu = el("div", "pay-box");
-    ov.setAttribute("role", "dialog"); ov.setAttribute("aria-modal", "true"); ov.setAttribute("aria-label", t.baslik);
+    ov.setAttribute("role", "dialog"); ov.setAttribute("aria-modal", "true"); ov.setAttribute("aria-label", k.pencere || t.baslik);
     var kapat = el("button", "pay-x", "×"); kapat.type = "button"; kapat.setAttribute("aria-label", t.kapat);
     kutu.appendChild(kapat);
-    kutu.appendChild(el("h3", "pay-h", t.baslik));
+    kutu.appendChild(el("h3", "pay-h", k.pencere || t.baslik));
     var sekme = el("div", "pay-tabs"), bicim = "hikaye", dosyalar = {}, istek = {};
     var on = el("div", "pay-prev"), img = el("img"), bekle = el("span", "pay-wait", t.hazir);
     img.alt = ""; on.appendChild(img); on.appendChild(bekle);
@@ -455,6 +491,7 @@
       });
       return d;
     },
+    ac: ac,   // topluluk.js: gönderiden kurulan kayıt (url, gorsel ya da tema, yazar, dil, pencere, alt)
     metin: duzMetin,
     uret: uret
   };

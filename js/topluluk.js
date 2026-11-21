@@ -82,6 +82,10 @@ const S = {
   "delete": { tr: "Sil", en: "Delete", es: "Eliminar", pt_BR: "Excluir", de: "Löschen", fr: "Supprimer", id: "Hapus", ja: "削除", ko: "삭제", zh_CN: "删除", zh_TW: "刪除" },
   "delete.q": { tr: "Silinsin mi? Bu geri alınamaz.", en: "Delete this? It can't be undone.", es: "¿Eliminar? No se puede deshacer.", pt_BR: "Excluir? Não pode ser desfeito.", de: "Löschen? Das kann nicht rückgängig gemacht werden.", fr: "Supprimer ? C'est définitif.", id: "Hapus? Tidak bisa dibatalkan.", ja: "削除しますか？元に戻せません。", ko: "삭제할까요? 되돌릴 수 없습니다.", zh_CN: "确定删除？此操作无法撤销。", zh_TW: "確定刪除？此操作無法復原。" },
   "share": { tr: "Bağlantıyı kopyala", en: "Copy link", es: "Copiar enlace", pt_BR: "Copiar link", de: "Link kopieren", fr: "Copier le lien", id: "Salin tautan", ja: "リンクをコピー", ko: "링크 복사", zh_CN: "复制链接", zh_TW: "複製連結" },
+  "sharepost": { tr: "Paylaş", en: "Share", es: "Compartir", pt_BR: "Compartilhar", de: "Teilen", fr: "Partager", id: "Bagikan", ja: "シェア", ko: "공유", zh_CN: "分享", zh_TW: "分享" },
+  "sharetitle": { tr: "Gönderiyi paylaş", en: "Share this post", es: "Compartir publicación", pt_BR: "Compartilhar publicação", de: "Beitrag teilen", fr: "Partager la publication", id: "Bagikan postingan", ja: "投稿をシェア", ko: "게시물 공유", zh_CN: "分享帖子", zh_TW: "分享貼文" },
+  "sharemore": { tr: "Toplulukta tartış", en: "Join the discussion at", es: "Únete a la conversación en", pt_BR: "Participe da conversa em", de: "Diskutiere mit auf", fr: "Rejoignez la discussion sur", id: "Ikut berdiskusi di", ja: "コミュニティで語ろう", ko: "커뮤니티에서 이야기해요", zh_CN: "来社区一起讨论", zh_TW: "來社群一起討論" },
+  "theme": { tr: "Topluluk", en: "Community", es: "Comunidad", pt_BR: "Comunidade", de: "Community", fr: "Communauté", id: "Komunitas", ja: "コミュニティ", ko: "커뮤니티", zh_CN: "社区", zh_TW: "社群" },
   "copied": { tr: "Kopyalandı", en: "Copied", es: "Copiado", pt_BR: "Copiado", de: "Kopiert", fr: "Copié", id: "Disalin", ja: "コピーしました", ko: "복사됨", zh_CN: "已复制", zh_TW: "已複製" },
   "empty": { tr: "Henüz gönderi yok. İlk paylaşan sen ol!", en: "No posts yet. Be the first to share!", es: "Aún no hay publicaciones. ¡Sé el primero!", pt_BR: "Ainda não há publicações. Seja o primeiro!", de: "Noch keine Beiträge. Sei der Erste!", fr: "Aucune publication pour l'instant. Soyez le premier !", id: "Belum ada postingan. Jadilah yang pertama!", ja: "まだ投稿がありません。最初の投稿をしよう！", ko: "아직 게시물이 없습니다. 첫 글을 남겨 보세요!", zh_CN: "还没有帖子，来发第一帖吧！", zh_TW: "還沒有貼文，來發第一篇吧！" },
   "loading": { tr: "Yükleniyor…", en: "Loading…", es: "Cargando…", pt_BR: "Carregando…", de: "Wird geladen…", fr: "Chargement…", id: "Memuat…", ja: "読み込み中…", ko: "불러오는 중…", zh_CN: "加载中…", zh_TW: "載入中…" },
@@ -362,12 +366,9 @@ function kart(p) {
     c.addEventListener("click", () => cevirGonderi(p, c));
     d.appendChild(c);
   }
-  const pay = el("button", null, t("share"));
-  pay.type = "button";
-  pay.addEventListener("click", () => {
-    const url = location.origin + location.pathname + "?lang=" + lang + "#p=" + p.id;
-    (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(() => { pay.textContent = t("copied"); }, () => { window.prompt(t("share"), url); });
-  });
+  const pay = el("button", null, "↗ " + t("sharepost"));
+  pay.type = "button"; pay.setAttribute("aria-haspopup", "dialog");
+  pay.addEventListener("click", () => paylas(p, pay));
   d.appendChild(pay);
   if (kullanici && p.u !== kullanici.uid) {
     const bl = el("button", null, t("report"));
@@ -407,6 +408,27 @@ function kart(p) {
   }
   a.appendChild(g);
   return a;
+}
+
+// paylaşım penceresi (js/paylas.js, haberlerle aynı): hikâye 9:16 ve gönderi 4:5 görseli. Gönderinin görseli varsa o,
+// yoksa oyun haritası üstünde "Topluluk" kapağı. Metin ekranda görünen hâli (çevrildiyse çevirisi).
+async function paylas(p, btn) {
+  if (!window.RBPaylas || !window.RBPaylas.ac) return;
+  btn.disabled = true;
+  let gorsel = null;
+  if (p.g) { try { const s = await get(ref(db, "topluluk_gorsel/" + p.id)); if (s.exists()) gorsel = s.val(); } catch (e) { /* temayla */ } }
+  btn.disabled = false;
+  const c = ceviri[p.id], tek = (x) => ({ [lang]: x || "" }), z = new Date(p.t || Date.now()), iki = (n) => String(n).padStart(2, "0");
+  window.RBPaylas.ac({
+    id: "topluluk-" + p.id,
+    etiket: tek(t("tag." + p.etiket)), renk: p.etiket === "hata" ? { etiket: "#d8483b" } : null,
+    baslik: tek(c ? c.baslik : p.baslik), ozet: tek(c ? c.metin : p.metin), dil: c ? lang : p.dil,
+    tarih: z.getFullYear() + "-" + iki(z.getMonth() + 1) + "-" + iki(z.getDate()),
+    yazar: p.ad, yazarRenk: p.r === "leader" ? "#ff4d3d" : null,
+    gorsel, tema: gorsel ? null : t("theme"),
+    url: "https://rebirthgame.tr/topluluk.html?lang=" + lang + "#p=" + p.id,
+    pencere: t("sharetitle"), alt: t("sharemore")
+  }, lang, btn);
 }
 
 // yazar adı: yönetici rozeti (r: "leader", kurallar yalnız yöneticiye izin verir) kırmızı ad + LEADER
