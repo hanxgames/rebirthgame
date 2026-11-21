@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-sayfa="topluluk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ReBirth — Community</title>
+<meta name="description" content="ReBirth community: share ideas, suggestions, bug reports and screenshots, vote and discuss with other commanders. ReBirth topluluğu: görüş, öneri ve ekran görüntülerini paylaş.">
+<meta name="theme-color" content="#191817">
+<meta name="apple-itunes-app" content="app-id=6821863283">
+<link rel="canonical" href="https://rebirthgame.tr/topluluk.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ReBirth">
+<meta property="og:title" content="ReBirth — Community">
+<meta property="og:description" content="Share ideas, suggestions and screenshots, vote and discuss with other commanders.">
+<meta property="og:image" content="https://rebirthgame.tr/assets/img/ui/og.jpg">
+<meta property="og:url" content="https://rebirthgame.tr/topluluk.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/doc.css?v=9">
+<link rel="stylesheet" href="css/dil.css?v=1">
+<link rel="stylesheet" href="css/topluluk.css?v=1">
+</head>
+<body>
+
+<header class="doc-nav">
+  <a class="doc-nav__logo" href="./" data-keep-lang="./"><span class="re">RE</span>BIRTH</a>
+  <div class="doc-nav__right">
+    <a class="hide-s" href="./" data-keep-lang="./"><span data-tt="nav.home">Home</span></a>
+    <a class="hide-s" href="haberler.html" data-keep-lang="haberler.html"><span data-tt="nav.news">News</span></a>
+    <a class="is-on" href="topluluk.html" data-keep-lang="topluluk.html"><span data-tt="nav.community">Community</span></a>
+    <button class="doc-lang dil-btn" id="docLang" type="button" aria-label="Dil / Language">EN</button>
+  </div>
+</header>
+
+<div class="doc-hero"><div class="doc-wrap">
+  <div class="doc-kicker">HanX Games · ReBirth</div>
+  <h1><span data-tt="title">Community</span></h1>
+  <p class="doc-meta"><span data-tt="lead">Share your ideas, suggestions and screenshots, and discuss them with other commanders.</span></p>
+</div></div>
+
+<main class="doc-body"><div class="doc-wrap tp">
+  <section class="tp-bar" aria-live="polite">
+    <div class="tp-user" id="tpUser"></div>
+    <div class="tp-sort" role="tablist" id="tpSort">
+      <button type="button" role="tab" data-sira="puan"><span data-tt="sort.top">Top</span></button>
+      <button type="button" role="tab" data-sira="yorum"><span data-tt="sort.comments">Most comments</span></button>
+      <button type="button" role="tab" data-sira="t"><span data-tt="sort.new">New</span></button>
+    </div>
+  </section>
+
+  <section class="tp-compose" id="tpCompose" hidden>
+    <form id="tpForm" autocomplete="off">
+      <label class="tp-field"><span data-tt="f.title">Title</span>
+        <input name="baslik" maxlength="120" minlength="3" required></label>
+      <label class="tp-field"><span data-tt="f.text">What's on your mind?</span>
+        <textarea name="metin" rows="5" maxlength="4000"></textarea></label>
+      <div class="tp-row">
+        <label class="tp-field"><span data-tt="f.tag">Topic</span><select name="etiket"></select></label>
+        <label class="tp-field"><span data-tt="f.lang">Language</span><select name="dil"></select></label>
+      </div>
+      <label class="tp-file"><input type="file" name="gorsel" accept="image/*"><span data-tt="f.image">Add a screenshot (optional)</span></label>
+      <div class="tp-preview" id="tpPreview" hidden></div>
+      <p class="tp-note"><span data-tt="rules">Be respectful, don't share personal information and don't advertise. Posts that break these rules are removed.</span>
+        <span data-tt="expire">Posts are deleted automatically after 30 days.</span></p>
+      <div class="tp-btns">
+        <button class="doc-btn" type="submit"><span data-tt="f.send">Post</span></button>
+        <button class="doc-btn doc-btn--ghost" type="button" id="tpCancel"><span data-tt="cancel">Cancel</span></button>
+      </div>
+      <p class="tp-err" id="tpFormErr" hidden></p>
+    </form>
+  </section>
+
+  <div id="tpList" class="tp-list" aria-live="polite"><p class="doc-meta" data-tt="loading">Loading…</p></div>
+  <p class="tp-foot"><span data-tt="expire">Posts are deleted automatically after 30 days.</span>
+    <a href="privacy.html" data-keep-lang="privacy.html"><span data-tt="privacy">Privacy</span></a></p>
+</div></main>
+
+<footer class="doc-foot"><div class="doc-wrap">
+  <span>© 2026 HanX Games · ReBirth</span>
+  <nav>
+    <a href="./" data-keep-lang="./"><span data-tt="nav.home">Home</span></a>
+    <a href="haberler.html" data-keep-lang="haberler.html"><span data-tt="nav.news">News</span></a>
+    <a href="support.html" data-keep-lang="support.html"><span data-tt="nav.support">Support</span></a>
+    <a href="https://play.google.com/store/apps/details?id=com.hantro.business&amp;referrer=utm_source%3Drebirthgame.tr%26utm_medium%3Dweb%26utm_campaign%3Dtopluluk" target="_blank" rel="noopener">Google Play</a>
+    <a href="https://apps.apple.com/app/id6821863283" target="_blank" rel="noopener">App Store</a>
+  </nav>
+</div></footer>
+
+<script src="js/dil.js?v=4"></script>
+<script type="module" src="js/topluluk.js?v=1"></script>
+<script src="js/sayac.js?v=1" defer></script>
+</body>
+</html>

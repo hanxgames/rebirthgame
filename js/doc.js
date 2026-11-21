@@ -7,6 +7,7 @@
   var SOZ = {
     "nav.home": { tr: "Site", en: "Home", es: "Inicio", pt_BR: "Início", de: "Startseite", fr: "Accueil", id: "Beranda", ja: "ホーム",
       ko: "홈", zh_CN: "首页", zh_TW: "首頁" },
+    "nav.community": { tr: "Topluluk", en: "Community", de: "Community", es: "Comunidad", fr: "Communauté", id: "Komunitas", ja: "コミュニティ", ko: "커뮤니티", pt_BR: "Comunidade", zh_CN: "社区", zh_TW: "社群" },
     "nav.news": { tr: "Haberler", en: "News", es: "Noticias", pt_BR: "Notícias", de: "Nachrichten", fr: "Actualités", id: "Berita",
       ja: "ニュース", ko: "뉴스", zh_CN: "新闻", zh_TW: "新聞" },
     "nav.support": { tr: "Destek", en: "Support", es: "Soporte", pt_BR: "Suporte", de: "Support", fr: "Assistance", id: "Dukungan",

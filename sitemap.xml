@@ -361,6 +361,9 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rebirthgame.tr/haberler.html"/>
   </url>
   <url>
+    <loc>https://rebirthgame.tr/topluluk.html</loc><changefreq>weekly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://rebirthgame.tr/tr/rehber/baslangic/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/rehber/baslangic/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/guide/beginners-guide/"/>

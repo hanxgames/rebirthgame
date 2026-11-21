@@ -1,5 +1,5 @@
 /* ReBirth tanıtım sitesi — metinler (TR / EN). Anahtarlar index.html'de data-i18n, data-i18n-html, data-i18n-attr ile kullanılır. */
-window.RB_I18N_SURUM = 3; // js/i18n/<dil>.js önbellek sürümü (dil.js); dil dosyaları değişince artır
+window.RB_I18N_SURUM = 4; // js/i18n/<dil>.js önbellek sürümü (dil.js); dil dosyaları değişince artır
 window.RB_I18N = {
   tr: {
     "meta.title": "ReBirth: Savaş ve Şehir Kurma — İnternetsiz 3D Strateji Oyunu",
@@ -146,7 +146,7 @@ window.RB_I18N = {
     "cta.title": "Vilayet sizi bekliyor",
     "cta.lead": "İndirin, ilk girişimi başlatın ve Tarsel'in yeniden doğuşunu izleyin.",
     "foot.studio": "Bir HanX Games yapımı",
-    "foot.privacy": "Gizlilik", "foot.support": "Destek", "foot.news": "Haberler", "foot.guides": "Rehberler", "foot.top": "Başa dön",
+    "foot.privacy": "Gizlilik", "foot.support": "Destek", "foot.news": "Haberler", "foot.guides": "Rehberler", "foot.community": "Topluluk", "foot.top": "Başa dön",
     "foot.note": "ReBirth'teki tüm yer, kurum ve kişi adları kurgusaldır.",
     "modal.close": "Kapat"
   },
@@ -296,7 +296,7 @@ window.RB_I18N = {
     "cta.title": "The province is waiting",
     "cta.lead": "Download, start your first initiative and watch Tarsel rise again.",
     "foot.studio": "A HanX Games production",
-    "foot.privacy": "Privacy", "foot.support": "Support", "foot.news": "News", "foot.guides": "Guides", "foot.top": "Back to top",
+    "foot.privacy": "Privacy", "foot.support": "Support", "foot.news": "News", "foot.guides": "Guides", "foot.community": "Community", "foot.top": "Back to top",
     "foot.note": "All places, organizations and people in ReBirth are fictional.",
     "modal.close": "Close"
   }

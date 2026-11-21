@@ -198,6 +198,8 @@ def site_haritasi(ek=()):
     alt = [(h, adres(kl)) for _, h, kl, _ in DILLER] + [("x-default", SITE + "/")]
     yeni = [sitemap_girdisi(SITE + "/", "1.0", alt)] + [sitemap_girdisi(adres(kl), "0.9", alt) for _, _, kl, _ in DILLER]
     yeni += [g for g in girdiler if koru(g)]
+    if not any("<loc>%s/topluluk.html</loc>" % SITE in g for g in yeni):
+        yeni.append(sitemap_girdisi(SITE + "/topluluk.html", "0.8"))
     yeni += [sitemap_girdisi(*e) for e in ek]
     s = s[:bas] + "".join(yeni) + s[son:]
     return yaz("sitemap.xml", s.replace("\n", nl))
@@ -210,14 +212,14 @@ YOL = {"tr": {"ana": "tr", "haber": "tr/haber", "rehber": "tr/rehber"}, "en": {"
 AY = {"tr": ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
       "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]}
 MET = {
-    "tr": {"site": "Site", "haberler": "Haberler", "rehberler": "Rehberler", "destek": "Destek", "gizlilik": "Gizlilik", "diger": "EN",
+    "tr": {"site": "Site", "haberler": "Haberler", "rehberler": "Rehberler", "topluluk": "Topluluk", "destek": "Destek", "gizlilik": "Gizlilik", "diger": "EN",
            "haber": "Haber", "rehber": "Rehber", "tum_haber": "Tüm haberler", "tum_rehber": "Tüm rehberler", "canli": "Güncel akış ve tepkiler",
            "diger_haber": "Diğer haberler", "diger_rehber": "Diğer rehberler", "icindekiler": "İçindekiler", "video": "Videoyu izle",
            "cta_b": "Vilayet seni bekliyor", "cta_a": "Ücretsiz başla · İnternetsiz oyna · 12 dil", "play": "Google Play'den indir",
            "pc": "PC'de oyna", "liste_haber_b": "ReBirth haberleri", "liste_rehber_b": "ReBirth rehberleri",
            "liste_haber_a": "ReBirth: Savaş ve Şehir Kurma'dan duyurular, etkinlikler ve güncelleme notları; en yenisi en üstte.",
            "liste_rehber_a": "ReBirth: Savaş ve Şehir Kurma için başlangıç, mod ve strateji rehberleri.", "guncelleme": "Güncelleme notu"},
-    "en": {"site": "Home", "haberler": "News", "rehberler": "Guides", "destek": "Support", "gizlilik": "Privacy", "diger": "TR",
+    "en": {"site": "Home", "haberler": "News", "rehberler": "Guides", "topluluk": "Community", "destek": "Support", "gizlilik": "Privacy", "diger": "TR",
            "haber": "News", "rehber": "Guide", "tum_haber": "All news", "tum_rehber": "All guides", "canli": "Live feed and reactions",
            "diger_haber": "More news", "diger_rehber": "More guides", "icindekiler": "Contents", "video": "Watch the video",
            "cta_b": "The province is waiting", "cta_a": "Free to start · Plays offline · 12 languages", "play": "Get it on Google Play",
@@ -326,6 +328,7 @@ def sayfa(dil, yol, alt_yol, tur, baslik, aciklama, gorsel, ld, kicker, h1, meta
     <a class="hide-s" href="/%(ana)s/">%(m_site)s</a>
     <a%(on_haber)s href="/%(y_haber)s/">%(m_haberler)s</a>
     <a%(on_rehber)s href="/%(y_rehber)s/">%(m_rehberler)s</a>
+    <a href="topluluk.html?lang=%(dil)s">%(m_topluluk)s</a>
     <a class="hide-s" href="support.html?lang=%(dil)s">%(m_destek)s</a>
     %(dil_linki)s
   </div>
@@ -361,7 +364,7 @@ def sayfa(dil, yol, alt_yol, tur, baslik, aciklama, gorsel, ld, kicker, h1, meta
        "ogtur": "website" if tur.startswith("liste") else "article", "oglocale": "tr_TR" if dil == "tr" else "en_US",
        "ogtitle": e(baslik), "gorsel": e(SITE + "/" + gorsel), "ld": json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"),
        "ana": Y["ana"], "y_haber": Y["haber"], "y_rehber": Y["rehber"], "m_site": e(m["site"]), "m_haberler": e(m["haberler"]),
-       "m_rehberler": e(m["rehberler"]), "m_destek": e(m["destek"]), "m_gizlilik": e(m["gizlilik"]), "dil_linki": dil_linki,
+       "m_rehberler": e(m["rehberler"]), "m_destek": e(m["destek"]), "m_topluluk": e(m["topluluk"]), "m_gizlilik": e(m["gizlilik"]), "dil_linki": dil_linki,
        "on_haber": on("haber") or on("liste_haber"), "on_rehber": on("rehber") or on("liste_rehber"),
        "kicker": kicker, "h1": e(h1), "meta": meta, "icerik": icerik, "play": PLAY_URL, "tur": tur}
 

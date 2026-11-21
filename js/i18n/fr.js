@@ -267,6 +267,7 @@ window.RB_I18N["fr"] = {
  "foot.support": "Assistance",
  "foot.news": "Actualités",
  "foot.guides": "Guides",
+ "foot.community": "Communauté",
  "foot.top": "Haut de page",
  "foot.note": "Tous les lieux, organisations et personnes de ReBirth sont fictifs.",
  "modal.close": "Fermer"

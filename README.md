@@ -59,3 +59,14 @@ Yanındaki kopyala simgesi ("Metni kopyala", `RBPaylas.kopya`) başlığı, öze
 kopyalar (bloklar arasında boş satır, "• " maddeler alt alta; Reddit vb. gönderiye yapıştırmak için).
 
 Oyundaki tüm yer, kurum ve kişi adları kurgusaldır. © 2026 HanX Games.
+
+## Topluluk (2026-11-21)
+`topluluk.html` + `js/topluluk.js` + `css/topluluk.css`: Reddit benzeri tek ekranlı akış (sıralama: en çok beğenilen / en çok yorumlanan /
+en yeni), yukarı-aşağı oy, tıklayınca açılan yorumlar, isteğe bağlı tek ekran görüntüsü (tarayıcıda WebP'ye küçültülür), "Çevir"
+(Chrome'un cihaz üstü çevirmeni, yoksa Google Çeviri), bağlantı kopyalama, bildir. Giriş yalnız Google (Firebase Auth,
+dead-mans-deck-global; izinli alan adı rebirthgame.tr). Veri Realtime Database `topluluk_*`; kurallar
+`YenidenDogus/ajanlar/site/topluluk_kurallar.py` (üretir) + `topluluk_sinama.py` (emülatör sınaması) → `panel/database.rules.json`.
+Günde en çok 5 gönderi / 60 yorum; gönderiler 30 gün sonra silinir (kurallar süresi dolanı herkese açar, sayfa açılışta temizler).
+Moderasyon sayfanın içinde: `topluluk_yonetici/<uid> = true` olan hesap gizle / sil / yazarı engelle düğmelerini ve bildirim sayısını
+görür (yönetici kaydı yalnız CLI/konsoldan). Yerel deneme: Auth + Database emülatörü, `topluluk.html?emu=1&emudb=<port>` ve konsolda
+`__tpDenemeGiris("ad")` (yalnız localhost). Gizlilik: privacy.html "Community page" / "Topluluk sayfası".

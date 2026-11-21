@@ -267,6 +267,7 @@ window.RB_I18N["de"] = {
  "foot.support": "Support",
  "foot.news": "News",
  "foot.guides": "Anleitungen",
+ "foot.community": "Community",
  "foot.top": "Nach oben",
  "foot.note": "Alle Orte, Organisationen und Personen in ReBirth sind frei erfunden.",
  "modal.close": "Schließen"

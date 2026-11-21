@@ -267,6 +267,7 @@ window.RB_I18N["zh_TW"] = {
  "foot.support": "支援",
  "foot.news": "最新消息",
  "foot.guides": "攻略",
+ "foot.community": "社群",
  "foot.top": "回到頂端",
  "foot.note": "ReBirth中的所有地點、組織與人物皆為虛構。",
  "modal.close": "關閉"
