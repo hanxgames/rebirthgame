@@ -86,6 +86,7 @@ const S = {
   "sharetitle": { tr: "Gönderiyi paylaş", en: "Share this post", es: "Compartir publicación", pt_BR: "Compartilhar publicação", de: "Beitrag teilen", fr: "Partager la publication", id: "Bagikan postingan", ja: "投稿をシェア", ko: "게시물 공유", zh_CN: "分享帖子", zh_TW: "分享貼文" },
   "sharemore": { tr: "Toplulukta tartış", en: "Join the discussion at", es: "Únete a la conversación en", pt_BR: "Participe da conversa em", de: "Diskutiere mit auf", fr: "Rejoignez la discussion sur", id: "Ikut berdiskusi di", ja: "コミュニティで語ろう", ko: "커뮤니티에서 이야기해요", zh_CN: "来社区一起讨论", zh_TW: "來社群一起討論" },
   "theme": { tr: "Topluluk", en: "Community", es: "Comunidad", pt_BR: "Comunidade", de: "Community", fr: "Communauté", id: "Komunitas", ja: "コミュニティ", ko: "커뮤니티", zh_CN: "社区", zh_TW: "社群" },
+  "close": { tr: "Kapat", en: "Close", es: "Cerrar", pt_BR: "Fechar", de: "Schließen", fr: "Fermer", id: "Tutup", ja: "閉じる", ko: "닫기", zh_CN: "关闭", zh_TW: "關閉" },
   "copied": { tr: "Kopyalandı", en: "Copied", es: "Copiado", pt_BR: "Copiado", de: "Kopiert", fr: "Copié", id: "Disalin", ja: "コピーしました", ko: "복사됨", zh_CN: "已复制", zh_TW: "已複製" },
   "empty": { tr: "Henüz gönderi yok. İlk paylaşan sen ol!", en: "No posts yet. Be the first to share!", es: "Aún no hay publicaciones. ¡Sé el primero!", pt_BR: "Ainda não há publicações. Seja o primeiro!", de: "Noch keine Beiträge. Sei der Erste!", fr: "Aucune publication pour l'instant. Soyez le premier !", id: "Belum ada postingan. Jadilah yang pertama!", ja: "まだ投稿がありません。最初の投稿をしよう！", ko: "아직 게시물이 없습니다. 첫 글을 남겨 보세요!", zh_CN: "还没有帖子，来发第一帖吧！", zh_TW: "還沒有貼文，來發第一篇吧！" },
   "loading": { tr: "Yükleniyor…", en: "Loading…", es: "Cargando…", pt_BR: "Carregando…", de: "Wird geladen…", fr: "Chargement…", id: "Memuat…", ja: "読み込み中…", ko: "불러오는 중…", zh_CN: "加载中…", zh_TW: "載入中…" },
@@ -446,13 +447,28 @@ function ac(pid) {
   if (p && eski) eski.replaceWith(kart(p));
 }
 
+// görsel büyütücü: tam ekran katman; dokununca, × ya da Esc ile kapanır
+function buyut(src) {
+  const ov = el("div", "tp-lightbox");
+  ov.setAttribute("role", "dialog"); ov.setAttribute("aria-modal", "true");
+  const im = el("img"); im.src = src; im.alt = "";
+  const x = el("button", "tp-lightbox__x", "×"); x.type = "button"; x.setAttribute("aria-label", t("close"));
+  ov.appendChild(im); ov.appendChild(x);
+  const kapa = () => { ov.remove(); document.documentElement.classList.remove("tp-lb-acik"); document.removeEventListener("keydown", tus); };
+  const tus = (e) => { if (e.key === "Escape") kapa(); };
+  ov.addEventListener("click", kapa);
+  document.addEventListener("keydown", tus);
+  document.body.appendChild(ov); document.documentElement.classList.add("tp-lb-acik");
+  x.focus();
+}
+
 async function gorselYukle(pid, kutu) {
   try {
     const s = await get(ref(db, "topluluk_gorsel/" + pid));
     if (!s.exists()) return;
     const i = el("img");
     i.src = s.val(); i.alt = ""; i.loading = "lazy";
-    i.addEventListener("click", () => window.open(i.src, "_blank"));
+    i.addEventListener("click", () => buyut(i.src));   // data: adresi yeni sekmede açılmaz (about:blank): sayfa içinde büyüt
     kutu.textContent = ""; kutu.appendChild(i);
   } catch (e) { /* görselsiz göster */ }
 }
