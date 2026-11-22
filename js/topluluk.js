@@ -6,7 +6,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signInWithCredential, signOut, onAuthStateChanged, connectAuthEmulator }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getDatabase, ref, get, update, push, query, orderByChild, limitToLast, limitToFirst, endAt, onValue, serverTimestamp,
+import { getDatabase, ref, get, update, push, query, orderByChild, limitToLast, limitToFirst, endAt, equalTo, onValue, serverTimestamp,
   connectDatabaseEmulator } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 const D = window.RBDil;
@@ -86,6 +86,17 @@ const S = {
   "sharetitle": { tr: "Gönderiyi paylaş", en: "Share this post", es: "Compartir publicación", pt_BR: "Compartilhar publicação", de: "Beitrag teilen", fr: "Partager la publication", id: "Bagikan postingan", ja: "投稿をシェア", ko: "게시물 공유", zh_CN: "分享帖子", zh_TW: "分享貼文" },
   "sharemore": { tr: "Toplulukta tartış", en: "Join the discussion at", es: "Únete a la conversación en", pt_BR: "Participe da conversa em", de: "Diskutiere mit auf", fr: "Rejoignez la discussion sur", id: "Ikut berdiskusi di", ja: "コミュニティで語ろう", ko: "커뮤니티에서 이야기해요", zh_CN: "来社区一起讨论", zh_TW: "來社群一起討論" },
   "theme": { tr: "Topluluk", en: "Community", es: "Comunidad", pt_BR: "Comunidade", de: "Community", fr: "Communauté", id: "Komunitas", ja: "コミュニティ", ko: "커뮤니티", zh_CN: "社区", zh_TW: "社群" },
+  "op": { tr: "Gönderen", en: "OP", es: "Autor", pt_BR: "Autor", de: "Autor", fr: "Auteur", id: "Pembuat", ja: "投稿者", ko: "작성자", zh_CN: "楼主", zh_TW: "原PO" },
+  "n.on": { tr: "Bildirimleri aç", en: "Turn on notifications", es: "Activar notificaciones", pt_BR: "Ativar notificações", de: "Benachrichtigungen an", fr: "Activer les notifications", id: "Aktifkan notifikasi", ja: "通知をオンにする", ko: "알림 켜기", zh_CN: "开启通知", zh_TW: "開啟通知" },
+  "n.active": { tr: "Bildirimler açık", en: "Notifications on", es: "Notificaciones activadas", pt_BR: "Notificações ativadas", de: "Benachrichtigungen an", fr: "Notifications activées", id: "Notifikasi aktif", ja: "通知オン", ko: "알림 켜짐", zh_CN: "通知已开启", zh_TW: "通知已開啟" },
+  "n.off": { tr: "Bildirimler kapalı", en: "Notifications off", es: "Notificaciones desactivadas", pt_BR: "Notificações desativadas", de: "Benachrichtigungen aus", fr: "Notifications désactivées", id: "Notifikasi mati", ja: "通知オフ", ko: "알림 꺼짐", zh_CN: "通知已关闭", zh_TW: "通知已關閉" },
+  "n.denied": { tr: "Bildirimler tarayıcı ayarlarında engellenmiş", en: "Notifications are blocked in your browser settings", es: "Las notificaciones están bloqueadas en el navegador", pt_BR: "As notificações estão bloqueadas no navegador", de: "Benachrichtigungen sind im Browser blockiert", fr: "Les notifications sont bloquées dans le navigateur", id: "Notifikasi diblokir di pengaturan browser", ja: "ブラウザの設定で通知がブロックされています", ko: "브라우저 설정에서 알림이 차단되어 있습니다", zh_CN: "浏览器设置已屏蔽通知", zh_TW: "瀏覽器設定已封鎖通知" },
+  "n.hint": { tr: "Gönderine yorum ya da beğeni gelince haber verir: site bir sekmede açıkken hemen, kapalıyken bir sonraki ziyaretinde.", en: "Get notified about comments and upvotes on your posts: instantly while the site is open in a tab, otherwise on your next visit.", es: "Te avisa de comentarios y votos en tus publicaciones: al instante con el sitio abierto en una pestaña, si no, en tu próxima visita.", pt_BR: "Avisa sobre comentários e votos nas suas publicações: na hora com o site aberto numa aba, senão na próxima visita.", de: "Meldet Kommentare und Upvotes zu deinen Beiträgen: sofort, solange die Seite in einem Tab offen ist, sonst beim nächsten Besuch.", fr: "Vous prévient des commentaires et votes sur vos publications : immédiatement si le site est ouvert dans un onglet, sinon à votre prochaine visite.", id: "Memberi tahu komentar dan suara di postinganmu: langsung saat situs terbuka di tab, atau saat kunjungan berikutnya.", ja: "投稿へのコメントや高評価をお知らせします。サイトをタブで開いていればすぐに、閉じていれば次回の訪問時に通知します。", ko: "내 게시물의 댓글과 추천을 알려 드립니다. 사이트가 탭에 열려 있으면 바로, 아니면 다음 방문 때 알려 드립니다.", zh_CN: "有人评论或点赞你的帖子时通知你：网站在标签页中打开时即时通知，否则在下次访问时通知。", zh_TW: "有人留言或按讚你的貼文時通知你：網站在分頁中開啟時即時通知，否則在下次造訪時通知。" },
+  "n.ok": { tr: "Gönderine yorum ya da beğeni gelince burada haber vereceğiz.", en: "We'll let you know here when your posts get comments or upvotes.", es: "Te avisaremos aquí cuando tus publicaciones reciban comentarios o votos.", pt_BR: "Avisaremos aqui quando suas publicações receberem comentários ou votos.", de: "Wir melden uns hier, wenn deine Beiträge Kommentare oder Upvotes bekommen.", fr: "Nous vous préviendrons ici quand vos publications recevront des commentaires ou des votes.", id: "Kami akan memberi tahu di sini saat postinganmu mendapat komentar atau suara.", ja: "投稿にコメントや高評価がつくと、ここでお知らせします。", ko: "게시물에 댓글이나 추천이 달리면 여기서 알려 드립니다.", zh_CN: "你的帖子收到评论或点赞时，我们会在这里通知你。", zh_TW: "你的貼文收到留言或按讚時，我們會在這裡通知你。" },
+  "n.comment.t": { tr: "{ad} gönderine yorum yaptı", en: "{ad} commented on your post", es: "{ad} comentó tu publicación", pt_BR: "{ad} comentou sua publicação", de: "{ad} hat deinen Beitrag kommentiert", fr: "{ad} a commenté votre publication", id: "{ad} mengomentari postinganmu", ja: "{ad}さんがあなたの投稿にコメントしました", ko: "{ad}님이 내 게시물에 댓글을 남겼습니다", zh_CN: "{ad} 评论了你的帖子", zh_TW: "{ad} 留言了你的貼文" },
+  "n.comments": { tr: "{n} yeni yorum: {baslik}", en: "{n} new comments: {baslik}", es: "{n} comentarios nuevos: {baslik}", pt_BR: "{n} novos comentários: {baslik}", de: "{n} neue Kommentare: {baslik}", fr: "{n} nouveaux commentaires : {baslik}", id: "{n} komentar baru: {baslik}", ja: "新しいコメント{n}件：{baslik}", ko: "새 댓글 {n}개: {baslik}", zh_CN: "{n} 条新评论：{baslik}", zh_TW: "{n} 則新留言：{baslik}" },
+  "n.like.t": { tr: "Gönderin beğeni aldı 👍", en: "Your post got upvotes 👍", es: "Tu publicación recibió votos 👍", pt_BR: "Sua publicação recebeu votos 👍", de: "Dein Beitrag hat Upvotes bekommen 👍", fr: "Votre publication a reçu des votes 👍", id: "Postinganmu mendapat suara 👍", ja: "投稿に高評価がつきました 👍", ko: "게시물이 추천을 받았습니다 👍", zh_CN: "你的帖子获得了点赞 👍", zh_TW: "你的貼文獲得了讚 👍" },
+  "n.like": { tr: "+{n} · {baslik} (toplam {toplam})", en: "+{n} · {baslik} ({toplam} total)", es: "+{n} · {baslik} ({toplam} en total)", pt_BR: "+{n} · {baslik} ({toplam} no total)", de: "+{n} · {baslik} ({toplam} insgesamt)", fr: "+{n} · {baslik} ({toplam} au total)", id: "+{n} · {baslik} (total {toplam})", ja: "+{n} · {baslik}（合計{toplam}）", ko: "+{n} · {baslik} (총 {toplam})", zh_CN: "+{n} · {baslik}（共 {toplam}）", zh_TW: "+{n} · {baslik}（共 {toplam}）" },
   "close": { tr: "Kapat", en: "Close", es: "Cerrar", pt_BR: "Fechar", de: "Schließen", fr: "Fermer", id: "Tutup", ja: "閉じる", ko: "닫기", zh_CN: "关闭", zh_TW: "關閉" },
   "copied": { tr: "Kopyalandı", en: "Copied", es: "Copiado", pt_BR: "Copiado", de: "Kopiert", fr: "Copié", id: "Disalin", ja: "コピーしました", ko: "복사됨", zh_CN: "已复制", zh_TW: "已複製" },
   "empty": { tr: "Henüz gönderi yok. İlk paylaşan sen ol!", en: "No posts yet. Be the first to share!", es: "Aún no hay publicaciones. ¡Sé el primero!", pt_BR: "Ainda não há publicações. Seja o primeiro!", de: "Noch keine Beiträge. Sei der Erste!", fr: "Aucune publication pour l'instant. Soyez le premier !", id: "Belum ada postingan. Jadilah yang pertama!", ja: "まだ投稿がありません。最初の投稿をしよう！", ko: "아직 게시물이 없습니다. 첫 글을 남겨 보세요!", zh_CN: "还没有帖子，来发第一帖吧！", zh_TW: "還沒有貼文，來發第一篇吧！" },
@@ -192,6 +203,7 @@ onAuthStateChanged(auth, async (u) => {
     } catch (e) { /* okunamadıysa misafir gibi devam */ }
   }
   kullaniciCiz();
+  bildirimIzle();
   yukle();
 });
 
@@ -236,8 +248,95 @@ function kullaniciCiz() {
   const cik = el("button", "doc-btn doc-btn--ghost tp-small", t("signout"));
   cik.type = "button";
   cik.addEventListener("click", () => signOut(auth));
-  sag.appendChild(yeni); sag.appendChild(cik);
+  sag.appendChild(yeni);
+  const bd = bildirimDugmesi(); if (bd) sag.appendChild(bd);
+  sag.appendChild(cik);
   k.appendChild(sag);
+}
+
+/* ------------------------------------------------------------------ bildirimler */
+// Kendi gönderilerine gelen yorum ve beğeniler (topluluk_gonderi "u" indeksi). Sunucudan push yok (Cloud Functions/Blaze gerekir):
+// site bir sekmede açıkken anında, kapalıyken sonraki ziyarette (son görülen sayılar localStorage'da) haber verilir.
+const BILD_VAR = "Notification" in window;
+let bildIzle = null, bildDurum = null, swKayit = null;
+function bildAcik() { try { return localStorage.getItem("rb_tp_bild_kapali") !== "1"; } catch (e) { return true; } }
+async function swAl() {
+  if (swKayit !== null) return swKayit;
+  try { swKayit = "serviceWorker" in navigator ? await navigator.serviceWorker.register("topluluk-sw.js", { scope: "./topluluk" }) : false; }
+  catch (e) { swKayit = false; }
+  return swKayit;
+}
+if ("serviceWorker" in navigator) navigator.serviceWorker.addEventListener("message", (e) => {
+  const u = e.data && e.data.tpAc;
+  const m = u && String(u).match(/#p=([A-Za-z0-9_-]+)/);
+  if (m) { location.hash = "p=" + m[1]; acik.add(m[1]); yukle(); }
+});
+const kisa = (s, n = 60) => { s = String(s || "").replace(/\s+/g, " ").trim(); return s.length > n ? s.slice(0, n - 1) + "…" : s; };
+async function bildirimGoster(baslik, govde, pid, tur) {
+  if (!BILD_VAR || Notification.permission !== "granted" || !bildAcik()) { if (document.visibilityState === "visible") uyar(baslik); return; }
+  const ayar = { body: govde, icon: "assets/img/ui/icon-512.png", badge: "favicon-32.png", tag: "tp-" + pid + "-" + tur, renotify: true,
+    data: { url: "topluluk.html?lang=" + lang + (pid ? "#p=" + pid : "") } };
+  try {
+    const sw = await swAl();
+    if (sw && sw.showNotification) { await sw.showNotification(baslik, ayar); return; }
+    const n = new Notification(baslik, ayar);
+    n.onclick = () => { window.focus(); if (pid) location.hash = "p=" + pid; n.close(); };
+  } catch (e) { if (document.visibilityState === "visible") uyar(baslik); }
+}
+async function yorumBildir(pid, p, n, uid) {
+  try {
+    const s = await get(query(ref(db, "topluluk_yorum/" + pid), orderByChild("t"), limitToLast(Math.min(n, 10))));
+    const ys = []; s.forEach((c) => { const v = c.val(); if (v.u !== uid) ys.push(v); });
+    if (!ys.length) return;
+    const son = ys[ys.length - 1];
+    const govde = ys.length > 1 ? t("n.comments").replace("{n}", ys.length).replace("{baslik}", kisa(p.baslik))
+      : "“" + kisa(son.metin, 110) + "” · " + kisa(p.baslik, 40);
+    await bildirimGoster(t("n.comment.t").replace("{ad}", son.ad), govde, pid, "y");
+  } catch (e) { /* sessiz */ }
+}
+function bildirimIzle() {
+  if (bildIzle) { bildIzle(); bildIzle = null; }
+  bildDurum = null;
+  if (!kullanici) return;
+  const uid = kullanici.uid, anahtar = "rb_tp_bild_" + uid;
+  try { bildDurum = JSON.parse(localStorage.getItem(anahtar) || "null"); } catch (e) { bildDurum = null; }
+  bildIzle = onValue(query(ref(db, "topluluk_gonderi"), orderByChild("u"), equalTo(uid)), (s) => {
+    if (!kullanici || kullanici.uid !== uid) return;
+    const yeni = {}, ilk = !bildDurum;
+    s.forEach((c) => {
+      const p = c.val(), pid = c.key, y = p.yorum || 0, pu = p.puan || 0, e = bildDurum && bildDurum[pid];
+      yeni[pid] = { y, p: pu };
+      if (ilk) return;   // ilk kez: yalnız kaydet
+      const eY = e ? e.y : 0, eP = e ? e.p : 0;
+      if (y > eY) yorumBildir(pid, p, y - eY, uid);
+      if (pu > eP) bildirimGoster(t("n.like.t"), t("n.like").replace("{n}", pu - eP).replace("{baslik}", kisa(p.baslik)).replace("{toplam}", pu), pid, "b");
+    });
+    bildDurum = yeni;
+    try { localStorage.setItem(anahtar, JSON.stringify(yeni)); } catch (e) { /* özel pencere */ }
+  }, () => { /* okunamadı */ });
+}
+function bildirimDugmesi() {
+  if (!BILD_VAR) return null;
+  const izin = Notification.permission;
+  const b = el("button", "doc-btn doc-btn--ghost tp-small tp-bell");
+  b.type = "button"; b.title = izin === "denied" ? t("n.denied") : t("n.hint");
+  if (izin === "denied") { b.textContent = "🔕 " + t("n.off"); b.disabled = true; return b; }
+  if (izin !== "granted") b.textContent = "🔔 " + t("n.on");
+  else b.textContent = bildAcik() ? "🔔 " + t("n.active") : "🔕 " + t("n.off");
+  b.classList.toggle("is-on", izin === "granted" && bildAcik());
+  b.addEventListener("click", async () => {
+    if (Notification.permission === "granted") {
+      try { localStorage.setItem("rb_tp_bild_kapali", bildAcik() ? "1" : "0"); } catch (e) { /* */ }
+      kullaniciCiz(); return;
+    }
+    const r = await Notification.requestPermission();
+    if (r === "granted") {
+      try { localStorage.removeItem("rb_tp_bild_kapali"); } catch (e) { /* */ }
+      await swAl(); bildirimGoster(t("n.active"), t("n.ok"), "", "ok");
+    }
+    kullaniciCiz();
+  });
+  return b;
 }
 
 /* ------------------------------------------------------------------ akış */
@@ -433,8 +532,16 @@ async function paylas(p, btn) {
 }
 
 // yazar adı: yönetici rozeti (r: "leader", kurallar yalnız yöneticiye izin verir) kırmızı ad + LEADER
-function adEtiketi(x) {
+function renkTonu(u) { let h = 2166136261; for (const c of String(u || "")) h = Math.imul(h ^ c.codePointAt(0), 16777619); h ^= h >>> 13; h = Math.imul(h, 0x5bd1e995); return ((h ^ (h >>> 15)) >>> 0) % 360; }
+function avatar(x) {
+  const a = el("span", "tp-av" + (x.r === "leader" ? " tp-av--leader" : ""), Array.from(String(x.ad || "?").trim())[0] || "?");
+  a.style.setProperty("--h", renkTonu(x.u)); a.setAttribute("aria-hidden", "true");
+  return a;
+}
+function adEtiketi(x, simge = true) {
   const k = el("span", "tp-author" + (x.r === "leader" ? " tp-leader" : ""));
+  k.style.setProperty("--h", renkTonu(x.u));
+  if (simge) k.appendChild(avatar(x));
   k.appendChild(el("b", null, x.ad));
   if (x.r === "leader") k.appendChild(el("span", "tp-flair", "LEADER"));
   return k;
@@ -481,15 +588,19 @@ async function yorumlariYukle(p, kutu) {
   } catch (e) { kutu.textContent = t("err"); return; }
   kutu.textContent = "";
   yorumlar.forEach((c) => {
-    const s = el("div", "tp-comment");
-    const ust = el("div", "tp-meta");
-    ust.appendChild(adEtiketi(c));
+    const s = el("div", "tp-comment" + (kullanici && c.u === kullanici.uid ? " is-me" : "") + (c.u === p.u ? " is-op" : ""));
+    s.appendChild(avatar(c));
+    const balon = el("div", "tp-bubble");
+    const ust = el("div", "tp-chead");
+    ust.appendChild(adEtiketi(c, false));
+    if (c.u === p.u) ust.appendChild(el("span", "tp-op", t("op")));
     ust.appendChild(el("time", null, zamanMetni(c.t)));
     if (c.dil !== lang) ust.appendChild(el("span", "tp-lang", dilAdi(c.dil)));
-    s.appendChild(ust);
+    balon.appendChild(ust);
     const anahtar = p.id + ":" + c.id;
     const m = el("p", null, ceviri[anahtar] || c.metin);
-    s.appendChild(m);
+    balon.appendChild(m);
+    s.appendChild(balon);
     const d = el("div", "tp-actions tp-actions--s");
     if (c.dil !== lang) {
       const b = el("button", null, ceviri[anahtar] ? t("original") : t("translate"));
@@ -562,6 +673,7 @@ async function oyVer(p, v) {
     const yeni = eski === v ? 0 : v;
     const puan = (await get(ref(db, "topluluk_gonderi/" + p.id + "/puan"))).val() || 0;
     try {
+      if (p.u === kullanici.uid && bildDurum && bildDurum[p.id]) bildDurum[p.id].p = puan + yeni - eski;   // kendi oyun bildirim olmasın
       await update(ref(db), { ["topluluk_oy/" + kullanici.uid + "/" + p.id]: yeni || null, ["topluluk_gonderi/" + p.id + "/puan"]: puan + yeni - eski });
       if (yeni) oylarim[p.id] = yeni; else delete oylarim[p.id];
       p.puan = puan + yeni - eski;
