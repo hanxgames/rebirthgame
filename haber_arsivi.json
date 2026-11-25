@@ -1,6 +1,122 @@
 {
  "_not": "Akışta bir kez yer almış bütün haberler (tools/statik.py yazar; haber_ekle.py sil buradan da siler).",
  "kayitlar": {
+  "2026-11-25-cok-oyunculu-geldi": {
+   "id": "2026-11-25-cok-oyunculu-geldi",
+   "tarih": "2026-11-25",
+   "etiket": {
+    "tr": "Yeni mod",
+    "en": "New mode",
+    "es": "Nuevo modo",
+    "pt_BR": "Novo modo",
+    "de": "Neuer Modus",
+    "fr": "Nouveau mode",
+    "id": "Mode baru",
+    "ja": "新モード",
+    "ko": "새 모드",
+    "zh_CN": "新模式",
+    "zh_TW": "新模式",
+    "ru": "Новый режим"
+   },
+   "baslik": {
+    "tr": "Çok Oyunculu geldi: 1v1 canlı maç!",
+    "en": "Multiplayer is here: live 1v1 matches!",
+    "es": "¡Llega el multijugador: partidas 1v1 en vivo!",
+    "pt_BR": "Chegou o multijogador: partidas 1v1 ao vivo!",
+    "de": "Mehrspieler ist da: Live-1v1-Matches!",
+    "fr": "Le multijoueur est là : matchs 1v1 en direct !",
+    "id": "Multiplayer telah hadir: pertandingan 1v1 langsung!",
+    "ja": "マルチプレイ登場：リアルタイム1v1対戦！",
+    "ko": "멀티플레이 등장: 실시간 1v1 대전!",
+    "zh_CN": "多人模式来了：1v1 实时对战！",
+    "zh_TW": "多人模式來了：1v1 即時對戰！",
+    "ru": "Мультиплеер уже здесь: матчи 1 на 1 в реальном времени!"
+   },
+   "ozet": {
+    "tr": "Android 2.3.0 ile arkadaşınla aynı haritada aynı anda oyna: biriniz Misyon, diğeriniz İsyancı. Açılış 27 Kasım Cuma 21:00 (TSİ); açılış hafta sonu herkese ücretsiz!",
+    "en": "With Android 2.3.0, play a friend on the same map at the same time: one leads the Mission, the other the Rebels. Opens Friday, 27 November at 18:00 UTC; free for everyone on opening weekend!",
+    "es": "Con Android 2.3.0, juega con un amigo en el mismo mapa y al mismo tiempo: uno dirige la Misión y el otro a los Insurgentes. Abre el viernes 27 de noviembre a las 18:00 UTC; ¡gratis para todos el fin de semana de estreno!",
+    "pt_BR": "No Android 2.3.0, jogue com um amigo no mesmo mapa ao mesmo tempo: um comanda a Missão e o outro os Insurgentes. Abre na sexta, 27 de novembro, às 18:00 UTC; grátis para todos no fim de semana de estreia!",
+    "de": "Mit Android 2.3.0 spielst du mit einem Freund gleichzeitig auf derselben Karte: einer führt die Mission, der andere die Aufständischen. Start am Freitag, 27. November, um 18:00 UTC; am Startwochenende für alle kostenlos!",
+    "fr": "Avec Android 2.3.0, affrontez un ami sur la même carte en même temps : l'un dirige la Mission, l'autre les Insurgés. Ouverture le vendredi 27 novembre à 18 h UTC ; gratuit pour tous le week-end d'ouverture !",
+    "id": "Dengan Android 2.3.0, main bersama teman di peta yang sama pada saat yang sama: satu memimpin Misi, satu lagi Pemberontak. Dibuka Jumat, 27 November pukul 18.00 UTC; gratis untuk semua selama akhir pekan pembukaan!",
+    "ja": "Android 2.3.0で、友だちと同じマップで同時に対戦：一方がミッション、もう一方が反乱軍を指揮。11月27日（金）18:00 UTC開始。オープン週末は全員無料！",
+    "ko": "Android 2.3.0에서 친구와 같은 지도에서 동시에 대결하세요. 한 명은 임무군, 다른 한 명은 반군을 지휘합니다. 11월 27일(금) 18:00 UTC 오픈, 오픈 주말에는 모두 무료!",
+    "zh_CN": "Android 2.3.0 起，与好友在同一张地图上同时对战：一方指挥任务部队，另一方指挥叛军。11 月 27 日（周五）18:00 UTC 开放，开放周末所有人免费！",
+    "zh_TW": "Android 2.3.0 起，與好友在同一張地圖上同時對戰：一方指揮任務部隊，另一方指揮叛軍。11 月 27 日（週五）18:00 UTC 開放，開放週末所有人免費！",
+    "ru": "В Android 2.3.0 играйте с другом на одной карте одновременно: один командует Миссией, другой — повстанцами. Старт в пятницу, 27 ноября, в 18:00 UTC; в первые выходные — бесплатно для всех!"
+   },
+   "metin": {
+    "tr": [
+     "ReBirth'e Çok Oyunculu geldi! Android 2.3.0 ile bir arkadaşınla 1v1 canlı maç yapabilirsin: biriniz Misyon'u, diğeriniz İsyancı'yı yönetir; aynı haritada, aynı anda.",
+     "• Oda kur ve oda kodunu arkadaşına ver; arkadaşın kodu girip odana katılsın.",
+     "• Açılış: 27 Kasım 2026 Cuma 21:00 (TSİ). O ana dek ana menüdeki Çok Oyunculu düğmesinde geri sayım görünür.",
+     "• Açılış hafta sonu herkese ücretsiz: 29 Kasım Pazar 21:00'e (TSİ) kadar.",
+     "• Sonrasında oda kurmak için Çok Oyunculu aboneliği gerekir: haftalık, aylık ya da 3 aylık; ilk 3 gün ücretsiz deneme, Google Play'den istediğin an iptal. Odaya katılmak her zaman ücretsiz; tek oyunculu oyunun tamamı aboneliksiz.",
+     "• Arkadaşını davet et: davet bağlantınla gelen yeni oyuncu 24 saat erişim kazanır.",
+     "• Oynamak için hesabının Play Games'e bağlı olması gerekir.",
+     "Çok Oyunculu şimdilik yalnız Android'de; iOS sürümü daha sonra gelecek. Aynı güncellemede Sandbox, ana menüden \"Özel oyun\"un içine taşındı. Oyununu Google Play'den 2.3.0'a güncelle, cuma akşamı sahada görüşelim!"
+    ],
+    "en": [
+     "Multiplayer has arrived in ReBirth! With Android 2.3.0 you can play a live 1v1 match with a friend: one of you leads the Mission, the other the Rebels, on the same map at the same time.",
+     "• Create a room and give the room code to your friend; they enter the code to join you.",
+     "• Opening: Friday, 27 November 2026 at 18:00 UTC. Until then, the Multiplayer button in the main menu shows a countdown.",
+     "• Free for everyone on opening weekend: until Sunday, 29 November at 18:00 UTC.",
+     "• After that, creating a room requires a Multiplayer subscription: weekly, monthly or 3 months, with a 3-day free trial and cancel any time on Google Play. Joining a room is always free, and the whole single-player game needs no subscription.",
+     "• Invite your friends: a new player who arrives through your invite link gets 24 hours of access.",
+     "• To play, your account must be linked to Play Games.",
+     "Multiplayer is Android-only for now; the iOS version will come later. In the same update, Sandbox moved from the main menu into \"Custom game\". Update to 2.3.0 on Google Play and see you on the battlefield on Friday evening!"
+    ]
+   },
+   "platform": [
+    "android"
+   ],
+   "tepki": "kalp",
+   "dugmeler": [
+    {
+     "metin": {
+      "tr": "Google Play'de güncelle",
+      "en": "Update on Google Play",
+      "es": "Actualizar en Google Play",
+      "pt_BR": "Atualizar no Google Play",
+      "de": "Bei Google Play aktualisieren",
+      "fr": "Mettre à jour sur Google Play",
+      "id": "Perbarui di Google Play",
+      "ja": "Google Playでアップデート",
+      "ko": "Google Play에서 업데이트",
+      "zh_CN": "在 Google Play 更新",
+      "zh_TW": "在 Google Play 更新",
+      "ru": "Обновить в Google Play"
+     },
+     "baglanti": "https://play.google.com/store/apps/details?id=com.hantro.business",
+     "simge": "play",
+     "stil": "ana"
+    },
+    {
+     "metin": {
+      "tr": "Detaylar",
+      "en": "Details",
+      "es": "Detalles",
+      "pt_BR": "Detalhes",
+      "de": "Details",
+      "fr": "Détails",
+      "id": "Detail",
+      "ja": "詳細",
+      "ko": "자세히",
+      "zh_CN": "详情",
+      "zh_TW": "詳情",
+      "ru": "Подробнее"
+     },
+     "baglanti": "detay",
+     "stil": "ikincil"
+    }
+   ],
+   "sabitle": true,
+   "vurgu": "parilti",
+   "gorsel": "assets/img/haber/2026-11-25-cok-oyunculu-geldi-c57291.jpg",
+   "eklendi": "2026-11-25T12:46:59.453836Z",
+   "tur": "haberler"
+  },
   "2026-11-22-topluluk-acildi": {
    "id": "2026-11-22-topluluk-acildi",
    "tarih": "2026-11-22",
@@ -68,8 +184,6 @@
    "gorsel": "assets/img/haber/2026-11-22-topluluk-acildi-c917d6.jpg",
    "eklendi": "2026-11-21T21:13:17.996181Z",
    "tepki": "kalp",
-   "sabitle": true,
-   "vurgu": "parilti",
    "tur": "haberler"
   },
   "2026-11-20-sefer-cok-oyunculu-yakinda": {

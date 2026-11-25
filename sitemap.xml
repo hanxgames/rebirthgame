@@ -404,6 +404,11 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/rehber/"/>
   </url>
   <url>
+    <loc>https://rebirthgame.tr/tr/haber/2026-11-25-cok-oyunculu-geldi/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-25-cok-oyunculu-geldi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-25-cok-oyunculu-geldi/"/>
+  </url>
+  <url>
     <loc>https://rebirthgame.tr/tr/haber/2026-11-22-topluluk-acildi/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-22-topluluk-acildi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-22-topluluk-acildi/"/>
@@ -542,6 +547,11 @@
     <loc>https://rebirthgame.tr/tr/haber/</loc><changefreq>weekly</changefreq><priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/"/>
+  </url>
+  <url>
+    <loc>https://rebirthgame.tr/en/news/2026-11-25-cok-oyunculu-geldi/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rebirthgame.tr/en/news/2026-11-25-cok-oyunculu-geldi/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://rebirthgame.tr/tr/haber/2026-11-25-cok-oyunculu-geldi/"/>
   </url>
   <url>
     <loc>https://rebirthgame.tr/en/news/2026-11-22-topluluk-acildi/</loc><changefreq>weekly</changefreq><priority>0.6</priority>
