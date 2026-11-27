@@ -1,7 +1,7 @@
 {
  "surum": 1,
  "en_cok": 5,
- "guncelleme": "2026-11-25T13:30:16Z",
+ "guncelleme": "2026-11-27T18:52:23Z",
  "haberler": [
   {
    "id": "2026-11-25-cok-oyunculu-geldi",
@@ -21,53 +21,53 @@
     "ru": "Новый режим"
    },
    "baslik": {
-    "tr": "Çok Oyunculu geldi: 1v1 canlı maç!",
-    "en": "Multiplayer is here: live 1v1 matches!",
-    "es": "¡Llega el multijugador: partidas 1v1 en vivo!",
-    "pt_BR": "Chegou o multijogador: partidas 1v1 ao vivo!",
-    "de": "Mehrspieler ist da: Live-1v1-Matches!",
-    "fr": "Le multijoueur est là : matchs 1v1 en direct !",
-    "id": "Multiplayer telah hadir: pertandingan 1v1 langsung!",
-    "ja": "マルチプレイ登場：リアルタイム1v1対戦！",
-    "ko": "멀티플레이 등장: 실시간 1v1 대전!",
-    "zh_CN": "多人模式来了：1v1 实时对战！",
-    "zh_TW": "多人模式來了：1v1 即時對戰！",
-    "ru": "Мультиплеер уже здесь: матчи 1 на 1 в реальном времени!"
+    "tr": "Çok Oyunculu açıldı: hemen oyna!",
+    "en": "Multiplayer is live: play now!",
+    "es": "¡El multijugador ya está abierto: juega ahora!",
+    "pt_BR": "O multijogador está no ar: jogue agora!",
+    "de": "Mehrspieler ist live: Jetzt spielen!",
+    "fr": "Le multijoueur est ouvert : jouez maintenant !",
+    "id": "Multiplayer sudah dibuka: main sekarang!",
+    "ja": "マルチプレイ解禁：今すぐプレイ！",
+    "ko": "멀티플레이 오픈: 지금 플레이하세요!",
+    "zh_CN": "多人模式已开放：立即开玩！",
+    "zh_TW": "多人模式已開放：立即開玩！",
+    "ru": "Мультиплеер открыт: играйте прямо сейчас!"
    },
    "ozet": {
-    "tr": "Android 2.3.0 ile arkadaşınla aynı haritada aynı anda oyna: biriniz Misyon, diğeriniz İsyancı. Açılış 27 Kasım Cuma 21:00 (TSİ); açılış hafta sonu herkese ücretsiz!",
-    "en": "With Android 2.3.0, play a friend on the same map at the same time: one leads the Mission, the other the Rebels. Opens Friday, 27 November at 18:00 UTC; free for everyone on opening weekend!",
-    "es": "Con Android 2.3.0, juega con un amigo en el mismo mapa y al mismo tiempo: uno dirige la Misión y el otro a los Insurgentes. Abre el viernes 27 de noviembre a las 18:00 UTC; ¡gratis para todos el fin de semana de estreno!",
-    "pt_BR": "No Android 2.3.0, jogue com um amigo no mesmo mapa ao mesmo tempo: um comanda a Missão e o outro os Insurgentes. Abre na sexta, 27 de novembro, às 18:00 UTC; grátis para todos no fim de semana de estreia!",
-    "de": "Mit Android 2.3.0 spielst du mit einem Freund gleichzeitig auf derselben Karte: einer führt die Mission, der andere die Aufständischen. Start am Freitag, 27. November, um 18:00 UTC; am Startwochenende für alle kostenlos!",
-    "fr": "Avec Android 2.3.0, affrontez un ami sur la même carte en même temps : l'un dirige la Mission, l'autre les Insurgés. Ouverture le vendredi 27 novembre à 18 h UTC ; gratuit pour tous le week-end d'ouverture !",
-    "id": "Dengan Android 2.3.0, main bersama teman di peta yang sama pada saat yang sama: satu memimpin Misi, satu lagi Pemberontak. Dibuka Jumat, 27 November pukul 18.00 UTC; gratis untuk semua selama akhir pekan pembukaan!",
-    "ja": "Android 2.3.0で、友だちと同じマップで同時に対戦：一方がミッション、もう一方が反乱軍を指揮。11月27日（金）18:00 UTC開始。オープン週末は全員無料！",
-    "ko": "Android 2.3.0에서 친구와 같은 지도에서 동시에 대결하세요. 한 명은 임무군, 다른 한 명은 반군을 지휘합니다. 11월 27일(금) 18:00 UTC 오픈, 오픈 주말에는 모두 무료!",
-    "zh_CN": "Android 2.3.0 起，与好友在同一张地图上同时对战：一方指挥任务部队，另一方指挥叛军。11 月 27 日（周五）18:00 UTC 开放，开放周末所有人免费！",
-    "zh_TW": "Android 2.3.0 起，與好友在同一張地圖上同時對戰：一方指揮任務部隊，另一方指揮叛軍。11 月 27 日（週五）18:00 UTC 開放，開放週末所有人免費！",
-    "ru": "В Android 2.3.0 играйте с другом на одной карте одновременно: один командует Миссией, другой — повстанцами. Старт в пятницу, 27 ноября, в 18:00 UTC; в первые выходные — бесплатно для всех!"
+    "tr": "Çok Oyunculu erişime açıldı! Android 2.3.0 ile arkadaşınla 1v1 canlı maç yap: biriniz Misyon, diğeriniz İsyancı. Pazar 21:00'e (TSİ) kadar herkese ücretsiz ve sınırsız!",
+    "en": "Multiplayer is now open! With Android 2.3.0, play a live 1v1 match with a friend: one leads the Mission, the other the Rebels. Free and unlimited for everyone until Sunday 18:00 UTC!",
+    "es": "¡El multijugador ya está abierto! Con Android 2.3.0, juegue una partida 1v1 en vivo con un amigo: uno dirige la Misión y el otro a los Insurgentes. ¡Gratis e ilimitado para todos hasta el domingo a las 18:00 UTC!",
+    "pt_BR": "O multijogador está aberto! No Android 2.3.0, jogue uma partida 1v1 ao vivo com um amigo: um comanda a Missão e o outro os Insurgentes. Grátis e ilimitado para todos até domingo às 18:00 UTC!",
+    "de": "Mehrspieler ist jetzt offen! Mit Android 2.3.0 spielen Sie live 1v1 gegen einen Freund: einer führt die Mission, der andere die Rebellen. Bis Sonntag 18:00 UTC für alle kostenlos und unbegrenzt!",
+    "fr": "Le multijoueur est ouvert ! Avec Android 2.3.0, jouez un match 1v1 en direct avec un ami : l'un dirige la Mission, l'autre les Rebelles. Gratuit et illimité pour tous jusqu'à dimanche 18:00 UTC !",
+    "id": "Multiplayer sudah dibuka! Dengan Android 2.3.0, mainkan pertandingan 1v1 langsung bersama teman: satu memimpin Misi, yang lain Pemberontak. Gratis dan tanpa batas untuk semua hingga Minggu pukul 18:00 UTC!",
+    "ja": "マルチプレイが解禁！Android 2.3.0で友だちとリアルタイム1v1対戦：一人がミッション、もう一人が反乱軍を指揮。日曜18:00（UTC）まで全員無料・無制限！",
+    "ko": "멀티플레이가 열렸습니다! Android 2.3.0에서 친구와 실시간 1v1 대전을 즐기세요. 한 명은 미션, 다른 한 명은 반군을 지휘합니다. 일요일 18:00(UTC)까지 모두 무료, 무제한!",
+    "zh_CN": "多人模式已开放！在 Android 2.3.0 中与好友进行 1v1 实时对战：一方指挥任务部队，另一方指挥叛军。周日 18:00（UTC）前所有人免费无限畅玩！",
+    "zh_TW": "多人模式已開放！在 Android 2.3.0 與好友進行 1v1 即時對戰：一方指揮任務部隊，另一方指揮叛軍。週日 18:00（UTC）前所有人免費無限暢玩！",
+    "ru": "Мультиплеер открыт! В Android 2.3.0 сыграйте матч 1 на 1 в реальном времени с другом: один командует Миссией, другой — повстанцами. Бесплатно и без ограничений для всех до воскресенья, 21:00 по Москве!"
    },
    "metin": {
     "tr": [
      "ReBirth'e Çok Oyunculu geldi! Android 2.3.0 ile bir arkadaşınla 1v1 canlı maç yapabilirsin: biriniz Misyon'u, diğeriniz İsyancı'yı yönetir; aynı haritada, aynı anda.",
      "• Oda kur ve oda kodunu arkadaşına ver; arkadaşın kodu girip odana katılsın.",
-     "• Açılış: 27 Kasım 2026 Cuma 21:00 (TSİ). O ana dek ana menüdeki Çok Oyunculu düğmesinde geri sayım görünür.",
+     "• Çok Oyunculu açık: ana menüdeki Çok Oyunculu düğmesine dokun, hemen oda kur.",
      "• Açılış hafta sonu herkese ücretsiz: 29 Kasım Pazar 21:00'e (TSİ) kadar.",
      "• Sonrasında oda kurmak için Çok Oyunculu aboneliği gerekir: haftalık, aylık ya da 3 aylık; ilk 3 gün ücretsiz deneme, Google Play'den istediğin an iptal. Odaya katılmak her zaman ücretsiz; tek oyunculu oyunun tamamı aboneliksiz.",
      "• Arkadaşını davet et: davet bağlantınla gelen yeni oyuncu 24 saat erişim kazanır.",
      "• Oynamak için hesabının Play Games'e bağlı olması gerekir.",
-     "Çok Oyunculu şimdilik yalnız Android'de; iOS sürümü daha sonra gelecek. Aynı güncellemede Sandbox, ana menüden \"Özel oyun\"un içine taşındı. Oyununu Google Play'den 2.3.0'a güncelle, cuma akşamı sahada görüşelim!"
+     "Çok Oyunculu şimdilik yalnız Android'de; iOS sürümü daha sonra gelecek. Aynı güncellemede Sandbox, ana menüden \"Özel oyun\"un içine taşındı. Oyununu Google Play'den 2.3.0'a güncelle, sahada görüşelim!"
     ],
     "en": [
      "Multiplayer has arrived in ReBirth! With Android 2.3.0 you can play a live 1v1 match with a friend: one of you leads the Mission, the other the Rebels, on the same map at the same time.",
      "• Create a room and give the room code to your friend; they enter the code to join you.",
-     "• Opening: Friday, 27 November 2026 at 18:00 UTC. Until then, the Multiplayer button in the main menu shows a countdown.",
+     "• Multiplayer is open: tap the Multiplayer button in the main menu and create a room right away.",
      "• Free for everyone on opening weekend: until Sunday, 29 November at 18:00 UTC.",
      "• After that, creating a room requires a Multiplayer subscription: weekly, monthly or 3 months, with a 3-day free trial and cancel any time on Google Play. Joining a room is always free, and the whole single-player game needs no subscription.",
      "• Invite your friends: a new player who arrives through your invite link gets 24 hours of access.",
      "• To play, your account must be linked to Play Games.",
-     "Multiplayer is Android-only for now; the iOS version will come later. In the same update, Sandbox moved from the main menu into \"Custom game\". Update to 2.3.0 on Google Play and see you on the battlefield on Friday evening!"
+     "Multiplayer is Android-only for now; the iOS version will come later. In the same update, Sandbox moved from the main menu into \"Custom game\". Update to 2.3.0 on Google Play and see you on the battlefield!"
     ]
    },
    "platform": [
